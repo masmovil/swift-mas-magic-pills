@@ -1,0 +1,6 @@
+language: swift
+script:
+- set -o pipefail
+- swift --version
+- bundle exec fastlane pass_tests
+- bundle exec danger
