@@ -1,7 +1,7 @@
-# iOS Magic Pills
-Set of powerful utilities for iOS development
+# Swift Magic Pills 💊
+Set of powerful utilities for development in Swift
 
-[![Build Status](https://travis-ci.org/bq/ios-magic-pills.svg?branch=master)](https://travis-ci.org/bq/ios-magic-pills)
+[![Build Status](https://travis-ci.org/bq/swift-magic-pills.svg?branch=master)](https://travis-ci.org/bq/swift-magic-pills)
 [![Version](https://img.shields.io/cocoapods/v/MagicPills.svg?style=flat)](https://cocoapods.org/pods/MagicPills)
 [![License](https://img.shields.io/cocoapods/l/MagicPills.svg?style=flat)](https://cocoapods.org/pods/MagicPills)
 [![Platform](https://img.shields.io/cocoapods/p/MagicPills.svg?style=flat)](https://cocoapods.org/pods/MagicPills)
