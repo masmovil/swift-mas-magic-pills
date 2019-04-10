@@ -44,6 +44,10 @@
 		F20082EA225E1E7100AC6EE1 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20082E9225E1E7100AC6EE1 /* DateExtensionsTests.swift */; };
 		F20082EB225E1E7100AC6EE1 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20082E9225E1E7100AC6EE1 /* DateExtensionsTests.swift */; };
 		F20082EC225E1E7100AC6EE1 /* DateExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20082E9225E1E7100AC6EE1 /* DateExtensionsTests.swift */; };
+		F20082EE225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20082ED225E50E800AC6EE1 /* DateFormatterExtensions.swift */; };
+		F20082EF225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20082ED225E50E800AC6EE1 /* DateFormatterExtensions.swift */; };
+		F20082F0225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20082ED225E50E800AC6EE1 /* DateFormatterExtensions.swift */; };
+		F20082F1225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20082ED225E50E800AC6EE1 /* DateFormatterExtensions.swift */; };
 		F26C3AF822537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
 		F26C3AF922537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
 		F26C3AFA22537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
@@ -102,6 +106,7 @@
 		F20082E0225DFFD900AC6EE1 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
 		F20082E4225E1E0000AC6EE1 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		F20082E9225E1E7100AC6EE1 /* DateExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTests.swift; sourceTree = "<group>"; };
+		F20082ED225E50E800AC6EE1 /* DateFormatterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtensions.swift; sourceTree = "<group>"; };
 		F26C3AF722537A4600189D28 /* MagicPills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicPills.swift; sourceTree = "<group>"; };
 		F2A74DB8225765CF001F0DF2 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		F2A74DBF22576610001F0DF2 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
@@ -283,6 +288,7 @@
 				F20082C6225DFC9D00AC6EE1 /* BoolExtensions.swift */,
 				F20082C1225DFC6E00AC6EE1 /* OptionalExtensions.swift */,
 				F20082E4225E1E0000AC6EE1 /* DateExtensions.swift */,
+				F20082ED225E50E800AC6EE1 /* DateFormatterExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				F20082D3225DFF4F00AC6EE1 /* Optionable.swift in Sources */,
 				F20082C7225DFC9D00AC6EE1 /* BoolExtensions.swift in Sources */,
 				F20082E5225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
+				F20082EE225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +677,7 @@
 				F20082D4225DFF4F00AC6EE1 /* Optionable.swift in Sources */,
 				F20082C8225DFC9D00AC6EE1 /* BoolExtensions.swift in Sources */,
 				F20082E6225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
+				F20082EF225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +703,7 @@
 				F20082D5225DFF4F00AC6EE1 /* Optionable.swift in Sources */,
 				F20082C9225DFC9D00AC6EE1 /* BoolExtensions.swift in Sources */,
 				F20082E7225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
+				F20082F0225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +729,7 @@
 				F20082D6225DFF4F00AC6EE1 /* Optionable.swift in Sources */,
 				F20082CA225DFC9D00AC6EE1 /* BoolExtensions.swift in Sources */,
 				F20082E8225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
+				F20082F1225E50E800AC6EE1 /* DateFormatterExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

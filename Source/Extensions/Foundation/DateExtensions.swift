@@ -6,7 +6,7 @@ public extension Date {
     }
 
     init?(formattedSpanishFullDate: String, timeZone: TimeZone? = nil) {
-        let formatter = Date.spanishFormatter
+        let formatter = DateFormatter.spanishDateFormatter
         formatter.dateFormat = "dd/MM/yyyy HH:mm"
         if let timeZone = timeZone {
             formatter.timeZone = timeZone
@@ -66,17 +66,11 @@ public extension Date {
     // MARK: - Private methods
 
     private func formatWith(dateFormat: String, timeZone: TimeZone? = nil) -> String {
-        let formatter = Date.spanishFormatter
+        let formatter = DateFormatter.spanishDateFormatter
         formatter.dateFormat = dateFormat
         if let timeZone = timeZone {
             formatter.timeZone = timeZone
         }
         return formatter.string(from: self)
-    }
-
-    private static var spanishFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "es_ES")
-        return formatter
     }
 }
