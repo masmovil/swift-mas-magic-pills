@@ -3,8 +3,3 @@
  
 ### How to review this PR?
 …
- 
-### Related Issues
-…
- 
-### Definition of Done
