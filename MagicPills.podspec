@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MagicPills'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Set of powerful utilities 💊.'
 
   s.description      = <<-DESC
@@ -10,15 +10,25 @@ DESC
   s.homepage         = 'https://github.com/bq/swift-magic-pills'
   s.license          = { :type => 'APACHE', :file => 'LICENSE' }
   s.author           = { 'bq' => 'info@bq.com' }
-  s.source           = { :git => 'https://github.com/bq/swift-magic-pills.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/bq/swift-magic-pills.git', :tag => "v#{s.version.to_s}" }
   s.social_media_url = 'https://twitter.com/bqreaders'
 
-  s.swift_version = '4.2'
-  s.ios.deployment_target = '11.0'
-
-  s.source_files  = "Source", "Source/**/*.{swift}"
-
   s.frameworks = 'Foundation'
-  #s.dependency 'RxSwift', '~> 4.3'
-  
+
+  s.ios.deployment_target = '11.0'
+  s.ios.frameworks = 'UIKit'
+  s.ios.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift'
+
+  s.osx.deployment_target = '10.13'
+  s.osx.frameworks = 'AppKit'
+  s.osx.source_files  = 'Source/Foundation/**/*.swift'
+
+  s.watchos.deployment_target = '4.0'
+  s.watchos.frameworks = 'UIKit', 'WatchKit'
+  s.watchos.source_files  = 'Source/Foundation/**/*.swift'
+  s.watchos.exclude_files = 'Source/Foundation/Extensions/StringExtensions+Formating.swift'
+
+  s.tvos.deployment_target = '11.0'
+  s.tvos.frameworks = 'UIKit'
+  s.tvos.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift'
 end
