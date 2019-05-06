@@ -71,10 +71,14 @@ public class OrderedSet<T: Comparable> {
             if internalSet[mid] > item {
                 rightBound = mid - 1
                 continue
-            } else if internalSet[mid] < item {
+            }
+
+            if internalSet[mid] < item {
                 leftBound = mid + 1
                 continue
-            } else if internalSet[mid] == item {
+            }
+
+            if internalSet[mid] == item {
                 return mid
             }
 
@@ -86,7 +90,8 @@ public class OrderedSet<T: Comparable> {
             for value in stride(from: mid, to: count - 1, by: 1) {
                 if internalSet[value + 1] == item {
                     return value + 1
-                } else if internalSet[value] < internalSet[value + 1] {
+                }
+                if internalSet[value] < internalSet[value + 1] {
                     break
                 }
             }
@@ -95,7 +100,8 @@ public class OrderedSet<T: Comparable> {
             for value in stride(from: mid, to: 0, by: -1) {
                 if internalSet[value - 1] == item {
                     return value - 1
-                } else if internalSet[value] > internalSet[value - 1] {
+                }
+                if internalSet[value] > internalSet[value - 1] {
                     break
                 }
             }
