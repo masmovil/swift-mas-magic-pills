@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MagicPills'
-  s.version          = '1.1.1'
+  s.version          = '1.2.0'
   s.summary          = 'Set of powerful utilities 💊.'
 
   s.description      = <<-DESC
