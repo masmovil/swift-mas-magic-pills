@@ -3,9 +3,12 @@ Set of powerful utilities for development in Swift
 
 [![Release Version](https://img.shields.io/github/release/bq/swift-magic-pills.svg)](https://github.com/bq/swift-magic-pills/releases) 
 [![Release Date](https://img.shields.io/github/release-date/bq/swift-magic-pills.svg)](https://github.com/bq/swift-magic-pills/releases)
-[![Build Status](https://travis-ci.org/bq/swift-magic-pills.svg?branch=master)](https://travis-ci.org/bq/swift-magic-pills)
-[![codecov](https://codecov.io/gh/bq/swift-magic-pills/branch/master/graph/badge.svg)](https://codecov.io/gh/bq/swift-magic-pills)
+[![Pod](https://img.shields.io/cocoapods/v/MagicPills.svg?style=flat)](https://cocoapods.org/pods/MagicPills)
+[![Platform](https://img.shields.io/cocoapods/p/MagicPills.svg?style=flat)](https://cocoapods.org/pods/MagicPills)
 [![GitHub](https://img.shields.io/github/license/bq/swift-magic-pills.svg)](https://github.com/bq/swift-magic-pills/blob/master/LICENSE)
+
+[![Build Status](https://travis-ci.org/bq/mini-swift.svg?branch=master)](https://travis-ci.org/bq/mini-swift)
+[![codecov](https://codecov.io/gh/bq/mini-swift/branch/master/graph/badge.svg)](https://codecov.io/gh/bq/mini-swift)
 
 ## Requirements
 
