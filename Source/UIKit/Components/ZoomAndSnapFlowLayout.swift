@@ -6,18 +6,18 @@ public class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
     public private(set) var activeDistance: CGFloat = 100
     public private(set) var zoomFactor: CGFloat = 0.10
 
-    public convenience init(activeDistance: CGFloat, zoomFactor: CGFloat) {
-        self.init()
+    public convenience init(screenWidth: CGFloat, activeDistance: CGFloat, zoomFactor: CGFloat) {
+        self.init(screenWidth: screenWidth)
         self.activeDistance = activeDistance
         self.zoomFactor = zoomFactor
     }
 
-    public override init() {
+    public init(screenWidth: CGFloat) {
         super.init()
 
         scrollDirection = .horizontal
         minimumLineSpacing = 30
-        itemSize = CGSize(width: UIApplication.shared.windows[0].frame.size.width - 90, height: 184)
+        itemSize = CGSize(width: screenWidth - 90, height: 184)
     }
 
     public required init?(coder aDecoder: NSCoder) {
