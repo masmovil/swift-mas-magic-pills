@@ -113,10 +113,10 @@ public extension Date {
     ///   - dateFormat: Date Format to convert
     ///   - locale: Language rules (optional) (by default use current)
     ///   - timeZone: Time zone to format date (optional) (by default use current)
-    /// - Returns: Date formatted (optional)
+    /// - Returns: Date formatted
     func formatted(with dateFormat: Date.Format,
                    locale: Locale? = nil,
-                   timeZone: TimeZone? = nil) -> String? {
+                   timeZone: TimeZone? = nil) -> String {
 
         let formatter = dateFormat.formatter(locale: locale,
                                              timeZone: timeZone)
