@@ -223,6 +223,9 @@
 		F2A74DC022576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A74DBF22576610001F0DF2 /* ArrayExtensionsTests.swift */; };
 		F2A74DC122576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A74DBF22576610001F0DF2 /* ArrayExtensionsTests.swift */; };
 		F2A74DC222576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A74DBF22576610001F0DF2 /* ArrayExtensionsTests.swift */; };
+		F2AC727A23460D2E00661BE9 /* FormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6D4C5230D468F00D161F9 /* FormatterExtensions.swift */; };
+		F2AC727B23460D3A00661BE9 /* LocaleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6D4C1230C108F00D161F9 /* LocaleExtensions.swift */; };
+		F2AC727C23460D4200661BE9 /* TimeZoneExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6D4C9230D5CBD00D161F9 /* TimeZoneExtensions.swift */; };
 		F62CC32722704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32822704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32A22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */; };
@@ -1461,6 +1464,7 @@
 				F20082F6225E518600AC6EE1 /* DecimalExtensions.swift in Sources */,
 				F200830E225F4BFC00AC6EE1 /* StringExtensions.swift in Sources */,
 				F20082C5225DFC6E00AC6EE1 /* OptionalExtensions.swift in Sources */,
+				F2AC727B23460D3A00661BE9 /* LocaleExtensions.swift in Sources */,
 				F2A74DBC225765CF001F0DF2 /* ArrayExtensions.swift in Sources */,
 				F20082D6225DFF4F00AC6EE1 /* Optionable.swift in Sources */,
 				F2008376226633AD00AC6EE1 /* SequenceExtensions.swift in Sources */,
@@ -1473,6 +1477,7 @@
 				F22A356522807465004E8546 /* Fold.swift in Sources */,
 				F20082E8225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
 				F22A355F22806EAD004E8546 /* DefinesPrimaryKey.swift in Sources */,
+				F2AC727C23460D4200661BE9 /* TimeZoneExtensions.swift in Sources */,
 				F20083682266317F00AC6EE1 /* URLExtensions.swift in Sources */,
 				F20083432266115E00AC6EE1 /* BundleExtensions.swift in Sources */,
 				F2496727230D504200C06E2E /* SemVer.swift in Sources */,
@@ -1482,6 +1487,7 @@
 				F2008328225F84A100AC6EE1 /* StringExtensions+Formating.swift in Sources */,
 				F22A357622807843004E8546 /* DispatchQueueExtensions.swift in Sources */,
 				F22A38DB227C634F0012C010 /* OrderedSet.swift in Sources */,
+				F2AC727A23460D2E00661BE9 /* FormatterExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
