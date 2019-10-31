@@ -29,6 +29,10 @@ public extension String {
         return components(separatedBy: .whitespaces).joined()
     }
 
+    var trimed: String {
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+
     var base64decoded: String? {
         guard let data = Data(base64Encoded: self) else {
             return nil

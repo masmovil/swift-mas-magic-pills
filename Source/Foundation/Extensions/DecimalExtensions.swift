@@ -84,7 +84,7 @@ public extension Decimal {
                    currencyCode: String? = nil,
                    locale: Locale? = nil,
                    numberStyle: NumberFormatter.Style? = nil,
-                   unit: Unit) -> String {
+                   unit: Unit = Unit(symbol: "")) -> String {
         let numberFormatter = NumberFormatter()
 
         if let currencyCode = currencyCode {
@@ -108,12 +108,7 @@ public extension Decimal {
 
         formatter.numberFormatter = numberFormatter
 
-        //        if #available(iOS 13.0, *) {
-        //            let measurement = Measurement(value: Double(truncating: self as NSNumber), unit: UnitInformationStorage.megabytes)
-        //            return formatter.string(from: measurement)
-        //        } else {
         let measurement = Measurement(value: Double(truncating: self as NSNumber), unit: unit)
-        return formatter.string(from: measurement)
-        //        }
+        return formatter.string(from: measurement).trimed
     }
 }

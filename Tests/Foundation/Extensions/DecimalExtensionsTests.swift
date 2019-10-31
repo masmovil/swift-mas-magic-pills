@@ -34,6 +34,14 @@ class DecimalExtensionsTests: XCTestCase {
         XCTAssertEqual((-3_000 as Decimal).formattedMegabits(.spanishSpain, decimals: 2), "-3,00 Gb")
     }
 
+    func test_format_number_without_unit() {
+        XCTAssertEqual((33.24 as Decimal).formatted(decimals: 2,
+                                                    locale: .spanishSpain), "33,24")
+
+        XCTAssertEqual((1_345 as Decimal).formatted(decimals: 1,
+                                                    locale: .englishUSA), "1345.0")
+    }
+
     func test_format_currency() {
         XCTAssertEqual((33 as Decimal).formatted(decimals: 2,
                                                  locale: .spanishSpain,
