@@ -234,6 +234,8 @@
 		F2C78F20238D67E1008C4846 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F1E238D67E1008C4846 /* UITableViewCellExtensions.swift */; };
 		F2C78F26238D6AF2008C4846 /* CellIdentificableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F23238D6AEF008C4846 /* CellIdentificableTests.swift */; };
 		F2C78F27238D6AF4008C4846 /* CellIdentificableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F23238D6AEF008C4846 /* CellIdentificableTests.swift */; };
+		F2C78F29238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */; };
+		F2C78F2A238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */; };
 		F62CC32722704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32822704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32A22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */; };
@@ -401,6 +403,7 @@
 		F2C78F1B238D679C008C4846 /* UICollectionReusableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionReusableViewExtensions.swift; sourceTree = "<group>"; };
 		F2C78F1E238D67E1008C4846 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		F2C78F23238D6AEF008C4846 /* CellIdentificableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentificableTests.swift; sourceTree = "<group>"; };
+		F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtensions.swift; sourceTree = "<group>"; };
 		F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensionsTests.swift; sourceTree = "<group>"; };
 		F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
@@ -714,6 +717,7 @@
 				F6B3838E22649D56001E4068 /* UILabelExtensions.swift */,
 				F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */,
 				F2C78F1E238D67E1008C4846 /* UITableViewCellExtensions.swift */,
+				F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */,
 				F6F97EF9226F1E5000C3E953 /* UIImageExtensions.swift */,
 				F21A6776226F4E260026F6E9 /* CIImageExtensions+UIKit.swift */,
 				F21A6778226F4E360026F6E9 /* CGImageExtensions+UIKit.swift */,
@@ -1235,6 +1239,7 @@
 				F2C78F16238D66CE008C4846 /* CellIdentificable.swift in Sources */,
 				F6F3330D23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
 				F6D6D4C2230C108F00D161F9 /* LocaleExtensions.swift in Sources */,
+				F2C78F29238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */,
 				F20082E5225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
 				F20083602266316C00AC6EE1 /* URLExtensions.swift in Sources */,
 				F20083402266115E00AC6EE1 /* BundleExtensions.swift in Sources */,
@@ -1414,6 +1419,7 @@
 				F2C78F17238D66CE008C4846 /* CellIdentificable.swift in Sources */,
 				F6F3330F23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
 				F6D6D4C4230C108F00D161F9 /* LocaleExtensions.swift in Sources */,
+				F2C78F2A238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */,
 				F200835922662DC400AC6EE1 /* TimeIntervalExtensions.swift in Sources */,
 				F21A677B226F4E540026F6E9 /* CGImageExtensions+UIKit.swift in Sources */,
 				F200832C225F862900AC6EE1 /* DataExtensions.swift in Sources */,

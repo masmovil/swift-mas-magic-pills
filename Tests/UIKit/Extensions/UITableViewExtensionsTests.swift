@@ -15,17 +15,25 @@ class UITableViewExtensionsTests: XCTestCase {
     }
 
     func test_register_cell_with_class() {
+        tableView.register(UITableViewCell.self)
+        _ = tableView.dequeueReusableCell() as UITableViewCell
+    }
+
+    func test_register_cell_with_class_and_indexpath() {
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.register(UITableViewCell.self)
-        let cell: UITableViewCell? = tableView.dequeueReusableCell(indexPath)
-        XCTAssertNotNil(cell)
+        _ = tableView.dequeueReusableCell(indexPath: indexPath) as UITableViewCell
     }
 
     func test_register_cell_with_nib_using_class() {
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.registerWithNib(UITableViewCell.self, bundle: Bundle(for: UITableViewExtensionsTests.self))
-        let cell: UITableViewCell? = tableView.dequeueReusableCell(indexPath)
-        XCTAssertNotNil(cell)
+        _ = tableView.dequeueReusableCell(indexPath: indexPath) as UITableViewCell
+    }
+
+    func test_register_header_footer_view() {
+        tableView.registerHeaderFooter(UITableViewHeaderFooterView.self)
+        _ = tableView.dequeueReusableHeaderFooterView() as UITableViewHeaderFooterView
     }
 }
 

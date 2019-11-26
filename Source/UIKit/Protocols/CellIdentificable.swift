@@ -1,6 +1,6 @@
 import Foundation
 
-/// Used to link a View with his XIB that use the same name.
+/// Used to identify a View to generate a reusable identifier for tables and collections view.
 public protocol CellIdentificable: class {
     static var reuseIdentifier: String { get }
 }
