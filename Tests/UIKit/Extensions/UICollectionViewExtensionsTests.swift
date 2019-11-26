@@ -18,21 +18,21 @@ class UICollectionViewExtensionsTests: XCTestCase {
     func test_register_cell_with_class() {
         let indexPath = IndexPath(row: 0, section: 0)
         collectionView.register(UICollectionViewCell.self)
-        let cell: UICollectionViewCell? = collectionView.dequeueReusableCell(indexPath)
+        let cell: UICollectionViewCell? = collectionView.dequeueReusableCell(indexPath: indexPath)
         XCTAssertNotNil(cell)
     }
 
     func test_register_cell_with_nib_using_class() {
         let indexPath = IndexPath(row: 0, section: 0)
         collectionView.registerWithNib(UICollectionViewCell.self, bundle: Bundle(for: UICollectionViewExtensionsTests.self))
-        let cell: UICollectionViewCell? = collectionView.dequeueReusableCell(indexPath)
+        let cell: UICollectionViewCell? = collectionView.dequeueReusableCell(indexPath: indexPath)
         XCTAssertNotNil(cell)
     }
 
     func test_dequeue_reusable_supplementary_view() {
         let indexPath = IndexPath(row: 0, section: 0)
         collectionView.register(UICollectionViewCell.self)
-        let _: UICollectionViewCell? = collectionView.dequeueReusableCell(indexPath)
+        let _: UICollectionViewCell? = collectionView.dequeueReusableCell(indexPath: indexPath)
         collectionView.register(supplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withClass: HeaderCollectionReusableView.self)
         let headerVIew: HeaderCollectionReusableView? = collectionView.dequeueReusableSupplementaryView(kind: "UICollectionElementKindSectionHeader", indexPath: indexPath)

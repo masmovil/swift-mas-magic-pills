@@ -31,7 +31,7 @@ public extension UICollectionView {
     /// - Parameters:
     ///   - indexPath: location of cell in collectionView.
     /// - Returns: UICollectionViewCell object with associated class name.
-    func dequeueReusableCell<T: UICollectionViewCell>(_ indexPath: IndexPath) -> T {
+    func dequeueReusableCell<T: UICollectionViewCell>(indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("\(T.xibName)/\(T.reuseIdentifier) could not be dequeued for \(indexPath) as \(T.self)")
         }
