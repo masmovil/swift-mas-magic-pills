@@ -29,14 +29,7 @@ class ToastTests: XCTestCase {
         let recoveredToast = Toast(coder: unarchiver)
 
         XCTAssertEqual(recoveredToast?.message, message)
-        XCTAssertEqual(recoveredToast?.messageFont, font)
+        XCTAssertEqual(recoveredToast?.messageFont.fontDescriptor, font.fontDescriptor)
         XCTAssertEqual(recoveredToast?.frame, frame)
-    }
-
-    func test_decode_without_data() {
-        let unarchiver = NSKeyedUnarchiver(forReadingWith: Data())
-        let recoveredToast = Toast(coder: unarchiver)
-
-        XCTAssertNil(recoveredToast)
     }
 }

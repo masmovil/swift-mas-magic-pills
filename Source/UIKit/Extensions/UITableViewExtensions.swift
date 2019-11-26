@@ -6,7 +6,7 @@ public extension UITableView {
     ///
     /// - Parameter type: UITableViewCell type.
     func register<T: UITableViewCell>(_ type: T.Type) {
-        register(T.self, forCellReuseIdentifier: String(describing: type))
+        register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
     }
 
     /// Register UITableViewCell with .xib file using only its corresponding class.
@@ -14,8 +14,7 @@ public extension UITableView {
     ///
     /// - Parameter type: UITableViewCell type.
     func registerWithNib<T: UITableViewCell>(_ type: T.Type, bundle: Bundle? = nil) {
-        let identifier = String(describing: type)
-        register(UINib(nibName: identifier, bundle: bundle), forCellReuseIdentifier: identifier)
+        register(T.xib(bundle: bundle), forCellReuseIdentifier: T.reuseIdentifier)
     }
 
     /// Dequeue reusable UITableViewCell using class name.
@@ -24,7 +23,6 @@ public extension UITableView {
     ///   - indexPath: location of cell in tableView.
     /// - Returns: UITableViewCell object with associated class name.
     func dequeueReusableCell<T: UITableViewCell>(_ indexPath: IndexPath) -> T? {
-        return dequeueReusableCell(withIdentifier: String(describing: T.self),
-                                   for: indexPath) as? T
+        return dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T
     }
 }

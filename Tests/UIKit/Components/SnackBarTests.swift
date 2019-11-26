@@ -29,14 +29,7 @@ class SnackBarTests: XCTestCase {
         let recoveredSnackbar = SnackBar(coder: unarchiver)
 
         XCTAssertEqual(recoveredSnackbar?.message, message)
-        XCTAssertEqual(recoveredSnackbar?.messageFont, font)
+        XCTAssertEqual(recoveredSnackbar?.messageFont.fontDescriptor, font.fontDescriptor)
         XCTAssertEqual(recoveredSnackbar?.frame, frame)
-    }
-
-    func test_decode_without_data() {
-        let unarchiver = NSKeyedUnarchiver(forReadingWith: Data())
-        let recoveredSnackbar = SnackBar(coder: unarchiver)
-
-        XCTAssertNil(recoveredSnackbar)
     }
 }

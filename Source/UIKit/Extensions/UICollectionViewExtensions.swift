@@ -6,7 +6,7 @@ public extension UICollectionView {
     ///
     /// - Parameter type: UICollectionViewCell type.
     func register<T: UICollectionViewCell>(_ type: T.Type) {
-        register(T.self, forCellWithReuseIdentifier: String(describing: type))
+        register(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
     }
 
     /// Register UICollectionReusableView using class name.
@@ -15,7 +15,7 @@ public extension UICollectionView {
     ///   - kind: the kind of supplementary view to retrieve. This value is defined by the layout object.
     ///   - name: UICollectionReusableView type.
     func register<T: UICollectionReusableView>(supplementaryViewOfKind kind: String, withClass name: T.Type) {
-        register(T.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: String(describing: name))
+        register(T.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.reuseIdentifier)
     }
 
     /// Register UICollectionViewCell with .xib file using only its corresponding class.
@@ -23,8 +23,7 @@ public extension UICollectionView {
     ///
     /// - Parameter type: UICollectionViewCell type.
     func registerWithNib<T: UICollectionViewCell>(_ type: T.Type, bundle: Bundle? = nil) {
-        let identifier = String(describing: type)
-        register(UINib(nibName: identifier, bundle: bundle), forCellWithReuseIdentifier: identifier)
+        register(T.xib(bundle: bundle), forCellWithReuseIdentifier: T.reuseIdentifier)
     }
 
     /// Dequeue reusable UICollectionViewCell using class name.
@@ -33,8 +32,7 @@ public extension UICollectionView {
     ///   - indexPath: location of cell in collectionView.
     /// - Returns: UICollectionViewCell object with associated class name.
     func dequeueReusableCell<T: UICollectionViewCell>(_ indexPath: IndexPath) -> T? {
-        return dequeueReusableCell(withReuseIdentifier: String(describing: T.self),
-                                   for: indexPath) as? T
+        return dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T
     }
 
     /// Dequeue reusable UICollectionReusableView using class name.
@@ -44,8 +42,6 @@ public extension UICollectionView {
     ///   - indexPath: location of cell in collectionView.
     /// - Returns: UICollectionReusableView object with associated class name.
     func dequeueReusableSupplementaryView<T: UICollectionReusableView>(kind: String, indexPath: IndexPath) -> T? {
-        return dequeueReusableSupplementaryView(ofKind: kind,
-                                                withReuseIdentifier: String(describing: T.self),
-                                                for: indexPath) as? T
+        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T
     }
 }

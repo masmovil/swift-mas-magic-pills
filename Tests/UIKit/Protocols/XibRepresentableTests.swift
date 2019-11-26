@@ -8,4 +8,4 @@ class XibRepresentableTests: XCTestCase {
     }
 }
 
-private class ViewWithRepresentableXib: UIView, XibRepresentable { }
+private class ViewWithRepresentableXib: UIView { }
