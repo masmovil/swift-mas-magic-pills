@@ -67,6 +67,7 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.formatted(with: .rfc2822, locale: .englishUSA, timeZone: .europeMadrid), "Fri, 09 Aug 2019 12:48:00 +0200")
         XCTAssertEqual(date.formatted(with: .rfc1123, locale: .englishUSA, timeZone: .europeMadrid), "Fri, 09 Aug 2019 12:48:00 GMT+2")
         XCTAssertEqual(date.formatted(with: .spanishFullDateWithSlashes, timeZone: .europeMadrid), "09/08/2019 12:48")
+        XCTAssertEqual(date.formatted(with: .spanishDateWithSlashes, timeZone: .europeMadrid), "09/08/2019")
         XCTAssertEqual(date.formatted(with: .americanFullDateWithSlashes, timeZone: .europeMadrid), "08/09/2019 12:48")
         XCTAssertEqual(date.formatted(with: .europeanFullDateWithSlashes, timeZone: .europeMadrid), "2019/08/09 12:48")
         XCTAssertEqual(date.formatted(with: .europeanDateWithDashes, timeZone: .europeMadrid), "2019-08-09")
