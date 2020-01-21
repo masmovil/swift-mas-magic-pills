@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-import MagicPills
+import MasMagicPills
 
 class StringExtensionsTests: XCTestCase {
     func test_capitalized_first_letter() {

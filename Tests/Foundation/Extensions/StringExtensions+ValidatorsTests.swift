@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-import MagicPills
+import MasMagicPills
 
 class StringExtensionsValidatorsTests: XCTestCase {
     func test_is_valid_email() {

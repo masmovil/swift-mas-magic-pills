@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-import MagicPills
+import MasMagicPills
 
 class IntExtensionsTests: XCTestCase {
     func test_int_to_string_conversion() {

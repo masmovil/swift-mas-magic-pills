@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-import MagicPills
+import MasMagicPills
 
 class OptionalExtensionsTests: XCTestCase {
     func test_is_not_nil() {

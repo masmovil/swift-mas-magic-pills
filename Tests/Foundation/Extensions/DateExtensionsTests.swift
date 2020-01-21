@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-import MagicPills
+import MasMagicPills
 
 class DateExtensionsTests: XCTestCase {
     func test_init_from_formatted_dates() {
