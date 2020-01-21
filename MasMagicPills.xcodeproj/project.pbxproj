@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E23E36F9212191CE00A81C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23E36F8212191CD00A81C2A /* UIKit.framework */; };
-		E26053F82121880000D013B5 /* MagicPills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26053EE212187FF00D013B5 /* MagicPills.framework */; };
+		E26053F82121880000D013B5 /* MasMagicPills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26053EE212187FF00D013B5 /* MasMagicPills.framework */; };
 		E26053FF2121880000D013B5 /* MagicPills.h in Headers */ = {isa = PBXBuildFile; fileRef = E26053F12121880000D013B5 /* MagicPills.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E28123E02122C2CB00E4F6D0 /* MagicPills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28123D72122C2CB00E4F6D0 /* MagicPills.framework */; };
+		E28123E02122C2CB00E4F6D0 /* MasMagicPills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28123D72122C2CB00E4F6D0 /* MasMagicPills.framework */; };
 		E28123EE2122C36600E4F6D0 /* MagicPills.h in Headers */ = {isa = PBXBuildFile; fileRef = E26053F12121880000D013B5 /* MagicPills.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E281243B2122CC4C00E4F6D0 /* MagicPills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28124322122CC4C00E4F6D0 /* MagicPills.framework */; };
+		E281243B2122CC4C00E4F6D0 /* MasMagicPills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28124322122CC4C00E4F6D0 /* MasMagicPills.framework */; };
 		E28124562122CCE300E4F6D0 /* MagicPills.h in Headers */ = {isa = PBXBuildFile; fileRef = E26053F12121880000D013B5 /* MagicPills.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E28124572122CCE300E4F6D0 /* MagicPills.h in Headers */ = {isa = PBXBuildFile; fileRef = E26053F12121880000D013B5 /* MagicPills.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E28C312621494B7E00DE964B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28C312021494B4300DE964B /* SystemConfiguration.framework */; };
@@ -309,36 +309,36 @@
 			containerPortal = E26053E5212187FF00D013B5 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E26053ED212187FF00D013B5;
-			remoteInfo = MagicPills;
+			remoteInfo = MasMagicPills;
 		};
 		E28123E12122C2CB00E4F6D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E26053E5212187FF00D013B5 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E28123D62122C2CB00E4F6D0;
-			remoteInfo = "MagicPills-macOS";
+			remoteInfo = "MasMagicPills-macOS";
 		};
 		E281243C2122CC4C00E4F6D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E26053E5212187FF00D013B5 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E28124312122CC4C00E4F6D0;
-			remoteInfo = "MagicPills-tvOS";
+			remoteInfo = "MasMagicPills-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E23E36F8212191CD00A81C2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E26053EE212187FF00D013B5 /* MagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26053EE212187FF00D013B5 /* MasMagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MasMagicPills.framework; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26053F12121880000D013B5 /* MagicPills.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MagicPills.h; sourceTree = "<group>"; };
 		E26053F22121880000D013B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E26053F72121880000D013B5 /* MagicPills-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MagicPills-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26053F72121880000D013B5 /* MasMagicPills-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MasMagicPills-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26053FE2121880000D013B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E28123D72122C2CB00E4F6D0 /* MagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E28123DF2122C2CB00E4F6D0 /* MagicPills-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MagicPills-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E28124322122CC4C00E4F6D0 /* MagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E281243A2122CC4C00E4F6D0 /* MagicPills-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MagicPills-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E281244E2122CC5B00E4F6D0 /* MagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28123D72122C2CB00E4F6D0 /* MasMagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MasMagicPills.framework; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28123DF2122C2CB00E4F6D0 /* MasMagicPills-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MasMagicPills-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28124322122CC4C00E4F6D0 /* MasMagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MasMagicPills.framework; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E281243A2122CC4C00E4F6D0 /* MasMagicPills-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MasMagicPills-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E281244E2122CC5B00E4F6D0 /* MasMagicPills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MasMagicPills.framework; path = MagicPills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28C312021494B4300DE964B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F20082C1225DFC6E00AC6EE1 /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
 		F20082C6225DFC9D00AC6EE1 /* BoolExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtensions.swift; sourceTree = "<group>"; };
@@ -456,7 +456,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E26053F82121880000D013B5 /* MagicPills.framework in Frameworks */,
+				E26053F82121880000D013B5 /* MasMagicPills.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +472,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E28123E02122C2CB00E4F6D0 /* MagicPills.framework in Frameworks */,
+				E28123E02122C2CB00E4F6D0 /* MasMagicPills.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +488,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E281243B2122CC4C00E4F6D0 /* MagicPills.framework in Frameworks */,
+				E281243B2122CC4C00E4F6D0 /* MasMagicPills.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,13 +516,13 @@
 		E26053EF212187FF00D013B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E26053EE212187FF00D013B5 /* MagicPills.framework */,
-				E26053F72121880000D013B5 /* MagicPills-iOSTests.xctest */,
-				E28123D72122C2CB00E4F6D0 /* MagicPills.framework */,
-				E28123DF2122C2CB00E4F6D0 /* MagicPills-macOSTests.xctest */,
-				E28124322122CC4C00E4F6D0 /* MagicPills.framework */,
-				E281243A2122CC4C00E4F6D0 /* MagicPills-tvOSTests.xctest */,
-				E281244E2122CC5B00E4F6D0 /* MagicPills.framework */,
+				E26053EE212187FF00D013B5 /* MasMagicPills.framework */,
+				E26053F72121880000D013B5 /* MasMagicPills-iOSTests.xctest */,
+				E28123D72122C2CB00E4F6D0 /* MasMagicPills.framework */,
+				E28123DF2122C2CB00E4F6D0 /* MasMagicPills-macOSTests.xctest */,
+				E28124322122CC4C00E4F6D0 /* MasMagicPills.framework */,
+				E281243A2122CC4C00E4F6D0 /* MasMagicPills-tvOSTests.xctest */,
+				E281244E2122CC5B00E4F6D0 /* MasMagicPills.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -899,9 +899,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E26053ED212187FF00D013B5 /* MagicPills-iOS */ = {
+		E26053ED212187FF00D013B5 /* MasMagicPills-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E26054022121880000D013B5 /* Build configuration list for PBXNativeTarget "MagicPills-iOS" */;
+			buildConfigurationList = E26054022121880000D013B5 /* Build configuration list for PBXNativeTarget "MasMagicPills-iOS" */;
 			buildPhases = (
 				E260540821218AF400D013B5 /* Swiftlint */,
 				E26053E9212187FF00D013B5 /* Sources */,
@@ -913,14 +913,14 @@
 			);
 			dependencies = (
 			);
-			name = "MagicPills-iOS";
+			name = "MasMagicPills-iOS";
 			productName = MagicPills;
-			productReference = E26053EE212187FF00D013B5 /* MagicPills.framework */;
+			productReference = E26053EE212187FF00D013B5 /* MasMagicPills.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E26053F62121880000D013B5 /* MagicPills-iOSTests */ = {
+		E26053F62121880000D013B5 /* MasMagicPills-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E26054052121880000D013B5 /* Build configuration list for PBXNativeTarget "MagicPills-iOSTests" */;
+			buildConfigurationList = E26054052121880000D013B5 /* Build configuration list for PBXNativeTarget "MasMagicPills-iOSTests" */;
 			buildPhases = (
 				E26053F32121880000D013B5 /* Sources */,
 				E26053F42121880000D013B5 /* Frameworks */,
@@ -931,14 +931,14 @@
 			dependencies = (
 				E26053FA2121880000D013B5 /* PBXTargetDependency */,
 			);
-			name = "MagicPills-iOSTests";
+			name = "MasMagicPills-iOSTests";
 			productName = MagicPillsTests;
-			productReference = E26053F72121880000D013B5 /* MagicPills-iOSTests.xctest */;
+			productReference = E26053F72121880000D013B5 /* MasMagicPills-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E28123D62122C2CB00E4F6D0 /* MagicPills-macOS */ = {
+		E28123D62122C2CB00E4F6D0 /* MasMagicPills-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E28123EC2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-macOS" */;
+			buildConfigurationList = E28123EC2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-macOS" */;
 			buildPhases = (
 				E20BA60521389BE0005BA13B /* Swiftlint */,
 				E28123D22122C2CB00E4F6D0 /* Sources */,
@@ -950,14 +950,14 @@
 			);
 			dependencies = (
 			);
-			name = "MagicPills-macOS";
-			productName = "MagicPills-macOS";
-			productReference = E28123D72122C2CB00E4F6D0 /* MagicPills.framework */;
+			name = "MasMagicPills-macOS";
+			productName = "MasMagicPills-macOS";
+			productReference = E28123D72122C2CB00E4F6D0 /* MasMagicPills.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E28123DE2122C2CB00E4F6D0 /* MagicPills-macOSTests */ = {
+		E28123DE2122C2CB00E4F6D0 /* MasMagicPills-macOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E28123ED2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-macOSTests" */;
+			buildConfigurationList = E28123ED2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-macOSTests" */;
 			buildPhases = (
 				E28123DB2122C2CB00E4F6D0 /* Sources */,
 				E28123DC2122C2CB00E4F6D0 /* Frameworks */,
@@ -968,14 +968,14 @@
 			dependencies = (
 				E28123E22122C2CB00E4F6D0 /* PBXTargetDependency */,
 			);
-			name = "MagicPills-macOSTests";
-			productName = "MagicPills-macOSTests";
-			productReference = E28123DF2122C2CB00E4F6D0 /* MagicPills-macOSTests.xctest */;
+			name = "MasMagicPills-macOSTests";
+			productName = "MasMagicPills-macOSTests";
+			productReference = E28123DF2122C2CB00E4F6D0 /* MasMagicPills-macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E28124312122CC4C00E4F6D0 /* MagicPills-tvOS */ = {
+		E28124312122CC4C00E4F6D0 /* MasMagicPills-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E28124432122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-tvOS" */;
+			buildConfigurationList = E28124432122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-tvOS" */;
 			buildPhases = (
 				E20BA60621389BF7005BA13B /* Swiftlint */,
 				E281242D2122CC4C00E4F6D0 /* Sources */,
@@ -987,14 +987,14 @@
 			);
 			dependencies = (
 			);
-			name = "MagicPills-tvOS";
-			productName = "MagicPills-tvOS";
-			productReference = E28124322122CC4C00E4F6D0 /* MagicPills.framework */;
+			name = "MasMagicPills-tvOS";
+			productName = "MasMagicPills-tvOS";
+			productReference = E28124322122CC4C00E4F6D0 /* MasMagicPills.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E28124392122CC4C00E4F6D0 /* MagicPills-tvOSTests */ = {
+		E28124392122CC4C00E4F6D0 /* MasMagicPills-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E28124462122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-tvOSTests" */;
+			buildConfigurationList = E28124462122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-tvOSTests" */;
 			buildPhases = (
 				E28124362122CC4C00E4F6D0 /* Sources */,
 				E28124372122CC4C00E4F6D0 /* Frameworks */,
@@ -1005,14 +1005,14 @@
 			dependencies = (
 				E281243D2122CC4C00E4F6D0 /* PBXTargetDependency */,
 			);
-			name = "MagicPills-tvOSTests";
-			productName = "MagicPills-tvOSTests";
-			productReference = E281243A2122CC4C00E4F6D0 /* MagicPills-tvOSTests.xctest */;
+			name = "MasMagicPills-tvOSTests";
+			productName = "MasMagicPills-tvOSTests";
+			productReference = E281243A2122CC4C00E4F6D0 /* MasMagicPills-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E281244D2122CC5B00E4F6D0 /* MagicPills-watchOS */ = {
+		E281244D2122CC5B00E4F6D0 /* MasMagicPills-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E28124532122CC5C00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-watchOS" */;
+			buildConfigurationList = E28124532122CC5C00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-watchOS" */;
 			buildPhases = (
 				E28124492122CC5B00E4F6D0 /* Sources */,
 				E281244A2122CC5B00E4F6D0 /* Frameworks */,
@@ -1023,9 +1023,9 @@
 			);
 			dependencies = (
 			);
-			name = "MagicPills-watchOS";
-			productName = "MagicPills-watchOS";
-			productReference = E281244E2122CC5B00E4F6D0 /* MagicPills.framework */;
+			name = "MasMagicPills-watchOS";
+			productName = "MasMagicPills-watchOS";
+			productReference = E281244E2122CC5B00E4F6D0 /* MasMagicPills.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1036,7 +1036,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = S3BA;
+				ORGANIZATIONNAME = MASMOVIL;
 				TargetAttributes = {
 					E26053ED212187FF00D013B5 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1068,7 +1068,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E26053E8212187FF00D013B5 /* Build configuration list for PBXProject "MagicPills" */;
+			buildConfigurationList = E26053E8212187FF00D013B5 /* Build configuration list for PBXProject "MasMagicPills" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1081,13 +1081,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E26053ED212187FF00D013B5 /* MagicPills-iOS */,
-				E26053F62121880000D013B5 /* MagicPills-iOSTests */,
-				E28123D62122C2CB00E4F6D0 /* MagicPills-macOS */,
-				E28123DE2122C2CB00E4F6D0 /* MagicPills-macOSTests */,
-				E28124312122CC4C00E4F6D0 /* MagicPills-tvOS */,
-				E28124392122CC4C00E4F6D0 /* MagicPills-tvOSTests */,
-				E281244D2122CC5B00E4F6D0 /* MagicPills-watchOS */,
+				E26053ED212187FF00D013B5 /* MasMagicPills-iOS */,
+				E26053F62121880000D013B5 /* MasMagicPills-iOSTests */,
+				E28123D62122C2CB00E4F6D0 /* MasMagicPills-macOS */,
+				E28123DE2122C2CB00E4F6D0 /* MasMagicPills-macOSTests */,
+				E28124312122CC4C00E4F6D0 /* MasMagicPills-tvOS */,
+				E28124392122CC4C00E4F6D0 /* MasMagicPills-tvOSTests */,
+				E281244D2122CC5B00E4F6D0 /* MasMagicPills-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1526,17 +1526,17 @@
 /* Begin PBXTargetDependency section */
 		E26053FA2121880000D013B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E26053ED212187FF00D013B5 /* MagicPills-iOS */;
+			target = E26053ED212187FF00D013B5 /* MasMagicPills-iOS */;
 			targetProxy = E26053F92121880000D013B5 /* PBXContainerItemProxy */;
 		};
 		E28123E22122C2CB00E4F6D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E28123D62122C2CB00E4F6D0 /* MagicPills-macOS */;
+			target = E28123D62122C2CB00E4F6D0 /* MasMagicPills-macOS */;
 			targetProxy = E28123E12122C2CB00E4F6D0 /* PBXContainerItemProxy */;
 		};
 		E281243D2122CC4C00E4F6D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E28124312122CC4C00E4F6D0 /* MagicPills-tvOS */;
+			target = E28124312122CC4C00E4F6D0 /* MasMagicPills-tvOS */;
 			targetProxy = E281243C2122CC4C00E4F6D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1598,7 +1598,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = MagicPills;
+				PRODUCT_NAME = MasMagicPills;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1659,7 +1659,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MagicPills;
+				PRODUCT_NAME = MasMagicPills;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1691,7 +1691,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1719,7 +1719,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1741,7 +1741,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPillsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPillsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1763,7 +1763,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPillsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPillsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1790,7 +1790,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1818,7 +1818,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1840,7 +1840,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPillsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPillsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1863,7 +1863,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPillsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPillsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1889,7 +1889,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1918,7 +1918,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1942,7 +1942,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPillsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPillsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -1966,7 +1966,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPillsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPillsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -1994,7 +1994,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2022,7 +2022,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.MagicPills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2033,7 +2033,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E26053E8212187FF00D013B5 /* Build configuration list for PBXProject "MagicPills" */ = {
+		E26053E8212187FF00D013B5 /* Build configuration list for PBXProject "MasMagicPills" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E26054002121880000D013B5 /* Debug */,
@@ -2042,7 +2042,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E26054022121880000D013B5 /* Build configuration list for PBXNativeTarget "MagicPills-iOS" */ = {
+		E26054022121880000D013B5 /* Build configuration list for PBXNativeTarget "MasMagicPills-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E26054032121880000D013B5 /* Debug */,
@@ -2051,7 +2051,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E26054052121880000D013B5 /* Build configuration list for PBXNativeTarget "MagicPills-iOSTests" */ = {
+		E26054052121880000D013B5 /* Build configuration list for PBXNativeTarget "MasMagicPills-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E26054062121880000D013B5 /* Debug */,
@@ -2060,7 +2060,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E28123EC2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-macOS" */ = {
+		E28123EC2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E28123E82122C2CB00E4F6D0 /* Debug */,
@@ -2069,7 +2069,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E28123ED2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-macOSTests" */ = {
+		E28123ED2122C2CB00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-macOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E28123EA2122C2CB00E4F6D0 /* Debug */,
@@ -2078,7 +2078,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E28124432122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-tvOS" */ = {
+		E28124432122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E28124442122CC4C00E4F6D0 /* Debug */,
@@ -2087,7 +2087,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E28124462122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-tvOSTests" */ = {
+		E28124462122CC4C00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E28124472122CC4C00E4F6D0 /* Debug */,
@@ -2096,7 +2096,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E28124532122CC5C00E4F6D0 /* Build configuration list for PBXNativeTarget "MagicPills-watchOS" */ = {
+		E28124532122CC5C00E4F6D0 /* Build configuration list for PBXNativeTarget "MasMagicPills-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E28124542122CC5C00E4F6D0 /* Debug */,

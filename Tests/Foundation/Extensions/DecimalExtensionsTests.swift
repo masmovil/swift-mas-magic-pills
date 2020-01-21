@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-import MagicPills
+import MasMagicPills
 
 class DecimalExtensionsTests: XCTestCase {
     func test_format_megabytes_in_spanish_format() {
