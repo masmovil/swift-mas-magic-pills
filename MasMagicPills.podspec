@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MasMagicPills'
-  s.version          = '2.2.6'
+  s.version          = '2.3.0'
   s.swift_version    = '5.0'
   s.summary          = 'Set of powerful utilities 💊.'
 
@@ -8,11 +8,11 @@ Pod::Spec.new do |s|
 Set of powerful utilities for development in Swift (Support for iOS, tvOS and mac)
 DESC
 
-  s.homepage         = 'https://github.com/bq/swift-magic-pills'
+  s.homepage         = 'https://github.com/masmovil/swift-mas-magic-pills'
   s.license          = { :type => 'APACHE', :file => 'LICENSE' }
-  s.author           = { 'bq' => 'info@bq.com' }
-  s.source           = { :git => 'https://github.com/bq/swift-magic-pills.git', :tag => "v#{s.version.to_s}" }
-  #s.social_media_url = 'https://twitter.com/bqreaders'
+  s.authors          = { 'MásMóvil' => 'info@grupomasmovil.com' }
+  s.source           = { :git => 'https://github.com/masmovil/swift-mas-magic-pills.git', :tag => "v#{s.version.to_s}" }
+  s.social_media_url = 'https://twitter.com/masmovil'
 
   s.frameworks = 'Foundation'
 
