@@ -32,6 +32,7 @@ end
 
 #BASIC CHECKS:
 warn 'Big PR, try to keep changes smaller if you can 😜' if git.lines_of_code > 500
+fail 'This PR does not have any assignees yet.' unless github.pr_json["assignee"]
 
 #BUILD PARSE:
 build_reports.each do |path|

@@ -1,4 +1,4 @@
-# Swift Magic Pills 💊
+# Swift Mas Magic Pills 💊
 Set of powerful utilities for development in Swift
 
 [![Release Version](https://img.shields.io/github/release/masmovil/swift-mas-magic-pills.svg)](https://github.com/masmovil/swift-mas-magic-pills/releases) 
