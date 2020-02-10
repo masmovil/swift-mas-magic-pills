@@ -21,6 +21,7 @@ public extension Date {
     /// - year: 2019
     /// - spanishDayAndMonth: 09 de agosto
     enum Format: String, CaseIterable {
+        case iso8601 = "yyyy-MM-dd'T'HH:mm:ssZ"
         case rfc3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         case rfc2822 = "EEE, dd MMM yyyy HH:mm:ss Z"
         case rfc1123 = "EEE, dd MMM yyyy HH:mm:ss z"
@@ -44,7 +45,11 @@ public extension Date {
 
             let dateFormatter = Formatter.date(locale: locale,
                                                timeZone: timeZone)
-            dateFormatter.dateFormat = self.rawValue
+            if timeZone == .utc && self == .iso8601 {
+                dateFormatter.dateFormat = self.rawValue.replacingOccurrences(of: "Z", with: "'Z'")
+            } else {
+                dateFormatter.dateFormat = self.rawValue
+            }
             return dateFormatter
         }
 
