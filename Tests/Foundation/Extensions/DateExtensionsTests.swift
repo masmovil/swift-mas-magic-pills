@@ -5,16 +5,23 @@ import MasMagicPills
 class DateExtensionsTests: XCTestCase {
     func test_init_from_formatted_dates() {
         let rfcDate = Date(formattedDate: "2019-08-09T12:48:00.000+0200",
-                           dateFormat: .rfc3339,
-                           timeZone: .europeMadrid)
-        XCTAssertNotNil(rfcDate)
+                           dateFormat: .rfc3339)
+        XCTAssertEqual(rfcDate?.formatted(with: .iso8601, timeZone: .utc), "2019-08-09T10:48:00Z")
+
+        let iso8601DateUTC = Date(formattedDate: "2020-02-10T17:26:08Z",
+                                  dateFormat: .iso8601)
+        XCTAssertEqual(iso8601DateUTC?.formatted(with: .iso8601, timeZone: .utc), "2020-02-10T17:26:08Z")
+
+        let iso8601DateZoned = Date(formattedDate: "2020-02-10T17:26:08+0200",
+                                    dateFormat: .iso8601)
+        XCTAssertEqual(iso8601DateZoned?.formatted(with: .iso8601, timeZone: .utc), "2020-02-10T15:26:08Z")
 
         let invalidDate = Date(formattedDate: "⚠️")
         XCTAssertNil(invalidDate)
 
         let spanishDate = Date(formattedDate: "20/02/2018 12:33",
                                timeZone: .europeMadrid)
-        XCTAssertNotNil(spanishDate)
+        XCTAssertEqual(spanishDate?.formatted(with: .iso8601, timeZone: .utc), "2018-02-20T11:33:00Z")
     }
 
     func test_init_with_milliseconds() {
@@ -63,6 +70,8 @@ class DateExtensionsTests: XCTestCase {
     func test_date_formats() {
         let date = Date(formattedDate: "09/08/2019 10:48", timeZone: .utc)!
 
+        XCTAssertEqual(date.formatted(with: .iso8601, timeZone: .utc), "2019-08-09T10:48:00Z")
+        XCTAssertEqual(date.formatted(with: .iso8601, timeZone: .europeMadrid), "2019-08-09T12:48:00+0200")
         XCTAssertEqual(date.formatted(with: .rfc3339, timeZone: .europeMadrid), "2019-08-09T12:48:00.000+0200")
         XCTAssertEqual(date.formatted(with: .rfc2822, locale: .englishUSA, timeZone: .europeMadrid), "Fri, 09 Aug 2019 12:48:00 +0200")
         XCTAssertEqual(date.formatted(with: .rfc1123, locale: .englishUSA, timeZone: .europeMadrid), "Fri, 09 Aug 2019 12:48:00 GMT+2")
