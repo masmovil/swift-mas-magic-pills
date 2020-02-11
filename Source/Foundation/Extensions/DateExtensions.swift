@@ -45,7 +45,9 @@ public extension Date {
 
             let dateFormatter = Formatter.date(locale: locale,
                                                timeZone: timeZone)
-            if timeZone == .utc && self == .iso8601 {
+
+            //For ISO8601 dates, if the timezone is UTC, use Z instead of +0000
+            if self == .iso8601 && timeZone == .utc {
                 dateFormatter.dateFormat = self.rawValue.replacingOccurrences(of: "Z", with: "'Z'")
             } else {
                 dateFormatter.dateFormat = self.rawValue
@@ -58,7 +60,15 @@ public extension Date {
                   timeZone: TimeZone? = nil) -> Date? {
 
             let dateFormatter = formatter(locale: locale, timeZone: timeZone)
-            return dateFormatter.date(from: formattedDate)
+            var date = dateFormatter.date(from: formattedDate)
+
+            //For ISO8601 dates, try to parse without seconds if the default input don't pass...
+            if self == .iso8601 && date == nil {
+                dateFormatter.dateFormat = dateFormatter.dateFormat.replacingOccurrences(of: ":ss", with: "")
+                date = dateFormatter.date(from: formattedDate)
+            }
+
+            return date
         }
     }
 

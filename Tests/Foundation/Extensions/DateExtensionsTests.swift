@@ -16,6 +16,10 @@ class DateExtensionsTests: XCTestCase {
                                     dateFormat: .iso8601)
         XCTAssertEqual(iso8601DateZoned?.formatted(with: .iso8601, timeZone: .utc), "2020-02-10T15:26:08Z")
 
+        let iso8601DateWithoutSeconds = Date(formattedDate: "2020-02-03T19:39Z",
+                                             dateFormat: .iso8601)
+        XCTAssertEqual(iso8601DateWithoutSeconds?.formatted(with: .iso8601, timeZone: .utc), "2020-02-03T19:39:00Z")
+
         let invalidDate = Date(formattedDate: "⚠️")
         XCTAssertNil(invalidDate)
 
