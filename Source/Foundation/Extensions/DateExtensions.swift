@@ -117,6 +117,12 @@ public extension Date {
         return 1...11 ~= day
     }
 
+    /// Check if day in date is between day 1 and 3 of the month (included)
+    var isInTheFirstThreeDaysOfTheMonth: Bool {
+        let day = Calendar.current.component(.day, from: self)
+        return 1...3 ~= day
+    }
+
     /// Check if day in date corresponds with current day
     var isToday: Bool {
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)

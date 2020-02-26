@@ -104,7 +104,15 @@ class DateExtensionsTests: XCTestCase {
         stride(from: 1, to: 31, by: 1).forEach { day in
             let date = "\(day)/01/2018 11:11".date()
 
-            XCTAssertEqual(date?.isInTheFirstElevenDaysOfTheMonth, day <= 11)
+            XCTAssertEqual(date?.isInTheFirstElevenDaysOfTheMonth, day <= 11, "\(String(describing: date)) dont pass validation")
+        }
+    }
+
+    func test_is_in_the_first_three_days_of_the_month() {
+        stride(from: 1, to: 31, by: 1).forEach { day in
+            let date = "\(day)/01/2018 11:11".date()
+
+            XCTAssertEqual(date?.isInTheFirstThreeDaysOfTheMonth, day <= 3, "\(String(describing: date)) dont pass validation")
         }
     }
 
