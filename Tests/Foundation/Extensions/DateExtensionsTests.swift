@@ -38,7 +38,6 @@ class DateExtensionsTests: XCTestCase {
     func test_init_with_rfc3339date() {
         let rfc3339Date = "2019-08-09T10:48:00.000+0200"
         let date = rfc3339Date.date()
-
         XCTAssertEqual(date?.formatted(with: .rfc3339,
                                        timeZone: .europeMadrid),
                        rfc3339Date)
@@ -93,6 +92,12 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.formatted(with: .shortYear), "19")
         XCTAssertEqual(date.formatted(with: .year), "2019")
         XCTAssertEqual(date.formatted(with: .spanishDayAndMonth, locale: .spanishSpain, timeZone: .europeMadrid), "09 de agosto")
+        XCTAssertEqual(date.formatted(with: .dateStyleShort, locale: .spanishSpain, timeZone: .europeMadrid), "9/8/19")
+        XCTAssertEqual(date.formatted(with: .dateStyleMedium, locale: .spanishSpain, timeZone: .europeMadrid), "9 ago 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleFull, locale: .spanishSpain, timeZone: .europeMadrid), "viernes, 9 de agosto de 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .spanishSpain, timeZone: .europeMadrid), "9 de agosto de 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .catalanSpain, timeZone: .europeMadrid), "9 d’agost de 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .basqueSpain, timeZone: .europeMadrid), "2019(e)ko abuztuaren 9(a)")
     }
 
     func test_is_today() {
@@ -134,12 +139,12 @@ class DateExtensionsTests: XCTestCase {
         let morningMoment = Date(formattedDate: "20/02/2018 8:00", timeZone: .europeMadrid)!.dayMoment
         XCTAssertEqual(morningMoment, DayMomentType.morning)
     }
-    
+
     func test_afternoon_day_moment() {
         let afternoonMoment = Date(formattedDate: "20/02/2018 16:00", timeZone: .europeMadrid)!.dayMoment
         XCTAssertEqual(afternoonMoment, DayMomentType.afternoon)
     }
-    
+
     func test_night_day_moment() {
         let nightMoment = Date(formattedDate: "20/02/2018 22:00", timeZone: .europeMadrid)!.dayMoment
         XCTAssertEqual(nightMoment, DayMomentType.night)

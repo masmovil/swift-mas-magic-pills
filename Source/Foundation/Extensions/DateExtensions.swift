@@ -39,6 +39,10 @@ public extension Date {
         case shortYear = "yy"
         case year = "yyyy"
         case spanishDayAndMonth = "dd 'de' MMMM"
+        case dateStyleShort = "dateStyleShort"
+        case dateStyleMedium = "dateStyleMedium"
+        case dateStyleLong = "dateStyleLong"
+        case dateStyleFull = "dateStyleFull"
 
         func formatter(locale: Locale? = nil,
                        timeZone: TimeZone? = nil) -> DateFormatter {
@@ -46,10 +50,19 @@ public extension Date {
             let dateFormatter = Formatter.date(locale: locale,
                                                timeZone: timeZone)
 
+            switch self {
             //For ISO8601 dates, if the timezone is UTC, use Z instead of +0000
-            if self == .iso8601 && timeZone == .utc {
+            case .iso8601 where timeZone == .utc:
                 dateFormatter.dateFormat = self.rawValue.replacingOccurrences(of: "Z", with: "'Z'")
-            } else {
+            case .dateStyleShort:
+                dateFormatter.dateStyle = .short
+            case .dateStyleMedium:
+                dateFormatter.dateStyle = .medium
+            case .dateStyleLong:
+                dateFormatter.dateStyle = .long
+            case .dateStyleFull:
+                dateFormatter.dateStyle = .full
+            default:
                 dateFormatter.dateFormat = self.rawValue
             }
             return dateFormatter
