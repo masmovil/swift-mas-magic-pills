@@ -2,7 +2,7 @@ import XCTest
 import Foundation
 import MasMagicPills
 
-class OptionableTests: XCTestCase {
+class OptionalTypeTests: XCTestCase {
     func test_wrapped_value() {
         let optional: String? = "pole"
         let another: Date? = nil

@@ -3,6 +3,13 @@ import Foundation
 import MasMagicPills
 
 class StringExtensionsValidatorsTests: XCTestCase {
+    func test_valid_internet_url() {
+        XCTAssertTrue("itms://itunes.apple.com/es/app/xxxx/id123132156465456456".isValidInternetUrl)
+        XCTAssertTrue("http://www.google.com".isValidInternetUrl)
+        XCTAssertFalse("wawawa".isValidInternetUrl)
+        XCTAssertFalse("".isValidInternetUrl)
+    }
+
     func test_is_valid_email() {
         XCTAssertTrue("wawa@wewe.com".isValidEmail)
         XCTAssertTrue("hola@bq.com".isValidEmail)
