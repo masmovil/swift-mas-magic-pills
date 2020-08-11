@@ -23,3 +23,27 @@ public extension Optional where Wrapped == Bool {
         return false
     }
 }
+
+/// Generic method to compare array of nullable Equatable values.
+func ==<T: Equatable>(lhs: [T]?, rhs: [T]?) -> Bool {
+    switch (lhs, rhs) {
+    case (.some(let lhs), .some(let rhs)):
+        return lhs == rhs
+    case (.none, .none):
+        return true
+    default:
+        return false
+    }
+}
+
+/// Generic method to compare array of nullable Optional(nullables) values.
+func ==<T: OptionalType>(lhs: [T]?, rhs: [T]?) -> Bool {
+    switch (lhs, rhs) {
+    case (.some(let lhs), .some(let rhs)):
+        return lhs == rhs
+    case (.none, .none):
+        return true
+    default:
+        return false
+    }
+}
