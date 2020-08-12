@@ -119,6 +119,46 @@ public extension Date {
         self = Date(timeIntervalSince1970: millisecondsSince1970 / 1_000)
     }
 
+    /// Return a new date by adding the given years
+    func adding(years: Int) -> Date {
+        guard let newDate = Calendar.current.date(byAdding: DateComponents(year: years), to: self) else {
+            fatalError("Cannot add \(years) years to date \(self)")
+        }
+        return newDate
+    }
+
+    /// Return a new date by adding the given days
+    func adding(days: Int) -> Date {
+        guard let newDate = Calendar.current.date(byAdding: DateComponents(day: days), to: self) else {
+            fatalError("Cannot add \(days) days to date \(self)")
+        }
+        return newDate
+    }
+
+    /// Return a new date by adding the given months
+    func adding(months: Int) -> Date {
+        guard let newDate = Calendar.current.date(byAdding: DateComponents(month: months), to: self) else {
+            fatalError("Cannot add \(months) months to date \(self)")
+        }
+        return newDate
+    }
+
+    /// Return a new date by adding the given hours
+    func adding(hours: Int) -> Date {
+        guard let newDate = Calendar.current.date(byAdding: DateComponents(hour: hours), to: self) else {
+            fatalError("Cannot add \(hours) hours to date \(self)")
+        }
+        return newDate
+    }
+
+    /// Return a new date by adding the given minutes
+    func adding(minutes: Int) -> Date {
+        guard let newDate = Calendar.current.date(byAdding: DateComponents(minute: minutes), to: self) else {
+            fatalError("Cannot add \(minutes) minutes to date \(self)")
+        }
+        return newDate
+    }
+
     /// Milliseconds since midnight UTC on January 1st, 1970 that corresponds with Date
     var millisecondsSince1970: Double {
         return timeIntervalSince1970 * 1_000.0
@@ -193,5 +233,10 @@ public extension Date {
             }
         }
         return .morning
+    }
+
+    /// Give the previous month name from current Date
+    static func previousMonthName(locale: Locale = .spanishSpain) -> String {
+        return Date().adding(months: -1).formatted(with: .month, locale: .spanishSpain)
     }
 }
