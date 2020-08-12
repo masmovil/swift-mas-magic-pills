@@ -81,14 +81,15 @@ public extension Decimal {
     ///   - unit: Unit for Measurement format
     /// - Returns: String with specified format
     func formatted(decimals: Int = 2,
-                   currencyCode: String? = nil,
+                   currencyCode: CurrencyCodeType? = nil,
                    locale: Locale? = nil,
                    numberStyle: NumberFormatter.Style? = nil,
                    unit: Unit = Unit(symbol: "")) -> String {
         let numberFormatter = NumberFormatter()
 
-        if let currencyCode = currencyCode {
+        if let currencyCode = currencyCode?.rawValue {
             numberFormatter.currencyCode = currencyCode
+            numberFormatter.numberStyle = .currency
         }
 
         if let numberStyle = numberStyle {
