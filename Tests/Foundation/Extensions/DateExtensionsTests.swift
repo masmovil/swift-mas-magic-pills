@@ -3,6 +3,21 @@ import Foundation
 import MasMagicPills
 
 class DateExtensionsTests: XCTestCase {
+    func test_adding() {
+        let date = Date(formattedDate: "2019-08-13T10:48:00Z", timeZone: .utc)!
+
+        XCTAssertEqual(date.adding(years: 1).formatted(with: .iso8601, timeZone: .utc), "2020-08-13T10:48:00Z")
+        XCTAssertEqual(date.adding(days: 10).formatted(with: .iso8601, timeZone: .utc), "2019-08-23T10:48:00Z")
+        XCTAssertEqual(date.adding(months: 2).formatted(with: .iso8601, timeZone: .utc), "2019-10-13T10:48:00Z")
+        XCTAssertEqual(date.adding(hours: 10).formatted(with: .iso8601, timeZone: .utc), "2019-08-13T20:48:00Z")
+        XCTAssertEqual(date.adding(minutes: 10).formatted(with: .iso8601, timeZone: .utc), "2019-08-13T10:58:00Z")
+    }
+
+    func test_previousMonthName() {
+        let expectedMonthName = Date().adding(months: -1).formatted(with: .month, locale: .spanishSpain)
+        XCTAssertEqual(Date.previousMonthName(locale: .spanishSpain), expectedMonthName)
+    }
+
     func test_init_from_formatted_dates() {
         let rfcDate = Date(formattedDate: "2019-08-09T12:48:00.000+0200",
                            dateFormat: .rfc3339)
