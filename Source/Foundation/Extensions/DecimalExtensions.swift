@@ -17,7 +17,7 @@ public extension Decimal {
         return self / 60
     }
 
-    /// Convert to Megabytes (1000 bytes) and format it with Locale and specific decimals
+    /// Convert given megas to Megabytes (1000 bytes) and format it with Locale and specific decimals
     ///
     /// - Parameters:
     ///   - locale: Language rules (optional) (by default use current)
@@ -35,7 +35,7 @@ public extension Decimal {
                          unit: .init(symbol: "MB"))
     }
 
-    /// Convert to Mebibytes (1024 bytes) and format it with Locale and specific decimals
+    /// Convert given megas to Mebibytes (1024 bytes) and format it with Locale and specific decimals
     ///
     /// - Parameters:
     ///   - locale: Language rules (optional) (by default use current)
