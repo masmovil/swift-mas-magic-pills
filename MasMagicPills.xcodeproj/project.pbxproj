@@ -778,22 +778,22 @@
 		F293266B227330A000B9A5E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F6E394DE2260BC5E00AFE7B1 /* StringExtensions+UIKit.swift */,
-				F2C1A27224E41E3B005DC7A8 /* NSAttributedString+UIKit.swift */,
-				F6F97EE8226DA88500C3E953 /* UICollectionViewExtensions.swift */,
-				F2C78F1B238D679C008C4846 /* UICollectionReusableViewExtensions.swift */,
-				F6E7C6862264902E00F0F11E /* UIFontExtensions.swift */,
-				F6B3838E22649D56001E4068 /* UILabelExtensions.swift */,
-				F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */,
-				F2C78F1E238D67E1008C4846 /* UITableViewCellExtensions.swift */,
-				F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */,
-				F6F97EF9226F1E5000C3E953 /* UIImageExtensions.swift */,
-				F21A6776226F4E260026F6E9 /* CIImageExtensions+UIKit.swift */,
 				F21A6778226F4E360026F6E9 /* CGImageExtensions+UIKit.swift */,
+				F21A6776226F4E260026F6E9 /* CIImageExtensions+UIKit.swift */,
+				F2C1A27224E41E3B005DC7A8 /* NSAttributedString+UIKit.swift */,
+				F6E394DE2260BC5E00AFE7B1 /* StringExtensions+UIKit.swift */,
+				F2C78F1B238D679C008C4846 /* UICollectionReusableViewExtensions.swift */,
+				F6F97EE8226DA88500C3E953 /* UICollectionViewExtensions.swift */,
+				F6E7C6862264902E00F0F11E /* UIFontExtensions.swift */,
+				F6F97EF9226F1E5000C3E953 /* UIImageExtensions.swift */,
+				F6B3838E22649D56001E4068 /* UILabelExtensions.swift */,
 				F6F97F00226F501E00C3E953 /* UIScrollViewExtensions.swift */,
 				F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */,
-				F6F97EED226DAF2C00C3E953 /* UIViewExtensions.swift */,
+				F2C78F1E238D67E1008C4846 /* UITableViewCellExtensions.swift */,
+				F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */,
+				F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */,
 				F62CC33C2270862800DC46F2 /* UIViewControllerExtensions.swift */,
+				F6F97EED226DAF2C00C3E953 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -822,17 +822,17 @@
 		F293266F2273313900B9A5E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F6F97EF2226DED4A00C3E953 /* Views */,
 				F69A081C2264C6FD00CB09F2 /* StringExtensionsUIKitTests.swift */,
-				F69A081F22672BDB00CB09F2 /* UIFontExtensionsTests.swift */,
-				F69A08212267323600CB09F2 /* UILabelExtensionTests.swift */,
 				F6F97EEA226DAA1100C3E953 /* UICollectionViewExtensionsTests.swift */,
-				F6F97EF6226E027E00C3E953 /* UIViewExtensionsTests.swift */,
+				F69A081F22672BDB00CB09F2 /* UIFontExtensionsTests.swift */,
 				F6F97EFB226F246100C3E953 /* UIImageExtensionsTests.swift */,
+				F69A08212267323600CB09F2 /* UILabelExtensionTests.swift */,
 				F6F97F03226F53E100C3E953 /* UIScrollViewExtensionsTest.swift */,
 				F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */,
 				F62CC32F22706B6C00DC46F2 /* UITableViewExtensionsTests.swift */,
 				F62CC34D2272015500DC46F2 /* UIViewControllerExtensionsTests.swift */,
+				F6F97EF6226E027E00C3E953 /* UIViewExtensionsTests.swift */,
+				F6F97EF2226DED4A00C3E953 /* Views */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
