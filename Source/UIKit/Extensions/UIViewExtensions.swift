@@ -190,7 +190,7 @@ public extension UIView {
                         self.transform = self.transform.rotated(by: angleInRadians)
         }, completion: completion)
     }
-    
+
     /// Shake animation for view
     func shake() {
         transform = CGAffineTransform(translationX: 15, y: 0)
