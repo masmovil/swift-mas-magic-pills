@@ -3,14 +3,10 @@
 task default: %w[setup]
 
 task(:setup) do
-  unless system('which brew')
-    raise '`brew` is required. Please install brew. https://brew.sh/'
-  end
-  puts('➡️ Brew 🍺')
-  sh('brew install sourcery')
-  sh('brew install swiftlint')
+  raise '`brew` is required. Please install brew. https://brew.sh/' unless system('which brew')
 
-  puts('➡️ Bundle 💎')
+  puts('➡️  Bundle')
+  sh('brew bundle')
   sh('bundle install')
 
   puts('➡️  Overcommit')
