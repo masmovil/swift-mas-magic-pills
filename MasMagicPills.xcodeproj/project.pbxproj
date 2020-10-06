@@ -221,8 +221,10 @@
 		F26C3AF922537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
 		F26C3AFA22537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
 		F26C3AFB22537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
-		F293267022734C9300B9A5E8 /* UICollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21A6789226F52730026F6E9 /* UICollectionViewCell.xib */; };
-		F293267122734C9D00B9A5E8 /* UITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62CC33A2270854200DC46F2 /* UITableViewCell.xib */; };
+		F27512AC252B3DCB0057D6F0 /* CollectionCellForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27512AB252B3DCB0057D6F0 /* CollectionCellForTests.swift */; };
+		F27512B5252B3DD80057D6F0 /* TableViewCellForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27512B4252B3DD80057D6F0 /* TableViewCellForTests.swift */; };
+		F293267022734C9300B9A5E8 /* CollectionCellForTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = F21A6789226F52730026F6E9 /* CollectionCellForTests.xib */; };
+		F293267122734C9D00B9A5E8 /* TableViewCellForTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62CC33A2270854200DC46F2 /* TableViewCellForTests.xib */; };
 		F297F0C924E55B0A00963BD8 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */; };
 		F297F0CA24E55B0F00963BD8 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */; };
 		F297F0CB24E55B1000963BD8 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */; };
@@ -247,6 +249,8 @@
 		F2AC727A23460D2E00661BE9 /* FormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6D4C5230D468F00D161F9 /* FormatterExtensions.swift */; };
 		F2AC727B23460D3A00661BE9 /* LocaleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6D4C1230C108F00D161F9 /* LocaleExtensions.swift */; };
 		F2AC727C23460D4200661BE9 /* TimeZoneExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6D4C9230D5CBD00D161F9 /* TimeZoneExtensions.swift */; };
+		F2B28627252DC4CE0058BCBB /* CollectionCellForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B28626252DC4CE0058BCBB /* CollectionCellForTests.swift */; };
+		F2B28637252DC4D50058BCBB /* TableViewCellForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B28636252DC4D50058BCBB /* TableViewCellForTests.swift */; };
 		F2C1A26024E2E055005DC7A8 /* StringExtensions+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1A25F24E2E055005DC7A8 /* StringExtensions+Crypto.swift */; };
 		F2C1A26124E2E079005DC7A8 /* StringExtensions+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1A25F24E2E055005DC7A8 /* StringExtensions+Crypto.swift */; };
 		F2C1A26224E2E07A005DC7A8 /* StringExtensions+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1A25F24E2E055005DC7A8 /* StringExtensions+Crypto.swift */; };
@@ -293,7 +297,7 @@
 		F62CC32E2270683C00DC46F2 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */; };
 		F62CC33022706B6C00DC46F2 /* UITableViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32F22706B6C00DC46F2 /* UITableViewExtensionsTests.swift */; };
 		F62CC33122706B6C00DC46F2 /* UITableViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32F22706B6C00DC46F2 /* UITableViewExtensionsTests.swift */; };
-		F62CC3332270701B00DC46F2 /* UITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62CC3322270701B00DC46F2 /* UITableViewCell.xib */; };
+		F62CC3332270701B00DC46F2 /* TableViewCellForTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62CC3322270701B00DC46F2 /* TableViewCellForTests.xib */; };
 		F62CC33D2270862800DC46F2 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC33C2270862800DC46F2 /* UIViewControllerExtensions.swift */; };
 		F62CC33E2270862800DC46F2 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC33C2270862800DC46F2 /* UIViewControllerExtensions.swift */; };
 		F62CC34122709F4500DC46F2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC34022709F4500DC46F2 /* Toast.swift */; };
@@ -343,7 +347,7 @@
 		F6F97EEC226DABE400C3E953 /* UICollectionViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F97EEA226DAA1100C3E953 /* UICollectionViewExtensionsTests.swift */; };
 		F6F97EEE226DAF2C00C3E953 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F97EED226DAF2C00C3E953 /* UIViewExtensions.swift */; };
 		F6F97EF7226E027E00C3E953 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F97EF6226E027E00C3E953 /* UIViewExtensionsTests.swift */; };
-		F6F97EF8226E1BD900C3E953 /* UICollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F97EF3226DED8A00C3E953 /* UICollectionViewCell.xib */; };
+		F6F97EF8226E1BD900C3E953 /* CollectionCellForTests.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F97EF3226DED8A00C3E953 /* CollectionCellForTests.xib */; };
 		F6F97EFA226F1E5000C3E953 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F97EF9226F1E5000C3E953 /* UIImageExtensions.swift */; };
 		F6F97EFC226F246100C3E953 /* UIImageExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F97EFB226F246100C3E953 /* UIImageExtensionsTests.swift */; };
 		F6F97F01226F501E00C3E953 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F97F00226F501E00C3E953 /* UIScrollViewExtensions.swift */; };
@@ -425,7 +429,7 @@
 		F210E6B1231EC7F0004D9F0A /* XibRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibRepresentableTests.swift; sourceTree = "<group>"; };
 		F21A6776226F4E260026F6E9 /* CIImageExtensions+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImageExtensions+UIKit.swift"; sourceTree = "<group>"; };
 		F21A6778226F4E360026F6E9 /* CGImageExtensions+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImageExtensions+UIKit.swift"; sourceTree = "<group>"; };
-		F21A6789226F52730026F6E9 /* UICollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewCell.xib; sourceTree = "<group>"; };
+		F21A6789226F52730026F6E9 /* CollectionCellForTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCellForTests.xib; sourceTree = "<group>"; };
 		F22A356122807465004E8546 /* Fold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fold.swift; sourceTree = "<group>"; };
 		F22A3567228074D4004E8546 /* FoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldTests.swift; sourceTree = "<group>"; };
 		F22A356B228077E8004E8546 /* DispatchQueueExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtensions.swift; sourceTree = "<group>"; };
@@ -448,12 +452,16 @@
 		F2496745230EBE4200C06E2E /* LastExecutionStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExecutionStateTests.swift; sourceTree = "<group>"; };
 		F2496749230EBE9500C06E2E /* JSONTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestHelper.swift; sourceTree = "<group>"; };
 		F26C3AF722537A4600189D28 /* MagicPills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicPills.swift; sourceTree = "<group>"; };
+		F27512AB252B3DCB0057D6F0 /* CollectionCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellForTests.swift; sourceTree = "<group>"; };
+		F27512B4252B3DD80057D6F0 /* TableViewCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForTests.swift; sourceTree = "<group>"; };
 		F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		F297F0CD24E55F0800963BD8 /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
 		F297F0D224E569DF00963BD8 /* KeyedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedValue.swift; sourceTree = "<group>"; };
 		F297F0D724E572A300963BD8 /* KeyedValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedValueTests.swift; sourceTree = "<group>"; };
 		F2A74DB8225765CF001F0DF2 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		F2A74DBF22576610001F0DF2 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
+		F2B28626252DC4CE0058BCBB /* CollectionCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellForTests.swift; sourceTree = "<group>"; };
+		F2B28636252DC4D50058BCBB /* TableViewCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForTests.swift; sourceTree = "<group>"; };
 		F2C1A25F24E2E055005DC7A8 /* StringExtensions+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringExtensions+Crypto.swift"; sourceTree = "<group>"; };
 		F2C1A26424E2E0A1005DC7A8 /* StringExtensions+CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringExtensions+CryptoTests.swift"; sourceTree = "<group>"; };
 		F2C1A27224E41E3B005DC7A8 /* NSAttributedString+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+UIKit.swift"; sourceTree = "<group>"; };
@@ -471,8 +479,8 @@
 		F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensionsTests.swift; sourceTree = "<group>"; };
 		F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		F62CC32F22706B6C00DC46F2 /* UITableViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensionsTests.swift; sourceTree = "<group>"; };
-		F62CC3322270701B00DC46F2 /* UITableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITableViewCell.xib; sourceTree = "<group>"; };
-		F62CC33A2270854200DC46F2 /* UITableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITableViewCell.xib; sourceTree = "<group>"; };
+		F62CC3322270701B00DC46F2 /* TableViewCellForTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellForTests.xib; sourceTree = "<group>"; };
+		F62CC33A2270854200DC46F2 /* TableViewCellForTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellForTests.xib; sourceTree = "<group>"; };
 		F62CC33C2270862800DC46F2 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		F62CC34022709F4500DC46F2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		F62CC3432270A1A000DC46F2 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
@@ -497,7 +505,7 @@
 		F6F97EE8226DA88500C3E953 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		F6F97EEA226DAA1100C3E953 /* UICollectionViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensionsTests.swift; sourceTree = "<group>"; };
 		F6F97EED226DAF2C00C3E953 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		F6F97EF3226DED8A00C3E953 /* UICollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewCell.xib; sourceTree = "<group>"; };
+		F6F97EF3226DED8A00C3E953 /* CollectionCellForTests.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCellForTests.xib; sourceTree = "<group>"; };
 		F6F97EF6226E027E00C3E953 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		F6F97EF9226F1E5000C3E953 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		F6F97EFB226F246100C3E953 /* UIImageExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensionsTests.swift; sourceTree = "<group>"; };
@@ -713,8 +721,10 @@
 		F21A6785226F519C0026F6E9 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F6F97EF3226DED8A00C3E953 /* UICollectionViewCell.xib */,
-				F62CC3322270701B00DC46F2 /* UITableViewCell.xib */,
+				F6F97EF3226DED8A00C3E953 /* CollectionCellForTests.xib */,
+				F62CC3322270701B00DC46F2 /* TableViewCellForTests.xib */,
+				F27512AB252B3DCB0057D6F0 /* CollectionCellForTests.swift */,
+				F27512B4252B3DD80057D6F0 /* TableViewCellForTests.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -722,8 +732,10 @@
 		F21A6786226F51B00026F6E9 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				F21A6789226F52730026F6E9 /* UICollectionViewCell.xib */,
-				F62CC33A2270854200DC46F2 /* UITableViewCell.xib */,
+				F21A6789226F52730026F6E9 /* CollectionCellForTests.xib */,
+				F62CC33A2270854200DC46F2 /* TableViewCellForTests.xib */,
+				F2B28626252DC4CE0058BCBB /* CollectionCellForTests.swift */,
+				F2B28636252DC4D50058BCBB /* TableViewCellForTests.swift */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -1181,8 +1193,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F62CC3332270701B00DC46F2 /* UITableViewCell.xib in Resources */,
-				F6F97EF8226E1BD900C3E953 /* UICollectionViewCell.xib in Resources */,
+				F62CC3332270701B00DC46F2 /* TableViewCellForTests.xib in Resources */,
+				F6F97EF8226E1BD900C3E953 /* CollectionCellForTests.xib in Resources */,
 				F20083832267E47F00AC6EE1 /* LocalizedSample.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1213,8 +1225,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F293267122734C9D00B9A5E8 /* UITableViewCell.xib in Resources */,
-				F293267022734C9300B9A5E8 /* UICollectionViewCell.xib in Resources */,
+				F293267122734C9D00B9A5E8 /* TableViewCellForTests.xib in Resources */,
+				F293267022734C9300B9A5E8 /* CollectionCellForTests.xib in Resources */,
 				F20083852267E47F00AC6EE1 /* LocalizedSample.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1355,6 +1367,7 @@
 				F6F97EFC226F246100C3E953 /* UIImageExtensionsTests.swift in Sources */,
 				F297F0D824E572A300963BD8 /* KeyedValueTests.swift in Sources */,
 				F20082FE225E556500AC6EE1 /* DecimalExtensionsTests.swift in Sources */,
+				F27512AC252B3DCB0057D6F0 /* CollectionCellForTests.swift in Sources */,
 				F68925D522CDE8A00008263B /* IntExtensionsTests.swift in Sources */,
 				F22A3568228074D4004E8546 /* FoldTests.swift in Sources */,
 				F20083452266117700AC6EE1 /* BundleExtensionsTests.swift in Sources */,
@@ -1382,6 +1395,7 @@
 				F69A082022672BDC00CB09F2 /* UIFontExtensionsTests.swift in Sources */,
 				F22A38DE227C63930012C010 /* OrderedSetTests.swift in Sources */,
 				F22A38FE227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */,
+				F27512B5252B3DD80057D6F0 /* TableViewCellForTests.swift in Sources */,
 				F6F97F04226F53E100C3E953 /* UIScrollViewExtensionsTest.swift in Sources */,
 				F200835C22662DDD00AC6EE1 /* TimeIntervalExtensionsTests.swift in Sources */,
 				F62CC34B2270B53C00DC46F2 /* SnackBarTests.swift in Sources */,
@@ -1559,6 +1573,7 @@
 				F249674C230EBE9500C06E2E /* JSONTestHelper.swift in Sources */,
 				F6F333202306B0AA00E93F0E /* CGFloatExtensionsTests.swift in Sources */,
 				F62CC33122706B6C00DC46F2 /* UITableViewExtensionsTests.swift in Sources */,
+				F2B28637252DC4D50058BCBB /* TableViewCellForTests.swift in Sources */,
 				F20082EC225E1E7100AC6EE1 /* DateExtensionsTests.swift in Sources */,
 				F297F0DA24E572A300963BD8 /* KeyedValueTests.swift in Sources */,
 				F2008300225E556500AC6EE1 /* DecimalExtensionsTests.swift in Sources */,
@@ -1578,6 +1593,7 @@
 				F2C1A28F24E464CF005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
 				F2A74DC222576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */,
 				F2C1A26724E2E0A1005DC7A8 /* StringExtensions+CryptoTests.swift in Sources */,
+				F2B28627252DC4CE0058BCBB /* CollectionCellForTests.swift in Sources */,
 				F22A357222807839004E8546 /* DispatchQueueExtensionsTests.swift in Sources */,
 				F249672B230D506F00C06E2E /* SemVerTests.swift in Sources */,
 				F6F333172304370900E93F0E /* CALayerExtensionsTests.swift in Sources */,
