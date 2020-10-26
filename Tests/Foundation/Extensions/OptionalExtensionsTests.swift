@@ -7,7 +7,7 @@ class OptionalExtensionsTests: XCTestCase {
         let nothing: String? = "pole"
 
         XCTAssertNotNil(nothing)
-        XCTAssertTrue(!nothing.isNil)
+        XCTAssertTrue(nothing.isNotNil)
     }
 
     func test_is_nil() {
