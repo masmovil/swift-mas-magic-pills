@@ -1,6 +1,19 @@
 import Foundation
 
 public extension String {
+    /// Return numbers from string
+    var onlyNumbers: String {
+        return self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+    }
+
+    /// Return URL value only if an valid Url for Internet
+    var internetUrlValue: URL? {
+        if isValidInternetUrl {
+            return urlValue
+        }
+        return nil
+    }
+    
     var addTrailingSpaceIfNotEmpty: String {
         return isEmpty ? "" : "\(self) "
     }

@@ -3,7 +3,7 @@ import Foundation
 import MasMagicPills
 
 class Int64ExtensionsTests: XCTestCase {
-    func test_static_helpers() {
+    func test_hepers_for_giga_and_mega() {
         let sixGigaBytes = Int64.gigaBytes(6)
         XCTAssertEqual(sixGigaBytes, 6 * 1_024 * 1_024 * 1_024)
 

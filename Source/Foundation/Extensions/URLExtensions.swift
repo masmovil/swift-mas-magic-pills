@@ -8,6 +8,17 @@ public extension URL {
     var localizedName: String? {
         return (try? resourceValues(forKeys: [.localizedNameKey]))?.localizedName
     }
+    
+    func appendingItems(items: [URLQueryItem]) throws -> URL {
+        guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
+            throw MagicError.badRequest
+        }
+        components.queryItems = items
+        guard let urlWithQuery = components.url else {
+            throw MagicError.badRequest
+        }
+        return urlWithQuery
+    }
 }
 
 extension URL: Comparable {
