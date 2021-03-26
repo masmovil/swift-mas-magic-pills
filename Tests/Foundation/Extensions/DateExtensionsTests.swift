@@ -59,6 +59,15 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertNil("👋".date())
     }
 
+    func test_init_with_rfc3339date_with_no_seconds() { //"2021-04-07T09:00+01:00"
+        let rfc3339Date = "2021-04-07T09:00+0100"
+        let date = rfc3339Date.date()
+        XCTAssertEqual(date?.formatted(with: .rfc3339,
+                                       timeZone: .europeMadrid),
+                       "2021-04-07T10:00:00.000+0200")
+        XCTAssertNil("👋".date())
+    }
+
     func test_init_with_formatted_spanishDate() {
         let spanishFullDate = "20/02/2018 12:33"
         var date = Date(formattedDate: spanishFullDate,
