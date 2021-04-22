@@ -128,6 +128,9 @@
 		F20083832267E47F00AC6EE1 /* LocalizedSample.strings in Resources */ = {isa = PBXBuildFile; fileRef = F20083822267E47F00AC6EE1 /* LocalizedSample.strings */; };
 		F20083842267E47F00AC6EE1 /* LocalizedSample.strings in Resources */ = {isa = PBXBuildFile; fileRef = F20083822267E47F00AC6EE1 /* LocalizedSample.strings */; };
 		F20083852267E47F00AC6EE1 /* LocalizedSample.strings in Resources */ = {isa = PBXBuildFile; fileRef = F20083822267E47F00AC6EE1 /* LocalizedSample.strings */; };
+		F2091DB02631AD23002F071E /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2091DAF2631AD23002F071E /* CodableExtensions.swift */; };
+		F2091DB12631AD23002F071E /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2091DAF2631AD23002F071E /* CodableExtensions.swift */; };
+		F2091DB22631AD23002F071E /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2091DAF2631AD23002F071E /* CodableExtensions.swift */; };
 		F209D41D24E6C6BC002BF853 /* Int64Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209D41C24E6C6BC002BF853 /* Int64Extensions.swift */; };
 		F209D41E24E6C6BC002BF853 /* Int64Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209D41C24E6C6BC002BF853 /* Int64Extensions.swift */; };
 		F209D41F24E6C6BC002BF853 /* Int64Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209D41C24E6C6BC002BF853 /* Int64Extensions.swift */; };
@@ -424,6 +427,7 @@
 		F200836E2266339800AC6EE1 /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
 		F2008370226633A500AC6EE1 /* SequenceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensionsTests.swift; sourceTree = "<group>"; };
 		F20083822267E47F00AC6EE1 /* LocalizedSample.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LocalizedSample.strings; sourceTree = "<group>"; };
+		F2091DAF2631AD23002F071E /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
 		F209D41C24E6C6BC002BF853 /* Int64Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int64Extensions.swift; sourceTree = "<group>"; };
 		F210E6AD231EC709004D9F0A /* XibRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibRepresentable.swift; sourceTree = "<group>"; };
 		F210E6B1231EC7F0004D9F0A /* XibRepresentableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibRepresentableTests.swift; sourceTree = "<group>"; };
@@ -847,16 +851,23 @@
 			isa = PBXGroup;
 			children = (
 				F2A74DB8225765CF001F0DF2 /* ArrayExtensions.swift */,
-				F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */,
 				F20082C6225DFC9D00AC6EE1 /* BoolExtensions.swift */,
 				F200833F2266115E00AC6EE1 /* BundleExtensions.swift */,
+				F6F3330C23042AEA00E93F0E /* CALayerExtensions.swift */,
+				F6F333182306B03F00E93F0E /* CGFloatExtensions.swift */,
+				F2091DAF2631AD23002F071E /* CodableExtensions.swift */,
+				F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */,
 				F2008329225F862900AC6EE1 /* DataExtensions.swift */,
 				F20082E4225E1E0000AC6EE1 /* DateExtensions.swift */,
 				F20082F2225E518600AC6EE1 /* DecimalExtensions.swift */,
 				F22A38E6227C76FD0012C010 /* DictionaryExtensions.swift */,
 				F22A356B228077E8004E8546 /* DispatchQueueExtensions.swift */,
+				F2C1A27C24E45ED9005DC7A8 /* DoubleExtensions.swift */,
 				F6D6D4C5230D468F00D161F9 /* FormatterExtensions.swift */,
+				F2C1A27E24E45EF7005DC7A8 /* Int64Extensions.swift */,
+				F68925CE22CDE8290008263B /* IntExtensions.swift */,
 				F6D6D4C1230C108F00D161F9 /* LocaleExtensions.swift */,
+				F2C1A27724E41E73005DC7A8 /* NSAttributedStringExtensions.swift */,
 				F20082C1225DFC6E00AC6EE1 /* OptionalExtensions.swift */,
 				F200836E2266339800AC6EE1 /* SequenceExtensions.swift */,
 				F200830A225F4BFC00AC6EE1 /* StringExtensions.swift */,
@@ -864,15 +875,9 @@
 				F2008324225F84A100AC6EE1 /* StringExtensions+Formating.swift */,
 				F200831F225F83EF00AC6EE1 /* StringExtensions+Validators.swift */,
 				F200831A225F831F00AC6EE1 /* StringExtensions+Values.swift */,
-				F2C1A27724E41E73005DC7A8 /* NSAttributedStringExtensions.swift */,
 				F200835622662DC400AC6EE1 /* TimeIntervalExtensions.swift */,
 				F6D6D4C9230D5CBD00D161F9 /* TimeZoneExtensions.swift */,
 				F200835F2266316C00AC6EE1 /* URLExtensions.swift */,
-				F68925CE22CDE8290008263B /* IntExtensions.swift */,
-				F2C1A27E24E45EF7005DC7A8 /* Int64Extensions.swift */,
-				F2C1A27C24E45ED9005DC7A8 /* DoubleExtensions.swift */,
-				F6F3330C23042AEA00E93F0E /* CALayerExtensions.swift */,
-				F6F333182306B03F00E93F0E /* CGFloatExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1346,6 +1351,7 @@
 				F297F0D324E569DF00963BD8 /* KeyedValue.swift in Sources */,
 				F6D6D4C6230D468F00D161F9 /* FormatterExtensions.swift in Sources */,
 				F6F97F01226F501E00C3E953 /* UIScrollViewExtensions.swift in Sources */,
+				F2091DB02631AD23002F071E /* CodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1410,6 +1416,7 @@
 				F26C3AF922537A4600189D28 /* MagicPills.swift in Sources */,
 				F2C1A28024E45EFD005DC7A8 /* Int64Extensions.swift in Sources */,
 				F6F3330E23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
+				F2091DB12631AD23002F071E /* CodableExtensions.swift in Sources */,
 				F2C1A27924E41E76005DC7A8 /* NSAttributedStringExtensions.swift in Sources */,
 				F20083662266317E00AC6EE1 /* URLExtensions.swift in Sources */,
 				F6D6D4C3230C108F00D161F9 /* LocaleExtensions.swift in Sources */,
@@ -1555,6 +1562,7 @@
 				F297F0D524E569DF00963BD8 /* KeyedValue.swift in Sources */,
 				F6D6D4C8230D468F00D161F9 /* FormatterExtensions.swift in Sources */,
 				F20083422266115E00AC6EE1 /* BundleExtensions.swift in Sources */,
+				F2091DB22631AD23002F071E /* CodableExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

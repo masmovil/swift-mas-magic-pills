@@ -50,6 +50,16 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.millisecondsSince1970, milliseconds)
     }
 
+    func test_init_with_rfc1123date() {
+        let rfc1123Date = "Fri, 16 Apr 2021 14:37:26 GMT"
+        let date = rfc1123Date.date(dateFormat: .rfc1123, locale: .posix, timeZone: .utc)
+        
+        XCTAssertEqual(date?.formatted(with: .rfc1123,
+                                       locale: .posix,
+                                       timeZone: .utc),
+                       rfc1123Date)
+    }
+    
     func test_init_with_rfc3339date() {
         let rfc3339Date = "2019-08-09T10:48:00.000+0200"
         let date = rfc3339Date.date()
