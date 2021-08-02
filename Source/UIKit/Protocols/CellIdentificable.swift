@@ -1,7 +1,7 @@
 import Foundation
 
 /// Used to identify a View to generate a reusable identifier for tables and collections view.
-public protocol CellIdentificable: class {
+public protocol CellIdentificable: AnyObject {
     static var reuseIdentifier: String { get }
 }
 
