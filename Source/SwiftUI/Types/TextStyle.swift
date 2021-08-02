@@ -1,6 +1,8 @@
 import Foundation
 import SwiftUI
+#if !os(macOS) && !os(watchOS)
 import UIKit
+#endif
 
 public struct TextStyle {
     public let font: Font
@@ -11,17 +13,10 @@ public struct TextStyle {
     public let textCase: Text.Case?
     public let alignment: NSTextAlignment?
 
-    public var uiColor: UIColor {
-        UIColor(color)
-    }
-
     public var textAlignment: TextAlignment {
         switch alignment {
         case .center:
             return .center
-
-        case .left:
-            return .leading
 
         case .right:
             return .trailing
@@ -31,22 +26,6 @@ public struct TextStyle {
         }
     }
 
-    public init(font: UIFont,
-                color: UIColor,
-                lineHeight: CGFloat,
-                letterSpacing: CGFloat? = nil,
-                alignment: NSTextAlignment? = nil,
-                textCase: Text.Case? = nil) {
-        self.uiFont = font
-        self.font = Font(font)
-        self.color = Color(color)
-        self.lineHeight = lineHeight
-        self.lineSpacing = lineHeight - font.lineHeight
-        self.letterSpacing = letterSpacing
-        self.alignment = alignment
-        self.textCase = textCase
-    }
-
     public init(font: Font,
                 color: Color,
                 lineHeight: CGFloat,
@@ -54,7 +33,9 @@ public struct TextStyle {
                 letterSpacing: CGFloat? = nil,
                 alignment: NSTextAlignment? = nil,
                 textCase: Text.Case? = nil) {
+        #if !os(macOS) && !os(watchOS)
         self.uiFont = nil
+        #endif
         self.font = font
         self.color = color
         self.lineHeight = lineHeight
@@ -74,7 +55,29 @@ public struct TextStyle {
                   textCase: .uppercase)
     }
 
-    // MARK: Temporal
+    // MARK: REMOVE WHEN DROP SUPPORT FOR UIKit in TextStyle
+    #if !os(macOS) && !os(watchOS)
+
+    public init(font: UIFont,
+                color: UIColor,
+                lineHeight: CGFloat,
+                letterSpacing: CGFloat? = nil,
+                alignment: NSTextAlignment? = nil,
+                textCase: Text.Case? = nil) {
+        self.uiFont = font
+        self.font = Font(font)
+        self.color = Color(color)
+        self.lineHeight = lineHeight
+        self.lineSpacing = lineHeight - font.lineHeight
+        self.letterSpacing = letterSpacing
+        self.alignment = alignment
+        self.textCase = textCase
+    }
+
+    public var uiColor: UIColor {
+        UIColor(color)
+    }
+
     @available(*, deprecated, renamed: "uppercased")
     public var uppercasedStyle: TextStyle {
         uppercased
@@ -88,10 +91,13 @@ public struct TextStyle {
 
     /// Don't use this whit SwiftUI.Font
     public func text(_ text: String) -> NSAttributedString {
+        guard let uiFont = uiFont else {
+            fatalError("Don't use this method with SwiftUI")
+        }
         text.attributed(alignment: alignment,
                         lineHeight: lineHeight,
                         letterSpacing: letterSpacing,
-                        font: uiFont ?? .systemRegular(size: 15),
+                        font: uiFont,
                         color: uiColor)
     }
 
@@ -101,4 +107,5 @@ public struct TextStyle {
     }
 
     private let uiFont: UIFont?
+    #endif
 }

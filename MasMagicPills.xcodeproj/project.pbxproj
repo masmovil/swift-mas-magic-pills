@@ -305,6 +305,15 @@
 		F2C78F2A238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */; };
 		F2E47FF426B82EFE0055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
 		F2E47FF726B8315D0055A0D6 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */; };
+		F2E4800D26B83F7F0055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
+		F2E4800E26B83FB50055A0D6 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */; };
+		F2E4801026B83FB80055A0D6 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */; };
+		F2E4801126B83FB90055A0D6 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */; };
+		F2E4801226B83FB90055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
+		F2E4801326B841370055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
+		F2E4801626B842000055A0D6 /* TextStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4801526B842000055A0D6 /* TextStylesTests.swift */; };
+		F2E4801726B842000055A0D6 /* TextStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4801526B842000055A0D6 /* TextStylesTests.swift */; };
+		F2E4801826B842000055A0D6 /* TextStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4801526B842000055A0D6 /* TextStylesTests.swift */; };
 		F62CC32722704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32822704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32A22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */; };
@@ -497,6 +506,7 @@
 		F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtensions.swift; sourceTree = "<group>"; };
 		F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
+		F2E4801526B842000055A0D6 /* TextStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStylesTests.swift; sourceTree = "<group>"; };
 		F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensionsTests.swift; sourceTree = "<group>"; };
 		F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
@@ -963,6 +973,7 @@
 		F2E47FF126B82EE30055A0D6 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F2E4801426B841F00055A0D6 /* Types */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -981,6 +992,14 @@
 				F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F2E4801426B841F00055A0D6 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				F2E4801526B842000055A0D6 /* TextStylesTests.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		F62CC33F22709F3000DC46F2 /* UIKit */ = {
@@ -1471,6 +1490,7 @@
 				F20082DD225DFFCF00AC6EE1 /* BoolExtensionsTests.swift in Sources */,
 				F2C78F27238D6AF4008C4846 /* CellIdentificableTests.swift in Sources */,
 				F22A38F4227C77770012C010 /* SharedDictionaryTests.swift in Sources */,
+				F2E4801626B842000055A0D6 /* TextStylesTests.swift in Sources */,
 				F22A38F0227C775F0012C010 /* DictionaryExtensionsTests.swift in Sources */,
 				F200834A226612F800AC6EE1 /* FakeBundle.swift in Sources */,
 				F69A08222267323600CB09F2 /* UILabelExtensionTests.swift in Sources */,
@@ -1485,6 +1505,7 @@
 				F2C1A28024E45EFD005DC7A8 /* Int64Extensions.swift in Sources */,
 				F6F3330E23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
 				F2091DB12631AD23002F071E /* CodableExtensions.swift in Sources */,
+				F2E4801126B83FB90055A0D6 /* TextStyleModifier.swift in Sources */,
 				F2C1A27924E41E76005DC7A8 /* NSAttributedStringExtensions.swift in Sources */,
 				F20083662266317E00AC6EE1 /* URLExtensions.swift in Sources */,
 				F6D6D4C3230C108F00D161F9 /* LocaleExtensions.swift in Sources */,
@@ -1492,6 +1513,7 @@
 				F200830C225F4BFC00AC6EE1 /* StringExtensions.swift in Sources */,
 				F20082C3225DFC6E00AC6EE1 /* OptionalExtensions.swift in Sources */,
 				F2A74DBA225765CF001F0DF2 /* ArrayExtensions.swift in Sources */,
+				F2E4801226B83FB90055A0D6 /* TextStyle.swift in Sources */,
 				F20082D4225DFF4F00AC6EE1 /* OptionalType.swift in Sources */,
 				F2008326225F84A100AC6EE1 /* StringExtensions+Formating.swift in Sources */,
 				44B30F162685BC63007C5B51 /* EncodableExtensions.swift in Sources */,
@@ -1560,6 +1582,7 @@
 				F22A38F1227C77610012C010 /* DictionaryExtensionsTests.swift in Sources */,
 				F2C1A26624E2E0A1005DC7A8 /* StringExtensions+CryptoTests.swift in Sources */,
 				F2496747230EBE4200C06E2E /* LastExecutionStateTests.swift in Sources */,
+				F2E4801726B842000055A0D6 /* TextStylesTests.swift in Sources */,
 				F2008338225F878600AC6EE1 /* StringExtensions+ValuesTests.swift in Sources */,
 				F2008330225F876300AC6EE1 /* StringExtensions+ValidatorsTests.swift in Sources */,
 				F22A357122807839004E8546 /* DispatchQueueExtensionsTests.swift in Sources */,
@@ -1575,6 +1598,7 @@
 				F26C3AFA22537A4600189D28 /* MagicPills.swift in Sources */,
 				F22A357522807842004E8546 /* DispatchQueueExtensions.swift in Sources */,
 				F6F3331B2306B03F00E93F0E /* CGFloatExtensions.swift in Sources */,
+				F2E4800D26B83F7F0055A0D6 /* TextStyle.swift in Sources */,
 				F22A355E22806EAC004E8546 /* DefinesPrimaryKey.swift in Sources */,
 				F20083672266317F00AC6EE1 /* URLExtensions.swift in Sources */,
 				F20082F5225E518600AC6EE1 /* DecimalExtensions.swift in Sources */,
@@ -1604,6 +1628,7 @@
 				F22A38E9227C76FD0012C010 /* DictionaryExtensions.swift in Sources */,
 				F62CC32E2270683C00DC46F2 /* UITableViewExtensions.swift in Sources */,
 				44B30F172685BC63007C5B51 /* EncodableExtensions.swift in Sources */,
+				F2E4801026B83FB80055A0D6 /* TextStyleModifier.swift in Sources */,
 				F20082E7225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
 				F258CE9D25F2A603007EF07E /* MagicError.swift in Sources */,
 				F62CC3452270A1A000DC46F2 /* SnackBar.swift in Sources */,
@@ -1688,6 +1713,7 @@
 				F2008339225F878600AC6EE1 /* StringExtensions+ValuesTests.swift in Sources */,
 				F2C78F26238D6AF2008C4846 /* CellIdentificableTests.swift in Sources */,
 				F22A38F6227C77770012C010 /* SharedDictionaryTests.swift in Sources */,
+				F2E4801826B842000055A0D6 /* TextStylesTests.swift in Sources */,
 				F22A38F2227C77620012C010 /* DictionaryExtensionsTests.swift in Sources */,
 				F21A6780226F4E6B0026F6E9 /* UIViewExtensionsTests.swift in Sources */,
 				F2008331225F876300AC6EE1 /* StringExtensions+ValidatorsTests.swift in Sources */,
@@ -1711,8 +1737,10 @@
 				F2A74DBC225765CF001F0DF2 /* ArrayExtensions.swift in Sources */,
 				F2C1A26324E2E07B005DC7A8 /* StringExtensions+Crypto.swift in Sources */,
 				F20082D6225DFF4F00AC6EE1 /* OptionalType.swift in Sources */,
+				F2E4801326B841370055A0D6 /* TextStyle.swift in Sources */,
 				F2008376226633AD00AC6EE1 /* SequenceExtensions.swift in Sources */,
 				F22A38EA227C76FD0012C010 /* DictionaryExtensions.swift in Sources */,
+				F2E4800E26B83FB50055A0D6 /* TextStyleModifier.swift in Sources */,
 				F2496730230D5DA200C06E2E /* Difference.swift in Sources */,
 				F200831E225F831F00AC6EE1 /* StringExtensions+Values.swift in Sources */,
 				F200832D225F862900AC6EE1 /* DataExtensions.swift in Sources */,
@@ -1815,7 +1843,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = MasMagicPills;
@@ -1878,7 +1906,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = MasMagicPills;
 				SDKROOT = iphoneos;
@@ -2013,6 +2041,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2041,6 +2070,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masmovil.MasMagicPills;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2121,6 +2151,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.1;
 			};
 			name = Debug;
 		};
@@ -2149,6 +2180,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.1;
 			};
 			name = Release;
 		};
@@ -2227,6 +2259,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -2254,6 +2287,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
