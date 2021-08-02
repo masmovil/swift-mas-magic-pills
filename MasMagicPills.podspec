@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MasMagicPills'
-  s.version          = '2.5.0'
+  s.version          = '3.0.0'
   s.swift_version    = '5.0'
   s.summary          = 'Set of powerful utilities 💊.'
 
@@ -16,9 +16,9 @@ DESC
 
   s.frameworks = 'Foundation'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '14.0'
   s.ios.frameworks = 'UIKit'
-  s.ios.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift'
+  s.ios.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift', 'Source/SwiftUI/**/*.swift'
 
   s.osx.deployment_target = '10.13'
   s.osx.frameworks = 'AppKit'
@@ -32,7 +32,7 @@ DESC
     'Source/Foundation/Extensions/CGFloatExtensions.swift', 
     'Source/Foundation/Extensions/NSAttributedStringExtensions.swift'
 
-  s.tvos.deployment_target = '11.0'
+  s.tvos.deployment_target = '14.0'
   s.tvos.frameworks = 'UIKit'
   s.tvos.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift'
 end
