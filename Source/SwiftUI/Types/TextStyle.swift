@@ -94,11 +94,11 @@ public struct TextStyle {
         guard let uiFont = uiFont else {
             fatalError("Don't use this method with SwiftUI")
         }
-        text.attributed(alignment: alignment,
-                        lineHeight: lineHeight,
-                        letterSpacing: letterSpacing,
-                        font: uiFont,
-                        color: uiColor)
+        return text.attributed(alignment: alignment,
+                               lineHeight: lineHeight,
+                               letterSpacing: letterSpacing,
+                               font: uiFont,
+                               color: uiColor)
     }
 
     /// Don't use this whit SwiftUI.Font

@@ -20,9 +20,9 @@ DESC
   s.ios.frameworks = 'UIKit'
   s.ios.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift', 'Source/SwiftUI/**/*.swift'
 
-  s.osx.deployment_target = '10.13'
+  s.osx.deployment_target = '11.0'
   s.osx.frameworks = 'AppKit'
-  s.osx.source_files  = 'Source/Foundation/**/*.swift'
+  s.osx.source_files  = 'Source/Foundation/**/*.swift', 'Source/SwiftUI/**/*.swift'
 
   s.watchos.deployment_target = '4.0'
   s.watchos.frameworks = 'UIKit', 'WatchKit'
@@ -34,5 +34,5 @@ DESC
 
   s.tvos.deployment_target = '14.0'
   s.tvos.frameworks = 'UIKit'
-  s.tvos.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift'
+  s.tvos.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift', 'Source/SwiftUI/**/*.swift'
 end
