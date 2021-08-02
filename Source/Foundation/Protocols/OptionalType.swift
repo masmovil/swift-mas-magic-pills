@@ -17,13 +17,13 @@ public extension Sequence where Iterator.Element: OptionalType {
     /// Remove all the nullable values inside a nullable values array.
     ///
     /// - Returns: A Collection without null values.
-    var filterNil: [Iterator.Element.Wrapped] {
+    var filterNils: [Iterator.Element.Wrapped] {
         return compactMap { $0.wrapped }
     }
 
-    @available(*, deprecated, renamed: "filterNil")
-    var filterNils: [Iterator.Element.Wrapped] {
-        return filterNil
+    @available(*, deprecated, renamed: "filterNils")
+    var filterNil: [Iterator.Element.Wrapped] {
+        return filterNils
     }
 }
 
