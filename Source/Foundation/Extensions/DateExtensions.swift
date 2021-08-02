@@ -80,6 +80,12 @@ public extension Date {
                 dateFormatter.dateFormat = dateFormatter.dateFormat.replacingOccurrences(of: ":ss", with: "")
                 date = dateFormatter.date(from: formattedDate)
             }
+            
+            //For ISO8601 dates, try to parse without seconds if the default input don't pass...
+            if self == .rfc3339 && date == nil {
+                dateFormatter.dateFormat = dateFormatter.dateFormat.replacingOccurrences(of: ":ss.SSS", with: "")
+                date = dateFormatter.date(from: formattedDate)
+            }
 
             return date
         }
