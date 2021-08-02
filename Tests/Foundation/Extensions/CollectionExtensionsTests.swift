@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class CollectionExtensionsTests: XCTestCase {
     func test_isNotEmpty() {

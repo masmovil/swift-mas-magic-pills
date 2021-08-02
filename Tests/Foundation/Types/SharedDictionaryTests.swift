@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class SharedDictionaryTests: XCTestCase {
     func test_init() {
@@ -12,9 +12,9 @@ class SharedDictionaryTests: XCTestCase {
     func test_getorput() {
         let sharedDictionary = SharedDictionary<String, Int>()
 
-        let value = sharedDictionary.getOrPut("a", defaultValue: { 4 })
+        let value = sharedDictionary.safeValue("a") { 4 }
 
-        XCTAssertEqual(value, sharedDictionary.get(withKey: "a"))
+        XCTAssertEqual(value, sharedDictionary.value(withKey: "a"))
         XCTAssertEqual(sharedDictionary.innerDictionary, ["a": 4])
     }
 }

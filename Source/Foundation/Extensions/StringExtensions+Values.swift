@@ -7,13 +7,14 @@ public extension String {
             return true
         case "false", "no", "0":
             return false
+
         default:
             return nil
         }
     }
 
     var urlValue: URL? {
-        return URL(string: self)
+        URL(string: self)
     }
 
     /// Convert String to Date with Date Format (if don't specify it, will look for all Date Formats contemplated)
@@ -26,10 +27,9 @@ public extension String {
     func date(dateFormat: Date.Format? = nil,
               locale: Locale = .posix,
               timeZone: TimeZone = .utc) -> Date? {
-
-        return Date(formattedDate: self,
-                    dateFormat: dateFormat,
-                    locale: locale,
-                    timeZone: timeZone)
+        Date(formattedDate: self,
+             dateFormat: dateFormat,
+             locale: locale,
+             timeZone: timeZone)
     }
 }

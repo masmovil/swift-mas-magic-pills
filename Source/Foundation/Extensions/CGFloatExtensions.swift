@@ -1,9 +1,8 @@
 import Foundation
 
 public extension CGFloat {
-
-    //Convert degrees to radians
+    // Convert degrees to radians
     var radians: CGFloat {
-        return self * .pi / 180
+        self * .pi / 180
     }
 }

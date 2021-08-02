@@ -1,7 +1,6 @@
 import UIKit
 
 public extension UIFont {
-
     // Return same font with bold trait (read-only)
     var bold: UIFont? {
         if fontDescriptor.symbolicTraits.contains(.traitBold) { return self }
@@ -25,7 +24,7 @@ public extension UIFont {
     /// - Parameter size: Font size
     /// - Returns: System regular font
     static func systemRegular(size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: .regular)
+        UIFont.systemFont(ofSize: size, weight: .regular)
     }
 
     /// To get bold font with custom size
@@ -33,7 +32,7 @@ public extension UIFont {
     /// - Parameter size: Font size
     /// - Returns: System bold font
     static func systemBold(size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: .bold)
+        UIFont.systemFont(ofSize: size, weight: .bold)
     }
 
     /// To get medium font with custom size
@@ -41,7 +40,7 @@ public extension UIFont {
     /// - Parameter size: Font size
     /// - Returns: System medium font
     static func systemMedium(size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: .medium)
+        UIFont.systemFont(ofSize: size, weight: .medium)
     }
 
     /// To get light font with custom size
@@ -49,7 +48,7 @@ public extension UIFont {
     /// - Parameter size: Font size
     /// - Returns: System light font
     static func systemLight(size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: .light)
+        UIFont.systemFont(ofSize: size, weight: .light)
     }
 
     private func with(traits: UIFontDescriptor.SymbolicTraits) -> UIFont? {

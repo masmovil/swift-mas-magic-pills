@@ -1,9 +1,8 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class UIStackViewExtensionsTests: XCTestCase {
-
     func test_add_arranged_subviews() {
         let stack = UIStackView()
         stack.addArrangedSubviews([UIView(), UIView()])

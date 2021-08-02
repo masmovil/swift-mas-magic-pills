@@ -1,9 +1,8 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class UILabelExtensionsTests: XCTestCase {
-
     func test_highlight_text() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
         label.font = UIFont(name: "Helvetica", size: 14)

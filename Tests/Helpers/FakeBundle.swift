@@ -6,9 +6,13 @@ class FakeBundle: Bundle {
 
     override func object(forInfoDictionaryKey key: String) -> Any? {
         switch key {
-        case "CFBundleShortVersionString": return versionNumberValue
-        case "CFBundleVersion": return buildNumberValue
-        default: return nil
+        case "CFBundleShortVersionString":
+            return versionNumberValue
+        case "CFBundleVersion":
+            return buildNumberValue
+
+        default:
+            return nil
         }
     }
 }

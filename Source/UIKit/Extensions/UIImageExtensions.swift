@@ -1,7 +1,6 @@
 import UIKit
 
 public extension UIImage {
-
     // MARK: - Methods
 
     /// Create UIImage from color and size.

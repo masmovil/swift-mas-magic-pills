@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class OrderedSetTests: XCTestCase {
     func test_empty() {
@@ -148,11 +148,11 @@ class OrderedSetTests: XCTestCase {
 
 private struct Player: Comparable, Equatable {
     static func < (lhs: Player, rhs: Player) -> Bool {
-        return lhs.points < rhs.points
+        lhs.points < rhs.points
     }
 
     static func == (lhs: Player, rhs: Player) -> Bool {
-        return lhs.points == rhs.points && lhs.name == rhs.name
+        lhs.points == rhs.points && lhs.name == rhs.name
     }
 
     let name: String

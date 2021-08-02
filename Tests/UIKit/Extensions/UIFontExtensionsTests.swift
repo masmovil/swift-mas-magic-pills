@@ -1,9 +1,8 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class UIFontExtensionsTests: XCTestCase {
-
     func test_font_bold() {
         let originalFont = UIFont(name: "Helvetica", size: 14)
         let boldedFont = originalFont?.bold

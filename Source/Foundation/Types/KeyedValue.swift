@@ -38,6 +38,6 @@ public struct KeyedValue<Value: Codable>: KeyedValueType, Equatable, Codable {
     // MARK: - Equatable
 
     public static func == (lhs: KeyedValue<Value>, rhs: KeyedValue<Value>) -> Bool {
-        return lhs.id == rhs.id
+        lhs.id == rhs.id
     }
 }

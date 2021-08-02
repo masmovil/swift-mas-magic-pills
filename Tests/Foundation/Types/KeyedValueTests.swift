@@ -1,5 +1,5 @@
-import XCTest
 import MasMagicPills
+import XCTest
 
 class KeyedValueTests: XCTestCase {
     private let jsonHelper = JSONTestHelper()

@@ -1,7 +1,6 @@
 import UIKit
 
 public extension UITableView {
-
     /// Register UITableViewCell using class name.
     ///
     /// - Parameter type: UITableViewCell type.

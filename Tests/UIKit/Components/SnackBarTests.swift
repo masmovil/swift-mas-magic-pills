@@ -1,9 +1,8 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class SnackBarTests: XCTestCase {
-
     func test_show_snackbar() {
         let completed = expectation(description: "Toast succesfully showed")
         let viewController = UIViewController()

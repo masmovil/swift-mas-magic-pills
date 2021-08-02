@@ -1,20 +1,19 @@
 import Foundation
 
 public extension Decimal {
-
     /// Convert milliseconds(self) to seconds
     var millisecondsToSeconds: Decimal {
-        return self / 1_000
+        self / 1_000
     }
 
     /// Convert milliseconds(self) to minutes
     var millisecondsToMinutes: Decimal {
-        return self / 60_000
+        self / 60_000
     }
 
     /// Convert seconds(self) to minutes
     var secondsToMinutes: Decimal {
-        return self / 60
+        self / 60
     }
 
     /// Convert given megas to Megabytes (1000 bytes) and format it with Locale and specific decimals

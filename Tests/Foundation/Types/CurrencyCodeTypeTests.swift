@@ -1,5 +1,5 @@
-import XCTest
 import MasMagicPills
+import XCTest
 
 class CurrencyCodeTypeTests: XCTestCase {
     private let jsonHelper = JSONTestHelper()

@@ -1,7 +1,6 @@
 import UIKit
 
 public extension String {
-
     /// Add multiples attributes
     ///
     /// - Parameters:

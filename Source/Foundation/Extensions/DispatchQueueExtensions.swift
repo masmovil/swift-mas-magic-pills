@@ -8,6 +8,6 @@ public extension DispatchQueue {
     }()
 
     static var isMain: Bool {
-        return DispatchQueue.getSpecific(key: token) != nil
+        DispatchQueue.getSpecific(key: token) != nil
     }
 }

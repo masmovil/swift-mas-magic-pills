@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class DateExtensionsTests: XCTestCase {
     func test_adding() {
@@ -53,13 +53,13 @@ class DateExtensionsTests: XCTestCase {
     func test_init_with_rfc1123date() {
         let rfc1123Date = "Fri, 16 Apr 2021 14:37:26 GMT"
         let date = rfc1123Date.date(dateFormat: .rfc1123, locale: .posix, timeZone: .utc)
-        
+
         XCTAssertEqual(date?.formatted(with: .rfc1123,
                                        locale: .posix,
                                        timeZone: .utc),
                        rfc1123Date)
     }
-    
+
     func test_init_with_rfc3339date() {
         let rfc3339Date = "2019-08-09T10:48:00.000+0200"
         let date = rfc3339Date.date()
@@ -69,7 +69,7 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertNil("👋".date())
     }
 
-    func test_init_with_rfc3339date_with_no_seconds() { //"2021-04-07T09:00+01:00"
+    func test_init_with_rfc3339date_with_no_seconds() { // "2021-04-07T09:00+01:00"
         let rfc3339Date = "2021-04-07T09:00+0100"
         let date = rfc3339Date.date()
         XCTAssertEqual(date?.formatted(with: .rfc3339,

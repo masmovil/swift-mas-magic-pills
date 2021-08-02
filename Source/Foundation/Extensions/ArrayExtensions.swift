@@ -3,7 +3,7 @@ import Foundation
 public extension Array where Element: Hashable {
     /// Return an array without repeat any hashable value
     var unique: [Element] {
-        return Array(Set(self))
+        Array(Set(self))
     }
 }
 

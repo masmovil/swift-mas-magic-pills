@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class SemVerTests: XCTestCase {
     func test_initializers() {

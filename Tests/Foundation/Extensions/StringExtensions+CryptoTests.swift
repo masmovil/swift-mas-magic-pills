@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class StringExtensionsCryptoTests: XCTestCase {
     func test_md5() {

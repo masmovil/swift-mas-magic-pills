@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class StringExtensionsTests: XCTestCase {
     func test_capitalizeWords() {
@@ -123,5 +123,4 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual("sample_text".localized(bundle: bundle, tableName: tableName), localizedExample)
         XCTAssertEqual("not_found".localized(bundle: bundle, tableName: tableName), "**not_found**")
     }
-
 }

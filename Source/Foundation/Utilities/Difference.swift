@@ -53,6 +53,7 @@ public func diff<T>(_ expected: T, _ received: T, level: Int = 0, closure: (_ de
             ↪️ \(expectedString)
             ➡️ \(receivedString)\n
             """)
+
     default:
         break
     }

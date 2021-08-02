@@ -8,19 +8,19 @@ public class SharedDictionary<Key: Hashable, Value> {
         innerDictionary = [:]
     }
 
-    public func getOrPut(_ key: Key, defaultValue: () -> Value) -> Value {
-        return self[key, orPut: defaultValue]
+    public func safeValue(_ key: Key, defaultValue: () -> Value) -> Value {
+        self[key, ifNotExistsSave: defaultValue]
     }
 
-    public func get(withKey key: Key) -> Value? {
-        return self[key]
+    public func value(withKey key: Key) -> Value? {
+        self[key]
     }
 
-    public subscript (_ key: Key, orPut defaultValue: () -> Value) -> Value {
-        return innerDictionary.getOrPut(key, defaultValue: defaultValue)
+    public subscript (_ key: Key, ifNotExistsSave defaultValue: () -> Value) -> Value {
+        innerDictionary.safeValue(key, defaultValue: defaultValue)
     }
 
     public subscript (_ key: Key) -> Value? {
-        return innerDictionary[key]
+        innerDictionary[key]
     }
 }

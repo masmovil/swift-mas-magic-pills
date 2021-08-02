@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class CGFloatExtensionsTests: XCTestCase {
     func test_convert_degrees_to_radianas() {

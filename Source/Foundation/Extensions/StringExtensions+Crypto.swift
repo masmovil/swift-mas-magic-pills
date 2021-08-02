@@ -1,5 +1,5 @@
-import Foundation
 import CommonCrypto
+import Foundation
 
 public extension String {
     @available(*, deprecated, message: "This function is cryptographically broken and should not be used in security contexts. Clients should migrate to SHA256 (or stronger).")

@@ -1,11 +1,10 @@
-import XCTest
-import UIKit
 import MasMagicPills
+import UIKit
+import XCTest
 
 private class HeaderCollectionReusableView: UICollectionReusableView {}
 
 class UICollectionViewExtensionsTests: XCTestCase {
-
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
 
     override func setUp() {
@@ -39,17 +38,15 @@ class UICollectionViewExtensionsTests: XCTestCase {
 }
 
 extension UICollectionViewExtensionsTests: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return (collectionView == self.collectionView) ? 2 : 0
+        (collectionView == self.collectionView) ? 2 : 0
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (collectionView == self.collectionView) ? (section == 0 ? 5 : 0) : 0
+        (collectionView == self.collectionView) ? (section == 0 ? 5 : 0) : 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        UICollectionViewCell()
     }
-
 }

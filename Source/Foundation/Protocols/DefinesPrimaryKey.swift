@@ -7,5 +7,5 @@ public protocol DefinesPrimaryKey: Equatable {
 }
 
 public func ==<T: DefinesPrimaryKey>(lhs: T, rhs: T) -> Bool where T.PrimaryKey: Equatable {
-    return lhs.primaryKey == rhs.primaryKey
+    lhs.primaryKey == rhs.primaryKey
 }

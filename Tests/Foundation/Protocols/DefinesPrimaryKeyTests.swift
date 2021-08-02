@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class DefinesPrimaryKeyTests: XCTestCase {
     func test_wrapped_value() {
@@ -21,6 +21,6 @@ private struct Person: DefinesPrimaryKey {
     typealias PrimaryKey = String
 
     var primaryKey: PrimaryKey {
-        return name
+        name
     }
 }

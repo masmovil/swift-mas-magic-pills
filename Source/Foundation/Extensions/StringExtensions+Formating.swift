@@ -2,7 +2,7 @@ import Foundation
 
 public extension String {
     var underLined: NSAttributedString {
-        return NSMutableAttributedString(string: self, attributes: [.underlineStyle: 1])
+        NSMutableAttributedString(string: self, attributes: [.underlineStyle: 1])
     }
 
     var formattedAsPhoneNumber: String {

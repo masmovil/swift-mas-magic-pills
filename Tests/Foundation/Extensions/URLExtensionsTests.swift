@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class URLExtensionsTests: XCTestCase {
     func test_comparable() {

@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class DictionaryExtensionsTests: XCTestCase {
     func test_getorput() {
@@ -15,7 +15,7 @@ class DictionaryExtensionsTests: XCTestCase {
         }
         XCTAssertEqual(dictionary.keys.count, 2)
 
-        XCTAssertEqual(dictionary.getOrPut("c", defaultValue: { 3 }), 3)
+        XCTAssertEqual(dictionary.getOrPut("c") { 3 }, 3)
         XCTAssertEqual(dictionary.keys.count, 3)
     }
 }

@@ -1,7 +1,6 @@
 import UIKit
 
 public extension UIView {
-
     /// Border color
     var borderColor: UIColor? {
         get {
@@ -21,7 +20,7 @@ public extension UIView {
     /// Border width
     var borderWidth: CGFloat {
         get {
-            return layer.borderWidth
+            layer.borderWidth
         }
         set {
             layer.borderWidth = newValue
@@ -31,7 +30,7 @@ public extension UIView {
     /// Corner radius
     var cornerRadius: CGFloat {
         get {
-            return layer.cornerRadius
+            layer.cornerRadius
         }
         set {
             layer.masksToBounds = true
@@ -53,7 +52,7 @@ public extension UIView {
     /// Shadow offset of view
     var shadowOffset: CGSize {
         get {
-            return layer.shadowOffset
+            layer.shadowOffset
         }
         set {
             layer.shadowOffset = newValue
@@ -63,7 +62,7 @@ public extension UIView {
     /// Shadow opacity of view
     var shadowOpacity: Float {
         get {
-            return layer.shadowOpacity
+            layer.shadowOpacity
         }
         set {
             layer.shadowOpacity = newValue
@@ -73,7 +72,7 @@ public extension UIView {
     /// Shadow radius of view
     var shadowRadius: CGFloat {
         get {
-            return layer.shadowRadius
+            layer.shadowRadius
         }
         set {
             layer.shadowRadius = newValue
@@ -101,7 +100,7 @@ public extension UIView {
 
     /// Remove all subviews in view.
     func removeSubviews() {
-        subviews.forEach({ $0.removeFromSuperview() })
+        subviews.forEach { $0.removeFromSuperview() }
     }
 
     /// Add custom shadow
@@ -115,9 +114,8 @@ public extension UIView {
                    opacity: Float = 0.2,
                    offSet: CGSize = CGSize(width: 1, height: 1),
                    radius: CGFloat = 2) {
-
         layer.masksToBounds = false
-        layer.shadowOffset = opacity.isZero ? CGSize(width: 0.0, height: 0.0) : offSet
+        layer.shadowOffset = opacity.isZero ? CGSize.zero : offSet
         layer.shadowOpacity = opacity
         layer.shadowRadius = opacity.isZero ? 0.0 : radius
         layer.shadowColor = opacity.isZero ? UIColor.clear.cgColor : color.cgColor
@@ -129,7 +127,7 @@ public extension UIView {
     /// Remove custom shadow
     func removeShadow() {
         layer.masksToBounds = true
-        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOffset = CGSize.zero
         layer.shadowOpacity = 0
         layer.shadowRadius = 0
         layer.shadowColor = UIColor.clear.cgColor
@@ -181,13 +179,11 @@ public extension UIView {
                 animated: Bool = false,
                 duration: TimeInterval = 1,
                 completion: ((Bool) -> Void)? = nil) {
-
         let angleInRadians = angle.radians
         UIView.animate(withDuration: animated ? duration : 0,
                        delay: 0,
                        options: .curveLinear,
                        animations: { () -> Void in
-
                         self.transform = self.transform.rotated(by: angleInRadians)
         }, completion: completion)
     }
@@ -214,5 +210,4 @@ public extension UIView {
 }
 
 extension UIView: XibRepresentable {
-
 }

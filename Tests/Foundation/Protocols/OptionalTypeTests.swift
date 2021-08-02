@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class OptionalTypeTests: XCTestCase {
     func test_wrapped_value() {

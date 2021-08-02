@@ -7,6 +7,6 @@ public protocol CellIdentificable: AnyObject {
 
 public extension CellIdentificable {
     static var reuseIdentifier: String {
-        return "\(String(describing: self))ID"
+        "\(String(describing: self))ID"
     }
 }

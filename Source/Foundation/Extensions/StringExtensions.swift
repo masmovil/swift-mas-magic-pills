@@ -3,7 +3,7 @@ import Foundation
 public extension String {
     /// Return numbers from string
     var onlyNumbers: String {
-        return self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
     }
 
     /// Return URL value only if an valid Url for Internet
@@ -13,25 +13,25 @@ public extension String {
         }
         return nil
     }
-    
+
     var addTrailingSpaceIfNotEmpty: String {
-        return isEmpty ? "" : "\(self) "
+        isEmpty ? "" : "\(self) "
     }
 
     var capitalizeWords: String {
-        return self.split(separator: " ")
+        self.split(separator: " ")
             .map { $0.capitalized }
             .joined(separator: " ")
     }
 
     var capitalizeSentences: String {
-        return self.components(separatedBy: ". ")
+        self.components(separatedBy: ". ")
             .map { String($0).capitalizedFirstLetter }
             .joined(separator: ". ")
     }
 
     func starts(withAnyOf: [String]) -> Bool {
-        return withAnyOf.contains { starts(with: $0) }
+        withAnyOf.contains { starts(with: $0) }
     }
 
     var capitalizedFirstLetter: String {
@@ -42,31 +42,31 @@ public extension String {
     }
 
     var capitalizedWords: String {
-        return self.split(separator: " ")
+        self.split(separator: " ")
             .map { $0.capitalized }
             .joined(separator: " ")
     }
 
     var capitalizedSentences: String {
-        return self.components(separatedBy: ". ")
+        self.components(separatedBy: ". ")
             .map { String($0).capitalizedFirstLetter }
             .joined(separator: ". ")
     }
 
     var lowercasedLeastTheFirstUnchanged: String {
-        return prefix(1) + dropFirst().lowercased()
+        prefix(1) + dropFirst().lowercased()
     }
 
     var dataUTF8: Data {
-        return data(using: String.Encoding.utf8)!
+        data(using: String.Encoding.utf8)!
     }
 
     var removingWhiteSpaces: String {
-        return components(separatedBy: .whitespaces).joined()
+        components(separatedBy: .whitespaces).joined()
     }
 
     var trimed: String {
-        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 
     var base64decoded: String? {
@@ -78,11 +78,11 @@ public extension String {
     }
 
     var base64encoded: String {
-        return Data(self.utf8).base64EncodedString()
+        Data(self.utf8).base64EncodedString()
     }
 
     func localized(bundle: Bundle = .main, tableName: String = "Common") -> String {
-        return NSLocalizedString(self, tableName: tableName, bundle: bundle, value: "**\(self)**", comment: "")
+        NSLocalizedString(self, tableName: tableName, bundle: bundle, value: "**\(self)**", comment: "")
     }
 
     func htmlValue(fontSize: Float, fontFamily: String? = nil) -> String {
@@ -93,7 +93,7 @@ public extension String {
     }
 
     func satisfiesRegex(_ regex: String) -> Bool {
-        return range(of: regex, options: .regularExpression) != nil
+        range(of: regex, options: .regularExpression) != nil
     }
 
     /// Replaces the matches of the given regex pattern with an user-defined String.
@@ -115,7 +115,6 @@ public extension String {
                              options: String.CompareOptions = [],
                              range: Range<Index>? = nil,
                              locale: Locale? = nil) -> NSRange? {
-
         guard let range = self.range(of: text,
                                      options: options,
                                      range: range ?? startIndex..<endIndex,
@@ -135,7 +134,6 @@ public extension String {
                           options: String.CompareOptions = [],
                           range: Range<Index>? = nil,
                           locale: Locale? = nil) -> [NSRange] {
-
         var start = range?.lowerBound ?? startIndex
         let end = range?.upperBound ?? endIndex
         var ranges: [NSRange] = []
@@ -150,7 +148,7 @@ public extension String {
     }
 
     var bodyRange: NSRange {
-        return nsRange(of: self)!
+        nsRange(of: self)!
     }
 
     func nsRange(of string: String) -> NSRange? {

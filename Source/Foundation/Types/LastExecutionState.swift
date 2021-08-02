@@ -22,12 +22,16 @@ public enum LastExecutionState: Codable, Equatable {
         switch (code, date) {
         case (0, .none):
             self = .never
+
         case (1, .none):
             self = .failure
+
         case (2, .some(let date)):
             self = .noData(date)
+
         case (3, .some(let date)):
             self = .dataUpdated(date)
+
         default:
             throw NSError(domain: "Invalid code: \(code)", code: 1, userInfo: nil)
         }
@@ -43,19 +47,33 @@ public enum LastExecutionState: Codable, Equatable {
 
     private var internalCode: Int {
         switch self {
-        case .never: return 0
-        case .failure: return 1
-        case .noData: return 2
-        case .dataUpdated: return 3
+        case .never:
+            return 0
+
+        case .failure:
+            return 1
+
+        case .noData:
+            return 2
+
+        case .dataUpdated:
+            return 3
         }
     }
 
     private var internalDate: Date? {
         switch self {
-        case .never: return nil
-        case .failure: return nil
-        case .noData(let date): return date
-        case .dataUpdated(let date): return date
+        case .never:
+            return nil
+
+        case .failure:
+            return nil
+
+        case .noData(let date):
+            return date
+
+        case .dataUpdated(let date):
+            return date
         }
     }
 }

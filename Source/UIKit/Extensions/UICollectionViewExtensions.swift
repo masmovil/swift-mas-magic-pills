@@ -1,7 +1,6 @@
 import UIKit
 
 public extension UICollectionView {
-
     /// Register UICollectionViewCell using class name.
     ///
     /// - Parameter type: UICollectionViewCell type.

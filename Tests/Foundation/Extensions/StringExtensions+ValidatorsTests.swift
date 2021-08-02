@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class StringExtensionsValidatorsTests: XCTestCase {
     func test_valid_internet_url() {

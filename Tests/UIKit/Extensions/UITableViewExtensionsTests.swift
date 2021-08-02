@@ -1,9 +1,8 @@
-import XCTest
-import UIKit
 import MasMagicPills
+import UIKit
+import XCTest
 
 class UITableViewExtensionsTests: XCTestCase {
-
     let tableView = UITableView()
     let emptyTableView = UITableView()
 
@@ -38,9 +37,8 @@ class UITableViewExtensionsTests: XCTestCase {
 }
 
 extension UITableViewExtensionsTests: UITableViewDataSource {
-
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableView == self.emptyTableView ? 0 : 2
+        tableView == self.emptyTableView ? 0 : 2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +50,6 @@ extension UITableViewExtensionsTests: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        UITableViewCell()
     }
-
 }

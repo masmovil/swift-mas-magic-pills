@@ -9,24 +9,32 @@ public enum CurrencyCodeType: RawRepresentable, Equatable, Codable, CaseIterable
 
     public init(rawValue: String) {
         switch rawValue {
-        case CurrencyCodeType.euro.rawValue: self = .euro
-        case CurrencyCodeType.dollar.rawValue: self = .dollar
-        default: self = .custom(rawValue)
+        case CurrencyCodeType.euro.rawValue:
+            self = .euro
+
+        case CurrencyCodeType.dollar.rawValue:
+            self = .dollar
+
+        default:
+            self = .custom(rawValue)
         }
     }
 
     public var rawValue: String {
         switch self {
-        case .euro: return "EUR"
-        case .dollar: return "USD"
-        case .custom(let value): return value
+        case .euro:
+            return "EUR"
+        case .dollar:
+            return "USD"
+        case .custom(let value):
+            return value
         }
     }
 
     // MARK: - CaseIterable
 
-    static public var allCases: [CurrencyCodeType] {
-        return [.euro, .dollar]
+    public static var allCases: [CurrencyCodeType] {
+        [.euro, .dollar]
     }
 
     // MARK: - Codable
@@ -48,14 +56,17 @@ public enum CurrencyCodeType: RawRepresentable, Equatable, Codable, CaseIterable
 
     // MARK: - Equatable
 
-    static public func == (lhs: CurrencyCodeType, rhs: CurrencyCodeType) -> Bool {
+    public static func == (lhs: CurrencyCodeType, rhs: CurrencyCodeType) -> Bool {
         switch (lhs, rhs) {
         case (.euro, .euro):
             return true
+
         case (.dollar, .dollar):
             return true
+
         case (.custom(let lhsCustom), .custom(let rhsCustom)):
             return lhsCustom == rhsCustom
+
         default:
             return false
         }

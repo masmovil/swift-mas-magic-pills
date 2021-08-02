@@ -2,7 +2,6 @@ import Foundation
 
 /// Wrapper for version representation according to https://semver.org
 public struct Semver: Comparable, CustomStringConvertible {
-
     /// Initialices a Semver from a string version compatible.
     /// - Parameter string: version literal
     public init(_ string: String) {
@@ -23,19 +22,19 @@ public struct Semver: Comparable, CustomStringConvertible {
     }
 
     public var major: Int {
-        return components[0]
+        components[0]
     }
 
     public var minor: Int {
-        return components[1]
+        components[1]
     }
 
     public var patch: Int {
-        return components[2]
+        components[2]
     }
 
     public var description: String {
-        return "v\(major).\(minor).\(patch)"
+        "v\(major).\(minor).\(patch)"
     }
 
     // Private

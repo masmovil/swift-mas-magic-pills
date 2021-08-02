@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -193,9 +193,9 @@
 		F22A38F0227C775F0012C010 /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38EB227C775C0012C010 /* DictionaryExtensionsTests.swift */; };
 		F22A38F1227C77610012C010 /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38EB227C775C0012C010 /* DictionaryExtensionsTests.swift */; };
 		F22A38F2227C77620012C010 /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38EB227C775C0012C010 /* DictionaryExtensionsTests.swift */; };
-		F22A38F4227C77770012C010 /* SharedDictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38F3227C77770012C010 /* SharedDictionaryExtensionsTests.swift */; };
-		F22A38F5227C77770012C010 /* SharedDictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38F3227C77770012C010 /* SharedDictionaryExtensionsTests.swift */; };
-		F22A38F6227C77770012C010 /* SharedDictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38F3227C77770012C010 /* SharedDictionaryExtensionsTests.swift */; };
+		F22A38F4227C77770012C010 /* SharedDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38F3227C77770012C010 /* SharedDictionaryTests.swift */; };
+		F22A38F5227C77770012C010 /* SharedDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38F3227C77770012C010 /* SharedDictionaryTests.swift */; };
+		F22A38F6227C77770012C010 /* SharedDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38F3227C77770012C010 /* SharedDictionaryTests.swift */; };
 		F22A38FE227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
 		F22A38FF227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
 		F22A3900227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
@@ -303,6 +303,8 @@
 		F2C78F27238D6AF4008C4846 /* CellIdentificableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F23238D6AEF008C4846 /* CellIdentificableTests.swift */; };
 		F2C78F29238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */; };
 		F2C78F2A238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */; };
+		F2E47FF426B82EFE0055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
+		F2E47FF726B8315D0055A0D6 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */; };
 		F62CC32722704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32822704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */; };
 		F62CC32A22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */; };
@@ -456,7 +458,7 @@
 		F22A38E1227C767A0012C010 /* SharedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDictionary.swift; sourceTree = "<group>"; };
 		F22A38E6227C76FD0012C010 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		F22A38EB227C775C0012C010 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
-		F22A38F3227C77770012C010 /* SharedDictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDictionaryExtensionsTests.swift; sourceTree = "<group>"; };
+		F22A38F3227C77770012C010 /* SharedDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDictionaryTests.swift; sourceTree = "<group>"; };
 		F22A38F7227C7FE20012C010 /* DefinesPrimaryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinesPrimaryKey.swift; sourceTree = "<group>"; };
 		F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinesPrimaryKeyTests.swift; sourceTree = "<group>"; };
 		F2496723230D504100C06E2E /* SemVer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
@@ -493,6 +495,8 @@
 		F2C78F1E238D67E1008C4846 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		F2C78F23238D6AEF008C4846 /* CellIdentificableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentificableTests.swift; sourceTree = "<group>"; };
 		F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtensions.swift; sourceTree = "<group>"; };
+		F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
 		F62CC32622704F0500DC46F2 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		F62CC32922705F5700DC46F2 /* UIStackViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensionsTests.swift; sourceTree = "<group>"; };
 		F62CC32C2270683C00DC46F2 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
@@ -601,6 +605,7 @@
 				E26053EF212187FF00D013B5 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		E26053EF212187FF00D013B5 /* Products */ = {
 			isa = PBXGroup;
@@ -621,6 +626,7 @@
 			children = (
 				F293266C227330D600B9A5E8 /* Foundation */,
 				F62CC33F22709F3000DC46F2 /* UIKit */,
+				F2E47FF026B82ED90055A0D6 /* SwiftUI */,
 				F26C3AF722537A4600189D28 /* MagicPills.swift */,
 				E26053F12121880000D013B5 /* MagicPills.h */,
 				E26053F22121880000D013B5 /* Info.plist */,
@@ -634,6 +640,7 @@
 				F2008348226612E800AC6EE1 /* Helpers */,
 				F2A74DBD225765F6001F0DF2 /* Foundation */,
 				F293266E2273310C00B9A5E8 /* UIKit */,
+				F2E47FF126B82EE30055A0D6 /* SwiftUI */,
 				E26053FE2121880000D013B5 /* Info.plist */,
 			);
 			path = Tests;
@@ -700,7 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				F22A38DC227C63900012C010 /* OrderedSetTests.swift */,
-				F22A38F3227C77770012C010 /* SharedDictionaryExtensionsTests.swift */,
+				F22A38F3227C77770012C010 /* SharedDictionaryTests.swift */,
 				F2496728230D506F00C06E2E /* SemVerTests.swift */,
 				F2496745230EBE4200C06E2E /* LastExecutionStateTests.swift */,
 				F297F0D724E572A300963BD8 /* KeyedValueTests.swift */,
@@ -944,6 +951,38 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F2E47FF026B82ED90055A0D6 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				F2E47FF526B8314D0055A0D6 /* Extensions */,
+				F2E47FF226B82EF30055A0D6 /* Types */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		F2E47FF126B82EE30055A0D6 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		F2E47FF226B82EF30055A0D6 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		F2E47FF526B8314D0055A0D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F62CC33F22709F3000DC46F2 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,7 +1219,7 @@
 				};
 			};
 			buildConfigurationList = E26053E8212187FF00D013B5 /* Build configuration list for PBXProject "MasMagicPills" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1275,7 +1314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi\n";
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi\n";
 		};
 		E20BA60621389BF7005BA13B /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1289,7 +1328,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi\n";
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi\n";
 		};
 		E260540821218AF400D013B5 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1303,7 +1342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi\n";
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1317,6 +1356,7 @@
 				F2008320225F83EF00AC6EE1 /* StringExtensions+Validators.swift in Sources */,
 				F22A357322807840004E8546 /* DispatchQueueExtensions.swift in Sources */,
 				F6F333192306B03F00E93F0E /* CGFloatExtensions.swift in Sources */,
+				F2E47FF426B82EFE0055A0D6 /* TextStyle.swift in Sources */,
 				F22A355C22806EAA004E8546 /* DefinesPrimaryKey.swift in Sources */,
 				F6F97EFA226F1E5000C3E953 /* UIImageExtensions.swift in Sources */,
 				F26C3AF822537A4600189D28 /* MagicPills.swift in Sources */,
@@ -1346,6 +1386,7 @@
 				F22A38E7227C76FD0012C010 /* DictionaryExtensions.swift in Sources */,
 				F20082D3225DFF4F00AC6EE1 /* OptionalType.swift in Sources */,
 				44B30F152685BC63007C5B51 /* EncodableExtensions.swift in Sources */,
+				F2E47FF726B8315D0055A0D6 /* TextStyleModifier.swift in Sources */,
 				F62CC3442270A1A000DC46F2 /* SnackBar.swift in Sources */,
 				F258CE9B25F2A603007EF07E /* MagicError.swift in Sources */,
 				F62CC34122709F4500DC46F2 /* Toast.swift in Sources */,
@@ -1429,7 +1470,7 @@
 				44B30F24268B2502007C5B51 /* EncodableExtensionsTests.swift in Sources */,
 				F20082DD225DFFCF00AC6EE1 /* BoolExtensionsTests.swift in Sources */,
 				F2C78F27238D6AF4008C4846 /* CellIdentificableTests.swift in Sources */,
-				F22A38F4227C77770012C010 /* SharedDictionaryExtensionsTests.swift in Sources */,
+				F22A38F4227C77770012C010 /* SharedDictionaryTests.swift in Sources */,
 				F22A38F0227C775F0012C010 /* DictionaryExtensionsTests.swift in Sources */,
 				F200834A226612F800AC6EE1 /* FakeBundle.swift in Sources */,
 				F69A08222267323600CB09F2 /* UILabelExtensionTests.swift in Sources */,
@@ -1502,7 +1543,7 @@
 				F200835D22662DDD00AC6EE1 /* TimeIntervalExtensionsTests.swift in Sources */,
 				F2C1A28E24E464CE005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
 				F20082E2225DFFD900AC6EE1 /* OptionalExtensionsTests.swift in Sources */,
-				F22A38F5227C77770012C010 /* SharedDictionaryExtensionsTests.swift in Sources */,
+				F22A38F5227C77770012C010 /* SharedDictionaryTests.swift in Sources */,
 				F22A38FF227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */,
 				F2A74DC122576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */,
 				F2008334225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
@@ -1646,7 +1687,7 @@
 				44B30F26268B2503007C5B51 /* EncodableExtensionsTests.swift in Sources */,
 				F2008339225F878600AC6EE1 /* StringExtensions+ValuesTests.swift in Sources */,
 				F2C78F26238D6AF2008C4846 /* CellIdentificableTests.swift in Sources */,
-				F22A38F6227C77770012C010 /* SharedDictionaryExtensionsTests.swift in Sources */,
+				F22A38F6227C77770012C010 /* SharedDictionaryTests.swift in Sources */,
 				F22A38F2227C77620012C010 /* DictionaryExtensionsTests.swift in Sources */,
 				F21A6780226F4E6B0026F6E9 /* UIViewExtensionsTests.swift in Sources */,
 				F2008331225F876300AC6EE1 /* StringExtensions+ValidatorsTests.swift in Sources */,
@@ -1773,7 +1814,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1836,7 +1877,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = MasMagicPills;

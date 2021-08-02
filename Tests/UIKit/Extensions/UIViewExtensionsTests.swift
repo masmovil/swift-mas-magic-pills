@@ -1,9 +1,8 @@
-import XCTest
-import UIKit
 import MasMagicPills
+import UIKit
+import XCTest
 
 class UIViewExtensionsTests: XCTestCase {
-
     func test_border_color() {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         let view = UIView(frame: frame)
@@ -119,7 +118,7 @@ class UIViewExtensionsTests: XCTestCase {
         view.removeShadow()
         XCTAssertEqual(view.shadowColor, UIColor.clear)
         XCTAssertEqual(view.shadowRadius, 0)
-        XCTAssertEqual(view.shadowOffset, CGSize(width: 0, height: 0))
+        XCTAssertEqual(view.shadowOffset, CGSize.zero)
         XCTAssertEqual(view.shadowOpacity, 0)
     }
 
@@ -139,7 +138,7 @@ class UIViewExtensionsTests: XCTestCase {
     func test_rotate_by_angle() {
         var angle: CGFloat = 0
         var angleInRadians: CGFloat {
-            return angle.radians
+            angle.radians
         }
 
         let view1 = UIView()

@@ -3,7 +3,7 @@ import UIKit
 public class Toast: UIView {
     public let message: String
     public let messageFont: UIFont
-    private let label: UILabel = UILabel()
+    private let label = UILabel()
 
     public init(_ message: String, font: UIFont, frame: CGRect) {
         self.message = message
@@ -26,7 +26,7 @@ public class Toast: UIView {
         setup()
     }
 
-    public override func encode(with aCoder: NSCoder) {
+    override public func encode(with aCoder: NSCoder) {
         aCoder.encode(message, forKey: "messageKey")
         aCoder.encode(messageFont, forKey: "fontKey")
 
@@ -79,7 +79,6 @@ public extension Toast {
                      font: UIFont = UIFont.systemRegular(size: 10),
                      in view: UIView,
                      completion: (() -> Void)? = nil) -> Toast {
-
         let toastFrame = CGRect(x: view.frame.size.width / 2 - 75,
                                 y: view.frame.size.height - 100,
                                 width: 150, height: 70)

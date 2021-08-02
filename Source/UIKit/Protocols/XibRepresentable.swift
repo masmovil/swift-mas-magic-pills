@@ -8,10 +8,10 @@ public protocol XibRepresentable: AnyObject {
 
 public extension XibRepresentable {
     static var xibName: String {
-        return String(describing: self)
+        String(describing: self)
     }
 
     static func xib(bundle: Bundle? = nil) -> UINib {
-        return UINib(nibName: xibName, bundle: bundle)
+        UINib(nibName: xibName, bundle: bundle)
     }
 }

@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class Int64ExtensionsTests: XCTestCase {
     func test_hepers_for_giga_and_mega() {

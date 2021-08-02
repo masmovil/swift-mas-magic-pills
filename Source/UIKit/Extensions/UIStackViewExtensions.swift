@@ -1,7 +1,6 @@
 import Foundation
 
 public extension UIStackView {
-
     // MARK: - Methods
 
     /// Adds views

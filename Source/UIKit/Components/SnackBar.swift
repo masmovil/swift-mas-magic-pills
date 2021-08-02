@@ -3,7 +3,7 @@ import UIKit
 public class SnackBar: UIView {
     public let message: String
     public let messageFont: UIFont
-    private let label: UILabel = UILabel()
+    private let label = UILabel()
 
     public init(_ message: String, font: UIFont, frame: CGRect) {
         self.message = message
@@ -26,7 +26,7 @@ public class SnackBar: UIView {
         setup()
     }
 
-    public override func encode(with aCoder: NSCoder) {
+    override public func encode(with aCoder: NSCoder) {
         aCoder.encode(message, forKey: "messageKey")
         aCoder.encode(messageFont, forKey: "fontKey")
 
@@ -94,7 +94,6 @@ public extension SnackBar {
                      font: UIFont = UIFont.systemRegular(size: 14),
                      in view: UIView,
                      completion: (() -> Void)? = nil) -> SnackBar {
-
         let snackBar = SnackBar(message,
                                 font: font,
                                 frame: CGRect(x: 0,
@@ -102,17 +101,15 @@ public extension SnackBar {
                                               width: view.frame.width,
                                               height: 80))
         view.addSubview(snackBar)
-        UIView.animate(withDuration: 0.4, animations: {
+        UIView.animate(withDuration: 0.4) {
             snackBar.frame.origin.y = view.frame.height - 80
-            Timer.scheduledTimer(withTimeInterval: TimeInterval(2.5),
-                                 repeats: false,
-                                 block: { _ in
-                                    UIView.animate(withDuration: 0.4, animations: {
-                                        snackBar.frame.origin.y = view.frame.height
-                                        completion?()
-                                    })
-            })
-        })
+            Timer.scheduledTimer(withTimeInterval: TimeInterval(2.5), repeats: false) { _ in
+                UIView.animate(withDuration: 0.4) {
+                    snackBar.frame.origin.y = view.frame.height
+                    completion?()
+                }
+            }
+        }
 
         return snackBar
     }

@@ -29,7 +29,7 @@ public extension String {
             .removingWhiteSpaces
 
         if identifierBase.satisfiesRegex("^[0-9]{0,1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$") {
-            guard let numberBase: Int = Int(identifierBase.prefix(identifierBase.count - 1)),
+            guard let numberBase = Int(identifierBase.prefix(identifierBase.count - 1)),
                 let letter: Character = identifierBase.last else {
                     return false
             }
@@ -50,7 +50,7 @@ public extension String {
             buffer.replaceOccurrences(of: "X", with: "0", options: .anchored, range: NSRange(location: 0, length: 1))
             buffer.replaceOccurrences(of: "Y", with: "1", options: .anchored, range: NSRange(location: 0, length: 1))
             buffer.replaceOccurrences(of: "Z", with: "2", options: .anchored, range: NSRange(location: 0, length: 1))
-            guard let numberBase: Int = Int(buffer.standardizingPath.prefix(self.count - 1)), let letter: Character = identifierBase.last else {
+            guard let numberBase = Int(buffer.standardizingPath.prefix(self.count - 1)), let letter: Character = identifierBase.last else {
                 return false
             }
             let letterMap = "TRWAGMYFPDXBNJZSQVHLCKET"

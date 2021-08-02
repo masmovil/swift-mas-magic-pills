@@ -1,9 +1,8 @@
-import XCTest
-import UIKit
 import MasMagicPills
+import UIKit
+import XCTest
 
 class UIScrollViewExtensionsTests: XCTestCase {
-
     let screenWidth: CGFloat = 828
     let screenHeight: CGFloat = 1_792
     let scrollHeight: CGFloat = 2_000

@@ -1,9 +1,8 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class StringExtensionsUIKitTests: XCTestCase {
-
     func test_format_last_character() {
         let string = "500 GB"
         let font = UIFont.boldSystemFont(ofSize: 40)

@@ -1,7 +1,6 @@
 import Foundation
 
 public extension Date {
-
     /// Specify date format to convert
     ///
     /// - rfc3339: 2019-08-09T12:48:00.000+0200
@@ -46,22 +45,26 @@ public extension Date {
 
         func formatter(locale: Locale? = nil,
                        timeZone: TimeZone? = nil) -> DateFormatter {
-
             let dateFormatter = Formatter.date(locale: locale,
                                                timeZone: timeZone)
 
             switch self {
-            //For ISO8601 dates, if the timezone is UTC, use Z instead of +0000
+            // For ISO8601 dates, if the timezone is UTC, use Z instead of +0000
             case .iso8601 where timeZone == .utc:
                 dateFormatter.dateFormat = self.rawValue.replacingOccurrences(of: "Z", with: "'Z'")
+
             case .dateStyleShort:
                 dateFormatter.dateStyle = .short
+
             case .dateStyleMedium:
                 dateFormatter.dateStyle = .medium
+
             case .dateStyleLong:
                 dateFormatter.dateStyle = .long
+
             case .dateStyleFull:
                 dateFormatter.dateStyle = .full
+
             default:
                 dateFormatter.dateFormat = self.rawValue
             }
@@ -71,17 +74,16 @@ public extension Date {
         func date(formattedDate: String,
                   locale: Locale? = nil,
                   timeZone: TimeZone? = nil) -> Date? {
-
             let dateFormatter = formatter(locale: locale, timeZone: timeZone)
             var date = dateFormatter.date(from: formattedDate)
 
-            //For ISO8601 dates, try to parse without seconds if the default input don't pass...
+            // For ISO8601 dates, try to parse without seconds if the default input don't pass...
             if self == .iso8601 && date == nil {
                 dateFormatter.dateFormat = dateFormatter.dateFormat.replacingOccurrences(of: ":ss", with: "")
                 date = dateFormatter.date(from: formattedDate)
             }
-            
-            //For ISO8601 dates, try to parse without seconds if the default input don't pass...
+
+            // For ISO8601 dates, try to parse without seconds if the default input don't pass...
             if self == .rfc3339 && date == nil {
                 dateFormatter.dateFormat = dateFormatter.dateFormat.replacingOccurrences(of: ":ss.SSS", with: "")
                 date = dateFormatter.date(from: formattedDate)
@@ -167,7 +169,7 @@ public extension Date {
 
     /// Milliseconds since midnight UTC on January 1st, 1970 that corresponds with Date
     var millisecondsSince1970: Double {
-        return timeIntervalSince1970 * 1_000.0
+        timeIntervalSince1970 * 1_000.0
     }
 
     /// Check if day in date is between day 1 and 11 of the month (included)
@@ -198,7 +200,6 @@ public extension Date {
     func formatted(with dateFormat: Date.Format,
                    locale: Locale? = nil,
                    timeZone: TimeZone? = nil) -> String {
-
         let formatter = dateFormat.formatter(locale: locale,
                                              timeZone: timeZone)
 
@@ -232,8 +233,10 @@ public extension Date {
             switch hour {
             case 7..<15:
                 return .morning
+
             case 15..<21:
                 return .afternoon
+
             default:
                 return .night
             }
@@ -243,6 +246,6 @@ public extension Date {
 
     /// Give the previous month name from current Date
     static func previousMonthName(locale: Locale = .spanishSpain) -> String {
-        return Date().adding(months: -1).formatted(with: .month, locale: .spanishSpain)
+        Date().adding(months: -1).formatted(with: .month, locale: .spanishSpain)
     }
 }

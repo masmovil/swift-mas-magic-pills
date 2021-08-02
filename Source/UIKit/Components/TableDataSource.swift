@@ -2,7 +2,6 @@ import UIKit
 
 /// This class is a simple, immutable, declarative data source for UITableView
 final class TableDataSource<V, T>: NSObject, UITableViewDataSource where V: UITableViewCell {
-
     typealias CellConfiguration = (V, T) -> V
 
     private let models: [T]
@@ -16,7 +15,7 @@ final class TableDataSource<V, T>: NSObject, UITableViewDataSource where V: UITa
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        models.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

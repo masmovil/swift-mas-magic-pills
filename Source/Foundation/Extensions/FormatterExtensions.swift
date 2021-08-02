@@ -1,5 +1,4 @@
 public extension Formatter {
-
     /// Get DateFormatter with specific Locale and TimeZone
     ///
     /// - Parameters:

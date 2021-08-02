@@ -1,12 +1,11 @@
-import XCTest
-import UIKit
 import MasMagicPills
+import UIKit
+import XCTest
 
 private class HomeViewController: UIViewController {}
 private class SecondViewController: UIViewController {}
 
 class UIViewControllerExtensionsTests: XCTestCase {
-
     func test_pop_viewcontroller() {
         let navigationController = UINavigationController()
         let homeViewController = HomeViewController()

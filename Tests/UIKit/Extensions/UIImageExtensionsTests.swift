@@ -1,9 +1,8 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class UIImageExtensionsTests: XCTestCase {
-
     func test_colored_image() {
         let image = UIImage(color: .black, size: CGSize(width: 20, height: 20))
         let image2 = UIImage(color: .yellow, size: CGSize(width: 20, height: 20))

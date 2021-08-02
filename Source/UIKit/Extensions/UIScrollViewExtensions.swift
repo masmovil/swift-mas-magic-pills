@@ -1,7 +1,6 @@
 import UIKit
 
 public extension UIScrollView {
-
     // MARK: - Methods
 
     /// Scroll until view is visible

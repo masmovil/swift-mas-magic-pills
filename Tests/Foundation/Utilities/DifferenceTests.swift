@@ -1,6 +1,6 @@
-import XCTest
 import Foundation
 import MasMagicPills
+import XCTest
 
 class DifferenceTests: XCTestCase {
     func test_dumping_init_helper() {
@@ -126,7 +126,7 @@ class DifferenceTests: XCTestCase {
 
 private extension Sequence where Iterator.Element == String {
     func clean() -> String {
-        return self.joined()
+        self.joined()
             .replacingOccurrences(of: "\n", with: "")
             .replacingOccurrences(of: "\"", with: "")
     }
