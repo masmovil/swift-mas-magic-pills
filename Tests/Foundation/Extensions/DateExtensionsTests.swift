@@ -125,6 +125,7 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.formatted(with: .monthAndYearWithUnderscore, locale: .spanishSpain), "agosto_2019")
         XCTAssertEqual(date.formatted(with: .shortYear), "19")
         XCTAssertEqual(date.formatted(with: .year), "2019")
+        XCTAssertEqual(date.formatted(with: .yearAndMonth), "2019-08")
         XCTAssertEqual(date.formatted(with: .spanishDayAndMonth, locale: .spanishSpain, timeZone: .europeMadrid), "09 de agosto")
         XCTAssertEqual(date.formatted(with: .dateStyleShort, locale: .spanishSpain, timeZone: .europeMadrid), "9/8/19")
         XCTAssertEqual(date.formatted(with: .dateStyleMedium, locale: .spanishSpain, timeZone: .europeMadrid), "9 ago 2019")

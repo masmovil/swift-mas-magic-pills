@@ -37,11 +37,13 @@ public extension Date {
         case monthAndYearWithUnderscore = "MMMM_yyyy"
         case shortYear = "yy"
         case year = "yyyy"
+        case yearAndMonth = "yyyy-MM"
         case spanishDayAndMonth = "dd 'de' MMMM"
         case dateStyleShort = "dateStyleShort"
         case dateStyleMedium = "dateStyleMedium"
         case dateStyleLong = "dateStyleLong"
         case dateStyleFull = "dateStyleFull"
+        
 
         func formatter(locale: Locale? = nil,
                        timeZone: TimeZone? = nil) -> DateFormatter {
