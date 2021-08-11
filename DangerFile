@@ -39,7 +39,7 @@ end
 if build_reports.length != test_reports.length 
   fail "Not all targets successfully completed the tests. (#{build_reports.length} builds vs #{test_reports.length} tests reports)"
 end
-fail "Not all targets could be compiled. Check if any flavor dont build. (We have #{build_reports.length} builds)" unless build_reports.length == 8
+fail "Not all targets could be compiled. Check if any flavor dont build. (We have #{build_reports.length} builds)" unless build_reports.length == 3
 
 #BASIC CHECKS:
 warn 'Big PR, try to keep changes smaller if you can 😜' if git.lines_of_code > 500
