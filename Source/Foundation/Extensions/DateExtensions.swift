@@ -43,7 +43,6 @@ public extension Date {
         case dateStyleMedium = "dateStyleMedium"
         case dateStyleLong = "dateStyleLong"
         case dateStyleFull = "dateStyleFull"
-        
 
         func formatter(locale: Locale? = nil,
                        timeZone: TimeZone? = nil) -> DateFormatter {
