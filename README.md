@@ -7,7 +7,7 @@ Set of powerful utilities for development in Swift
 [![Platform](https://img.shields.io/cocoapods/p/MasMagicPills.svg?style=flat)](https://cocoapods.org/pods/MasMagicPills)
 [![GitHub](https://img.shields.io/github/license/masmovil/swift-mas-magic-pills.svg)](https://github.com/bq/swift-mas-magic-pills/blob/master/LICENSE)
 
-[![Build Status](https://travis-ci.com/masmovil/swift-mas-magic-pills.svg?branch=master)](https://travis-ci.com/masmovil/swift-mas-magic-pills)
+[![Build Status](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/build-and-tests.yml/badge.svg)](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/build-and-tests.yml)
 [![codecov](https://codecov.io/gh/masmovil/swift-mas-magic-pills/branch/master/graph/badge.svg)](https://codecov.io/gh/masmovil/swift-mas-magic-pills)
 
 ## Requirements

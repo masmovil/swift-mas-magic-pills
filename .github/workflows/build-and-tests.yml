@@ -1,6 +1,9 @@
 name: "build-and-tests"
 on:
   pull_request:
+  push:
+    branches:
+      - master
 
 jobs:
   discard_runnings_workflows:
