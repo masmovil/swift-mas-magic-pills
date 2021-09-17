@@ -106,6 +106,6 @@ public struct TextStyle {
         text(" ").attributes(at: 0, effectiveRange: nil)
     }
 
-    private let uiFont: UIFont?
+    public let uiFont: UIFont?
     #endif
 }
