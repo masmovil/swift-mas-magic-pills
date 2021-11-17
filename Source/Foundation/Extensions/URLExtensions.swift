@@ -19,6 +19,11 @@ public extension URL {
         }
         return urlWithQuery
     }
+
+    func lowercased() -> URL {
+        let string = absoluteString.lowercased()
+        return string.urlValue!
+    }
 }
 
 extension URL: Comparable {
