@@ -16,10 +16,10 @@ class CodableExtensionsTests: XCTestCase {
     func test_encode_decode_jsonstring() {
         let encodableObject = CodableTestObject(name: "Peter", age: 38, weight: 89.5)
 
-        let json = encodableObject.jsonString
+        let json = try? encodableObject.jsonString()
         XCTAssertNotNil(json)
 
-        let object = CodableTestObject.decode(jsonString: json)
+        let object = try? CodableTestObject.decode(jsonString: json)
         XCTAssertEqual(object, encodableObject)
     }
 }

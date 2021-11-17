@@ -1,9 +1,13 @@
 import Foundation
 
 public extension Encodable {
-    var jsonString: String? {
-        guard let data = try? JSONEncoder().encode(self) else { return nil }
-        guard let json = String(data: data, encoding: String.Encoding.utf8) else { return nil }
+    func jsonString() throws -> String {
+        guard let data = try? JSONEncoder().encode(self) else {
+            throw MagicError.invalidInput
+        }
+        guard let json = String(data: data, encoding: String.Encoding.utf8) else {
+            throw MagicError.cantCreateOutput
+        }
         return json
     }
 
@@ -18,13 +22,15 @@ public extension Encodable {
 }
 
 public extension Decodable {
-    static func decode(jsonString: String) -> Self? {
-        decode(jsonString: (jsonString as String?))
+    static func decode(jsonString: String) throws -> Self {
+        try decode(jsonString: (jsonString as String?))
     }
 
-    static func decode(jsonString: String?) -> Self? {
-        guard let json = jsonString else { return nil }
+    static func decode(jsonString: String?) throws -> Self {
+        guard let json = jsonString else {
+            throw MagicError.invalidInput
+        }
         let data = json.dataUTF8
-        return try? JSONDecoder().decode(self, from: data)
+        return try JSONDecoder().decode(self, from: data)
     }
 }
