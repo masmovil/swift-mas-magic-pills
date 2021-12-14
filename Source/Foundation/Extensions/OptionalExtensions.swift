@@ -8,6 +8,13 @@ public extension Optional {
     var isNotNil: Bool {
         !isNil
     }
+
+    var describingString: String {
+        guard let value = self else {
+            return "nil"
+        }
+        return "\(value)"
+    }
 }
 
 public extension Optional where Wrapped == Bool {
