@@ -33,6 +33,7 @@ public extension Date {
         case day = "d"
         case shortMonth = "MMM"
         case month = "MMMM"
+        case dayAndMonthWithSlashes = "dd/MM"
         case monthAndYear = "MMMM yyyy"
         case monthAndYearWithUnderscore = "MMMM_yyyy"
         case shortYear = "yy"
