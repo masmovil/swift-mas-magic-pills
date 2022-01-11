@@ -25,6 +25,7 @@ public extension Date {
         case rfc2822 = "EEE, dd MMM yyyy HH:mm:ss Z"
         case rfc1123 = "EEE, dd MMM yyyy HH:mm:ss z"
         case spanishDateWithSlashes = "dd/MM/yyyy"
+        case spanishDayAndMonthWithSlashes = "dd/MM"
         case spanishFullDateWithSlashes = "dd/MM/yyyy HH:mm"
         case americanFullDateWithSlashes = "MM/dd/yyyy HH:mm"
         case europeanFullDateWithSlashes = "yyyy/MM/dd HH:mm"
