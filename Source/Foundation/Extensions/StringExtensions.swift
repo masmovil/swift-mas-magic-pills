@@ -14,6 +14,12 @@ public extension String {
         return nil
     }
 
+    /// Remove a prefix from a String
+    func removePrefix(_ prefix: String) -> String {
+        guard self.hasPrefix(prefix) else { return self }
+        return String(self.dropFirst(prefix.count))
+    }
+
     var addTrailingSpaceIfNotEmpty: String {
         isEmpty ? "" : "\(self) "
     }

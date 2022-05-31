@@ -23,12 +23,25 @@ class StringExtensionsValidatorsTests: XCTestCase {
         XCTAssertTrue("687687687".isValidPhone)
         XCTAssertTrue("787687687".isValidPhone)
         XCTAssertTrue("987687687".isValidPhone)
+        XCTAssertTrue("+34687687687".isValidPhone)
+        XCTAssertTrue("34787687687".isValidPhone)
+        XCTAssertTrue("0034987687687".isValidPhone)
+        XCTAssertTrue("034687687687".isValidPhone)
+        XCTAssertTrue("+34 687 687 687".isValidPhone)
     }
 
     func test_is_not_valid_phone() {
         XCTAssertFalse("587687687".isValidPhone)
         XCTAssertFalse("124".isValidPhone)
         XCTAssertFalse("kkk".isValidPhone)
+    }
+
+    func test_clean_phone() {
+        XCTAssertEqual("+34 687 687 687".cleanPhone, "687687687")
+        XCTAssertEqual("0034687687687".cleanPhone, "687687687")
+        XCTAssertEqual("034687687687".cleanPhone, "687687687")
+        XCTAssertEqual("34687687687".cleanPhone, "687687687")
+        XCTAssertEqual("+34687687687".cleanPhone, "687687687")
     }
 
     func test_is_valid_nif() {
