@@ -42,6 +42,7 @@ class StringExtensionsValidatorsTests: XCTestCase {
         XCTAssertEqual("034687687687".cleanPhone, "687687687")
         XCTAssertEqual("34687687687".cleanPhone, "687687687")
         XCTAssertEqual("+34687687687".cleanPhone, "687687687")
+        XCTAssertEqual("email@mail.com".cleanPhone, "email@mail.com")
     }
 
     func test_is_valid_nif() {
