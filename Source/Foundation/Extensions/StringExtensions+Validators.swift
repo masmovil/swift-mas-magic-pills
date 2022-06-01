@@ -16,10 +16,22 @@ public extension String {
         return emailTest.evaluate(with: self)
     }
 
-    var isValidPhone: Bool {
-        let phoneRegEx = "^[679][0-9]{8}$"
+    var isValidSpanishPhone: Bool {
+        let phoneRegEx = "^(\\+34|34|0034|034)?[679][0-9]{8}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
-        return phoneTest.evaluate(with: self)
+        return phoneTest.evaluate(with: self.removingWhiteSpaces)
+    }
+
+    var removingSpanishCountryCode: String {
+        if self.isValidSpanishPhone {
+            let phoneWithoutWhiteSpaces = self.removingWhiteSpaces
+            let phoneWithoutPrefix = phoneWithoutWhiteSpaces.removePrefix("+34")
+                                                            .removePrefix("34")
+                                                            .removePrefix("034")
+                                                            .removePrefix("0034")
+            return phoneWithoutPrefix
+        }
+        return self
     }
 
     var isValidNIF: Bool {
