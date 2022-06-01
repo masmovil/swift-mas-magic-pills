@@ -2,9 +2,11 @@
 # Each line is a file pattern followed by one or more owners.
 
 # Current code owners
-# - @sebastianvarela -> Sebastián Varela
-# - @r-pedraza -> Raul Pedraza
 # - @EdiLT -> Edilberto López
+# - @r-pedraza -> Raul Pedraza
+# - @sebastianvarela -> Sebastián Varela
 # - @josemanuelmartin -> Jose Manuel Martín
+# - @Gabriel-V-Radu -> Valentin Gabriel Radu
+# - @adrianrl -> Adrián Ruiz Lafuente
 
-* @sebastianvarela @r-pedraza @EdiLT @josemanuelmartin
+* @EdiLT @r-pedraza @sebastianvarela @josemanuelmartin @Gabriel-V-Radu @adrianrl
