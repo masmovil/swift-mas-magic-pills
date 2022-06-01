@@ -16,14 +16,14 @@ public extension String {
         return emailTest.evaluate(with: self)
     }
 
-    var isValidPhone: Bool {
+    var isValidSpanishPhone: Bool {
         let phoneRegEx = "^(\\+34|34|0034|034)?[679][0-9]{8}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
         return phoneTest.evaluate(with: self.removingWhiteSpaces)
     }
 
-    var cleanPhone: String {
-        if self.isValidPhone {
+    var removingSpanishCountryCode: String {
+        if self.isValidSpanishPhone {
             let phoneWithoutWhiteSpaces = self.removingWhiteSpaces
             let phoneWithoutPrefix = phoneWithoutWhiteSpaces.removePrefix("+34")
                                                             .removePrefix("34")

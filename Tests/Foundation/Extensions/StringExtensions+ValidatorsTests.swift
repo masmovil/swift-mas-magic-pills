@@ -19,30 +19,30 @@ class StringExtensionsValidatorsTests: XCTestCase {
         XCTAssertFalse("chau".isValidEmail)
     }
 
-    func test_is_valid_phone() {
-        XCTAssertTrue("687687687".isValidPhone)
-        XCTAssertTrue("787687687".isValidPhone)
-        XCTAssertTrue("987687687".isValidPhone)
-        XCTAssertTrue("+34687687687".isValidPhone)
-        XCTAssertTrue("34787687687".isValidPhone)
-        XCTAssertTrue("0034987687687".isValidPhone)
-        XCTAssertTrue("034687687687".isValidPhone)
-        XCTAssertTrue("+34 687 687 687".isValidPhone)
+    func test_is_valid_spanish_phone() {
+        XCTAssertTrue("687687687".isValidSpanishPhone)
+        XCTAssertTrue("787687687".isValidSpanishPhone)
+        XCTAssertTrue("987687687".isValidSpanishPhone)
+        XCTAssertTrue("+34687687687".isValidSpanishPhone)
+        XCTAssertTrue("34787687687".isValidSpanishPhone)
+        XCTAssertTrue("0034987687687".isValidSpanishPhone)
+        XCTAssertTrue("034687687687".isValidSpanishPhone)
+        XCTAssertTrue("+34 687 687 687".isValidSpanishPhone)
     }
 
-    func test_is_not_valid_phone() {
-        XCTAssertFalse("587687687".isValidPhone)
-        XCTAssertFalse("124".isValidPhone)
-        XCTAssertFalse("kkk".isValidPhone)
+    func test_is_not_valid_spanish_phone() {
+        XCTAssertFalse("587687687".isValidSpanishPhone)
+        XCTAssertFalse("124".isValidSpanishPhone)
+        XCTAssertFalse("kkk".isValidSpanishPhone)
     }
 
-    func test_clean_phone() {
-        XCTAssertEqual("+34 687 687 687".cleanPhone, "687687687")
-        XCTAssertEqual("0034687687687".cleanPhone, "687687687")
-        XCTAssertEqual("034687687687".cleanPhone, "687687687")
-        XCTAssertEqual("34687687687".cleanPhone, "687687687")
-        XCTAssertEqual("+34687687687".cleanPhone, "687687687")
-        XCTAssertEqual("email@mail.com".cleanPhone, "email@mail.com")
+    func test_removing_spanish_country_code() {
+        XCTAssertEqual("+34 687 687 687".removingSpanishCountryCode, "687687687")
+        XCTAssertEqual("0034687687687".removingSpanishCountryCode, "687687687")
+        XCTAssertEqual("034687687687".removingSpanishCountryCode, "687687687")
+        XCTAssertEqual("34687687687".removingSpanishCountryCode, "687687687")
+        XCTAssertEqual("+34687687687".removingSpanishCountryCode, "687687687")
+        XCTAssertEqual("email@mail.com".removingSpanishCountryCode, "email@mail.com")
     }
 
     func test_is_valid_nif() {
