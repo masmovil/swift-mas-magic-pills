@@ -1,3 +1,5 @@
+require 'xcodeproj'
+
 # FUNCTION HELPERS
 def read_platform_from_testreport_file(path:)
     path.dirname.to_s.split('/')[-1]
