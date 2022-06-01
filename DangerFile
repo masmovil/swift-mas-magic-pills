@@ -33,7 +33,7 @@ end
 
 test_reports.each do |path|
   path = Pathname(path)
-  test_report_name = read_name_from_testreport_file(path: path)
+  test_report_name = read_platform_from_testreport_file(path: path)
   junit.parse path.to_s
   junit.report
 
