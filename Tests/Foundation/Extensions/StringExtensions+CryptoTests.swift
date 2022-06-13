@@ -7,6 +7,10 @@ class StringExtensionsCryptoTests: XCTestCase {
         XCTAssertEqual("hash, hash, baby!!".md5, "A6401501F421EC8CE65C8405915ADF0D")
     }
 
+    func test_sha1() {
+        XCTAssertEqual("📦".sha1, "221887727FDCBD9F648F2672CFD4F366264C8440")
+    }
+
     func test_sha256() {
         XCTAssertEqual("hash, hash, baby!!!! :D".sha256, "5EEBACE75DEDB9C94BE1E72E1229B55A02DBE2D23E5FEE0756CE6CB96673BEEB")
         XCTAssertEqual("📦".sha256, "E68EBC94437CAF84F78CF166B90ABFF24ABF4E95F30897B2A90768B59BFC0A7B")
