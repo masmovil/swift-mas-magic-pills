@@ -14,6 +14,18 @@ public extension String {
         return hash.map { String(format: "%02x", $0) }.joined().uppercased()
     }
 
+    /// This function is cryptographically broken and should not be used in security contexts.
+    var sha1: String {
+        let data = Data(utf8)
+        var hash = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
+
+        data.withUnsafeBytes {
+            _ = CC_SHA1($0.baseAddress, CC_LONG(data.count), &hash)
+        }
+
+        return hash.map { String(format: "%02x", $0) }.joined().uppercased()
+    }
+
     var sha256: String {
         let data = Data(utf8)
         var hash = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
