@@ -93,6 +93,21 @@ public extension Date {
 
             return date
         }
+
+        func tryDate(formattedDate: String,
+                     locale: Locale? = nil,
+                     timeZone: TimeZone? = nil) throws -> Date {
+            let dateFormatter = formatter(locale: locale, timeZone: timeZone)
+
+            var date: AnyObject?
+            var range = NSRange(location: 0, length: formattedDate.count)
+            try dateFormatter.getObjectValue(&date, for: formattedDate, range: &range)
+
+            if let date = date as? Date {
+                return date
+            }
+            throw MagicError.badRequest
+        }
     }
 
     /// Init Date with String and Date Format (if you don't specify it, will look for all Date Formats contemplated)
@@ -120,6 +135,20 @@ public extension Date {
             }
         }
         return nil
+    }
+
+    /// Init Date with String and Date Format (if you don't specify it, will look for all Date Formats contemplated)
+    ///
+    /// - Parameters:
+    ///   - formattedDate: String with date
+    ///   - dateFormat: Format Date to convert (optional)
+    ///   - locale: Language rules for date (optional) (by default use current)
+    ///   - timeZone: Time zone to format date (optional) (by default use current)
+    init(tryFormattedDate formattedDate: String,
+         dateFormat: Format,
+         locale: Locale? = nil,
+         timeZone: TimeZone? = nil) throws {
+        self = try dateFormat.tryDate(formattedDate: formattedDate, locale: locale, timeZone: timeZone)
     }
 
     /// Init Date with strategy that decodes dates in terms of milliseconds since midnight UTC on January 1st, 1970

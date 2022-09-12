@@ -43,6 +43,11 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(spanishDate?.formatted(with: .iso8601, timeZone: .utc), "2018-02-20T11:33:00Z")
     }
 
+    func test_init_from_formatted_dates_with_try() {
+        XCTAssertNoThrow(try Date(tryFormattedDate: "2019-08-09T12:48:00.000+0200", dateFormat: .rfc3339))
+        XCTAssertThrowsError(try Date(tryFormattedDate: "2019-08-09T12:48:00.000+0200", dateFormat: .dateStyleMedium))
+    }
+
     func test_init_with_milliseconds() {
         let milliseconds: Double = 12_408_124_000
         let date = Date(millisecondsSince1970: milliseconds)
