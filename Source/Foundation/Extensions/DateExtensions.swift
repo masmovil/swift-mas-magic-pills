@@ -1,115 +1,6 @@
 import Foundation
 
 public extension Date {
-    /// Specify date format to convert
-    ///
-    /// - rfc3339: 2019-08-09T12:48:00.000+0200
-    /// - rfc2822: Fri, 09 Aug 2019 12:48:00 +0200
-    /// - rfc1123: Fri, 09 Aug 2019 12:48:00 GMT+2
-    /// - spanishFullDateWithSlashes: 09/08/2019 12:48
-    /// - americanFullDateWithSlashes: 08/09/2019 12:48
-    /// - europeanFullDateWithSlashes: 2019/08/09 12:48
-    /// - europeanDateWithDashes: 2019-08-09
-    /// - time: 12:48
-    /// - day: 9
-    /// - shortMonth: aug
-    /// - month: august
-    /// - monthAndYear: august 2019
-    /// - monthAndYearWithUnderscore: august_2019
-    /// - shortYear: 19
-    /// - year: 2019
-    /// - spanishDayAndMonth: 09 de agosto
-    enum Format: String, CaseIterable {
-        case iso8601 = "yyyy-MM-dd'T'HH:mm:ssZ"
-        case rfc3339 = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        case rfc2822 = "EEE, dd MMM yyyy HH:mm:ss Z"
-        case rfc1123 = "EEE, dd MMM yyyy HH:mm:ss z"
-        case spanishDateWithSlashes = "dd/MM/yyyy"
-        case spanishDayAndMonthWithSlashes = "dd/MM"
-        case spanishFullDateWithSlashes = "dd/MM/yyyy HH:mm"
-        case americanFullDateWithSlashes = "MM/dd/yyyy HH:mm"
-        case europeanFullDateWithSlashes = "yyyy/MM/dd HH:mm"
-        case europeanDateWithDashes = "yyyy-MM-dd"
-        case time = "HH:mm"
-        case day = "d"
-        case shortMonth = "MMM"
-        case month = "MMMM"
-        case monthAndYear = "MMMM yyyy"
-        case monthAndYearWithUnderscore = "MMMM_yyyy"
-        case shortYear = "yy"
-        case year = "yyyy"
-        case yearAndMonth = "yyyy-MM"
-        case spanishDayAndMonth = "dd 'de' MMMM"
-        case dateStyleShort = "dateStyleShort"
-        case dateStyleMedium = "dateStyleMedium"
-        case dateStyleLong = "dateStyleLong"
-        case dateStyleFull = "dateStyleFull"
-
-        func formatter(locale: Locale? = nil,
-                       timeZone: TimeZone? = nil) -> DateFormatter {
-            let dateFormatter = Formatter.date(locale: locale,
-                                               timeZone: timeZone)
-
-            switch self {
-            // For ISO8601 dates, if the timezone is UTC, use Z instead of +0000
-            case .iso8601 where timeZone == .utc:
-                dateFormatter.dateFormat = self.rawValue.replacingOccurrences(of: "Z", with: "'Z'")
-
-            case .dateStyleShort:
-                dateFormatter.dateStyle = .short
-
-            case .dateStyleMedium:
-                dateFormatter.dateStyle = .medium
-
-            case .dateStyleLong:
-                dateFormatter.dateStyle = .long
-
-            case .dateStyleFull:
-                dateFormatter.dateStyle = .full
-
-            default:
-                dateFormatter.dateFormat = self.rawValue
-            }
-            return dateFormatter
-        }
-
-        func date(formattedDate: String,
-                  locale: Locale? = nil,
-                  timeZone: TimeZone? = nil) -> Date? {
-            let dateFormatter = formatter(locale: locale, timeZone: timeZone)
-            var date = dateFormatter.date(from: formattedDate)
-
-            // For ISO8601 dates, try to parse without seconds if the default input don't pass...
-            if self == .iso8601 && date == nil {
-                dateFormatter.dateFormat = dateFormatter.dateFormat.replacingOccurrences(of: ":ss", with: "")
-                date = dateFormatter.date(from: formattedDate)
-            }
-
-            // For ISO8601 dates, try to parse without seconds if the default input don't pass...
-            if self == .rfc3339 && date == nil {
-                dateFormatter.dateFormat = dateFormatter.dateFormat.replacingOccurrences(of: ":ss.SSS", with: "")
-                date = dateFormatter.date(from: formattedDate)
-            }
-
-            return date
-        }
-
-        func tryDate(formattedDate: String,
-                     locale: Locale? = nil,
-                     timeZone: TimeZone? = nil) throws -> Date {
-            let dateFormatter = formatter(locale: locale, timeZone: timeZone)
-
-            var date: AnyObject?
-            var range = NSRange(location: 0, length: formattedDate.count)
-            try dateFormatter.getObjectValue(&date, for: formattedDate, range: &range)
-
-            if let date = date as? Date {
-                return date
-            }
-            throw MagicError.badRequest
-        }
-    }
-
     /// Init Date with String and Date Format (if you don't specify it, will look for all Date Formats contemplated)
     ///
     /// - Parameters:
@@ -127,28 +18,12 @@ public extension Date {
         }
 
         for dateFormat in Format.allCases {
-            if let date = dateFormat.date(formattedDate: formattedDate,
-                                          locale: locale,
-                                          timeZone: timeZone) {
+            if let date = dateFormat.date(formattedDate: formattedDate, locale: locale, timeZone: timeZone) {
                 self = date
                 return
             }
         }
         return nil
-    }
-
-    /// Init Date with String and Date Format (if you don't specify it, will look for all Date Formats contemplated)
-    ///
-    /// - Parameters:
-    ///   - formattedDate: String with date
-    ///   - dateFormat: Format Date to convert (optional)
-    ///   - locale: Language rules for date (optional) (by default use current)
-    ///   - timeZone: Time zone to format date (optional) (by default use current)
-    init(tryFormattedDate formattedDate: String,
-         dateFormat: Format,
-         locale: Locale? = nil,
-         timeZone: TimeZone? = nil) throws {
-        self = try dateFormat.tryDate(formattedDate: formattedDate, locale: locale, timeZone: timeZone)
     }
 
     /// Init Date with strategy that decodes dates in terms of milliseconds since midnight UTC on January 1st, 1970
@@ -233,6 +108,10 @@ public extension Date {
                    timeZone: TimeZone? = nil) -> String {
         let formatter = dateFormat.formatter(locale: locale,
                                              timeZone: timeZone)
+
+        if let dateFormat = dateFormat.mainDateFormat(timeZone: timeZone) {
+            formatter.dateFormat = dateFormat
+        }
 
         return formatter.string(from: self)
     }
