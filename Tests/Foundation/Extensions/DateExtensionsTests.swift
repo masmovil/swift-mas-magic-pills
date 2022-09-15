@@ -20,7 +20,7 @@ class DateExtensionsTests: XCTestCase {
 
     func test_init_from_formatted_dates() {
         let rfcDate = Date(formattedDate: "2019-08-09T12:48:00.000+0200",
-                           dateFormat: .rfc3339)
+                           dateFormat: .iso8601)
         XCTAssertEqual(rfcDate?.formatted(with: .iso8601, timeZone: .utc), "2019-08-09T10:48:00Z")
 
         let iso8601DateUTC = Date(formattedDate: "2020-02-10T17:26:08Z",
@@ -43,11 +43,6 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(spanishDate?.formatted(with: .iso8601, timeZone: .utc), "2018-02-20T11:33:00Z")
     }
 
-    func test_init_from_formatted_dates_with_try() {
-        XCTAssertNoThrow(try Date(tryFormattedDate: "2019-08-09T12:48:00.000+0200", dateFormat: .rfc3339))
-        XCTAssertThrowsError(try Date(tryFormattedDate: "2019-08-09T12:48:00.000+0200", dateFormat: .dateStyleMedium))
-    }
-
     func test_init_with_milliseconds() {
         let milliseconds: Double = 12_408_124_000
         let date = Date(millisecondsSince1970: milliseconds)
@@ -65,21 +60,31 @@ class DateExtensionsTests: XCTestCase {
                        rfc1123Date)
     }
 
-    func test_init_with_rfc3339date() {
-        let rfc3339Date = "2019-08-09T10:48:00.000+0200"
-        let date = rfc3339Date.date()
-        XCTAssertEqual(date?.formatted(with: .rfc3339,
+    func test_init_with_rfc1123date_with_offset() {
+        let rfc1123Date = "Fri, 09 Aug 2019 12:48:00 +0200"
+        let date = rfc1123Date.date(dateFormat: .rfc1123, locale: .posix, timeZone: .utc)
+
+        XCTAssertEqual(date?.formatted(with: .rfc1123,
+                                       locale: .posix,
+                                       timeZone: .utc),
+                       "Fri, 09 Aug 2019 10:48:00 GMT")
+    }
+
+    func test_init_with_iso8601date() {
+        let iso8601Date = "2019-08-09T10:48:00.000+0200"
+        let date = iso8601Date.date()
+        XCTAssertEqual(date?.formatted(with: .iso8601,
                                        timeZone: .europeMadrid),
-                       rfc3339Date)
+                       "2019-08-09T10:48:00+0200")
         XCTAssertNil("👋".date())
     }
 
-    func test_init_with_rfc3339date_with_no_seconds() { // "2021-04-07T09:00+01:00"
-        let rfc3339Date = "2021-04-07T09:00+0100"
-        let date = rfc3339Date.date()
-        XCTAssertEqual(date?.formatted(with: .rfc3339,
+    func test_init_with_iso8601date_with_no_seconds() { // "2021-04-07T09:00+01:00"
+        let iso8601Date = "2021-04-07T09:00+0100"
+        let date = iso8601Date.date()
+        XCTAssertEqual(date?.formatted(with: .iso8601,
                                        timeZone: .europeMadrid),
-                       "2021-04-07T10:00:00.000+0200")
+                       "2021-04-07T10:00:00+0200")
         XCTAssertNil("👋".date())
     }
 
@@ -114,8 +119,6 @@ class DateExtensionsTests: XCTestCase {
 
         XCTAssertEqual(date.formatted(with: .iso8601, timeZone: .utc), "2019-08-09T10:48:00Z")
         XCTAssertEqual(date.formatted(with: .iso8601, timeZone: .europeMadrid), "2019-08-09T12:48:00+0200")
-        XCTAssertEqual(date.formatted(with: .rfc3339, timeZone: .europeMadrid), "2019-08-09T12:48:00.000+0200")
-        XCTAssertEqual(date.formatted(with: .rfc2822, locale: .englishUSA, timeZone: .europeMadrid), "Fri, 09 Aug 2019 12:48:00 +0200")
         XCTAssertEqual(date.formatted(with: .rfc1123, locale: .englishUSA, timeZone: .europeMadrid), "Fri, 09 Aug 2019 12:48:00 GMT+2")
         XCTAssertEqual(date.formatted(with: .spanishDateWithSlashes, timeZone: .europeMadrid), "09/08/2019")
         XCTAssertEqual(date.formatted(with: .spanishDayAndMonthWithSlashes), "09/08")

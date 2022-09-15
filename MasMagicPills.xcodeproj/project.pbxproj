@@ -220,6 +220,10 @@
 		F258CE9C25F2A603007EF07E /* MagicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258CE9A25F2A603007EF07E /* MagicError.swift */; };
 		F258CE9D25F2A603007EF07E /* MagicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258CE9A25F2A603007EF07E /* MagicError.swift */; };
 		F258CE9E25F2A603007EF07E /* MagicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258CE9A25F2A603007EF07E /* MagicError.swift */; };
+		F25EED6528D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
+		F25EED6628D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
+		F25EED6728D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
+		F25EED6828D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
 		F26C3AF822537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
 		F26C3AF922537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
 		F26C3AFA22537A4600189D28 /* MagicPills.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C3AF722537A4600189D28 /* MagicPills.swift */; };
@@ -469,6 +473,7 @@
 		F2496745230EBE4200C06E2E /* LastExecutionStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExecutionStateTests.swift; sourceTree = "<group>"; };
 		F2496749230EBE9500C06E2E /* JSONTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestHelper.swift; sourceTree = "<group>"; };
 		F258CE9A25F2A603007EF07E /* MagicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicError.swift; sourceTree = "<group>"; };
+		F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateExtensions+Format.swift"; sourceTree = "<group>"; };
 		F26C3AF722537A4600189D28 /* MagicPills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicPills.swift; sourceTree = "<group>"; };
 		F26C630426C422160065E04C /* CodableTestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTestObject.swift; sourceTree = "<group>"; };
 		F27512AB252B3DCB0057D6F0 /* CollectionCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellForTests.swift; sourceTree = "<group>"; };
@@ -886,6 +891,7 @@
 				F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */,
 				F2008329225F862900AC6EE1 /* DataExtensions.swift */,
 				F20082E4225E1E0000AC6EE1 /* DateExtensions.swift */,
+				F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */,
 				F20082F2225E518600AC6EE1 /* DecimalExtensions.swift */,
 				F22A38E6227C76FD0012C010 /* DictionaryExtensions.swift */,
 				F22A356B228077E8004E8546 /* DispatchQueueExtensions.swift */,
@@ -1377,6 +1383,7 @@
 				F62CC32722704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */,
 				F2C78F1C238D679C008C4846 /* UICollectionReusableViewExtensions.swift in Sources */,
 				F6D6D4CA230D5CBD00D161F9 /* TimeZoneExtensions.swift in Sources */,
+				F25EED6528D0AB9400819C10 /* DateExtensions+Format.swift in Sources */,
 				F20082F3225E518600AC6EE1 /* DecimalExtensions.swift in Sources */,
 				F2496739230EB99400C06E2E /* ZoomAndSnapFlowLayout.swift in Sources */,
 				F2C1A26024E2E055005DC7A8 /* StringExtensions+Crypto.swift in Sources */,
@@ -1490,6 +1497,7 @@
 				F26C3AF922537A4600189D28 /* MagicPills.swift in Sources */,
 				F2C1A28024E45EFD005DC7A8 /* Int64Extensions.swift in Sources */,
 				F6F3330E23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
+				F25EED6628D0AB9400819C10 /* DateExtensions+Format.swift in Sources */,
 				F2091DB12631AD23002F071E /* CodableExtensions.swift in Sources */,
 				F2E4801126B83FB90055A0D6 /* TextStyleModifier.swift in Sources */,
 				F2C1A27924E41E76005DC7A8 /* NSAttributedStringExtensions.swift in Sources */,
@@ -1596,6 +1604,7 @@
 				F2A74DBB225765CF001F0DF2 /* ArrayExtensions.swift in Sources */,
 				F2C78F1D238D679C008C4846 /* UICollectionReusableViewExtensions.swift in Sources */,
 				F6D6D4CC230D5CBD00D161F9 /* TimeZoneExtensions.swift in Sources */,
+				F25EED6728D0AB9400819C10 /* DateExtensions+Format.swift in Sources */,
 				F62CC32822704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */,
 				F249673C230EBB7A00C06E2E /* ZoomAndSnapFlowLayout.swift in Sources */,
 				F2C1A26224E2E07A005DC7A8 /* StringExtensions+Crypto.swift in Sources */,
@@ -1730,6 +1739,7 @@
 				F2496744230EBDEF00C06E2E /* LastExecutionState.swift in Sources */,
 				F22A356522807465004E8546 /* Fold.swift in Sources */,
 				F20082E8225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
+				F25EED6828D0AB9400819C10 /* DateExtensions+Format.swift in Sources */,
 				F22A355F22806EAD004E8546 /* DefinesPrimaryKey.swift in Sources */,
 				F297F0CC24E55B1100963BD8 /* CollectionExtensions.swift in Sources */,
 				F2C1A27B24E41E77005DC7A8 /* NSAttributedStringExtensions.swift in Sources */,
