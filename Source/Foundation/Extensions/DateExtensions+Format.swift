@@ -49,7 +49,7 @@ public extension Date {
             if let dateFormats = dateFormats(timeZone: timeZone) {
                 for dateFormat in dateFormats {
                     dateFormatter.dateFormat = dateFormat
-                    date = dateFormatter.date(from: formattedDate)
+                    date = dateFormatter.date(from: formattedDate.trimed)
                     if date != nil { break }
                 }
             }

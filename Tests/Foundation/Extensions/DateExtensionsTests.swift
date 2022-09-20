@@ -193,4 +193,8 @@ class DateExtensionsTests: XCTestCase {
         let nightMoment = Date(formattedDate: "20/02/2018 22:00", timeZone: .europeMadrid)!.dayMoment
         XCTAssertEqual(nightMoment, DayMomentType.night)
     }
+
+    func test_parsing_date_with_carriage_return() {
+        XCTAssertNotNil(Date(formattedDate: " 2022-09-13T17:22:11Z \r\n", dateFormat: .iso8601))
+    }
 }
