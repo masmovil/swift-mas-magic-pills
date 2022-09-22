@@ -37,6 +37,7 @@ public extension Date {
         case year = "yyyy"
         case yearAndMonth = "yyyy-MM"
         case spanishDayAndMonth = "dd 'de' MMMM"
+        case spanishMonthAndYear = "MMMM 'de' yyyy"
         case dateStyleShort = "dateStyleShort"
         case dateStyleMedium = "dateStyleMedium"
         case dateStyleLong = "dateStyleLong"
