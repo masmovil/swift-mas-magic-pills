@@ -3,7 +3,7 @@ import SwiftUI
 public extension Text {
     func textStyle(_ textStyle: TextStyle, lineLimit: Int? = nil) -> some View {
         self.tracking(textStyle.letterSpacing ?? 0)
-            .modifier(TextWithStyle(textStyle))
+            .modifier(TextWithStyle(textStyle, lineLimit: lineLimit))
     }
 }
 
