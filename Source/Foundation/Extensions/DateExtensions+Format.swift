@@ -66,8 +66,11 @@ public extension Date {
             switch self {
             case .iso8601:
                 return [mainDateFormat,
+                        "yyyy-MM-dd'T'HH:mm:ss'Z'",
                         "yyyy-MM-dd'T'HH:mmZ",
-                        "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
+                        "yyyy-MM-dd'T'HH:mm'Z'",
+                        "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
+                        "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"]
 
             case .rfc1123:
                 return [mainDateFormat,
