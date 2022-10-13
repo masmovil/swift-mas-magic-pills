@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44A4817F28F80FDB000F6562 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4817E28F80FDB000F6562 /* CalendarExtensions.swift */; };
+		44A4818028F80FDB000F6562 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4817E28F80FDB000F6562 /* CalendarExtensions.swift */; };
+		44A4818128F80FDB000F6562 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4817E28F80FDB000F6562 /* CalendarExtensions.swift */; };
+		44A4818228F80FDB000F6562 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4817E28F80FDB000F6562 /* CalendarExtensions.swift */; };
+		44A4818828F82219000F6562 /* CalendarExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4818328F81F24000F6562 /* CalendarExtensionsTests.swift */; };
+		44A4818928F8221A000F6562 /* CalendarExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4818328F81F24000F6562 /* CalendarExtensionsTests.swift */; };
+		44A4818A28F8221D000F6562 /* CalendarExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4818328F81F24000F6562 /* CalendarExtensionsTests.swift */; };
 		44B30F24268B2502007C5B51 /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B30F192685C176007C5B51 /* CodableExtensionsTests.swift */; };
 		44B30F25268B2502007C5B51 /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B30F192685C176007C5B51 /* CodableExtensionsTests.swift */; };
 		44B30F26268B2503007C5B51 /* CodableExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B30F192685C176007C5B51 /* CodableExtensionsTests.swift */; };
@@ -402,6 +409,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44A4817E28F80FDB000F6562 /* CalendarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtensions.swift; sourceTree = "<group>"; };
+		44A4818328F81F24000F6562 /* CalendarExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtensionsTests.swift; sourceTree = "<group>"; };
 		44B30F192685C176007C5B51 /* CodableExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensionsTests.swift; sourceTree = "<group>"; };
 		47269D42241FE79A008D58EB /* DayMomentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMomentType.swift; sourceTree = "<group>"; };
 		E23E36F8212191CD00A81C2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -886,6 +895,7 @@
 				F20082C6225DFC9D00AC6EE1 /* BoolExtensions.swift */,
 				F200833F2266115E00AC6EE1 /* BundleExtensions.swift */,
 				F6F3330C23042AEA00E93F0E /* CALayerExtensions.swift */,
+				44A4817E28F80FDB000F6562 /* CalendarExtensions.swift */,
 				F6F333182306B03F00E93F0E /* CGFloatExtensions.swift */,
 				F2091DAF2631AD23002F071E /* CodableExtensions.swift */,
 				F297F0C824E55B0A00963BD8 /* CollectionExtensions.swift */,
@@ -933,6 +943,7 @@
 				F20082DC225DFFCF00AC6EE1 /* BoolExtensionsTests.swift */,
 				F20083442266117700AC6EE1 /* BundleExtensionsTests.swift */,
 				F6F33311230436C000E93F0E /* CALayerExtensionsTests.swift */,
+				44A4818328F81F24000F6562 /* CalendarExtensionsTests.swift */,
 				F6F3331D2306B0AA00E93F0E /* CGFloatExtensionsTests.swift */,
 				44B30F192685C176007C5B51 /* CodableExtensionsTests.swift */,
 				F297F0CD24E55F0800963BD8 /* CollectionExtensionsTests.swift */,
@@ -1377,6 +1388,7 @@
 				F249673E230EBCFA00C06E2E /* TableDataSource.swift in Sources */,
 				F21A6779226F4E360026F6E9 /* CGImageExtensions+UIKit.swift in Sources */,
 				F2C1A27324E41E3B005DC7A8 /* NSAttributedString+UIKit.swift in Sources */,
+				44A4817F28F80FDB000F6562 /* CalendarExtensions.swift in Sources */,
 				F6B3838F22649D56001E4068 /* UILabelExtensions.swift in Sources */,
 				F6F97EEE226DAF2C00C3E953 /* UIViewExtensions.swift in Sources */,
 				F6E394DF2260BC5E00AFE7B1 /* StringExtensions+UIKit.swift in Sources */,
@@ -1469,6 +1481,7 @@
 				F2008333225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
 				F2008337225F878600AC6EE1 /* StringExtensions+ValuesTests.swift in Sources */,
 				F20083632266317900AC6EE1 /* URLExtensionsTests.swift in Sources */,
+				44A4818828F82219000F6562 /* CalendarExtensionsTests.swift in Sources */,
 				F2A74DC022576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */,
 				F69A082022672BDC00CB09F2 /* UIFontExtensionsTests.swift in Sources */,
 				F22A38DE227C63930012C010 /* OrderedSetTests.swift in Sources */,
@@ -1507,6 +1520,7 @@
 				F200830C225F4BFC00AC6EE1 /* StringExtensions.swift in Sources */,
 				F20082C3225DFC6E00AC6EE1 /* OptionalExtensions.swift in Sources */,
 				F2A74DBA225765CF001F0DF2 /* ArrayExtensions.swift in Sources */,
+				44A4818028F80FDB000F6562 /* CalendarExtensions.swift in Sources */,
 				F2E4801226B83FB90055A0D6 /* TextStyle.swift in Sources */,
 				F20082D4225DFF4F00AC6EE1 /* OptionalType.swift in Sources */,
 				F2008326225F84A100AC6EE1 /* StringExtensions+Formating.swift in Sources */,
@@ -1560,6 +1574,7 @@
 				F22A38FF227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */,
 				F2A74DC122576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */,
 				F2008334225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
+				44A4818928F8221A000F6562 /* CalendarExtensionsTests.swift in Sources */,
 				F249672A230D506F00C06E2E /* SemVerTests.swift in Sources */,
 				F249674B230EBE9500C06E2E /* JSONTestHelper.swift in Sources */,
 				F20083642266317A00AC6EE1 /* URLExtensionsTests.swift in Sources */,
@@ -1598,6 +1613,7 @@
 				F249673F230EBCFA00C06E2E /* TableDataSource.swift in Sources */,
 				F6F97F02226F501E00C3E953 /* UIScrollViewExtensions.swift in Sources */,
 				F2C1A27524E41E3F005DC7A8 /* NSAttributedString+UIKit.swift in Sources */,
+				44A4818128F80FDB000F6562 /* CalendarExtensions.swift in Sources */,
 				F200830D225F4BFC00AC6EE1 /* StringExtensions.swift in Sources */,
 				F21A677A226F4E520026F6E9 /* CIImageExtensions+UIKit.swift in Sources */,
 				F20082C4225DFC6E00AC6EE1 /* OptionalExtensions.swift in Sources */,
@@ -1690,6 +1706,7 @@
 				F2008335225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
 				F6F97F05226F53E100C3E953 /* UIScrollViewExtensionsTest.swift in Sources */,
 				F20083652266317A00AC6EE1 /* URLExtensionsTests.swift in Sources */,
+				44A4818A28F8221D000F6562 /* CalendarExtensionsTests.swift in Sources */,
 				F20083472266117700AC6EE1 /* BundleExtensionsTests.swift in Sources */,
 				F200834C226612F800AC6EE1 /* FakeBundle.swift in Sources */,
 				F200837A226789B100AC6EE1 /* UIFontExtensionsTests.swift in Sources */,
@@ -1718,6 +1735,7 @@
 				F2008323225F83EF00AC6EE1 /* StringExtensions+Validators.swift in Sources */,
 				F26C3AFB22537A4600189D28 /* MagicPills.swift in Sources */,
 				F258CE9E25F2A603007EF07E /* MagicError.swift in Sources */,
+				44A4818228F80FDB000F6562 /* CalendarExtensions.swift in Sources */,
 				F20082F6225E518600AC6EE1 /* DecimalExtensions.swift in Sources */,
 				F200830E225F4BFC00AC6EE1 /* StringExtensions.swift in Sources */,
 				F2C1A28224E45EFE005DC7A8 /* Int64Extensions.swift in Sources */,
