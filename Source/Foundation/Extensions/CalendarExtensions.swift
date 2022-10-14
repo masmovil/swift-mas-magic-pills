@@ -1,22 +1,21 @@
 import Foundation
 
 public extension Calendar {
-    
-    // Calendar for Madrid (Spain)
-    static var spainMadrid: Calendar {
+    /// Calendar for Madrid (Spain 🇪🇸)
+    static var europeMadrid: Calendar {
         var calendar = Calendar.current
-        calendar.timeZone = .init(identifier: "Europe/Madrid")!
+        calendar.timeZone = .europeMadrid
         return calendar
     }
-    
+
     /// Check if it's in first days of current month
     ///
     /// - Parameters:
     ///   - days: Number of days since 1st of current month
     func isOnTheFirstDaysFromCurrentMonth(days: Int) -> Bool {
-        return isInRangeFromCurrentMonth(days: 1...days)
+        isInRangeFromCurrentMonth(days: 1...days)
     }
-    
+
     /// Check if it's in the range of days of current month
     ///
     /// - Parameters:
@@ -25,13 +24,13 @@ public extension Calendar {
         let currentDay = component(.day, from: Date())
         return days ~= currentDay
     }
-    
+
     /// Check if all dates given are the same day
     ///
     /// - Parameters:
     ///   - dates: Dates to check
     func allDatesAreOnSameDay(dates: Date...) -> Bool {
-        return dates.allSatisfy {
+        dates.allSatisfy {
             self.isDate(dates.first!, inSameDayAs: $0)
         }
     }
