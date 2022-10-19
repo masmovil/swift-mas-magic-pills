@@ -37,7 +37,7 @@ github "masmovil/swift-mas-magic-pills"
 * **[Sebastián Varela](https://github.com/sebastianvarela)**
 * **[Jose Manuel Martín](https://github.com/josemanuelmartin)**
 * **[Gabriel Valentín Radu](https://github.com/Gabriel-V-Radu)**
-* **[Adrián Ruiz La Fuente](https://github.com/adrianrl)**
+* **[Adrián Ruiz Lafuente](https://github.com/adrianrl)**
 
 ## License
 
