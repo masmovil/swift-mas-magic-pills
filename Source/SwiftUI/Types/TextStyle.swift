@@ -58,17 +58,33 @@ public struct TextStyle {
     // MARK: REMOVE WHEN DROP SUPPORT FOR UIKit in TextStyle
     #if !os(macOS) && !os(watchOS)
 
-    public init(font: UIFont,
-                color: UIColor,
+    public init(uiFont: UIFont,
+                uiColor: UIColor,
                 lineHeight: CGFloat,
                 letterSpacing: CGFloat? = nil,
                 alignment: NSTextAlignment? = nil,
                 textCase: Text.Case? = nil) {
-        self.uiFont = font
-        self.font = Font(font)
-        self.color = Color(color)
+        self.uiFont = uiFont
+        self.font = Font(uiFont)
+        self.color = Color(uiColor)
         self.lineHeight = lineHeight
-        self.lineSpacing = lineHeight - font.lineHeight
+        self.lineSpacing = lineHeight - uiFont.lineHeight
+        self.letterSpacing = letterSpacing
+        self.alignment = alignment
+        self.textCase = textCase
+    }
+
+    public init(uiFont: UIFont,
+                color: Color,
+                lineHeight: CGFloat,
+                letterSpacing: CGFloat? = nil,
+                alignment: NSTextAlignment? = nil,
+                textCase: Text.Case? = nil) {
+        self.uiFont = uiFont
+        self.font = Font(uiFont)
+        self.color = color
+        self.lineHeight = lineHeight
+        self.lineSpacing = lineHeight - uiFont.lineHeight
         self.letterSpacing = letterSpacing
         self.alignment = alignment
         self.textCase = textCase
