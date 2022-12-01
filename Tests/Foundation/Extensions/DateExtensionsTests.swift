@@ -70,12 +70,21 @@ class DateExtensionsTests: XCTestCase {
                        "Fri, 09 Aug 2019 10:48:00 GMT")
     }
 
-    func test_init_with_iso8601date() {
+    func test_init_with_iso8601date_with_seconds_and_thousandths() {
         let iso8601Date = "2019-08-09T10:48:00.000+0200"
         let date = iso8601Date.date()
         XCTAssertEqual(date?.formatted(with: .iso8601,
                                        timeZone: .europeMadrid),
                        "2019-08-09T10:48:00+0200")
+        XCTAssertNil("👋".date())
+    }
+
+    func test_init_with_iso8601date_with_seconds() {
+        let iso8601Date = "2022-10-27T16:00:00+0200"
+        let date = iso8601Date.date(dateFormat: .iso8601)
+        XCTAssertEqual(date?.formatted(with: .iso8601,
+                                       timeZone: .europeMadrid),
+                       "2022-10-27T16:00:00+0200")
         XCTAssertNil("👋".date())
     }
 

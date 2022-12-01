@@ -45,19 +45,36 @@ public extension Date {
         case dateStyleLong = "dateStyleLong"
         case dateStyleFull = "dateStyleFull"
 
-        func date(formattedDate: String, locale: Locale?, timeZone: TimeZone?) -> Date? {
-            let dateFormatter = formatter(locale: locale, timeZone: timeZone)
+        func string(from date: Date, locale: Locale?, timeZone: TimeZone?) -> String {
+            let formatter = formatter(locale: locale, timeZone: timeZone)
 
-            var date: Date?
-            if let dateFormats = dateFormats(timeZone: timeZone) {
-                for dateFormat in dateFormats {
-                    dateFormatter.dateFormat = dateFormat
-                    date = dateFormatter.date(from: formattedDate.trimed)
-                    if date != nil { break }
-                }
+            if let dateFormat = mainDateFormat(timeZone: timeZone) {
+                formatter.dateFormat = dateFormat
             }
 
-            return date
+            return formatter.string(from: date)
+        }
+
+        func date(from formattedDate: String, locale: Locale?, timeZone: TimeZone?) -> Date? {
+            guard let dateFormats = dateFormats(timeZone: timeZone) else {
+                return nil
+            }
+
+            let formatter = formatter(locale: locale, timeZone: timeZone)
+            for dateFormat in dateFormats {
+                formatter.dateFormat = dateFormat
+                let date = formatter.date(from: formattedDate.trimed)
+                if date != nil { return date }
+            }
+
+            // If all dateFormats fail, try with ISO8601Formatter:
+            if case .iso8601 = self {
+                let iso8601Formatter = Formatter.iso8601Date(timeZone: timeZone)
+                return iso8601Formatter.date(from: formattedDate.trimed)
+            }
+
+            // Sorry! not recognized
+            return nil
         }
 
         func dateFormats(timeZone: TimeZone?) -> [String]? {
@@ -68,7 +85,6 @@ public extension Date {
             switch self {
             case .iso8601:
                 return [mainDateFormat,
-                        "yyyy-MM-dd'T'HH:mm:ss'Z'",
                         "yyyy-MM-dd'T'HH:mmZ",
                         "yyyy-MM-dd'T'HH:mm'Z'",
                         "yyyy-MM-dd'T'HH:mm:ss.SSSZ",
