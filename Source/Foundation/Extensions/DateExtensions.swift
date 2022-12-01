@@ -12,13 +12,13 @@ public extension Date {
           dateFormat: Format? = nil,
           locale: Locale? = nil,
           timeZone: TimeZone? = nil) {
-        if let dateFormat = dateFormat, let date = dateFormat.date(formattedDate: formattedDate, locale: locale, timeZone: timeZone) {
+        if let dateFormat = dateFormat, let date = dateFormat.date(from: formattedDate, locale: locale, timeZone: timeZone) {
             self = date
             return
         }
 
         for dateFormat in Format.allCases {
-            if let date = dateFormat.date(formattedDate: formattedDate, locale: locale, timeZone: timeZone) {
+            if let date = dateFormat.date(from: formattedDate, locale: locale, timeZone: timeZone) {
                 self = date
                 return
             }
@@ -106,14 +106,7 @@ public extension Date {
     func formatted(with dateFormat: Date.Format,
                    locale: Locale? = nil,
                    timeZone: TimeZone? = nil) -> String {
-        let formatter = dateFormat.formatter(locale: locale,
-                                             timeZone: timeZone)
-
-        if let dateFormat = dateFormat.mainDateFormat(timeZone: timeZone) {
-            formatter.dateFormat = dateFormat
-        }
-
-        return formatter.string(from: self)
+        dateFormat.string(from: self, locale: locale, timeZone: timeZone)
     }
 
     /// Calculate months to end dates, included days in last month or not
