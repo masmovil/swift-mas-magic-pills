@@ -16,7 +16,7 @@ DESC
 
   s.frameworks = 'Foundation'
 
-  s.ios.deployment_target = '14.0'
+  s.ios.deployment_target = '14.1'
   s.ios.frameworks = 'UIKit'
   s.ios.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift', 'Source/SwiftUI/**/*.swift'
 
@@ -24,7 +24,7 @@ DESC
   s.osx.frameworks = 'AppKit'
   s.osx.source_files  = 'Source/Foundation/**/*.swift', 'Source/SwiftUI/**/*.swift'
 
-  s.watchos.deployment_target = '4.0'
+  s.watchos.deployment_target = '7.1'
   s.watchos.frameworks = 'UIKit', 'WatchKit'
   s.watchos.source_files  = 'Source/Foundation/**/*.swift'
   s.watchos.exclude_files = 'Source/Foundation/Extensions/StringExtensions+Formating.swift', 
@@ -32,7 +32,7 @@ DESC
     'Source/Foundation/Extensions/CGFloatExtensions.swift', 
     'Source/Foundation/Extensions/NSAttributedStringExtensions.swift'
 
-  s.tvos.deployment_target = '14.0'
+  s.tvos.deployment_target = '14.1'
   s.tvos.frameworks = 'UIKit'
   s.tvos.source_files  = 'Source/Foundation/**/*.swift', 'Source/UIKit/**/*.swift', 'Source/SwiftUI/**/*.swift'
 end
