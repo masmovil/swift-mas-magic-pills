@@ -163,4 +163,12 @@ public extension String {
         }
         return NSRange(range, in: self)
     }
+
+    /// Format the string by slicing in equal segments with given separator
+    func separating(every: Int, with separator: Character = " ") -> String {
+        let charactersWithSeparator = enumerated()
+            .map { $0 > 0 && $0 % every == 0 ? [separator, $1] : [$1] }
+
+        return String(charactersWithSeparator.joined())
+    }
 }

@@ -83,6 +83,7 @@ public extension Decimal {
                    currencyCode: CurrencyCodeType? = nil,
                    locale: Locale? = nil,
                    numberStyle: NumberFormatter.Style? = nil,
+                   roundingMode: NumberFormatter.RoundingMode? = nil,
                    unit: Unit = Unit(symbol: "")) -> String {
         let numberFormatter = NumberFormatter()
 
@@ -93,6 +94,10 @@ public extension Decimal {
 
         if let numberStyle = numberStyle {
             numberFormatter.numberStyle = numberStyle
+        }
+
+        if let roundingMode = roundingMode {
+            numberFormatter.roundingMode = roundingMode
         }
 
         numberFormatter.minimumIntegerDigits = 1
