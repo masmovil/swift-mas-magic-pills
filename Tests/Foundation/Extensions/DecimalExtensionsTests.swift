@@ -34,6 +34,28 @@ class DecimalExtensionsTests: XCTestCase {
         XCTAssertEqual((-3_000 as Decimal).formattedMegabits(.spanishSpain, decimals: 2), "-3,00 Gb")
     }
 
+    func test_format_with_roundingmodes() {
+        // FLOOR:
+        XCTAssertEqual((5.532 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .floor, unit: Unit(symbol: "🍎")), "5.53 🍎")
+        XCTAssertEqual((5.535 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .floor, unit: Unit(symbol: "🍎")), "5.53 🍎")
+        XCTAssertEqual((5.537 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .floor, unit: Unit(symbol: "🍎")), "5.53 🍎")
+
+        // CEILING:
+        XCTAssertEqual((5.532 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .ceiling, unit: Unit(symbol: "🍎")), "5.54 🍎")
+        XCTAssertEqual((5.535 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .ceiling, unit: Unit(symbol: "🍎")), "5.54 🍎")
+        XCTAssertEqual((5.537 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .ceiling, unit: Unit(symbol: "🍎")), "5.54 🍎")
+
+        // HALF-UP:
+        XCTAssertEqual((5.532 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .halfUp, unit: Unit(symbol: "🍎")), "5.53 🍎")
+        XCTAssertEqual((5.535 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .halfUp, unit: Unit(symbol: "🍎")), "5.54 🍎")
+        XCTAssertEqual((5.537 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .halfUp, unit: Unit(symbol: "🍎")), "5.54 🍎")
+
+        // HALF-DOWN:
+        XCTAssertEqual((5.532 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .halfDown, unit: Unit(symbol: "🍎")), "5.53 🍎")
+        XCTAssertEqual((5.535 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .halfDown, unit: Unit(symbol: "🍎")), "5.53 🍎")
+        XCTAssertEqual((5.537 as Decimal).formatted(decimals: 2, locale: .englishUSA, roundingMode: .halfDown, unit: Unit(symbol: "🍎")), "5.54 🍎")
+    }
+
     func test_format_number_without_unit() {
         XCTAssertEqual((33.24 as Decimal).formatted(decimals: 2,
                                                     locale: .spanishSpain), "33,24")
