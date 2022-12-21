@@ -30,14 +30,23 @@ class CollectionExtensionsTests: XCTestCase {
         struct HIdent: Identifiable {
             let id: String
         }
-        let elements = [HIdent(id: "h"), HIdent(id: "g"), HIdent(id: "6")]
+        let elements = [HIdent(id: "1"), HIdent(id: "1"), HIdent(id: "2")]
 
         let enumerated = elements.enumeratedArray()
+
         XCTAssertEqual(enumerated[0].index, 0)
-        XCTAssertEqual(enumerated[0].id, "h")
+        XCTAssertEqual(enumerated[0].id, "1")
         XCTAssertEqual(enumerated[1].index, 1)
-        XCTAssertEqual(enumerated[1].id, "g")
+        XCTAssertEqual(enumerated[1].id, "1")
         XCTAssertEqual(enumerated[2].index, 2)
-        XCTAssertEqual(enumerated[2].id, "6")
+        XCTAssertEqual(enumerated[2].id, "2")
+
+        // All `IndexedItemIdentifiable` are `Hashable` & `Equatable`, for that reason its can be grouped by itself:
+        let groupedByItem = Dictionary(grouping: enumerated) { $0 }
+
+        // When the elements has two IDs repeated, these items are grouped together:
+        XCTAssertEqual(groupedByItem.keys.map(\.id).sorted(), ["1", "2"])
+        XCTAssertEqual(groupedByItem[enumerated[0]]?.count, 2)
+        XCTAssertEqual(groupedByItem[enumerated[2]]?.count, 1)
     }
 }
