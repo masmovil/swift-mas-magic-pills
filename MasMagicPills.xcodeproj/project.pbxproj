@@ -227,6 +227,12 @@
 		F258CE9C25F2A603007EF07E /* MagicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258CE9A25F2A603007EF07E /* MagicError.swift */; };
 		F258CE9D25F2A603007EF07E /* MagicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258CE9A25F2A603007EF07E /* MagicError.swift */; };
 		F258CE9E25F2A603007EF07E /* MagicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258CE9A25F2A603007EF07E /* MagicError.swift */; };
+		F25A99AA2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */; };
+		F25A99AB2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */; };
+		F25A99AC2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */; };
+		F25A99AE2953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */; };
+		F25A99AF2953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */; };
+		F25A99B02953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */; };
 		F25EED6528D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
 		F25EED6628D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
 		F25EED6728D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
@@ -486,6 +492,8 @@
 		F2496745230EBE4200C06E2E /* LastExecutionStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastExecutionStateTests.swift; sourceTree = "<group>"; };
 		F2496749230EBE9500C06E2E /* JSONTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestHelper.swift; sourceTree = "<group>"; };
 		F258CE9A25F2A603007EF07E /* MagicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicError.swift; sourceTree = "<group>"; };
+		F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleExtensionTests.swift; sourceTree = "<group>"; };
+		F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneExtensionsTests.swift; sourceTree = "<group>"; };
 		F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateExtensions+Format.swift"; sourceTree = "<group>"; };
 		F26C3AF722537A4600189D28 /* MagicPills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicPills.swift; sourceTree = "<group>"; };
 		F26C630426C422160065E04C /* CodableTestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTestObject.swift; sourceTree = "<group>"; };
@@ -959,6 +967,7 @@
 				F22A356F22807839004E8546 /* DispatchQueueExtensionsTests.swift */,
 				F209D41C24E6C6BC002BF853 /* Int64ExtensionsTests.swift */,
 				F68925D322CDE8950008263B /* IntExtensionsTests.swift */,
+				F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */,
 				F20082E0225DFFD900AC6EE1 /* OptionalExtensionsTests.swift */,
 				F2008370226633A500AC6EE1 /* SequenceExtensionsTests.swift */,
 				F2C1A26424E2E0A1005DC7A8 /* StringExtensions+CryptoTests.swift */,
@@ -967,6 +976,7 @@
 				F2008336225F878600AC6EE1 /* StringExtensions+ValuesTests.swift */,
 				F200830F225F4C5200AC6EE1 /* StringExtensionsTests.swift */,
 				F200835B22662DDD00AC6EE1 /* TimeIntervalExtensionsTests.swift */,
+				F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */,
 				F20083612266317600AC6EE1 /* URLExtensionsTests.swift */,
 			);
 			path = Extensions;
@@ -1481,7 +1491,9 @@
 				F2C1A28D24E464CD005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
 				F6F97EEC226DABE400C3E953 /* UICollectionViewExtensionsTests.swift in Sources */,
 				F2C1A26524E2E0A1005DC7A8 /* StringExtensions+CryptoTests.swift in Sources */,
+				F25A99AE2953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */,
 				F22A357022807839004E8546 /* DispatchQueueExtensionsTests.swift in Sources */,
+				F25A99AA2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */,
 				F2496729230D506F00C06E2E /* SemVerTests.swift in Sources */,
 				F6F333152304370800E93F0E /* CALayerExtensionsTests.swift in Sources */,
 				F20082E1225DFFD900AC6EE1 /* OptionalExtensionsTests.swift in Sources */,
@@ -1583,8 +1595,10 @@
 				F2A74DC122576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */,
 				F2008334225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
 				44A4818928F8221A000F6562 /* CalendarExtensionsTests.swift in Sources */,
+				F25A99AB2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */,
 				F249672A230D506F00C06E2E /* SemVerTests.swift in Sources */,
 				F249674B230EBE9500C06E2E /* JSONTestHelper.swift in Sources */,
+				F25A99AF2953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */,
 				F20083642266317A00AC6EE1 /* URLExtensionsTests.swift in Sources */,
 				F20083462266117700AC6EE1 /* BundleExtensionsTests.swift in Sources */,
 				F209D41E24E6C6BC002BF853 /* Int64ExtensionsTests.swift in Sources */,
@@ -1708,7 +1722,9 @@
 				F2C1A28F24E464CF005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
 				F2A74DC222576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */,
 				F2C1A26724E2E0A1005DC7A8 /* StringExtensions+CryptoTests.swift in Sources */,
+				F25A99B02953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */,
 				F2B28627252DC4CE0058BCBB /* CollectionCellForTests.swift in Sources */,
+				F25A99AC2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */,
 				F22A357222807839004E8546 /* DispatchQueueExtensionsTests.swift in Sources */,
 				F249672B230D506F00C06E2E /* SemVerTests.swift in Sources */,
 				F6F333172304370900E93F0E /* CALayerExtensionsTests.swift in Sources */,

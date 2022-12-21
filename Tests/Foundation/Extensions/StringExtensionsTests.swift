@@ -127,6 +127,6 @@ class StringExtensionsTests: XCTestCase {
     func test_separating() {
         XCTAssertEqual("HOLA".separating(every: 1), "H O L A")
         XCTAssertEqual("ARGENTINA".separating(every: 3), "ARG ENT INA")
-        XCTAssertEqual("🍆💦".separating(every: 4), "🍆💦")
+        XCTAssertEqual("🍆🎄".separating(every: 1, with: "💦"), "🍆💦🎄")
     }
 }
