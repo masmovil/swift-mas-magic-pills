@@ -1,16 +1,21 @@
 import Foundation
 
-public struct IndexedItemIdentifiable<Index: Hashable, Element: Identifiable>: Identifiable, Equatable, Hashable {
+public struct IndexedItemIdentifiable<Index: Comparable, Element: Identifiable>: Identifiable, Equatable, Hashable {
     public let index: Index
-    public let item: Element
+    public let value: Element
 
-    public init(index: Index, item: Element) {
+    @available(*, deprecated, renamed: "value")
+    public var item: Element {
+        value
+    }
+
+    public init(index: Index, value: Element) {
         self.index = index
-        self.item = item
+        self.value = value
     }
 
     public var id: Element.ID {
-        item.id
+        value.id
     }
 
     public func hash(into hasher: inout Hasher) {
