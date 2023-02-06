@@ -195,10 +195,6 @@
 		F22A38FE227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
 		F22A38FF227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
 		F22A3900227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
-		F23EE9D7295485E20078D516 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EE9D6295485E20078D516 /* FontExtensions.swift */; };
-		F23EE9D8295485E20078D516 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EE9D6295485E20078D516 /* FontExtensions.swift */; };
-		F23EE9D9295485E20078D516 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EE9D6295485E20078D516 /* FontExtensions.swift */; };
-		F23EE9DA295485E20078D516 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EE9D6295485E20078D516 /* FontExtensions.swift */; };
 		F2496724230D504200C06E2E /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2496723230D504100C06E2E /* SemVer.swift */; };
 		F2496725230D504200C06E2E /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2496723230D504100C06E2E /* SemVer.swift */; };
 		F2496726230D504200C06E2E /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2496723230D504100C06E2E /* SemVer.swift */; };
@@ -241,9 +237,6 @@
 		F25E770829915EEC001D974C /* IndexedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770629915EEC001D974C /* IndexedItem.swift */; };
 		F25E770929915EEC001D974C /* IndexedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770629915EEC001D974C /* IndexedItem.swift */; };
 		F25E770A29915EEC001D974C /* IndexedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770629915EEC001D974C /* IndexedItem.swift */; };
-		F25E77112991612E001D974C /* FontExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770C29916109001D974C /* FontExtensionsTests.swift */; };
-		F25E77122991612F001D974C /* FontExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770C29916109001D974C /* FontExtensionsTests.swift */; };
-		F25E771329916130001D974C /* FontExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770C29916109001D974C /* FontExtensionsTests.swift */; };
 		F25EED6528D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
 		F25EED6628D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
 		F25EED6728D0AB9400819C10 /* DateExtensions+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */; };
@@ -493,7 +486,6 @@
 		F22A38EB227C775C0012C010 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
 		F22A38F7227C7FE20012C010 /* DefinesPrimaryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinesPrimaryKey.swift; sourceTree = "<group>"; };
 		F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinesPrimaryKeyTests.swift; sourceTree = "<group>"; };
-		F23EE9D6295485E20078D516 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 		F2496723230D504100C06E2E /* SemVer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
 		F2496728230D506F00C06E2E /* SemVerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemVerTests.swift; sourceTree = "<group>"; };
 		F249672C230D5DA200C06E2E /* Difference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difference.swift; sourceTree = "<group>"; };
@@ -507,7 +499,6 @@
 		F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleExtensionTests.swift; sourceTree = "<group>"; };
 		F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneExtensionsTests.swift; sourceTree = "<group>"; };
 		F25E770629915EEC001D974C /* IndexedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexedItem.swift; sourceTree = "<group>"; };
-		F25E770C29916109001D974C /* FontExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensionsTests.swift; sourceTree = "<group>"; };
 		F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateExtensions+Format.swift"; sourceTree = "<group>"; };
 		F26C3AF722537A4600189D28 /* MagicPills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicPills.swift; sourceTree = "<group>"; };
 		F26C630426C422160065E04C /* CodableTestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTestObject.swift; sourceTree = "<group>"; };
@@ -847,7 +838,6 @@
 		F25E770B299160D9001D974C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F25E770C29916109001D974C /* FontExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1035,7 +1025,6 @@
 			isa = PBXGroup;
 			children = (
 				F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */,
-				F23EE9D6295485E20078D516 /* FontExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1462,7 +1451,6 @@
 				F200832A225F862900AC6EE1 /* DataExtensions.swift in Sources */,
 				F20082C7225DFC9D00AC6EE1 /* BoolExtensions.swift in Sources */,
 				F2C78F16238D66CE008C4846 /* CellIdentificable.swift in Sources */,
-				F23EE9D7295485E20078D516 /* FontExtensions.swift in Sources */,
 				F297F0C924E55B0A00963BD8 /* CollectionExtensions.swift in Sources */,
 				F6F3330D23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
 				F6D6D4C2230C108F00D161F9 /* LocaleExtensions.swift in Sources */,
@@ -1508,7 +1496,6 @@
 				F20082D9225DFFC300AC6EE1 /* OptionalTypeTests.swift in Sources */,
 				F2008310225F4C5200AC6EE1 /* StringExtensionsTests.swift in Sources */,
 				F6F97EF7226E027E00C3E953 /* UIViewExtensionsTests.swift in Sources */,
-				F25E77112991612E001D974C /* FontExtensionsTests.swift in Sources */,
 				F69A081E2264DF1200CB09F2 /* StringExtensionsUIKitTests.swift in Sources */,
 				F210E6B2231EC7F0004D9F0A /* XibRepresentableTests.swift in Sources */,
 				F62CC3482270B52700DC46F2 /* ToastTests.swift in Sources */,
@@ -1599,7 +1586,6 @@
 				F22A357422807841004E8546 /* DispatchQueueExtensions.swift in Sources */,
 				F20083412266115E00AC6EE1 /* BundleExtensions.swift in Sources */,
 				F22A38D9227C634D0012C010 /* OrderedSet.swift in Sources */,
-				F23EE9D8295485E20078D516 /* FontExtensions.swift in Sources */,
 				F6D6D4C7230D468F00D161F9 /* FormatterExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1618,7 +1604,6 @@
 				F297F0D024E55F0B00963BD8 /* CollectionExtensionsTests.swift in Sources */,
 				F22A3569228074D4004E8546 /* FoldTests.swift in Sources */,
 				F2008311225F4C5200AC6EE1 /* StringExtensionsTests.swift in Sources */,
-				F25E77122991612F001D974C /* FontExtensionsTests.swift in Sources */,
 				F200835D22662DDD00AC6EE1 /* TimeIntervalExtensionsTests.swift in Sources */,
 				F2C1A28E24E464CE005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
 				F20082E2225DFFD900AC6EE1 /* OptionalExtensionsTests.swift in Sources */,
@@ -1699,7 +1684,6 @@
 				F2008379226789AA00AC6EE1 /* UILabelExtensions.swift in Sources */,
 				F2008322225F83EF00AC6EE1 /* StringExtensions+Validators.swift in Sources */,
 				F21A677E226F4E600026F6E9 /* UIViewExtensions.swift in Sources */,
-				F23EE9D9295485E20078D516 /* FontExtensions.swift in Sources */,
 				F2C78F17238D66CE008C4846 /* CellIdentificable.swift in Sources */,
 				F297F0CB24E55B1000963BD8 /* CollectionExtensions.swift in Sources */,
 				F6F3330F23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
@@ -1745,7 +1729,6 @@
 				F2008312225F4C5200AC6EE1 /* StringExtensionsTests.swift in Sources */,
 				F200835E22662DDD00AC6EE1 /* TimeIntervalExtensionsTests.swift in Sources */,
 				F20082E3225DFFD900AC6EE1 /* OptionalExtensionsTests.swift in Sources */,
-				F25E771329916130001D974C /* FontExtensionsTests.swift in Sources */,
 				F21A677F226F4E6B0026F6E9 /* UICollectionViewExtensionsTests.swift in Sources */,
 				F210E6B3231EC7F0004D9F0A /* XibRepresentableTests.swift in Sources */,
 				F62CC3492270B52700DC46F2 /* ToastTests.swift in Sources */,
@@ -1825,7 +1808,6 @@
 				F20083432266115E00AC6EE1 /* BundleExtensions.swift in Sources */,
 				F2496727230D504200C06E2E /* SemVer.swift in Sources */,
 				F200835A22662DC400AC6EE1 /* TimeIntervalExtensions.swift in Sources */,
-				F23EE9DA295485E20078D516 /* FontExtensions.swift in Sources */,
 				F68925D222CDE83C0008263B /* IntExtensions.swift in Sources */,
 				F25E770A29915EEC001D974C /* IndexedItem.swift in Sources */,
 				F2008328225F84A100AC6EE1 /* StringExtensions+Formating.swift in Sources */,
