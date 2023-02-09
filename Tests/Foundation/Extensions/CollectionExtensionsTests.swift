@@ -19,11 +19,11 @@ class CollectionExtensionsTests: XCTestCase {
 
         let enumerated = elements.enumeratedArray()
         XCTAssertEqual(enumerated[0].index, 0)
-        XCTAssertEqual(enumerated[0].item, "hola")
+        XCTAssertEqual(enumerated[0].value, "hola")
         XCTAssertEqual(enumerated[1].index, 1)
-        XCTAssertEqual(enumerated[1].item, "chau")
+        XCTAssertEqual(enumerated[1].value, "chau")
         XCTAssertEqual(enumerated[2].index, 2)
-        XCTAssertEqual(enumerated[2].item, "adios")
+        XCTAssertEqual(enumerated[2].value, "adios")
     }
 
     func test_enumerated_array_identifiable() {

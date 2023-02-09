@@ -20,11 +20,6 @@ public extension Sequence where Iterator.Element: OptionalType {
     var filterNils: [Iterator.Element.Wrapped] {
         compactMap { $0.wrapped }
     }
-
-    @available(*, deprecated, renamed: "filterNils")
-    var filterNil: [Iterator.Element.Wrapped] {
-        filterNils
-    }
 }
 
 /// Return nil if any of his components is nil

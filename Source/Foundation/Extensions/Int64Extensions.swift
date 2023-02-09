@@ -59,18 +59,6 @@ public extension Int64 {
         1_000 * kibibytes
     }
 
-    /// Return the given units of GiB as bytes
-    @available(*, deprecated, renamed: "bytes(gibibytes:)")
-    static func gigaBytes(_ amount: Int64) -> Int64 {
-        bytes(gibibytes: amount)
-    }
-
-    /// Return the given units of MiB as bytes
-    @available(*, deprecated, renamed: "bytes(mebibytes:)")
-    static func megaBytes(_ amount: Int64) -> Int64 {
-        bytes(mebibytes: amount)
-    }
-
     var toString: String {
         "\(self)"
     }

@@ -94,11 +94,6 @@ public struct TextStyle {
         UIColor(color)
     }
 
-    @available(*, deprecated, renamed: "uppercased")
-    public var uppercasedStyle: TextStyle {
-        uppercased
-    }
-
     /// Don't use this whit SwiftUI.Font
     public func text(_ text: String?) -> NSAttributedString? {
         guard let text = text else { return nil }
