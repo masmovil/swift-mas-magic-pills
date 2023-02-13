@@ -6,7 +6,7 @@ public extension Collection {
     }
 
     /// Returns a copy as an array with the indices of each element.
-    func enumeratedArray() -> [IndexedItem<Indices.Iterator.Element, Iterator.Element>] {
+    func enumeratedArray() -> [IndexedItem<Indices.Iterator.Element, Iterator.Element>] where Index: Hashable {
         Array(zip(indices, self)).map { index, value in
             IndexedItem(index: index, value: value)
         }

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct IndexedItemIdentifiable<Index: Comparable, Element: Identifiable>: Identifiable, Equatable, Hashable {
+public struct IndexedItemIdentifiable<Index: Hashable, Element: Identifiable>: Identifiable, Equatable, Hashable {
     public let index: Index
     public let value: Element
 
