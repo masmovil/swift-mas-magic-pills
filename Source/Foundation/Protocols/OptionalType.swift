@@ -26,7 +26,7 @@ public extension Sequence where Iterator.Element: OptionalType {
 public func unwrapTuple<A, B>(first: A?, second: B?) -> (A, B)? {
     first.flatMap { firstUnwrapped -> (A, B)? in
         second.flatMap { secondUnwrapped -> (A, B)? in
-            return (firstUnwrapped, secondUnwrapped)
+            (firstUnwrapped, secondUnwrapped)
         }
     }
 }
@@ -36,20 +36,19 @@ public func unwrapTuple<A, B, C>(first: A?, second: B?, third: C?) -> (A, B, C)?
     first.flatMap { firstUnwraped -> (A, B, C)? in
         second.flatMap { secondUnwrapped -> (A, B, C)? in
             third.flatMap { thirdUnwrapped -> (A, B, C)? in
-                return (firstUnwraped, secondUnwrapped, thirdUnwrapped)
+                (firstUnwraped, secondUnwrapped, thirdUnwrapped)
             }
         }
     }
 }
 
 /// Return nil if any of his components is nil
-// swiftlint:disable large_tuple
 public func unwrapTuple<A, B, C, D>(first: A?, second: B?, third: C?, fourth: D?) -> (A, B, C, D)? {
     first.flatMap { firstUnwraped -> (A, B, C, D)? in
         second.flatMap { secondUnwrapped -> (A, B, C, D)? in
             third.flatMap { thirdUnwrapped -> (A, B, C, D)? in
                 fourth.flatMap { fourthUnwrapped -> (A, B, C, D)? in
-                    return (firstUnwraped, secondUnwrapped, thirdUnwrapped, fourthUnwrapped)
+                    (firstUnwraped, secondUnwrapped, thirdUnwrapped, fourthUnwrapped)
                 }
             }
         }

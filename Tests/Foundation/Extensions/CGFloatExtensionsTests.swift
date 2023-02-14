@@ -7,6 +7,6 @@ class CGFloatExtensionsTests: XCTestCase {
         let degrees: CGFloat = 90
         let radians: CGFloat = degrees.radians
 
-        XCTAssertEqual(radians, 1.570_796_326_794_896_6)
+        XCTAssertEqual(radians, 1.5707963267948966)
     }
 }

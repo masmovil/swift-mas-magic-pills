@@ -30,7 +30,7 @@ class FoldTests: XCTestCase {
 
     func test_composing_word() {
         let word = fold(initial: "HO", list: ["L", "A"]) { value, param in
-            return value + param
+            value + param
         }
 
         XCTAssertEqual(word, "HOLA")
