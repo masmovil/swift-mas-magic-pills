@@ -257,14 +257,14 @@
 		F26C630726C422160065E04C /* CodableTestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C630426C422160065E04C /* CodableTestObject.swift */; };
 		F27512AC252B3DCB0057D6F0 /* CollectionCellForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27512AB252B3DCB0057D6F0 /* CollectionCellForTests.swift */; };
 		F27512B5252B3DD80057D6F0 /* TableViewCellForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27512B4252B3DD80057D6F0 /* TableViewCellForTests.swift */; };
-		F27FE193299FDBE100D4A2ED /* Publishers.FilterNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.FilterNils.swift */; };
+		F27FE193299FDBE100D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
 		F27FE197299FE92C00D4A2ED /* Publishers.MapToVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */; };
 		F27FE19C299FE96500D4A2ED /* Publishers.FilterNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */; };
 		F27FE19D299FE96600D4A2ED /* Publishers.FilterNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */; };
 		F27FE19E299FE96700D4A2ED /* Publishers.FilterNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */; };
-		F27FE19F299FE96D00D4A2ED /* Publishers.FilterNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.FilterNils.swift */; };
-		F27FE1A0299FE96E00D4A2ED /* Publishers.FilterNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.FilterNils.swift */; };
-		F27FE1A1299FE96F00D4A2ED /* Publishers.FilterNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.FilterNils.swift */; };
+		F27FE19F299FE96D00D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
+		F27FE1A0299FE96E00D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
+		F27FE1A1299FE96F00D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
 		F27FE1A2299FED8100D4A2ED /* Publishers.MapToVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */; };
 		F27FE1A3299FED8200D4A2ED /* Publishers.MapToVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */; };
 		F27FE1A4299FED8300D4A2ED /* Publishers.MapToVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */; };
@@ -534,7 +534,7 @@
 		F26C630426C422160065E04C /* CodableTestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTestObject.swift; sourceTree = "<group>"; };
 		F27512AB252B3DCB0057D6F0 /* CollectionCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellForTests.swift; sourceTree = "<group>"; };
 		F27512B4252B3DD80057D6F0 /* TableViewCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForTests.swift; sourceTree = "<group>"; };
-		F27FE192299FDBE100D4A2ED /* Publishers.FilterNils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.FilterNils.swift; sourceTree = "<group>"; };
+		F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.RemoveNils.swift; sourceTree = "<group>"; };
 		F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.MapToVoid.swift; sourceTree = "<group>"; };
 		F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.FilterNilsTests.swift; sourceTree = "<group>"; };
 		F27FE1A5299FED9700D4A2ED /* Publishers.MapToVoidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.MapToVoidTests.swift; sourceTree = "<group>"; };
@@ -893,7 +893,7 @@
 			isa = PBXGroup;
 			children = (
 				F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */,
-				F27FE192299FDBE100D4A2ED /* Publishers.FilterNils.swift */,
+				F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */,
 				F27FE1AA299FEFCE00D4A2ED /* Publishers.FilterFalses.swift */,
 			);
 			path = Publishers;
@@ -1555,7 +1555,7 @@
 				F6F97F01226F501E00C3E953 /* UIScrollViewExtensions.swift in Sources */,
 				F2091DB02631AD23002F071E /* CodableExtensions.swift in Sources */,
 				F25E770729915EEC001D974C /* IndexedItem.swift in Sources */,
-				F27FE193299FDBE100D4A2ED /* Publishers.FilterNils.swift in Sources */,
+				F27FE193299FDBE100D4A2ED /* Publishers.RemoveNils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1629,7 +1629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F26C3AF922537A4600189D28 /* MagicPills.swift in Sources */,
-				F27FE19F299FE96D00D4A2ED /* Publishers.FilterNils.swift in Sources */,
+				F27FE19F299FE96D00D4A2ED /* Publishers.RemoveNils.swift in Sources */,
 				F2C1A28024E45EFD005DC7A8 /* Int64Extensions.swift in Sources */,
 				F6F3330E23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
 				F25EED6628D0AB9400819C10 /* DateExtensions+Format.swift in Sources */,
@@ -1735,7 +1735,7 @@
 			files = (
 				F27FE1A3299FED8200D4A2ED /* Publishers.MapToVoid.swift in Sources */,
 				F210E6AF231EC709004D9F0A /* XibRepresentable.swift in Sources */,
-				F27FE1A0299FE96E00D4A2ED /* Publishers.FilterNils.swift in Sources */,
+				F27FE1A0299FE96E00D4A2ED /* Publishers.RemoveNils.swift in Sources */,
 				F27FE1AD299FEFCE00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F2C1A28924E46056005DC7A8 /* CurrencyCodeType.swift in Sources */,
 				F26C3AFA22537A4600189D28 /* MagicPills.swift in Sources */,
@@ -1893,7 +1893,7 @@
 				F20082D6225DFF4F00AC6EE1 /* OptionalType.swift in Sources */,
 				F2E4801326B841370055A0D6 /* TextStyle.swift in Sources */,
 				F2008376226633AD00AC6EE1 /* SequenceExtensions.swift in Sources */,
-				F27FE1A1299FE96F00D4A2ED /* Publishers.FilterNils.swift in Sources */,
+				F27FE1A1299FE96F00D4A2ED /* Publishers.RemoveNils.swift in Sources */,
 				F22A38EA227C76FD0012C010 /* DictionaryExtensions.swift in Sources */,
 				F2E4800E26B83FB50055A0D6 /* TextStyleModifier.swift in Sources */,
 				F2496730230D5DA200C06E2E /* Difference.swift in Sources */,

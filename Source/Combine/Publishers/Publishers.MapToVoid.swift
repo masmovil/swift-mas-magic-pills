@@ -27,7 +27,7 @@ public extension Publishers {
 }
 
 extension Publishers.MapToVoid {
-    private struct Inner<Downstream: Subscriber>: Subscriber, CustomStringConvertible, CustomReflectable, CustomPlaygroundDisplayConvertible
+    private struct Inner<Downstream: Subscriber>: Subscriber
     where Downstream.Input == Output, Downstream.Failure == Upstream.Failure {
         typealias Input = Upstream.Output
         typealias Failure = Upstream.Failure
@@ -51,13 +51,5 @@ extension Publishers.MapToVoid {
         func receive(completion: Subscribers.Completion<Failure>) {
             downstream.receive(completion: completion)
         }
-
-        var description: String { "MapToVoid" }
-
-        var customMirror: Mirror {
-            Mirror(self, children: EmptyCollection())
-        }
-
-        var playgroundDescription: Any { description }
     }
 }

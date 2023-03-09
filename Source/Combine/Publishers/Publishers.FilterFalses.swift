@@ -27,7 +27,7 @@ public extension Publishers {
 }
 
 extension Publishers.FilterFalses {
-    private struct Inner<Downstream: Subscriber>: Subscriber, CustomStringConvertible, CustomReflectable, CustomPlaygroundDisplayConvertible
+    private struct Inner<Downstream: Subscriber>: Subscriber
     where Downstream.Input == Output, Downstream.Failure == Upstream.Failure {
         typealias Input = Upstream.Output
         typealias Failure = Upstream.Failure
@@ -57,13 +57,5 @@ extension Publishers.FilterFalses {
         func receive(completion: Subscribers.Completion<Failure>) {
             downstream.receive(completion: completion)
         }
-
-        var description: String { "FilterNils" }
-
-        var customMirror: Mirror {
-            Mirror(self, children: EmptyCollection())
-        }
-
-        var playgroundDescription: Any { description }
     }
 }
