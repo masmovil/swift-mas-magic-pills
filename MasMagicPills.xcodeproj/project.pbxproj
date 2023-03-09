@@ -259,9 +259,9 @@
 		F27512B5252B3DD80057D6F0 /* TableViewCellForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27512B4252B3DD80057D6F0 /* TableViewCellForTests.swift */; };
 		F27FE193299FDBE100D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
 		F27FE197299FE92C00D4A2ED /* Publishers.MapToVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */; };
-		F27FE19C299FE96500D4A2ED /* Publishers.FilterNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */; };
-		F27FE19D299FE96600D4A2ED /* Publishers.FilterNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */; };
-		F27FE19E299FE96700D4A2ED /* Publishers.FilterNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */; };
+		F27FE19C299FE96500D4A2ED /* Publishers.RemoveNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.RemoveNilsTests.swift */; };
+		F27FE19D299FE96600D4A2ED /* Publishers.RemoveNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.RemoveNilsTests.swift */; };
+		F27FE19E299FE96700D4A2ED /* Publishers.RemoveNilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE19A299FE95F00D4A2ED /* Publishers.RemoveNilsTests.swift */; };
 		F27FE19F299FE96D00D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
 		F27FE1A0299FE96E00D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
 		F27FE1A1299FE96F00D4A2ED /* Publishers.RemoveNils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */; };
@@ -536,7 +536,7 @@
 		F27512B4252B3DD80057D6F0 /* TableViewCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForTests.swift; sourceTree = "<group>"; };
 		F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.RemoveNils.swift; sourceTree = "<group>"; };
 		F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.MapToVoid.swift; sourceTree = "<group>"; };
-		F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.FilterNilsTests.swift; sourceTree = "<group>"; };
+		F27FE19A299FE95F00D4A2ED /* Publishers.RemoveNilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.RemoveNilsTests.swift; sourceTree = "<group>"; };
 		F27FE1A5299FED9700D4A2ED /* Publishers.MapToVoidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.MapToVoidTests.swift; sourceTree = "<group>"; };
 		F27FE1AA299FEFCE00D4A2ED /* Publishers.FilterFalses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.FilterFalses.swift; sourceTree = "<group>"; };
 		F27FE1AF299FF08200D4A2ED /* Publishers.FilterFalses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.FilterFalses.swift; sourceTree = "<group>"; };
@@ -910,7 +910,7 @@
 		F27FE199299FE94300D4A2ED /* Publishers */ = {
 			isa = PBXGroup;
 			children = (
-				F27FE19A299FE95F00D4A2ED /* Publishers.FilterNilsTests.swift */,
+				F27FE19A299FE95F00D4A2ED /* Publishers.RemoveNilsTests.swift */,
 				F27FE1A5299FED9700D4A2ED /* Publishers.MapToVoidTests.swift */,
 				F27FE1AF299FF08200D4A2ED /* Publishers.FilterFalses.swift */,
 			);
@@ -1582,7 +1582,7 @@
 				F25E77112991612E001D974C /* FontExtensionsTests.swift in Sources */,
 				F27FE1B4299FF09B00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F69A081E2264DF1200CB09F2 /* StringExtensionsUIKitTests.swift in Sources */,
-				F27FE19C299FE96500D4A2ED /* Publishers.FilterNilsTests.swift in Sources */,
+				F27FE19C299FE96500D4A2ED /* Publishers.RemoveNilsTests.swift in Sources */,
 				F210E6B2231EC7F0004D9F0A /* XibRepresentableTests.swift in Sources */,
 				F62CC3482270B52700DC46F2 /* ToastTests.swift in Sources */,
 				F2008371226633A500AC6EE1 /* SequenceExtensionsTests.swift in Sources */,
@@ -1704,7 +1704,7 @@
 				F27FE1A8299FED9B00D4A2ED /* Publishers.MapToVoidTests.swift in Sources */,
 				F2A74DC122576610001F0DF2 /* ArrayExtensionsTests.swift in Sources */,
 				F2008334225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
-				F27FE19D299FE96600D4A2ED /* Publishers.FilterNilsTests.swift in Sources */,
+				F27FE19D299FE96600D4A2ED /* Publishers.RemoveNilsTests.swift in Sources */,
 				44A4818928F8221A000F6562 /* CalendarExtensionsTests.swift in Sources */,
 				F25A99AB2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */,
 				F249672A230D506F00C06E2E /* SemVerTests.swift in Sources */,
@@ -1831,7 +1831,7 @@
 				F25E771329916130001D974C /* FontExtensionsTests.swift in Sources */,
 				F27FE1B6299FF09C00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F21A677F226F4E6B0026F6E9 /* UICollectionViewExtensionsTests.swift in Sources */,
-				F27FE19E299FE96700D4A2ED /* Publishers.FilterNilsTests.swift in Sources */,
+				F27FE19E299FE96700D4A2ED /* Publishers.RemoveNilsTests.swift in Sources */,
 				F210E6B3231EC7F0004D9F0A /* XibRepresentableTests.swift in Sources */,
 				F62CC3492270B52700DC46F2 /* ToastTests.swift in Sources */,
 				F21A6781226F4E6B0026F6E9 /* UIImageExtensionsTests.swift in Sources */,

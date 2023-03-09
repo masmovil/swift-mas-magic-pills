@@ -2,7 +2,7 @@ import Combine
 import MasMagicPills
 import XCTest
 
-class PublishersFilterNilsTests: XCTestCase {
+class PublishersRemoveNilsTests: XCTestCase {
     func test_removeNils() {
         var cancellables = Set<AnyCancellable>()
         let expectation = expectation(description: "wait for async process")
