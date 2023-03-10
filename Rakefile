@@ -12,6 +12,13 @@ task(:setup) do
   sh('bundle exec overcommit --install')
   sh('bundle exec overcommit --sign')
   sh('bundle exec overcommit --sign pre-commit')
+
+  puts('➡️  Brew 🍺')
+  sh('brew update')
+  sh('brew outdated mint || brew upgrade mint')
+
+  puts('➡️  Mint 🍃')
+  sh('mint bootstrap')    
 end
 
 task(:tests) do
