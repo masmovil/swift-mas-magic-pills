@@ -16,7 +16,15 @@ extension Optional: OptionalType {
 public extension Sequence where Iterator.Element: OptionalType {
     /// Remove all the nullable values inside a nullable values array.
     ///
-    /// - Returns: A Collection without null values.
+    /// - Returns: A Collection without null values with the Wrapped Type
+    var removeNils: [Iterator.Element.Wrapped] {
+        compactMap { $0.wrapped }
+    }
+
+    /// Remove all the nullable values inside a nullable values array.
+    ///
+    /// - Returns: A Collection without null values with the Wrapped Type
+    @available(*, deprecated, renamed: "removeNils")
     var filterNils: [Iterator.Element.Wrapped] {
         compactMap { $0.wrapped }
     }

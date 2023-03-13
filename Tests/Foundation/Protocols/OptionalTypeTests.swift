@@ -14,7 +14,7 @@ class OptionalTypeTests: XCTestCase {
     func test_filter_nil() {
         let array: [String?] = ["uno", nil, "dos", nil]
 
-        XCTAssertEqual(array.filterNils, ["uno", "dos"])
+        XCTAssertEqual(array.removeNils, ["uno", "dos"])
     }
 
     func test_uwrapTuple_of_2_elements() {
