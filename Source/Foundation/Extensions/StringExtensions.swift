@@ -71,7 +71,7 @@ public extension String {
         components(separatedBy: .whitespaces).joined()
     }
 
-    var trimed: String {
+    var trimmed: String {
         trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 

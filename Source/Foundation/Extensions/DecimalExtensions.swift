@@ -114,6 +114,6 @@ public extension Decimal {
         formatter.numberFormatter = numberFormatter
 
         let measurement = Measurement(value: Double(truncating: self as NSNumber), unit: unit)
-        return formatter.string(from: measurement).trimed
+        return formatter.string(from: measurement).trimmed
     }
 }

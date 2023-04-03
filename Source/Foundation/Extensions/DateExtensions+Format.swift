@@ -63,14 +63,14 @@ public extension Date {
             let formatter = formatter(locale: locale, timeZone: timeZone)
             for dateFormat in dateFormats {
                 formatter.dateFormat = dateFormat
-                let date = formatter.date(from: formattedDate.trimed)
+                let date = formatter.date(from: formattedDate.trimmed)
                 if date != nil { return date }
             }
 
             // If all dateFormats fail, try with ISO8601Formatter:
             if case .iso8601 = self {
                 let iso8601Formatter = Formatter.iso8601Date(timeZone: timeZone)
-                return iso8601Formatter.date(from: formattedDate.trimed)
+                return iso8601Formatter.date(from: formattedDate.trimmed)
             }
 
             // Sorry! not recognized

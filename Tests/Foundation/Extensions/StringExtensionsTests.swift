@@ -17,7 +17,7 @@ class StringExtensionsTests: XCTestCase {
     }
 
     func test_trimed() {
-        XCTAssertEqual(" hola ".trimed, "hola")
+        XCTAssertEqual(" hola ".trimmed, "hola")
     }
 
     func test_capitalized_first_letter() {
