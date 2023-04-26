@@ -17,14 +17,6 @@ public extension URL {
         return string.urlValue!
     }
 
-    var typeIdentifier: String? {
-        (try? resourceValues(forKeys: [.typeIdentifierKey]))?.typeIdentifier
-    }
-
-    var localizedName: String? {
-        (try? resourceValues(forKeys: [.localizedNameKey]))?.localizedName
-    }
-
     var isMailto: Bool {
         guard scheme == "mailto" else { return false }
         return absoluteString.replacingOccurrences(of: "mailto:", with: "").isValidEmail
