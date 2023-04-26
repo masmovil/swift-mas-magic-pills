@@ -129,4 +129,12 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual("ARGENTINA".separating(every: 3), "ARG ENT INA")
         XCTAssertEqual("🍆🎄".separating(every: 1, with: "💦"), "🍆💦🎄")
     }
+
+    func test_is_valid_for_phone_dialer() {
+        XCTAssertTrue("2414124124".isValidForPhoneDialer)
+        XCTAssertTrue("+44(2)841-412-4124".isValidForPhoneDialer)
+        XCTAssertFalse("2414hh124124".isValidForPhoneDialer)
+        XCTAssertFalse("24aa14 12 4124".isValidForPhoneDialer)
+        XCTAssertTrue("#21*412".isValidForPhoneDialer)
+    }
 }

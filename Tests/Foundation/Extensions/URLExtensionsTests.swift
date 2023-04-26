@@ -18,4 +18,19 @@ class URLExtensionsTests: XCTestCase {
         XCTAssertNotEqual(url1, url2)
         XCTAssertEqual(url1.lowercased(), url2.lowercased())
     }
+
+    func test_clicktocall_url() {
+        XCTAssertEqual(URL(string: "tel:685685685")?.isClickToCall, true)
+        XCTAssertEqual(URL(string: "tel:sfafsaf")?.isClickToCall, false)
+        XCTAssertEqual(URL(string: "tel:+34687687687")?.isClickToCall, true)
+        XCTAssertEqual(URL(string: "tel:asfasf.com")?.isClickToCall, false)
+        XCTAssertEqual(URL(string: "wawa:asfasf.com")?.isClickToCall, false)
+    }
+
+    func test_mailto_url() {
+        XCTAssertEqual(URL(string: "mailto:ssss@ssss.com")?.isMailto, true)
+        XCTAssertEqual(URL(string: "tel:+34687687687")?.isMailto, false)
+        XCTAssertEqual(URL(string: "mailto:asfasf.com")?.isMailto, false)
+        XCTAssertEqual(URL(string: "mailto:124124")?.isMailto, false)
+    }
 }
