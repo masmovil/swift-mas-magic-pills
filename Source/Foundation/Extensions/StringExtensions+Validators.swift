@@ -16,6 +16,13 @@ public extension String {
         return emailTest.evaluate(with: self)
     }
 
+    /// Check if the string only have digits valid for phones (not spaces, letters or specials simbols)
+    var isValidForPhoneDialer: Bool {
+        let phoneRegEx = "(\\d|\\*|\\#|-|\\+|\\(|\\))+"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
+        return phoneTest.evaluate(with: self)
+    }
+
     var isValidSpanishPhone: Bool {
         let phoneRegEx = "^(\\+34|34|0034|034)?[679][0-9]{8}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)

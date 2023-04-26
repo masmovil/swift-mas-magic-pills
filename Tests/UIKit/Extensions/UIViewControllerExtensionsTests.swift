@@ -10,7 +10,6 @@ class UIViewControllerExtensionsTests: XCTestCase {
         let navigationController = UINavigationController()
         let homeViewController = HomeViewController()
         navigationController.viewControllers = [homeViewController]
-        UIApplication.shared.keyWindow?.rootViewController = navigationController
         let secondViewController = SecondViewController()
         navigationController.pushViewController(secondViewController, animated: false)
         secondViewController.viewDidAppear(false)

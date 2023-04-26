@@ -1,14 +1,6 @@
 import Foundation
 
 public extension URL {
-    var typeIdentifier: String? {
-        (try? resourceValues(forKeys: [.typeIdentifierKey]))?.typeIdentifier
-    }
-
-    var localizedName: String? {
-        (try? resourceValues(forKeys: [.localizedNameKey]))?.localizedName
-    }
-
     func appendingItems(items: [URLQueryItem]) throws -> URL {
         guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
             throw MagicError.badRequest
@@ -23,6 +15,16 @@ public extension URL {
     func lowercased() -> URL {
         let string = absoluteString.lowercased()
         return string.urlValue!
+    }
+
+    var isMailto: Bool {
+        guard scheme == "mailto" else { return false }
+        return absoluteString.replacingOccurrences(of: "mailto:", with: "").isValidEmail
+    }
+
+    var isClickToCall: Bool {
+        guard scheme == "tel" else { return false }
+        return absoluteString.replacingOccurrences(of: "tel:", with: "").isValidForPhoneDialer
     }
 }
 
