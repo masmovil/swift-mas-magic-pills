@@ -26,6 +26,11 @@ public extension URL {
         guard scheme == "tel" else { return false }
         return absoluteString.replacingOccurrences(of: "tel:", with: "").isValidForPhoneDialer
     }
+
+    /// Retrieve the resource of the url (or the absolute string if not available)
+    var resourceSpecifier: String {
+        (self as NSURL).resourceSpecifier ?? absoluteString
+    }
 }
 
 extension URL: Comparable {
