@@ -348,6 +348,10 @@
 		F2C78F27238D6AF4008C4846 /* CellIdentificableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F23238D6AEF008C4846 /* CellIdentificableTests.swift */; };
 		F2C78F29238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */; };
 		F2C78F2A238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */; };
+		F2C9B0A72A1C075500046F2A /* Publishers.MapToResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9B0A62A1C075500046F2A /* Publishers.MapToResult.swift */; };
+		F2C9B0A82A1C075500046F2A /* Publishers.MapToResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9B0A62A1C075500046F2A /* Publishers.MapToResult.swift */; };
+		F2C9B0A92A1C075500046F2A /* Publishers.MapToResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9B0A62A1C075500046F2A /* Publishers.MapToResult.swift */; };
+		F2C9B0AA2A1C075500046F2A /* Publishers.MapToResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9B0A62A1C075500046F2A /* Publishers.MapToResult.swift */; };
 		F2E47FF426B82EFE0055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
 		F2E47FF726B8315D0055A0D6 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */; };
 		F2E4800D26B83F7F0055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
@@ -562,6 +566,7 @@
 		F2C78F1E238D67E1008C4846 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		F2C78F23238D6AEF008C4846 /* CellIdentificableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentificableTests.swift; sourceTree = "<group>"; };
 		F2C78F28238D76DF008C4846 /* UITableViewHeaderFooterViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtensions.swift; sourceTree = "<group>"; };
+		F2C9B0A62A1C075500046F2A /* Publishers.MapToResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.MapToResult.swift; sourceTree = "<group>"; };
 		F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
 		F2E4801526B842000055A0D6 /* TextStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStylesTests.swift; sourceTree = "<group>"; };
@@ -895,6 +900,7 @@
 				F27FE194299FDC7400D4A2ED /* Publishers.MapToVoid.swift */,
 				F27FE192299FDBE100D4A2ED /* Publishers.RemoveNils.swift */,
 				F27FE1AA299FEFCE00D4A2ED /* Publishers.FilterFalses.swift */,
+				F2C9B0A62A1C075500046F2A /* Publishers.MapToResult.swift */,
 			);
 			path = Publishers;
 			sourceTree = "<group>";
@@ -1486,6 +1492,7 @@
 			files = (
 				F27FE197299FE92C00D4A2ED /* Publishers.MapToVoid.swift in Sources */,
 				F210E6AE231EC709004D9F0A /* XibRepresentable.swift in Sources */,
+				F2C9B0A72A1C075500046F2A /* Publishers.MapToResult.swift in Sources */,
 				F2C1A28724E46041005DC7A8 /* CurrencyCodeType.swift in Sources */,
 				F27FE1AB299FEFCE00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F2008320225F83EF00AC6EE1 /* StringExtensions+Validators.swift in Sources */,
@@ -1632,6 +1639,7 @@
 				F27FE19F299FE96D00D4A2ED /* Publishers.RemoveNils.swift in Sources */,
 				F2C1A28024E45EFD005DC7A8 /* Int64Extensions.swift in Sources */,
 				F6F3330E23042AEA00E93F0E /* CALayerExtensions.swift in Sources */,
+				F2C9B0A82A1C075500046F2A /* Publishers.MapToResult.swift in Sources */,
 				F25EED6628D0AB9400819C10 /* DateExtensions+Format.swift in Sources */,
 				F2091DB12631AD23002F071E /* CodableExtensions.swift in Sources */,
 				F2E4801126B83FB90055A0D6 /* TextStyleModifier.swift in Sources */,
@@ -1735,6 +1743,7 @@
 			files = (
 				F27FE1A3299FED8200D4A2ED /* Publishers.MapToVoid.swift in Sources */,
 				F210E6AF231EC709004D9F0A /* XibRepresentable.swift in Sources */,
+				F2C9B0A92A1C075500046F2A /* Publishers.MapToResult.swift in Sources */,
 				F27FE1A0299FE96E00D4A2ED /* Publishers.RemoveNils.swift in Sources */,
 				F27FE1AD299FEFCE00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F2C1A28924E46056005DC7A8 /* CurrencyCodeType.swift in Sources */,
@@ -1899,6 +1908,7 @@
 				F2496730230D5DA200C06E2E /* Difference.swift in Sources */,
 				F200831E225F831F00AC6EE1 /* StringExtensions+Values.swift in Sources */,
 				F200832D225F862900AC6EE1 /* DataExtensions.swift in Sources */,
+				F2C9B0AA2A1C075500046F2A /* Publishers.MapToResult.swift in Sources */,
 				F20082CA225DFC9D00AC6EE1 /* BoolExtensions.swift in Sources */,
 				F2496744230EBDEF00C06E2E /* LastExecutionState.swift in Sources */,
 				F22A356522807465004E8546 /* Fold.swift in Sources */,
