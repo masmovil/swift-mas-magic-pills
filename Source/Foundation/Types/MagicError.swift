@@ -1,6 +1,6 @@
 import Foundation
 
-public enum MagicError: Error {
+public enum MagicError: Error, Equatable {
     case badRequest
     case cantConvertToDictionary
     case cantCreateOutput
