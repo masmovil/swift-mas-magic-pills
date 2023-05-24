@@ -6,9 +6,8 @@ public extension Array where Element: Hashable {
         Array(Set(self))
     }
 
-
     func subtracting(_ elements: [Element]) -> [Element] {
-        return Array(Set(self).subtracting(elements))
+        Array(Set(self).subtracting(elements))
     }
 }
 
@@ -100,5 +99,4 @@ public extension Array where Element: Equatable {
         }
         return result
     }
-
 }
