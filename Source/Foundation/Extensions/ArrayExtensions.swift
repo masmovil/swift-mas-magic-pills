@@ -95,4 +95,9 @@ public extension Array where Element: Equatable {
         }
         return result
     }
+
+    /// Return a copy of the array with values not in the specified array.
+    func subtracting(_ elements: [Element]) -> [Element] {
+        filter { !elements.contains($0) }
+    }
 }
