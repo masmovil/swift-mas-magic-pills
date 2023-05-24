@@ -55,6 +55,7 @@ extension Publishers.MapToResult {
 
             case .failure(let error):
                 _ = downstream.receive(.failure(error))
+                downstream.receive(completion: .finished)
             }
         }
     }
