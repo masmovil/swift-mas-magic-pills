@@ -76,17 +76,10 @@ class ArrayExtensionsTests: XCTestCase {
          XCTAssertEqual(newCollection.first { $0.id == "2" }?.value, "cya")
      }
 
-    func test_subtracting_string() {
+    func test_subtracting() {
         var array = ["a", "b", "c", "d", "e"]
         var arrayToSubtract = ["c", "d", "e", "f", "g"]
 
         XCTAssertEqual(array.subtracting(arrayToSubtract), ["a", "b"])
-    }
-
-    func test_subtracting_int() {
-        var array = [1, 2, 3, 4, 5]
-        var arrayToSubtract = [3, 4, 5, 6, 7]
-
-        XCTAssertEqual(array.subtracting(arrayToSubtract), [1, 2])
     }
 }

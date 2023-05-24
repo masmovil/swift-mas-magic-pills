@@ -5,10 +5,6 @@ public extension Array where Element: Hashable {
     var unique: [Element] {
         Array(Set(self))
     }
-
-    func subtracting(_ elements: [Element]) -> [Element] {
-        Array(Set(self).subtracting(elements))
-    }
 }
 
 public extension Array where Element: Equatable {
@@ -98,5 +94,9 @@ public extension Array where Element: Equatable {
             result = result.appendingIfNotExists(element)
         }
         return result
+    }
+
+    func subtracting(_ elements: [Element]) -> [Element] {
+        filter { !elements.contains($0) }
     }
 }
