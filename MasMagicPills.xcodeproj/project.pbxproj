@@ -237,6 +237,13 @@
 		F25A99AE2953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */; };
 		F25A99AF2953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */; };
 		F25A99B02953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */; };
+		F25CA6712A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CA6702A20E57C00B1F0B7 /* ResultExtensions.swift */; };
+		F25CA6722A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CA6702A20E57C00B1F0B7 /* ResultExtensions.swift */; };
+		F25CA6732A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CA6702A20E57C00B1F0B7 /* ResultExtensions.swift */; };
+		F25CA6742A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CA6702A20E57C00B1F0B7 /* ResultExtensions.swift */; };
+		F25CA67A2A20E68400B1F0B7 /* ResultExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CA6752A20E66F00B1F0B7 /* ResultExtensionsTests.swift */; };
+		F25CA67B2A20E68400B1F0B7 /* ResultExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CA6752A20E66F00B1F0B7 /* ResultExtensionsTests.swift */; };
+		F25CA67C2A20E68500B1F0B7 /* ResultExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CA6752A20E66F00B1F0B7 /* ResultExtensionsTests.swift */; };
 		F25E770729915EEC001D974C /* IndexedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770629915EEC001D974C /* IndexedItem.swift */; };
 		F25E770829915EEC001D974C /* IndexedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770629915EEC001D974C /* IndexedItem.swift */; };
 		F25E770929915EEC001D974C /* IndexedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25E770629915EEC001D974C /* IndexedItem.swift */; };
@@ -534,6 +541,8 @@
 		F258CE9A25F2A603007EF07E /* MagicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicError.swift; sourceTree = "<group>"; };
 		F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleExtensionTests.swift; sourceTree = "<group>"; };
 		F25A99AD2953379F00D19C14 /* TimeZoneExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneExtensionsTests.swift; sourceTree = "<group>"; };
+		F25CA6702A20E57C00B1F0B7 /* ResultExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultExtensions.swift; sourceTree = "<group>"; };
+		F25CA6752A20E66F00B1F0B7 /* ResultExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultExtensionsTests.swift; sourceTree = "<group>"; };
 		F25E770629915EEC001D974C /* IndexedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexedItem.swift; sourceTree = "<group>"; };
 		F25E770C29916109001D974C /* FontExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensionsTests.swift; sourceTree = "<group>"; };
 		F25EED6428D0AB9400819C10 /* DateExtensions+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateExtensions+Format.swift"; sourceTree = "<group>"; };
@@ -1025,6 +1034,7 @@
 				F6D6D4C1230C108F00D161F9 /* LocaleExtensions.swift */,
 				F2C1A27724E41E73005DC7A8 /* NSAttributedStringExtensions.swift */,
 				F20082C1225DFC6E00AC6EE1 /* OptionalExtensions.swift */,
+				F25CA6702A20E57C00B1F0B7 /* ResultExtensions.swift */,
 				F200836E2266339800AC6EE1 /* SequenceExtensions.swift */,
 				F200830A225F4BFC00AC6EE1 /* StringExtensions.swift */,
 				F2C1A25F24E2E055005DC7A8 /* StringExtensions+Crypto.swift */,
@@ -1068,6 +1078,7 @@
 				F68925D322CDE8950008263B /* IntExtensionsTests.swift */,
 				F25A99A92953378D00D19C14 /* LocaleExtensionTests.swift */,
 				F20082E0225DFFD900AC6EE1 /* OptionalExtensionsTests.swift */,
+				F25CA6752A20E66F00B1F0B7 /* ResultExtensionsTests.swift */,
 				F2008370226633A500AC6EE1 /* SequenceExtensionsTests.swift */,
 				F2C1A26424E2E0A1005DC7A8 /* StringExtensions+CryptoTests.swift */,
 				F2008332225F877700AC6EE1 /* StringExtensions+FormatingTests.swift */,
@@ -1501,6 +1512,7 @@
 				F2C1A28724E46041005DC7A8 /* CurrencyCodeType.swift in Sources */,
 				F27FE1AB299FEFCE00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F2008320225F83EF00AC6EE1 /* StringExtensions+Validators.swift in Sources */,
+				F25CA6712A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */,
 				F22A357322807840004E8546 /* DispatchQueueExtensions.swift in Sources */,
 				F6F333192306B03F00E93F0E /* CGFloatExtensions.swift in Sources */,
 				F2E47FF426B82EFE0055A0D6 /* TextStyle.swift in Sources */,
@@ -1599,6 +1611,7 @@
 				F210E6B2231EC7F0004D9F0A /* XibRepresentableTests.swift in Sources */,
 				F62CC3482270B52700DC46F2 /* ToastTests.swift in Sources */,
 				F2008371226633A500AC6EE1 /* SequenceExtensionsTests.swift in Sources */,
+				F25CA67A2A20E68400B1F0B7 /* ResultExtensionsTests.swift in Sources */,
 				F297F0CF24E55F0A00963BD8 /* CollectionExtensionsTests.swift in Sources */,
 				F2496732230D5E1B00C06E2E /* DifferenceTests.swift in Sources */,
 				F62CC32A22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */,
@@ -1677,6 +1690,7 @@
 				F22A355D22806EAA004E8546 /* DefinesPrimaryKey.swift in Sources */,
 				F297F0D424E569DF00963BD8 /* KeyedValue.swift in Sources */,
 				F200835822662DC400AC6EE1 /* TimeIntervalExtensions.swift in Sources */,
+				F25CA6722A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */,
 				47269D44241FE7CC008D58EB /* DayMomentType.swift in Sources */,
 				F2C502AE2951E83E007AEF92 /* IndexedItemIdentifiable.swift in Sources */,
 				F200832B225F862900AC6EE1 /* DataExtensions.swift in Sources */,
@@ -1727,6 +1741,7 @@
 				F20083642266317A00AC6EE1 /* URLExtensionsTests.swift in Sources */,
 				F20083462266117700AC6EE1 /* BundleExtensionsTests.swift in Sources */,
 				F209D41E24E6C6BC002BF853 /* Int64ExtensionsTests.swift in Sources */,
+				F25CA67B2A20E68400B1F0B7 /* ResultExtensionsTests.swift in Sources */,
 				F200834B226612F800AC6EE1 /* FakeBundle.swift in Sources */,
 				F2496733230D5E1B00C06E2E /* DifferenceTests.swift in Sources */,
 				F2C9B0B12A1E216900046F2A /* Publishers.MapToResultTests.swift in Sources */,
@@ -1754,6 +1769,7 @@
 				F27FE1A0299FE96E00D4A2ED /* Publishers.RemoveNils.swift in Sources */,
 				F27FE1AD299FEFCE00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F2C1A28924E46056005DC7A8 /* CurrencyCodeType.swift in Sources */,
+				F25CA6732A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */,
 				F26C3AFA22537A4600189D28 /* MagicPills.swift in Sources */,
 				F22A357522807842004E8546 /* DispatchQueueExtensions.swift in Sources */,
 				F6F3331B2306B03F00E93F0E /* CGFloatExtensions.swift in Sources */,
@@ -1852,6 +1868,7 @@
 				F210E6B3231EC7F0004D9F0A /* XibRepresentableTests.swift in Sources */,
 				F62CC3492270B52700DC46F2 /* ToastTests.swift in Sources */,
 				F21A6781226F4E6B0026F6E9 /* UIImageExtensionsTests.swift in Sources */,
+				F25CA67C2A20E68500B1F0B7 /* ResultExtensionsTests.swift in Sources */,
 				F297F0D124E55F0C00963BD8 /* CollectionExtensionsTests.swift in Sources */,
 				F2496734230D5E1B00C06E2E /* DifferenceTests.swift in Sources */,
 				F62CC32B22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */,
@@ -1921,6 +1938,7 @@
 				F2496744230EBDEF00C06E2E /* LastExecutionState.swift in Sources */,
 				F22A356522807465004E8546 /* Fold.swift in Sources */,
 				F20082E8225E1E0000AC6EE1 /* DateExtensions.swift in Sources */,
+				F25CA6742A20E57C00B1F0B7 /* ResultExtensions.swift in Sources */,
 				F27FE1AE299FEFCE00D4A2ED /* Publishers.FilterFalses.swift in Sources */,
 				F25EED6828D0AB9400819C10 /* DateExtensions+Format.swift in Sources */,
 				F22A355F22806EAD004E8546 /* DefinesPrimaryKey.swift in Sources */,

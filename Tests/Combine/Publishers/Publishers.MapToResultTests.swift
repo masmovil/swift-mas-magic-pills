@@ -41,10 +41,12 @@ class PublishersMapToResultTests: XCTestCase {
         let one: AnyPublisher<String, MagicError> = Fail<String, MagicError>(error: .invalidInput).eraseToAnyPublisher()
         let two: AnyPublisher<String, MagicError> = Just("2").setFailureType(to: MagicError.self).eraseToAnyPublisher()
 
-        Publishers.MergeMany([one, two].map { $0.mapToResult() })
+        Publishers.MergeMany([one, two].mapToResults())
             .collect()
             .sink { values in
                 XCTAssertEqual(values, [.failure(.invalidInput), .success("2")])
+                XCTAssertEqual(values.failureErrors(), [.invalidInput])
+                XCTAssertEqual(values.successValues(), ["2"])
                 expectation.fulfill()
             }
             .store(in: &cancellables)
