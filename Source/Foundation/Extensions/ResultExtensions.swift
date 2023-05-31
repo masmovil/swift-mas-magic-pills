@@ -23,3 +23,13 @@ public extension Result {
         }
     }
 }
+
+public extension Collection {
+    func failureErrors<S, F>() -> [F] where Element == Result<S, F> {
+        compactMap(\.failureError)
+    }
+
+    func successValues<S, F>() -> [S] where Element == Result<S, F> {
+        compactMap(\.successValue)
+    }
+}

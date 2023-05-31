@@ -8,6 +8,13 @@ public extension Publisher {
     }
 }
 
+public extension Collection {
+    func mapToResults<S, F>() -> [Publishers.MapToResult<Element>]
+    where Element: Publisher<S, F> {
+        map { $0.mapToResult() }
+    }
+}
+
 public extension Publishers {
     struct MapToResult<Upstream: Publisher>: Publisher {
         public typealias Output = Result<Upstream.Output, Upstream.Failure>
