@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MasMagicPills'
-  s.version          = '3.6.4'
+  s.version          = '3.6.5'
   s.swift_version    = '5.0'
   s.summary          = 'Set of powerful utilities 💊.'
 
