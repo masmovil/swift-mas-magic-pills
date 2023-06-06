@@ -2,7 +2,7 @@ import CommonCrypto
 import Foundation
 
 public extension String {
-    @available(*, deprecated, message: "This function is cryptographically broken and should not be used in security contexts. Clients should migrate to SHA256 (or stronger).")
+    /// This function is cryptographically broken and should not be used in security contexts. Clients should migrate to SHA256 (or stronger).
     var md5: String {
         let data = Data(utf8)
         var hash = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
