@@ -33,8 +33,23 @@ public struct Semver: Comparable, CustomStringConvertible {
         components[2]
     }
 
-    public var description: String {
+    /// Version formatted with MAJOR.MINOR pattern. Example: 3.41
+    public var simple: String {
+        "\(major).\(minor)"
+    }
+
+    /// Version formatted with MAJOR.MINOR.PATCH pattern. Example: 3.41.2
+    public var full: String {
+        "\(major).\(minor).\(patch)"
+    }
+
+    /// Version formatted with MAJOR.MINOR.PATCH pattern prefixed with an v. Example: v3.41.2
+    public var commercial: String {
         "v\(major).\(minor).\(patch)"
+    }
+
+    public var description: String {
+        commercial
     }
 
     // Private
