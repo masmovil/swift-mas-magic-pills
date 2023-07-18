@@ -103,4 +103,27 @@ class DecimalExtensionsTests: XCTestCase {
     func test_convert_seconds_to_minutes() {
         XCTAssertEqual((6_000 as Decimal).secondsToMinutes, 100)
     }
+
+    func test_split_for_positive_number() {
+        let number: Decimal = 288.6970
+
+        let result = number.split(decimals: 3)
+
+        XCTAssertEqual(result.integerPart, 288)
+        XCTAssertEqual(result.decimalPart, 697)
+    }
+
+    func test_split_for_negative_number() {
+        let number: Decimal = -288.6970
+
+        let result = number.split(decimals: 3)
+
+        XCTAssertEqual(result.integerPart, -288)
+        XCTAssertEqual(result.decimalPart, 697)
+    }
+
+    func test_format_decimal_part() {
+        XCTAssertEqual((5.532 as Decimal).formattedDecimalPart(decimals: 1, locale: .spanishSpain), ",5")
+        XCTAssertEqual((-5.532 as Decimal).formattedDecimalPart(decimals: 2, locale: .spanishSpain), ",53")
+    }
 }

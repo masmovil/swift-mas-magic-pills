@@ -16,13 +16,43 @@ public extension Decimal {
         self / 60
     }
 
+    /// Return integer part
+    var integerPart: Int {
+        var result = Decimal()
+        var mutableSelf = self
+        NSDecimalRound(&result, &mutableSelf, 0, self >= 0 ? .down : .up)
+        return Int(truncating: NSDecimalNumber(decimal: result))
+    }
+
+    /// Return decimal part
+    func decimalPart(decimals: Int) -> Int {
+        var result = Decimal()
+        let powered = pow(Decimal(10), decimals)
+        let integerPartToRemove = (powered * Decimal(abs(integerPart)))
+        var elevated = powered * abs(self)
+
+        NSDecimalRound(&result, &elevated, 0, .down)
+        return Int(truncating: NSDecimalNumber(decimal: result - integerPartToRemove))
+    }
+
+    /// Split the number into decimal and integer part
+    func split(decimals: Int) -> (integerPart: Int, decimalPart: Int) {
+        (integerPart: integerPart,
+         decimalPart: decimalPart(decimals: decimals))
+    }
+
+    /// Formats the decimal part from separator (without zero)
+    func formattedDecimalPart(decimals: Int, locale: Locale = .current) -> String {
+        "\(locale.decimalSeparator ?? ".")\(decimalPart(decimals: decimals))"
+    }
+
     /// Convert given megas to Megabytes (1000 bytes) and format it with Locale and specific decimals
     ///
     /// - Parameters:
     ///   - locale: Language rules (optional) (by default use current)
     ///   - decimals: Number of decimals to use (optional) (by default use 0)
     /// - Returns: String with specified format
-    func formattedMegabytes(_ locale: Locale? = nil,
+    func formattedMegabytes(_ locale: Locale = .current,
                             decimals: Int = 0) -> String {
         if abs(self) >= 1_000 {
             return (self / 1_000).formatted(decimals: decimals,
@@ -40,7 +70,7 @@ public extension Decimal {
     ///   - locale: Language rules (optional) (by default use current)
     ///   - decimals: Number of decimals to use (optional) (by default use 0)
     /// - Returns: String with specified format
-    func formattedMebibytes(_ locale: Locale? = nil,
+    func formattedMebibytes(_ locale: Locale = .current,
                             decimals: Int = 0) -> String {
         if abs(self) >= 1_000 {
             return (self / 1_024).formatted(decimals: decimals,
@@ -58,7 +88,7 @@ public extension Decimal {
     ///   - locale: Language rules (optional) (by default use current)
     ///   - decimals: Number of decimals to use (optional) (by default use 0)
     /// - Returns: String with specified format
-    func formattedMegabits(_ locale: Locale? = nil,
+    func formattedMegabits(_ locale: Locale = .current,
                            decimals: Int = 0) -> String {
         if abs(self) >= 1_000 {
             return (self / 1_000).formatted(decimals: decimals,
@@ -81,7 +111,7 @@ public extension Decimal {
     /// - Returns: String with specified format
     func formatted(decimals: Int = 2,
                    currencyCode: CurrencyCodeType? = nil,
-                   locale: Locale? = nil,
+                   locale: Locale = .current,
                    numberStyle: NumberFormatter.Style? = nil,
                    roundingMode: NumberFormatter.RoundingMode? = nil,
                    unit: Unit = Unit(symbol: "")) -> String {
@@ -105,11 +135,8 @@ public extension Decimal {
         numberFormatter.maximumFractionDigits = decimals
 
         let formatter = MeasurementFormatter()
-
-        if let locale = locale {
-            formatter.locale = locale
-            numberFormatter.locale = locale
-        }
+        formatter.locale = locale
+        numberFormatter.locale = locale
 
         formatter.numberFormatter = numberFormatter
 
