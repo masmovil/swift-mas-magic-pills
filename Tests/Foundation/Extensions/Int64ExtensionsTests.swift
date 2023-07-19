@@ -12,8 +12,8 @@ class Int64ExtensionsTests: XCTestCase {
     }
 
     func test_int_to_string_conversion() {
-        XCTAssertEqual((24 as Int64).toString, "24")
-        XCTAssertEqual((1_024 as Int64).toString, "1024")
-        XCTAssertNotEqual((1_024 as Int64).toString, "10")
+        XCTAssertEqual((24 as Int64).stringValue, "24")
+        XCTAssertEqual((1_024 as Int64).stringValue, "1024")
+        XCTAssertNotEqual((1_024 as Int64).stringValue, "10")
     }
 }

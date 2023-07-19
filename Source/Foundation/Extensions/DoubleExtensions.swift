@@ -11,6 +11,11 @@ extension Double {
         1_024 * 1_024 * gibibytes
     }
 
+    var stringValue: String {
+        "\(self)"
+    }
+
+    @available(*, deprecated, renamed: "stringValue")
     var toString: String {
         "\(self)"
     }

@@ -43,7 +43,12 @@ public extension Decimal {
 
     /// Formats the decimal part from separator (without zero)
     func formattedDecimalPart(decimals: Int, locale: Locale = .current) -> String {
-        "\(locale.decimalSeparator ?? ".")\(decimalPart(decimals: decimals))"
+        let number = decimalPart(decimals: decimals)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.minimumIntegerDigits = decimals
+        numberFormatter.maximumIntegerDigits = decimals
+
+        return "\(locale.decimalSeparator ?? ".")\(numberFormatter.string(for: number) ?? "\(number)")"
     }
 
     /// Convert given megas to Megabytes (1000 bytes) and format it with Locale and specific decimals

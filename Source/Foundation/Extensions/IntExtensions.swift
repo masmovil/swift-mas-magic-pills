@@ -2,9 +2,10 @@ import Foundation
 
 public extension Int {
     var stringValue: String {
-        toString
+        "\(self)"
     }
 
+    @available(*, deprecated, renamed: "stringValue")
     var toString: String {
         "\(self)"
     }

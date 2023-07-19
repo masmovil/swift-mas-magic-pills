@@ -125,5 +125,6 @@ class DecimalExtensionsTests: XCTestCase {
     func test_format_decimal_part() {
         XCTAssertEqual((5.532 as Decimal).formattedDecimalPart(decimals: 1, locale: .spanishSpain), ",5")
         XCTAssertEqual((-5.532 as Decimal).formattedDecimalPart(decimals: 2, locale: .spanishSpain), ",53")
+        XCTAssertEqual((-5 as Decimal).formattedDecimalPart(decimals: 4, locale: .spanishSpain), ",0000")
     }
 }

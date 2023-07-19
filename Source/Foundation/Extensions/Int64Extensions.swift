@@ -59,6 +59,11 @@ public extension Int64 {
         1_000 * kibibytes
     }
 
+    var stringValue: String {
+        "\(self)"
+    }
+
+    @available(*, deprecated, renamed: "stringValue")
     var toString: String {
         "\(self)"
     }
