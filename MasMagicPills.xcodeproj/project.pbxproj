@@ -195,6 +195,9 @@
 		F22A38FE227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
 		F22A38FF227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
 		F22A3900227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */; };
+		F23DC0AB2B0EA68B00B2DD3C /* JWTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23DC0AA2B0EA68B00B2DD3C /* JWTTests.swift */; };
+		F23DC0AC2B0EA68B00B2DD3C /* JWTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23DC0AA2B0EA68B00B2DD3C /* JWTTests.swift */; };
+		F23DC0AD2B0EA68B00B2DD3C /* JWTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23DC0AA2B0EA68B00B2DD3C /* JWTTests.swift */; };
 		F23EE9D7295485E20078D516 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EE9D6295485E20078D516 /* FontExtensions.swift */; };
 		F23EE9D8295485E20078D516 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EE9D6295485E20078D516 /* FontExtensions.swift */; };
 		F23EE9D9295485E20078D516 /* FontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23EE9D6295485E20078D516 /* FontExtensions.swift */; };
@@ -301,6 +304,10 @@
 		F297F0D824E572A300963BD8 /* KeyedValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297F0D724E572A300963BD8 /* KeyedValueTests.swift */; };
 		F297F0D924E572A300963BD8 /* KeyedValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297F0D724E572A300963BD8 /* KeyedValueTests.swift */; };
 		F297F0DA24E572A300963BD8 /* KeyedValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297F0D724E572A300963BD8 /* KeyedValueTests.swift */; };
+		F29FA9AF2B03C6340064A711 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FA9AE2B03C6340064A711 /* JWT.swift */; };
+		F29FA9B02B03C6340064A711 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FA9AE2B03C6340064A711 /* JWT.swift */; };
+		F29FA9B12B03C6340064A711 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FA9AE2B03C6340064A711 /* JWT.swift */; };
+		F29FA9B22B03C6340064A711 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FA9AE2B03C6340064A711 /* JWT.swift */; };
 		F2A74DB9225765CF001F0DF2 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A74DB8225765CF001F0DF2 /* ArrayExtensions.swift */; };
 		F2A74DBA225765CF001F0DF2 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A74DB8225765CF001F0DF2 /* ArrayExtensions.swift */; };
 		F2A74DBB225765CF001F0DF2 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A74DB8225765CF001F0DF2 /* ArrayExtensions.swift */; };
@@ -528,6 +535,7 @@
 		F22A38EB227C775C0012C010 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
 		F22A38F7227C7FE20012C010 /* DefinesPrimaryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinesPrimaryKey.swift; sourceTree = "<group>"; };
 		F22A38FD227C80800012C010 /* DefinesPrimaryKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinesPrimaryKeyTests.swift; sourceTree = "<group>"; };
+		F23DC0AA2B0EA68B00B2DD3C /* JWTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTests.swift; sourceTree = "<group>"; };
 		F23EE9D6295485E20078D516 /* FontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtensions.swift; sourceTree = "<group>"; };
 		F2496723230D504100C06E2E /* SemVer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
 		F2496728230D506F00C06E2E /* SemVerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemVerTests.swift; sourceTree = "<group>"; };
@@ -560,6 +568,7 @@
 		F297F0CD24E55F0800963BD8 /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
 		F297F0D224E569DF00963BD8 /* KeyedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedValue.swift; sourceTree = "<group>"; };
 		F297F0D724E572A300963BD8 /* KeyedValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedValueTests.swift; sourceTree = "<group>"; };
+		F29FA9AE2B03C6340064A711 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		F2A74DB8225765CF001F0DF2 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		F2A74DBF22576610001F0DF2 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		F2B28626252DC4CE0058BCBB /* CollectionCellForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellForTests.swift; sourceTree = "<group>"; };
@@ -788,6 +797,7 @@
 				F258CE9A25F2A603007EF07E /* MagicError.swift */,
 				F22A38D7227C63250012C010 /* OrderedSet.swift */,
 				F2496723230D504100C06E2E /* SemVer.swift */,
+				F29FA9AE2B03C6340064A711 /* JWT.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -800,6 +810,7 @@
 				F2496745230EBE4200C06E2E /* LastExecutionStateTests.swift */,
 				F22A38DC227C63900012C010 /* OrderedSetTests.swift */,
 				F2496728230D506F00C06E2E /* SemVerTests.swift */,
+				F23DC0AA2B0EA68B00B2DD3C /* JWTTests.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -1526,6 +1537,7 @@
 				44A4817F28F80FDB000F6562 /* CalendarExtensions.swift in Sources */,
 				F6B3838F22649D56001E4068 /* UILabelExtensions.swift in Sources */,
 				F6F97EEE226DAF2C00C3E953 /* UIViewExtensions.swift in Sources */,
+				F29FA9AF2B03C6340064A711 /* JWT.swift in Sources */,
 				F6E394DF2260BC5E00AFE7B1 /* StringExtensions+UIKit.swift in Sources */,
 				F62CC32722704F0500DC46F2 /* UIStackViewExtensions.swift in Sources */,
 				F2C78F1C238D679C008C4846 /* UICollectionReusableViewExtensions.swift in Sources */,
@@ -1622,6 +1634,7 @@
 				F22A357022807839004E8546 /* DispatchQueueExtensionsTests.swift in Sources */,
 				F25A99AA2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */,
 				F2496729230D506F00C06E2E /* SemVerTests.swift in Sources */,
+				F23DC0AB2B0EA68B00B2DD3C /* JWTTests.swift in Sources */,
 				F6F333152304370800E93F0E /* CALayerExtensionsTests.swift in Sources */,
 				F20082E1225DFFD900AC6EE1 /* OptionalExtensionsTests.swift in Sources */,
 				F2008333225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
@@ -1697,6 +1710,7 @@
 				F2496742230EBDEF00C06E2E /* LastExecutionState.swift in Sources */,
 				F2008374226633AB00AC6EE1 /* SequenceExtensions.swift in Sources */,
 				F6F3331A2306B03F00E93F0E /* CGFloatExtensions.swift in Sources */,
+				F29FA9B02B03C6340064A711 /* JWT.swift in Sources */,
 				F2C1A28824E46055005DC7A8 /* CurrencyCodeType.swift in Sources */,
 				F25E770829915EEC001D974C /* IndexedItem.swift in Sources */,
 				F68925D022CDE83B0008263B /* IntExtensions.swift in Sources */,
@@ -1726,6 +1740,7 @@
 				F2008311225F4C5200AC6EE1 /* StringExtensionsTests.swift in Sources */,
 				F25E77122991612F001D974C /* FontExtensionsTests.swift in Sources */,
 				F200835D22662DDD00AC6EE1 /* TimeIntervalExtensionsTests.swift in Sources */,
+				F23DC0AC2B0EA68B00B2DD3C /* JWTTests.swift in Sources */,
 				F2C1A28E24E464CE005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
 				F20082E2225DFFD900AC6EE1 /* OptionalExtensionsTests.swift in Sources */,
 				F22A38FF227C80800012C010 /* DefinesPrimaryKeyTests.swift in Sources */,
@@ -1783,6 +1798,7 @@
 				F2C1A27524E41E3F005DC7A8 /* NSAttributedString+UIKit.swift in Sources */,
 				44A4818128F80FDB000F6562 /* CalendarExtensions.swift in Sources */,
 				F200830D225F4BFC00AC6EE1 /* StringExtensions.swift in Sources */,
+				F29FA9B12B03C6340064A711 /* JWT.swift in Sources */,
 				F21A677A226F4E520026F6E9 /* CIImageExtensions+UIKit.swift in Sources */,
 				F20082C4225DFC6E00AC6EE1 /* OptionalExtensions.swift in Sources */,
 				F2A74DBB225765CF001F0DF2 /* ArrayExtensions.swift in Sources */,
@@ -1879,6 +1895,7 @@
 				F2B28627252DC4CE0058BCBB /* CollectionCellForTests.swift in Sources */,
 				F25A99AC2953378D00D19C14 /* LocaleExtensionTests.swift in Sources */,
 				F22A357222807839004E8546 /* DispatchQueueExtensionsTests.swift in Sources */,
+				F23DC0AD2B0EA68B00B2DD3C /* JWTTests.swift in Sources */,
 				F249672B230D506F00C06E2E /* SemVerTests.swift in Sources */,
 				F6F333172304370900E93F0E /* CALayerExtensionsTests.swift in Sources */,
 				F2008335225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
@@ -1956,6 +1973,7 @@
 				F27FE1A4299FED8300D4A2ED /* Publishers.MapToVoid.swift in Sources */,
 				F22A357622807843004E8546 /* DispatchQueueExtensions.swift in Sources */,
 				F2C1A28524E45F03005DC7A8 /* DoubleExtensions.swift in Sources */,
+				F29FA9B22B03C6340064A711 /* JWT.swift in Sources */,
 				F22A38DB227C634F0012C010 /* OrderedSet.swift in Sources */,
 				F2AC727A23460D2E00661BE9 /* FormatterExtensions.swift in Sources */,
 				F2C502B02951E83E007AEF92 /* IndexedItemIdentifiable.swift in Sources */,
