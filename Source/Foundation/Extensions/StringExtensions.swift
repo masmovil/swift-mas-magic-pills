@@ -75,16 +75,38 @@ public extension String {
         trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 
+    /// Decode Base64 string if possible. Returns nil if fails.
     var base64decoded: String? {
-        guard let data = Data(base64Encoded: self) else {
+        guard let data = Data(base64Encoded: self, options: .ignoreUnknownCharacters) else {
             return nil
         }
 
         return String(data: data, encoding: .utf8)
     }
 
+    /// Decode Base64 URL-Safe string if possible. Returns nil if fails.
+    var base64UrlDecoded: String? {
+        var base64 = self
+            .replacingOccurrences(of: "_", with: "/")
+            .replacingOccurrences(of: "-", with: "+")
+
+        if base64.count % 4 != 0 {
+            base64.append(String(repeating: "=", count: 4 - base64.count % 4))
+        }
+        return base64.base64decoded
+    }
+
+    /// Encode into Base64 String
     var base64encoded: String {
-        Data(self.utf8).base64EncodedString()
+        dataUTF8.base64EncodedString()
+    }
+
+    /// Encode into Base64 URL-Safe string.
+    var base64UrlEncoded: String {
+        base64encoded
+            .replacingOccurrences(of: "/", with: "_")
+            .replacingOccurrences(of: "+", with: "-")
+            .replacingOccurrences(of: "=", with: "")
     }
 
     func localized(bundle: Bundle = .main, tableName: String = "Common") -> String {

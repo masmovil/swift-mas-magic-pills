@@ -19,4 +19,9 @@ class StringExtensionsCryptoTests: XCTestCase {
     func test_sha512() {
         XCTAssertEqual("hi, this is more secure! ;)".sha512, "53CEA135E5859223C9DD6FC050D3E7FEBA51E43B00210B20E27E1BC5FD87E67971B6646044A7C2F188E89297BB0BCAB22F31517B66CBBF1C27A43D632289FE36")
     }
+
+    func test_hmac_sha256_hash() {
+        XCTAssertEqual("Prueba".hmac(.sha256(secret: "this-is-a-signing-key-for-HS256-jijiji")),
+                       "BopCTSSzXNmUx6009cioMF2PJD/F+Gp0EOC3ajN4jI0=")
+    }
 }

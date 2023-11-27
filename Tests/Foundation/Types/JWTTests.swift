@@ -38,4 +38,10 @@ class JWTTests: XCTestCase {
         XCTAssertNil(JWT(rawValue: ""))
         XCTAssertNil(JWT(rawValue: "🤷"))
     }
+
+    func test_init_HS256_token() {
+        let jwt = try? JWT(HMACSHA256Claims: ["sub": "hola"], secret: "jijiji")
+        XCTAssertEqual(jwt?.rawValue, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJob2xhIn0.dXg3SitnRVRjMjV3dnFHRGwzQkZzK203RUlOVkFRR3F6UzRhZW1Sd09mUT0")
+        XCTAssertEqual(jwt?.subject, "hola")
+    }
 }

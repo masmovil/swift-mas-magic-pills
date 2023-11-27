@@ -1,3 +1,4 @@
+import CommonCrypto
 import Foundation
 
 /// A representation of the given JWT token.
@@ -41,6 +42,15 @@ public struct JWT: Codable, Equatable, RawRepresentable {
         self.identifier = body["jti"] as? String
     }
 
+    public init(HMACSHA256Claims claims: [String: Any], secret: String) throws {
+        let encodedHeader = try JWT.encodeJWTPart(["alg": "HS256", "typ": "JWT"])
+        let encodedBody = try JWT.encodeJWTPart(claims)
+        let unsignedToken = "\(encodedHeader).\(encodedBody)"
+        let signature = unsignedToken.hmac(.sha256(secret: secret))
+
+        try self.init(token: "\(unsignedToken).\(signature.base64UrlEncoded)")
+    }
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let token = try container.decode(String.self)
@@ -64,31 +74,27 @@ public struct JWT: Codable, Equatable, RawRepresentable {
         lhs.rawValue == rhs.rawValue
     }
 
+    private static func encodeJWTPart(_ value: [String: Any]) throws -> String {
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+            throw MagicError.invalidInput
+        }
+        guard let json = String(data: jsonData, encoding: .utf8) else {
+            throw MagicError.invalidInput
+        }
+        return json.base64UrlEncoded
+    }
+
     private static func decodeJWTPart(_ value: String) throws -> [String: Any] {
-        guard let bodyData = base64UrlDecode(value) else {
+        guard let json = value.base64UrlDecoded else {
             throw MasMagicPills.MagicError.invalidInput
         }
 
-        guard let json = try? JSONSerialization.jsonObject(with: bodyData, options: []),
+        guard let json = try? JSONSerialization.jsonObject(with: json.dataUTF8, options: []),
               let payload = json as? [String: Any] else {
             throw MasMagicPills.MagicError.invalidInput
         }
 
         return payload
-    }
-
-    private static func base64UrlDecode(_ value: String) -> Data? {
-        var base64 = value
-            .replacingOccurrences(of: "-", with: "+")
-            .replacingOccurrences(of: "_", with: "/")
-        let length = Double(base64.lengthOfBytes(using: String.Encoding.utf8))
-        let requiredLength = 4 * ceil(length / 4.0)
-        let paddingLength = requiredLength - length
-        if paddingLength > 0 {
-            let padding = "".padding(toLength: Int(paddingLength), withPad: "=", startingAt: 0)
-            base64 += padding
-        }
-        return Data(base64Encoded: base64, options: .ignoreUnknownCharacters)
     }
 
     private static func parseClaimTo(arrayString value: Any?) -> [String]? {
