@@ -22,6 +22,7 @@ class StringExtensionsValidatorsTests: XCTestCase {
     func test_is_valid_spanish_phone() {
         XCTAssertTrue("687687687".isValidSpanishPhone)
         XCTAssertTrue("787687687".isValidSpanishPhone)
+        XCTAssertTrue("875258855".isValidSpanishPhone)
         XCTAssertTrue("987687687".isValidSpanishPhone)
         XCTAssertTrue("+34687687687".isValidSpanishPhone)
         XCTAssertTrue("34787687687".isValidSpanishPhone)
