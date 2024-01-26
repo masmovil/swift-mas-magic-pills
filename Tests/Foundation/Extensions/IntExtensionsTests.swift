@@ -8,4 +8,8 @@ class IntExtensionsTests: XCTestCase {
         XCTAssertEqual((1_024 as Int).stringValue, "1024")
         XCTAssertNotEqual((1_024 as Int).stringValue, "10")
     }
+
+    func test_int_to_decimal_convertion() {
+        XCTAssertEqual((24 as Int).decimalValue, 24)
+    }
 }

@@ -44,6 +44,6 @@ class BundleExtensionsTests: XCTestCase {
         bundle.versionNumberValue = nil
         bundle.buildNumberValue = nil
 
-        XCTAssertNil(bundle.fullVersionNumber)
+        XCTAssertEqual(bundle.fullVersionNumber, "v0")
     }
 }

@@ -17,6 +17,18 @@ public extension String {
         URL(string: self)
     }
 
+    /// Return URL value only if an valid Url for Internet
+    var internetUrlValue: URL? {
+        if isValidInternetUrl {
+            return urlValue
+        }
+        return nil
+    }
+
+    var dataUTF8: Data {
+        data(using: String.Encoding.utf8)!
+    }
+
     /// Convert String to Date with Date Format (if don't specify it, will look for all Date Formats contemplated)
     ///
     /// - Parameters:
@@ -31,5 +43,12 @@ public extension String {
              dateFormat: dateFormat,
              locale: locale,
              timeZone: timeZone)
+    }
+
+    func htmlValue(fontSize: Float, fontFamily: String? = nil) -> String {
+        if let fontFamily = fontFamily {
+            return "<span style=\"font-family: \(fontFamily); font-size: \(fontSize)\">\(self)</span>"
+        }
+        return "<span style=\"font-size: \(fontSize)\">\(self)</span>"
     }
 }

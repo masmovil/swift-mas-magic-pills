@@ -90,4 +90,34 @@ public extension UIImage {
 
         return context.makeImage()?.uiImage
     }
+
+    func resized(ratio: CGFloat, isOpaque: Bool = true) -> UIImage {
+        let canvas = CGSize(width: size.width * ratio, height: size.height * ratio)
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        format.scale = UIScreen.main.scale
+
+        return UIGraphicsImageRenderer(size: canvas, format: format).image { _ in
+            draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+
+    func resized(width: CGFloat, isOpaque: Bool = true) -> UIImage {
+        let canvas = CGSize(width: width, height: CGFloat(ceil(width / size.width * size.height)))
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        format.scale = UIScreen.main.scale
+
+        return UIGraphicsImageRenderer(size: canvas, format: format).image { _ in
+            draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+
+    static func imageResized(data: Data, width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        UIImage(data: data)?.resized(width: width, isOpaque: isOpaque)
+    }
+
+    static func imageResized(data: Data, percentage: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        UIImage(data: data)?.resized(ratio: percentage, isOpaque: isOpaque)
+    }
 }

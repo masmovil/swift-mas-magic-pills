@@ -1,6 +1,31 @@
 import Foundation
 
 public extension Decimal {
+    /// Return the percentage value from self
+    func asPercentage(_ value: Decimal) -> Decimal {
+        self / (100 / value)
+    }
+
+    /// Return the negate value
+    var negated: Decimal {
+        -self
+    }
+
+    /// Return true if value is != 0
+    var isNotZero: Bool {
+        !isZero
+    }
+
+    /// Return double from decimal value.
+    var doubleValue: Double {
+        Double(truncating: self as NSNumber)
+    }
+
+    @available(*, deprecated, renamed: "doubleValue")
+    var asDouble: Double {
+        doubleValue
+    }
+
     /// Convert milliseconds(self) to seconds
     var millisecondsToSeconds: Decimal {
         self / 1_000

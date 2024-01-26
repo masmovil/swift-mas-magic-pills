@@ -28,9 +28,31 @@ class URLExtensionsTests: XCTestCase {
     }
 
     func test_mailto_url() {
-        XCTAssertEqual(URL(string: "mailto:ssss@ssss.com")?.isMailto, true)
-        XCTAssertEqual(URL(string: "tel:+34687687687")?.isMailto, false)
-        XCTAssertEqual(URL(string: "mailto:asfasf.com")?.isMailto, false)
-        XCTAssertEqual(URL(string: "mailto:124124")?.isMailto, false)
+        XCTAssertEqual(URL(string: "mailto:ssss@ssss.com")?.isMailTo, true)
+        XCTAssertEqual(URL(string: "mailto:ssss@ssss.com?subject=Hi")?.isMailTo, true)
+        XCTAssertEqual(URL(string: "tel:+34687687687")?.isMailTo, false)
+        XCTAssertEqual(URL(string: "mailto:asfasf.com")?.isMailTo, false)
+        XCTAssertEqual(URL(string: "mailto:124124")?.isMailTo, false)
+    }
+
+    func test_check_is_reachable_for_two_urls() async {
+        let validURL = "https://code.jquery.com/jquery-3.7.1.min.js".urlValue!
+        let wrongURL = "https://code.jquery.com/jquery-HAKUNA-MATATA.min.js".urlValue!
+
+        let resultTrue = await validURL.checkIsReachableOnInternet()
+        let resultFalse = await wrongURL.checkIsReachableOnInternet()
+
+        XCTAssertTrue(resultTrue)
+        XCTAssertFalse(resultFalse)
+    }
+
+    func test_check_is_reachable_for_an_array_of_urls() async {
+        let validURL = "https://code.jquery.com/jquery-3.7.1.min.js".urlValue!
+        let wrongURL = "https://code.jquery.com/jquery-HAKUNA-MATATA.min.js".urlValue!
+
+        let array = [validURL, validURL, wrongURL, wrongURL, validURL]
+        let filteredArray = await array.filterUnreachableUrls()
+
+        XCTAssertEqual(filteredArray.count, 3)
     }
 }
