@@ -11,7 +11,7 @@ public struct Semver: Comparable, CustomStringConvertible {
         }
     }
 
-    init?(_ string: String?) {
+    public init?(_ string: String?) {
         guard let string = string else {
             return nil
         }
