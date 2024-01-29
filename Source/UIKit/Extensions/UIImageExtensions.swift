@@ -9,6 +9,11 @@ public extension UIImage {
     ///   - color: image fill color.
     ///   - size: image size.
     convenience init(color: UIColor, size: CGSize) {
+        guard size.width > 0, size.height > 0 else {
+            self.init()
+            return
+        }
+
         UIGraphicsBeginImageContextWithOptions(size, false, 1)
 
         defer {
@@ -31,6 +36,10 @@ public extension UIImage {
     /// - Parameter color: color to fill
     /// - Returns: image colored with new color
     func colored(_ color: UIColor) -> UIImage? {
+        guard size.width > 0, size.height > 0 else {
+            return nil
+        }
+
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         color.setFill()
         guard let context = UIGraphicsGetCurrentContext() else {
@@ -60,6 +69,10 @@ public extension UIImage {
     /// - Parameter color: color for tint mask
     /// - Returns: image with tinted mask
     func tinted(_ color: UIColor) -> UIImage? {
+        guard size.width > 0, size.height > 0 else {
+            return nil
+        }
+
         defer {
             UIGraphicsEndImageContext()
         }
