@@ -51,10 +51,10 @@ public extension URL {
         guard isMailTo else { return nil }
         guard let scheme = scheme else { return nil }
         if absoluteString.hasPrefix("\(scheme):\\") {
-            return absoluteString.removing(prefix: "\(scheme):\\")
+            return removingQuery.absoluteString.removing(prefix: "\(scheme):\\")
         }
         if absoluteString.hasPrefix("\(scheme):") {
-            return absoluteString.removing(prefix: "\(scheme):")
+            return removingQuery.absoluteString.removing(prefix: "\(scheme):")
         }
         return nil
     }

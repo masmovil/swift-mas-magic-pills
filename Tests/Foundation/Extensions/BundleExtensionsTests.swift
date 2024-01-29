@@ -46,4 +46,12 @@ class BundleExtensionsTests: XCTestCase {
 
         XCTAssertEqual(bundle.fullVersionNumber, "v0")
     }
+
+    func test_running_from_testflight() {
+        let bundle = FakeBundle()
+        XCTAssertFalse(bundle.isRunningFromTestFlight)
+
+        bundle.testflight = true
+        XCTAssertTrue(bundle.isRunningFromTestFlight)
+    }
 }
