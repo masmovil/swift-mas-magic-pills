@@ -25,6 +25,20 @@ class StringExtensionsFormatingTests: XCTestCase {
         XCTAssertEqual("".formattedAsPhoneNumber, "")
     }
 
+    func test_only_numbers() {
+        XCTAssertEqual("asfw15as15352gd".onlyNumbers, "1515352")
+    }
+
+    func test_removing_suffix() {
+        XCTAssertEqual("cuna".removing(suffix: "cu"), "cuna")
+        XCTAssertEqual("cuna".removing(suffix: "na"), "cu")
+    }
+
+    func test_removing_prefix() {
+        XCTAssertEqual("cuna".removing(prefix: "cu"), "na")
+        XCTAssertEqual("cuna".removing(prefix: "sa"), "cuna")
+    }
+
     func test_addtrailingspaceifnotempty() {
         XCTAssertEqual("".addingTrailingSpaceIfNotEmpty, "")
         XCTAssertEqual("hola".addingTrailingSpaceIfNotEmpty, "hola ")

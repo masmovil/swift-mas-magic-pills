@@ -30,7 +30,7 @@ public extension String {
     }
 
     var isValidHexColor: Bool {
-        self.satisfiesRegex("^#?[0-9a-fA-F]{3,6}")
+        self.satisfiesRegex("^#?[0-9a-fA-F]{3,6}$")
     }
 
     var removingSpanishCountryCode: String {

@@ -62,6 +62,11 @@ class URLExtensionsTests: XCTestCase {
         XCTAssertEqual("fafa:sss@ssss.com".urlValue?.mailToDestination, nil)
     }
 
+    func test_resourceSpecifier() {
+        XCTAssertEqual("https://www.google.com".urlValue?.resourceSpecifier, "//www.google.com")
+        XCTAssertEqual("mailto:sss@ssss.com".urlValue?.resourceSpecifier, "sss@ssss.com")
+    }
+
     func test_check_is_reachable_for_two_urls() async {
         let validURL = "https://code.jquery.com/jquery-3.7.1.min.js".urlValue!
         let wrongURL = "https://code.jquery.com/jquery-HAKUNA-MATATA.min.js".urlValue!

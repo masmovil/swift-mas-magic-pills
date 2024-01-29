@@ -31,6 +31,17 @@ class StringExtensionsValidatorsTests: XCTestCase {
         XCTAssertTrue("+34 687 687 687".isValidSpanishPhone)
     }
 
+    func test_is_valid_color() {
+        XCTAssertTrue("#C0C0C0".isValidHexColor)
+        XCTAssertTrue("#00FF06".isValidHexColor)
+        XCTAssertTrue("#ffffff".isValidHexColor)
+        XCTAssertTrue("#ffffff".isValidHexColor)
+        XCTAssertTrue("#fff".isValidHexColor)
+        XCTAssertFalse("#ff".isValidHexColor)
+        XCTAssertFalse("#fffffff".isValidHexColor)
+        XCTAssertFalse("#lkaslfs".isValidHexColor)
+    }
+
     func test_is_not_valid_spanish_phone() {
         XCTAssertFalse("587687687".isValidSpanishPhone)
         XCTAssertFalse("124".isValidSpanishPhone)
