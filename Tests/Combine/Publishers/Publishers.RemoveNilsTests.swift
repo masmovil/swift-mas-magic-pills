@@ -11,7 +11,7 @@ class PublishersRemoveNilsTests: XCTestCase {
         let expectedOutput = ["hola", "chau", "nil"]
 
         Publishers.Sequence(sequence: inputData)
-            .removeNils()
+            .filterNils()
             .collect()
             .sink { value in
                 XCTAssertEqual(value, expectedOutput)

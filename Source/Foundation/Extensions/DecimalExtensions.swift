@@ -1,12 +1,13 @@
 import Foundation
 
 public extension Decimal {
-    /// Return the percentage value from self
+    /// Return the given percent from current value (self)
+    /// - Returns: Decimal
     func asPercentage(_ value: Decimal) -> Decimal {
         self / (100 / value)
     }
 
-    /// Return the negate value
+    /// Return the negated value
     var negated: Decimal {
         -self
     }

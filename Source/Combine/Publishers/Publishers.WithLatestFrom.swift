@@ -2,6 +2,7 @@ import Combine
 import Foundation
 
 public extension Publisher {
+    /// Emit with the latest value from given publisher, if the given publisher is empty upstream value will loss.
     func withLatestFrom<Other: Publisher>(_ other: Other) -> Publishers.WithLatestFrom<Self, Other> {
         Publishers.WithLatestFrom(upstream: self, other: other)
     }

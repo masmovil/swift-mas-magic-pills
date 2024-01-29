@@ -3,6 +3,23 @@ import MasMagicPills
 import XCTest
 
 class DecimalExtensionsTests: XCTestCase {
+    func test_as_percentage() {
+        XCTAssertEqual((120 as Decimal).asPercentage(50), 60)
+    }
+
+    func test_negated() {
+        XCTAssertEqual((120 as Decimal).negated, -120)
+    }
+
+    func test_is_not_zero() {
+        XCTAssertTrue((12 as Decimal).isNotZero)
+        XCTAssertFalse((0 as Decimal).isNotZero)
+    }
+
+    func test_double_value() {
+        XCTAssertEqual((12 as Decimal).asDouble, (12 as Double))
+    }
+
     func test_format_megabytes_in_spanish_format() {
         XCTAssertEqual((1_000 as Decimal).formattedMegabytes(.spanishSpain), "1 GB")
         XCTAssertEqual((900 as Decimal).formattedMegabytes(.spanishSpain), "900 MB")

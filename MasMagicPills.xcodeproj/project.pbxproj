@@ -423,6 +423,12 @@
 		F2E3A45A2B6825FC00E85E39 /* CurrentValueSubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A4592B6825FC00E85E39 /* CurrentValueSubjectTests.swift */; };
 		F2E3A45B2B6825FC00E85E39 /* CurrentValueSubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A4592B6825FC00E85E39 /* CurrentValueSubjectTests.swift */; };
 		F2E3A45C2B6825FC00E85E39 /* CurrentValueSubjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A4592B6825FC00E85E39 /* CurrentValueSubjectTests.swift */; };
+		F2E3A45E2B684F8300E85E39 /* PublishersExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A45D2B684F8300E85E39 /* PublishersExtensionsTests.swift */; };
+		F2E3A45F2B684F8300E85E39 /* PublishersExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A45D2B684F8300E85E39 /* PublishersExtensionsTests.swift */; };
+		F2E3A4602B684F8300E85E39 /* PublishersExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A45D2B684F8300E85E39 /* PublishersExtensionsTests.swift */; };
+		F2E3A4622B68517000E85E39 /* Publishers.WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A4612B68517000E85E39 /* Publishers.WithLatestFromTests.swift */; };
+		F2E3A4632B68517000E85E39 /* Publishers.WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A4612B68517000E85E39 /* Publishers.WithLatestFromTests.swift */; };
+		F2E3A4642B68517000E85E39 /* Publishers.WithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3A4612B68517000E85E39 /* Publishers.WithLatestFromTests.swift */; };
 		F2E47FF426B82EFE0055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
 		F2E47FF726B8315D0055A0D6 /* TextStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */; };
 		F2E4800D26B83F7F0055A0D6 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */; };
@@ -658,6 +664,8 @@
 		F2E3A44F2B64047800E85E39 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		F2E3A4552B6825EF00E85E39 /* PassthroughSubjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughSubjectTests.swift; sourceTree = "<group>"; };
 		F2E3A4592B6825FC00E85E39 /* CurrentValueSubjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueSubjectTests.swift; sourceTree = "<group>"; };
+		F2E3A45D2B684F8300E85E39 /* PublishersExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishersExtensionsTests.swift; sourceTree = "<group>"; };
+		F2E3A4612B68517000E85E39 /* Publishers.WithLatestFromTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publishers.WithLatestFromTests.swift; sourceTree = "<group>"; };
 		F2E47FF326B82EFE0055A0D6 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		F2E47FF626B8315D0055A0D6 /* TextStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifier.swift; sourceTree = "<group>"; };
 		F2E4801526B842000055A0D6 /* TextStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStylesTests.swift; sourceTree = "<group>"; };
@@ -1016,6 +1024,7 @@
 				F27FE1A5299FED9700D4A2ED /* Publishers.MapToVoidTests.swift */,
 				F27FE1AF299FF08200D4A2ED /* Publishers.FilterFalsesTests.swift */,
 				F2C9B0AB2A1E214700046F2A /* Publishers.MapToResultTests.swift */,
+				F2E3A4612B68517000E85E39 /* Publishers.WithLatestFromTests.swift */,
 			);
 			path = Publishers;
 			sourceTree = "<group>";
@@ -1184,9 +1193,9 @@
 		F2E3A42F2B631CF900E85E39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F2E3A4302B631D0E00E85E39 /* PublisherExtensions.swift */,
 				F2E3A43A2B63FB9600E85E39 /* CurrentValueSubjectExtensions.swift */,
 				F2E3A43F2B63FBAE00E85E39 /* PassthroughSubjectExtensions.swift */,
+				F2E3A4302B631D0E00E85E39 /* PublisherExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1202,8 +1211,9 @@
 		F2E3A4542B6825D800E85E39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F2E3A4552B6825EF00E85E39 /* PassthroughSubjectTests.swift */,
 				F2E3A4592B6825FC00E85E39 /* CurrentValueSubjectTests.swift */,
+				F2E3A4552B6825EF00E85E39 /* PassthroughSubjectTests.swift */,
+				F2E3A45D2B684F8300E85E39 /* PublishersExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1745,6 +1755,7 @@
 				F2008371226633A500AC6EE1 /* SequenceExtensionsTests.swift in Sources */,
 				F25CA67A2A20E68400B1F0B7 /* ResultExtensionsTests.swift in Sources */,
 				F297F0CF24E55F0A00963BD8 /* CollectionExtensionsTests.swift in Sources */,
+				F2E3A4622B68517000E85E39 /* Publishers.WithLatestFromTests.swift in Sources */,
 				F2496732230D5E1B00C06E2E /* DifferenceTests.swift in Sources */,
 				F62CC32A22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */,
 				F2C1A28D24E464CD005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
@@ -1758,6 +1769,7 @@
 				F6F333152304370800E93F0E /* CALayerExtensionsTests.swift in Sources */,
 				F2E3A40A2B6312D100E85E39 /* URLComponentsExtensions.swift in Sources */,
 				F20082E1225DFFD900AC6EE1 /* OptionalExtensionsTests.swift in Sources */,
+				F2E3A45E2B684F8300E85E39 /* PublishersExtensionsTests.swift in Sources */,
 				F2008333225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
 				F2008337225F878600AC6EE1 /* StringExtensions+ValuesTests.swift in Sources */,
 				F20083632266317900AC6EE1 /* URLExtensionsTests.swift in Sources */,
@@ -1867,6 +1879,7 @@
 				F20082DA225DFFC300AC6EE1 /* OptionalTypeTests.swift in Sources */,
 				F22A38DF227C63930012C010 /* OrderedSetTests.swift in Sources */,
 				F68925D622CDE8A10008263B /* IntExtensionsTests.swift in Sources */,
+				F2E3A45F2B684F8300E85E39 /* PublishersExtensionsTests.swift in Sources */,
 				F297F0D924E572A300963BD8 /* KeyedValueTests.swift in Sources */,
 				F297F0D024E55F0B00963BD8 /* CollectionExtensionsTests.swift in Sources */,
 				F27FE1B5299FF09C00D4A2ED /* Publishers.FilterFalsesTests.swift in Sources */,
@@ -1892,6 +1905,7 @@
 				F249674B230EBE9500C06E2E /* JSONTestHelper.swift in Sources */,
 				F25A99AF2953379F00D19C14 /* TimeZoneExtensionsTests.swift in Sources */,
 				F20083642266317A00AC6EE1 /* URLExtensionsTests.swift in Sources */,
+				F2E3A4632B68517000E85E39 /* Publishers.WithLatestFromTests.swift in Sources */,
 				F20083462266117700AC6EE1 /* BundleExtensionsTests.swift in Sources */,
 				F209D41E24E6C6BC002BF853 /* Int64ExtensionsTests.swift in Sources */,
 				F25CA67B2A20E68400B1F0B7 /* ResultExtensionsTests.swift in Sources */,
@@ -2036,6 +2050,7 @@
 				F21A6781226F4E6B0026F6E9 /* UIImageExtensionsTests.swift in Sources */,
 				F25CA67C2A20E68500B1F0B7 /* ResultExtensionsTests.swift in Sources */,
 				F297F0D124E55F0C00963BD8 /* CollectionExtensionsTests.swift in Sources */,
+				F2E3A4642B68517000E85E39 /* Publishers.WithLatestFromTests.swift in Sources */,
 				F2496734230D5E1B00C06E2E /* DifferenceTests.swift in Sources */,
 				F62CC32B22705F5700DC46F2 /* UIStackViewExtensionsTests.swift in Sources */,
 				F2C1A28F24E464CF005DC7A8 /* CurrencyCodeTypeTests.swift in Sources */,
@@ -2049,6 +2064,7 @@
 				F249672B230D506F00C06E2E /* SemVerTests.swift in Sources */,
 				F2E3A40C2B6312D100E85E39 /* URLComponentsExtensions.swift in Sources */,
 				F6F333172304370900E93F0E /* CALayerExtensionsTests.swift in Sources */,
+				F2E3A4602B684F8300E85E39 /* PublishersExtensionsTests.swift in Sources */,
 				F2008335225F877700AC6EE1 /* StringExtensions+FormatingTests.swift in Sources */,
 				F6F97F05226F53E100C3E953 /* UIScrollViewExtensionsTest.swift in Sources */,
 				F20083652266317A00AC6EE1 /* URLExtensionsTests.swift in Sources */,
