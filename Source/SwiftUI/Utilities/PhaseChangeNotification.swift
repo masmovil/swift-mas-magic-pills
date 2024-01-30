@@ -1,11 +1,11 @@
 import Foundation
 import SwiftUI
 
-extension Notification.Name {
+public extension Notification.Name {
     static let phaseChangeNotification = Notification.Name("phaseChangeNotification")
 }
 
-extension View {
+public extension View {
     /// Wraps a listener to centralice all change of phases.
     ///  You need to add to the main .onChange() the post of the notification `phaseChangeNotification` into `NotificationCenter`.
     ///  ```

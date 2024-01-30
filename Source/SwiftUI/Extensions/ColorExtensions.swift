@@ -5,12 +5,12 @@ public extension Color {
     init(hex: String) throws {
         var cString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
-        if cString.hasPrefix("#") {
-            cString.remove(at: cString.startIndex)
+        guard cString.isValidHexColor else {
+            throw MagicError.invalidInput
         }
 
-        if (cString.count) != 6 {
-            throw MagicError.invalidInput
+        if cString.hasPrefix("#") {
+            cString.remove(at: cString.startIndex)
         }
 
         var rgbValue: UInt64 = 0
