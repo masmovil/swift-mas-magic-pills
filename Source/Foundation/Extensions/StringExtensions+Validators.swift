@@ -29,13 +29,17 @@ public extension String {
         return phoneTest.evaluate(with: self.removingWhiteSpaces)
     }
 
+    var isValidHexColor: Bool {
+        self.satisfiesRegex("^#?[0-9a-fA-F]{3,6}$")
+    }
+
     var removingSpanishCountryCode: String {
         if self.isValidSpanishPhone {
             let phoneWithoutWhiteSpaces = self.removingWhiteSpaces
-            let phoneWithoutPrefix = phoneWithoutWhiteSpaces.removePrefix("+34")
-                                                            .removePrefix("34")
-                                                            .removePrefix("034")
-                                                            .removePrefix("0034")
+            let phoneWithoutPrefix = phoneWithoutWhiteSpaces.removing(prefix: "+34")
+                                                            .removing(prefix: "34")
+                                                            .removing(prefix: "034")
+                                                            .removing(prefix: "0034")
             return phoneWithoutPrefix
         }
         return self

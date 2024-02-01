@@ -13,6 +13,13 @@ class SemVerTests: XCTestCase {
         XCTAssertEqual(versionFromComponents.major, 1)
         XCTAssertEqual(versionFromComponents.minor, 2)
         XCTAssertEqual(versionFromComponents.patch, 3)
+
+        let fromNil = Semver(nil)
+        XCTAssertNil(fromNil)
+
+        let optionalVersion: String? = "1.2.3"
+        let fromOptionalValue = Semver(optionalVersion)
+        XCTAssertNotNil(fromOptionalValue)
     }
 
     func test_comparacions() {
@@ -34,5 +41,24 @@ class SemVerTests: XCTestCase {
     func test_description() {
         let version = Semver("1.2.3")
         XCTAssertEqual(version.description, "v1.2.3")
+    }
+
+    func test_simple_value() {
+        let version = Semver("1.2.3")
+        XCTAssertEqual(version.simple, "1.2")
+    }
+
+    func test_full_value() {
+        let version = Semver("6.7.8")
+        XCTAssertEqual(version.full, "6.7.8")
+    }
+
+    func test_init_from_processInfo() {
+        let versionFromObj = ProcessInfo.processInfo.operatingSystemVersion.semver
+        let versionFromValues = Semver(major: ProcessInfo.processInfo.operatingSystemVersion.majorVersion,
+                                       minor: ProcessInfo.processInfo.operatingSystemVersion.minorVersion,
+                                       patch: ProcessInfo.processInfo.operatingSystemVersion.patchVersion)
+
+        XCTAssertEqual(versionFromObj, versionFromValues)
     }
 }

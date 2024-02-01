@@ -11,6 +11,21 @@ public struct Semver: Comparable, CustomStringConvertible {
         }
     }
 
+    /// Initialices a Semver from a string version compatible if a value given.
+    /// - Parameter string: version literal
+    public init?(_ string: String?) {
+        guard let string = string else {
+            return nil
+        }
+        self.init(string)
+    }
+
+    /// Initialices a Semver from a OperatingSystemVersion value.
+    /// - Parameter string: version literal
+    public init(_ version: OperatingSystemVersion) {
+        self.init("\(version.majorVersion).\(version.minorVersion).\(version.patchVersion)")
+    }
+
     /// Initialices a Semver from his components
     /// - Parameter major: major componente of the version
     /// - Parameter minor: minor componente of the version
@@ -72,4 +87,10 @@ public func == (lhs: Semver, rhs: Semver) -> Bool {
         return lhs.patch == rhs.patch
     }
     return false
+}
+
+public extension OperatingSystemVersion {
+    var semver: Semver {
+        Semver(self)
+    }
 }

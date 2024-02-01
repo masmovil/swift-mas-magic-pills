@@ -3,6 +3,15 @@ import Foundation
 class FakeBundle: Bundle {
     var versionNumberValue: String?
     var buildNumberValue: String?
+    var testflight = false
+
+    override var appStoreReceiptURL: URL? {
+        guard testflight else {
+            return nil
+        }
+
+        return "https://appstore.com/blabllablalab/sandboxReceipt".urlValue
+    }
 
     override func object(forInfoDictionaryKey key: String) -> Any? {
         switch key {

@@ -9,6 +9,11 @@ public extension UIImage {
     ///   - color: image fill color.
     ///   - size: image size.
     convenience init(color: UIColor, size: CGSize) {
+        guard size.width > 0, size.height > 0 else {
+            self.init()
+            return
+        }
+
         UIGraphicsBeginImageContextWithOptions(size, false, 1)
 
         defer {
@@ -31,6 +36,10 @@ public extension UIImage {
     /// - Parameter color: color to fill
     /// - Returns: image colored with new color
     func colored(_ color: UIColor) -> UIImage? {
+        guard size.width > 0, size.height > 0 else {
+            return nil
+        }
+
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         color.setFill()
         guard let context = UIGraphicsGetCurrentContext() else {
@@ -60,6 +69,10 @@ public extension UIImage {
     /// - Parameter color: color for tint mask
     /// - Returns: image with tinted mask
     func tinted(_ color: UIColor) -> UIImage? {
+        guard size.width > 0, size.height > 0 else {
+            return nil
+        }
+
         defer {
             UIGraphicsEndImageContext()
         }
@@ -89,5 +102,35 @@ public extension UIImage {
         context.fill(bounds)
 
         return context.makeImage()?.uiImage
+    }
+
+    func resized(ratio: CGFloat, isOpaque: Bool = true) -> UIImage {
+        let canvas = CGSize(width: size.width * ratio, height: size.height * ratio)
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        format.scale = UIScreen.main.scale
+
+        return UIGraphicsImageRenderer(size: canvas, format: format).image { _ in
+            draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+
+    func resized(width: CGFloat, isOpaque: Bool = true) -> UIImage {
+        let canvas = CGSize(width: width, height: CGFloat(ceil(width / size.width * size.height)))
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        format.scale = UIScreen.main.scale
+
+        return UIGraphicsImageRenderer(size: canvas, format: format).image { _ in
+            draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+
+    static func imageResized(data: Data, width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        UIImage(data: data)?.resized(width: width, isOpaque: isOpaque)
+    }
+
+    static func imageResized(data: Data, percentage: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        UIImage(data: data)?.resized(ratio: percentage, isOpaque: isOpaque)
     }
 }
