@@ -12,6 +12,7 @@ public extension Date {
     /// - time: 12:48
     /// - day: 9
     /// - shortMonth: aug
+    /// - dayAndMonth: 9 aug
     /// - month: august
     /// - monthAndYear: august 2019
     /// - monthAndYearWithUnderscore: august_2019
@@ -31,6 +32,7 @@ public extension Date {
         case time = "HH:mm"
         case day = "d"
         case shortMonth = "MMM"
+        case dayAndMonth = "d MMM"
         case month = "MMMM"
         case monthAndYear = "MMMM yyyy"
         case monthAndYearWithUnderscore = "MMMM_yyyy"
