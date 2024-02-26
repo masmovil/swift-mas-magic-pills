@@ -68,7 +68,7 @@ public extension Decimal {
     }
 
     /// Formats the decimal part from separator (without zero)
-    func formattedDecimalPart(decimals: Int, locale: Locale = .current) -> String {
+    func formattedDecimalPart(decimals: Int, locale: Locale = .current.fixed) -> String {
         let number = decimalPart(decimals: decimals)
         let numberFormatter = NumberFormatter()
         numberFormatter.minimumIntegerDigits = decimals
@@ -83,7 +83,7 @@ public extension Decimal {
     ///   - locale: Language rules (optional) (by default use current)
     ///   - decimals: Number of decimals to use (optional) (by default use 0)
     /// - Returns: String with specified format
-    func formattedMegabytes(_ locale: Locale = .current,
+    func formattedMegabytes(_ locale: Locale = .current.fixed,
                             decimals: Int = 0) -> String {
         if abs(self) >= 1_000 {
             return (self / 1_000).formatted(decimals: decimals,
@@ -101,7 +101,7 @@ public extension Decimal {
     ///   - locale: Language rules (optional) (by default use current)
     ///   - decimals: Number of decimals to use (optional) (by default use 0)
     /// - Returns: String with specified format
-    func formattedMebibytes(_ locale: Locale = .current,
+    func formattedMebibytes(_ locale: Locale = .current.fixed,
                             decimals: Int = 0) -> String {
         if abs(self) >= 1_000 {
             return (self / 1_024).formatted(decimals: decimals,
@@ -119,7 +119,7 @@ public extension Decimal {
     ///   - locale: Language rules (optional) (by default use current)
     ///   - decimals: Number of decimals to use (optional) (by default use 0)
     /// - Returns: String with specified format
-    func formattedMegabits(_ locale: Locale = .current,
+    func formattedMegabits(_ locale: Locale = .current.fixed,
                            decimals: Int = 0) -> String {
         if abs(self) >= 1_000 {
             return (self / 1_000).formatted(decimals: decimals,
@@ -142,7 +142,7 @@ public extension Decimal {
     /// - Returns: String with specified format
     func formatted(decimals: Int = 2,
                    currencyCode: CurrencyCodeType? = nil,
-                   locale: Locale = .current,
+                   locale: Locale = .current.fixed,
                    numberStyle: NumberFormatter.Style? = nil,
                    roundingMode: NumberFormatter.RoundingMode? = nil,
                    unit: Unit = Unit(symbol: "")) -> String {

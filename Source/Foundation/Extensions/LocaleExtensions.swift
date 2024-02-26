@@ -21,4 +21,15 @@ public extension Locale {
 
     /// Resolved locale that correspond with en_GB (🇬🇧)
     static var englishUnitedKingdom: Locale { Locale(identifier: "en_GB") }
+
+    /// Fixed locale without the region
+    var fixed: Locale {
+        if #available(iOSApplicationExtension 16, *), #available(macOSApplicationExtension 13, *) {
+            Locale(languageCode: language.languageCode,
+                   script: nil,
+                   languageRegion: nil)
+        } else {
+            Locale(identifier: languageCode!)
+        }
+    }
 }
