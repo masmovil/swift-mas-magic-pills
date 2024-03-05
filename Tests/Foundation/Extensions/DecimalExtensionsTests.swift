@@ -113,12 +113,12 @@ class DecimalExtensionsTests: XCTestCase {
                                                  locale: .spanishSpain,
                                                  unit: Unit(symbol: "$"),
                                                  trimZeros: true), "33 $")
-        
+
         XCTAssertEqual((1_345.3 as Decimal).formatted(decimals: 2,
                                                       locale: .spanishSpain,
                                                       unit: Unit(symbol: "€"),
                                                       trimZeros: true), "1345,30 €")
-        
+
         XCTAssertEqual((33.564 as Decimal).formatted(decimals: 2,
                                                      currencyCode: .euro,
                                                      locale: .spanishSpain,
