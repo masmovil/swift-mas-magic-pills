@@ -68,8 +68,13 @@ public extension Decimal {
     }
 
     /// Formats the decimal part from separator (without zero)
-    func formattedDecimalPart(decimals: Int, locale: Locale = .current.fixed) -> String {
+    func formattedDecimalPart(decimals: Int, locale: Locale = .current.fixed, trimZeros: Bool = false) -> String {
         let number = decimalPart(decimals: decimals)
+        if trimZeros {
+            guard number != 0 else {
+                return ""
+            }
+        }
         let numberFormatter = NumberFormatter()
         numberFormatter.minimumIntegerDigits = decimals
         numberFormatter.maximumIntegerDigits = decimals
@@ -139,13 +144,15 @@ public extension Decimal {
     ///   - locale: Language rules to use
     ///   - numberStyle: Predefined number format style
     ///   - unit: Unit for Measurement format
+    ///   - trimZeros (Bool): if it is true do not show the decimals if they are zero,  (showing no decimals if they are zero and two decimals otherwise)
     /// - Returns: String with specified format
     func formatted(decimals: Int = 2,
                    currencyCode: CurrencyCodeType? = nil,
                    locale: Locale = .current.fixed,
                    numberStyle: NumberFormatter.Style? = nil,
                    roundingMode: NumberFormatter.RoundingMode? = nil,
-                   unit: Unit = Unit(symbol: "")) -> String {
+                   unit: Unit = Unit(symbol: ""),
+                   trimZeros: Bool = false) -> String {
         let numberFormatter = NumberFormatter()
 
         if let currencyCode = currencyCode?.rawValue {
@@ -160,9 +167,10 @@ public extension Decimal {
         if let roundingMode = roundingMode {
             numberFormatter.roundingMode = roundingMode
         }
+        let minimumFractionDigits = self.decimalPart(decimals: decimals) == 0 ? 0 : decimals
 
         numberFormatter.minimumIntegerDigits = 1
-        numberFormatter.minimumFractionDigits = decimals
+        numberFormatter.minimumFractionDigits = trimZeros ? minimumFractionDigits : decimals
         numberFormatter.maximumFractionDigits = decimals
 
         let formatter = MeasurementFormatter()

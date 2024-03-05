@@ -108,6 +108,23 @@ class DecimalExtensionsTests: XCTestCase {
                                                      numberStyle: .ordinal), "16.868.º")
     }
 
+    func test_format_with_trimZeros_option() {
+        XCTAssertEqual((33 as Decimal).formatted(decimals: 2,
+                                                 locale: .spanishSpain,
+                                                 unit: Unit(symbol: "$"),
+                                                 trimZeros: true), "33 $")
+        
+        XCTAssertEqual((1_345.3 as Decimal).formatted(decimals: 2,
+                                                      locale: .spanishSpain,
+                                                      unit: Unit(symbol: "€"),
+                                                      trimZeros: true), "1345,30 €")
+        
+        XCTAssertEqual((33.564 as Decimal).formatted(decimals: 2,
+                                                     currencyCode: .euro,
+                                                     locale: .spanishSpain,
+                                                     trimZeros: true), "33,56 €")
+    }
+
     func test_convert_miliseconds_to_seconds() {
         XCTAssertEqual((10_000 as Decimal).millisecondsToSeconds, 10)
     }
@@ -143,5 +160,13 @@ class DecimalExtensionsTests: XCTestCase {
         XCTAssertEqual((5.532 as Decimal).formattedDecimalPart(decimals: 1, locale: .spanishSpain), ",5")
         XCTAssertEqual((-5.532 as Decimal).formattedDecimalPart(decimals: 2, locale: .spanishSpain), ",53")
         XCTAssertEqual((-5 as Decimal).formattedDecimalPart(decimals: 4, locale: .spanishSpain), ",0000")
+    }
+
+    func test_format_decimal_with_trimZeros_option() {
+        XCTAssertEqual((5.532 as Decimal).formattedDecimalPart(decimals: 1, locale: .spanishSpain, trimZeros: true), ",5")
+        XCTAssertEqual((-5.532 as Decimal).formattedDecimalPart(decimals: 2, locale: .spanishSpain, trimZeros: true), ",53")
+        XCTAssertEqual((-5 as Decimal).formattedDecimalPart(decimals: 4, locale: .spanishSpain, trimZeros: true), "")
+        XCTAssertEqual((20 as Decimal).formattedDecimalPart(decimals: 2, locale: .spanishSpain, trimZeros: true), "")
+        XCTAssertEqual((20.000 as Decimal).formattedDecimalPart(decimals: 2, locale: .spanishSpain, trimZeros: true), "")
     }
 }
