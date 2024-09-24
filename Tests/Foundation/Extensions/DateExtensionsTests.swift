@@ -153,7 +153,11 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.formatted(with: .dateStyleMedium, locale: .spanishSpain, timeZone: .europeMadrid), "9 ago 2019")
         XCTAssertEqual(date.formatted(with: .dateStyleFull, locale: .spanishSpain, timeZone: .europeMadrid), "viernes, 9 de agosto de 2019")
         XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .spanishSpain, timeZone: .europeMadrid), "9 de agosto de 2019")
-        XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .catalanSpain, timeZone: .europeMadrid), "9 d’agost del 2019")
+        if #available(iOS 18.0, *) {
+            XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .catalanSpain, timeZone: .europeMadrid), "9 d’agost del 2019")
+        } else {
+            XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .catalanSpain, timeZone: .europeMadrid), "9 d’agost de 2019")
+        }
         XCTAssertTrue(date.formatted(with: .dateStyleLong, locale: .basqueSpain, timeZone: .europeMadrid).starts(with: "2019(e)ko abuztua"))
     }
 
