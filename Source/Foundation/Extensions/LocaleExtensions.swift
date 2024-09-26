@@ -24,7 +24,7 @@ public extension Locale {
 
     /// Fixed locale without the region
     var fixed: Locale {
-        if #available(iOSApplicationExtension 16, *), #available(macOSApplicationExtension 13, *) {
+        if #available(iOSApplicationExtension 16, *), #available(macOSApplicationExtension 13, *), #available(tvOSApplicationExtension 16, *) {
             Locale(languageCode: language.languageCode,
                    script: nil,
                    languageRegion: nil)

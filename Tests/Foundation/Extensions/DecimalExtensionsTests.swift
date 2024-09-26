@@ -139,6 +139,22 @@ class DecimalExtensionsTests: XCTestCase {
         XCTAssertEqual(result.decimalPart, 697)
     }
 
+    func test_integer_part() {
+        XCTAssertEqual(Decimal(0).integerPart, 0)
+        XCTAssertEqual(Decimal(0.3).integerPart, 0)
+        XCTAssertEqual(Decimal(0.8).integerPart, 0)
+        XCTAssertEqual(Decimal(2.4).integerPart, 2)
+        XCTAssertEqual(Decimal(-3.8).integerPart, -3)
+    }
+
+    func test_decimal_part() {
+        XCTAssertEqual(Decimal(0).decimalPart(decimals: 0), 0)
+        XCTAssertEqual(Decimal(0.3).decimalPart(decimals: 1), 3)
+        XCTAssertEqual(Decimal(0.8).decimalPart(decimals: 2), 80)
+        XCTAssertEqual(Decimal(2.4).decimalPart(decimals: 0), 0)
+        XCTAssertEqual(Decimal(-3.8).decimalPart(decimals: 3), 800)
+    }
+
     func test_format_decimal_part() {
         XCTAssertEqual((5.532 as Decimal).formattedDecimalPart(decimals: 1, locale: .spanishSpain), ",5")
         XCTAssertEqual((-5.532 as Decimal).formattedDecimalPart(decimals: 2, locale: .spanishSpain), ",53")
