@@ -1,7 +1,7 @@
 import Foundation
 
 /// Wrapper for version representation according to https://semver.org
-public struct Semver: Comparable, CustomStringConvertible {
+public struct Semver: Comparable, CustomStringConvertible, Codable {
     /// Initialices a Semver from a string version compatible.
     /// - Parameter string: version literal
     public init(_ string: String) {
