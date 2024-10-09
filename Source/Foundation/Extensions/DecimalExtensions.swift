@@ -44,21 +44,17 @@ public extension Decimal {
 
     /// Return integer part
     var integerPart: Int {
-        var result = Decimal()
-        var mutableSelf = self
-        NSDecimalRound(&result, &mutableSelf, 0, self >= 0 ? .down : .up)
-        return Int(truncating: NSDecimalNumber(decimal: result))
+        (self as NSNumber).intValue
     }
 
     /// Return decimal part
     func decimalPart(decimals: Int) -> Int {
-        var result = Decimal()
-        let powered = pow(Decimal(10), decimals)
-        let integerPartToRemove = (powered * Decimal(abs(integerPart)))
-        var elevated = powered * abs(self)
+        let fractionalPart = self - Decimal((integerPart))
+        let multiplier = pow(10, decimals)
+        let scaledNumber = fractionalPart * multiplier
+        let truncatedNumber = Int(truncating: scaledNumber as NSNumber)
 
-        NSDecimalRound(&result, &elevated, 0, .down)
-        return Int(truncating: NSDecimalNumber(decimal: result - integerPartToRemove))
+        return abs(truncatedNumber)
     }
 
     /// Split the number into decimal and integer part
