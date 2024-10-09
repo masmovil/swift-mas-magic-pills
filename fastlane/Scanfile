@@ -8,6 +8,7 @@
 
 devices(['iPhone 14'])
 
+skip_detect_devices(true)
 open_report(false)
 code_coverage(true)
 clean(true)
