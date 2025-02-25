@@ -146,9 +146,4 @@ public extension Date {
         }
         return .morning
     }
-
-    /// Give the previous month name from current Date
-    static func previousMonthName(locale: Locale = .spanishSpain, timeZone: TimeZone = .europeMadrid) -> String {
-        Date().adding(months: -1).formatted(with: .month, locale: locale, timeZone: timeZone)
-    }
 }
