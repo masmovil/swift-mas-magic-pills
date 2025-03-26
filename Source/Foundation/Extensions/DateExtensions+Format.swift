@@ -25,7 +25,7 @@ public extension Date {
         case spanishDateWithSlashes = "dd/MM/yyyy"
         case americanDateWithSlashes = "MM/dd/yyyy"
         case spanishDayAndMonthWithSlashes = "dd/MM"
-        case spanishMonthAndYearWithSlashes = "MM/yyyy"
+        case spanishMonthAndYearWithSlashes = "MM/yy"
         case spanishFullDateWithSlashes = "dd/MM/yyyy HH:mm"
         case americanFullDateWithSlashes = "MM/dd/yyyy HH:mm"
         case europeanFullDateWithSlashes = "yyyy/MM/dd HH:mm"
