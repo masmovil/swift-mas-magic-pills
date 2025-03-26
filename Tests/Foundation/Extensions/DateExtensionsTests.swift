@@ -139,7 +139,11 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.formatted(with: .europeanDateWithDashes, timeZone: .europeMadrid), "2019-08-09")
         XCTAssertEqual(date.formatted(with: .time, timeZone: .europeMadrid), "12:48")
         XCTAssertEqual(date.formatted(with: .day), "9")
-        XCTAssertEqual(date.formatted(with: .dayAndMonth, locale: .spanishSpain), "9 ago")
+        XCTAssertEqual(date.formatted(with: .dayAndShortMonth, locale: .spanishSpain), "9 ago")
+        XCTAssertEqual(date.formatted(with: .dayAndMonth, locale: .spanishSpain), "9 agosto")
+        XCTAssertEqual(date.formatted(with: .dayAndMonth, locale: .spanishSpain, useLocalizedTemplate: true), "9 de agosto")
+        XCTAssertEqual(date.formatted(with: .dayAndMonth, locale: .englishUSA, useLocalizedTemplate: true), "August 9")
+        XCTAssertEqual(date.formatted(with: .dayAndMonth, locale: .basqueSpain, useLocalizedTemplate: true), "abuztuaren 9(a)")
         XCTAssertEqual(date.formatted(with: .shortMonth, locale: .spanishSpain), "ago")
         XCTAssertEqual(date.formatted(with: .month, locale: .spanishSpain), "agosto")
         XCTAssertEqual(date.formatted(with: .monthAndYear, locale: .spanishSpain), "agosto 2019")
@@ -150,6 +154,12 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.formatted(with: .spanishDayAndMonth, locale: .spanishSpain, timeZone: .europeMadrid), "09 de agosto")
         XCTAssertEqual(date.formatted(with: .americanDayAndMonth, locale: .englishUSA, timeZone: .europeMadrid), "August 09")
         XCTAssertEqual(date.formatted(with: .spanishMonthAndYear, locale: .spanishSpain, timeZone: .europeMadrid), "agosto de 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleShort, locale: .spanishSpain, timeZone: .europeMadrid), "9/8/19")
+        XCTAssertEqual(date.formatted(with: .dateStyleMedium, locale: .spanishSpain, timeZone: .europeMadrid), "9 ago 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleFull, locale: .spanishSpain, timeZone: .europeMadrid), "viernes, 9 de agosto de 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .spanishSpain, timeZone: .europeMadrid), "9 de agosto de 2019")
+        XCTAssertEqual(date.formatted(with: .dateStyleLong, locale: .catalanSpain, timeZone: .europeMadrid), "9 d’agost del 2019")
+        XCTAssertTrue(date.formatted(with: .dateStyleLong, locale: .basqueSpain, timeZone: .europeMadrid).starts(with: "2019(e)ko abuztua"))
     }
 
     func test_is_today() {
