@@ -132,7 +132,7 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.formatted(with: .spanishDateWithSlashes, timeZone: .europeMadrid), "09/08/2019")
         XCTAssertEqual(date.formatted(with: .americanDateWithSlashes, timeZone: .europeMadrid), "08/09/2019")
         XCTAssertEqual(date.formatted(with: .spanishDayAndMonthWithSlashes), "09/08")
-        XCTAssertEqual(date.formatted(with: .spanishMonthAndYearWithSlashes), "08/2019")
+        XCTAssertEqual(date.formatted(with: .spanishMonthAndYearWithSlashes), "08/19")
         XCTAssertEqual(date.formatted(with: .spanishFullDateWithSlashes, timeZone: .europeMadrid), "09/08/2019 12:48")
         XCTAssertEqual(date.formatted(with: .americanFullDateWithSlashes, timeZone: .europeMadrid), "08/09/2019 12:48")
         XCTAssertEqual(date.formatted(with: .europeanFullDateWithSlashes, timeZone: .europeMadrid), "2019/08/09 12:48")
