@@ -131,12 +131,14 @@ public extension Decimal {
     ///
     /// - Parameters:
     ///   - decimals: Number of decimals to use
+    ///   - minimumFractionDigits: Number of minimum decimals to use if possible.
     ///   - currencyCode: Three-letter code that denote the currency unit. For example, Australian dollar is “AUD”. Currency codes are based on the ISO 4217 standard.
     ///   - locale: Language rules to use
     ///   - numberStyle: Predefined number format style
     ///   - unit: Unit for Measurement format
     /// - Returns: String with specified format
     func formatted(decimals: Int = 2,
+                   minimumFractionDigits: Int? = nil,
                    currencyCode: CurrencyCodeType? = nil,
                    locale: Locale = .current.fixed,
                    numberStyle: NumberFormatter.Style? = nil,
@@ -158,7 +160,13 @@ public extension Decimal {
         }
 
         numberFormatter.minimumIntegerDigits = 1
-        numberFormatter.minimumFractionDigits = decimals
+
+        if let minimumFractionDigits {
+            numberFormatter.minimumFractionDigits = minimumFractionDigits
+        } else {
+            numberFormatter.minimumFractionDigits = decimals
+        }
+
         numberFormatter.maximumFractionDigits = decimals
 
         let formatter = MeasurementFormatter()
