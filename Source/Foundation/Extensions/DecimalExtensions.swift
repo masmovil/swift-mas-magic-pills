@@ -161,11 +161,7 @@ public extension Decimal {
 
         numberFormatter.minimumIntegerDigits = 1
 
-        if let minimumFractionDigits {
-            numberFormatter.minimumFractionDigits = minimumFractionDigits
-        } else {
-            numberFormatter.minimumFractionDigits = decimals
-        }
+        numberFormatter.minimumFractionDigits = minimumFractionDigits ?? decimal
 
         numberFormatter.maximumFractionDigits = decimals
 
