@@ -160,9 +160,7 @@ public extension Decimal {
         }
 
         numberFormatter.minimumIntegerDigits = 1
-
-        numberFormatter.minimumFractionDigits = minimumFractionDigits ?? decimal
-
+        numberFormatter.minimumFractionDigits = minimumFractionDigits ?? decimals
         numberFormatter.maximumFractionDigits = decimals
 
         let formatter = MeasurementFormatter()
