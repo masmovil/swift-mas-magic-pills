@@ -81,6 +81,23 @@ class DecimalExtensionsTests: XCTestCase {
                                                     locale: .englishUSA), "1345.0")
     }
 
+    func test_format_minimum_fraction_digits() {
+        XCTAssertEqual((33.00 as Decimal).formatted(decimals: 2,
+                                                    minimumFractionDigits: 0,
+                                                    locale: .spanishSpain), "33")
+
+        XCTAssertEqual((33.20 as Decimal).formatted(decimals: 2,
+                                                    minimumFractionDigits: 1,
+                                                    locale: .spanishSpain), "33,2")
+
+        XCTAssertEqual((33.24 as Decimal).formatted(decimals: 2,
+                                                    minimumFractionDigits: 0,
+                                                    locale: .spanishSpain), "33,24")
+
+        XCTAssertEqual((1_345 as Decimal).formatted(decimals: 1,
+                                                    locale: .spanishSpain), "1345,0")
+    }
+
     func test_format_currency() {
         XCTAssertEqual((33 as Decimal).formatted(decimals: 2,
                                                  locale: .spanishSpain,
