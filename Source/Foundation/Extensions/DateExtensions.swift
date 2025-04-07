@@ -102,11 +102,13 @@ public extension Date {
     ///   - dateFormat: Date Format to convert
     ///   - locale: Language rules (optional) (by default use current)
     ///   - timeZone: Time zone to format date (optional) (by default use current)
+    ///   - useLocalizedTemplate: Set the format based on locale template from system
     /// - Returns: Date formatted
     func formatted(with dateFormat: Date.Format,
                    locale: Locale? = nil,
-                   timeZone: TimeZone? = nil) -> String {
-        dateFormat.string(from: self, locale: locale, timeZone: timeZone)
+                   timeZone: TimeZone? = nil,
+                   useLocalizedTemplate: Bool = false) -> String {
+        dateFormat.string(from: self, locale: locale, timeZone: timeZone, useLocalizedTemplate: useLocalizedTemplate)
     }
 
     /// Calculate months to end dates, included days in last month or not
