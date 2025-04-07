@@ -19,17 +19,17 @@ let package = Package(
         .target(
             name: "MasMagicPills",
             dependencies: [],
-            path: "Sources",
-            exclude: [
-                "../_config.yml",
-                "../Mintfile",
-                "../Rakefile",
-            ]
+            path: "Sources"
         ),
         .testTarget(
             name: "MagicPillsTests",
             dependencies: ["MasMagicPills"],
-            path: "Tests"
+            path: "Tests",
+            resources: [
+                .copy("Helpers/LocalizedSample.strings"),
+                .copy("UIKit/Extensions/Views/iOS/CollectionCellForTests.xib"),
+                .copy("UIKit/Extensions/Views/iOS/TableViewCellForTests.xib")
+            ]
         ),
     ]
 )
