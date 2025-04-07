@@ -17,6 +17,7 @@ class FakeBundle: Bundle {
         switch key {
         case "CFBundleShortVersionString":
             return versionNumberValue
+
         case "CFBundleVersion":
             return buildNumberValue
 

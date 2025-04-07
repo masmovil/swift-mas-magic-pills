@@ -14,9 +14,9 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == unitRange, let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if range == unitRange, let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         XCTAssertEqual(foundFont, font)
@@ -36,9 +36,9 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == amountRange, let font = value as? UIFont {
-                                        foundAmountFont = font
-                                    }
+                if range == amountRange, let font = value as? UIFont {
+                    foundAmountFont = font
+                }
             }
 
         var foundUnitFont: UIFont?
@@ -46,9 +46,9 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == unitRange, let font = value as? UIFont {
-                                        foundUnitFont = font
-                                    }
+                if range == unitRange, let font = value as? UIFont {
+                    foundUnitFont = font
+                }
             }
 
         XCTAssertEqual(foundAmountFont, defaultFont)
@@ -66,9 +66,9 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, _, _ in
-                                    if let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         XCTAssertEqual(foundFont, font)
@@ -89,18 +89,18 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.paragraphStyle,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, _, _ in
-                                    if let style = value as? NSMutableParagraphStyle {
-                                        foundStyle = style
-                                    }
+                if let style = value as? NSMutableParagraphStyle {
+                    foundStyle = style
+                }
             }
 
         attributedText
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, _, _ in
-                                    if let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         XCTAssertEqual(2, foundStyle?.lineSpacing)
@@ -122,18 +122,18 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == boldedRange, let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if range == boldedRange, let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         attributedText
             .enumerateAttribute(.foregroundColor,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == boldedRange, let color = value as? UIColor {
-                                        foundColor = color
-                                    }
+                if range == boldedRange, let color = value as? UIColor {
+                    foundColor = color
+                }
             }
 
         XCTAssertTrue(foundFont?.fontDescriptor.symbolicTraits.contains(.traitBold) ?? false)
@@ -155,18 +155,18 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, _, _ in
-                                    if let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         attributedText
             .enumerateAttribute(.foregroundColor,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, _, _ in
-                                    if let color = value as? UIColor {
-                                        foundColor = color
-                                    }
+                if let color = value as? UIColor {
+                    foundColor = color
+                }
             }
 
         XCTAssertNil(foundFont)
@@ -187,18 +187,18 @@ class StringExtensionsUIKitTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == boldedRange, let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if range == boldedRange, let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         attributedText
             .enumerateAttribute(.foregroundColor,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == boldedRange, let color = value as? UIColor {
-                                        foundColor = color
-                                    }
+                if range == boldedRange, let color = value as? UIColor {
+                    foundColor = color
+                }
             }
 
         XCTAssertTrue(foundFont?.fontDescriptor.symbolicTraits.contains(.traitBold) ?? false)

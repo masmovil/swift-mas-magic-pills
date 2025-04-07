@@ -17,16 +17,16 @@ class DateExtensionsTests: XCTestCase {
         let date1 = Date()
         let date2 = date1.addingTimeInterval(60 * 60 * 24)
         var dates: [Date] = []
-        
+
         dates.append(date1)
         dates.append(date2)
-        
+
         var monthNames: [String] = []
-        
+
         for date in dates {
             monthNames.append(date.localizedMonthName)
         }
-        
+
         XCTAssertEqual(dates.count, monthNames.count)
     }
 

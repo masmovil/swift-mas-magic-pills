@@ -22,10 +22,10 @@ class UILabelExtensionsTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == highlightedRange,
-                                        let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if range == highlightedRange,
+                   let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         XCTAssertTrue(foundFont?.fontDescriptor.symbolicTraits.contains(.traitBold) ?? false)
