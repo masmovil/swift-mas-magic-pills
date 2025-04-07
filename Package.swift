@@ -2,22 +2,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "Mini",
+    name: "MagicPills",
     platforms: [
-        .iOS("14.1"),
+        .iOS("16"),
         .macOS(.v11),
         .tvOS(.v13),
     ],
     products: [
         .library(
-            name: "Mini",
-            targets: ["Mini"]
+            name: "MasMagicPills",
+            targets: ["MasMagicPills"]
         )
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "Mini",
+            name: "MasMagicPills",
             dependencies: [],
             path: "Sources",
             exclude: [
@@ -27,8 +27,8 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "MiniSwiftTests",
-            dependencies: ["Mini"],
+            name: "MagicPillsTests",
+            dependencies: ["MasMagicPills"],
             path: "Tests"
         ),
     ]
