@@ -82,8 +82,8 @@ public extension URL {
         defer { session.invalidateAndCancel() }
 
         guard let (_, response) = try? await session.data(for: request),
-                let httpResponse = response as? HTTPURLResponse,
-                httpResponse.statusCode == 200 else {
+              let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
             return false
         }
 

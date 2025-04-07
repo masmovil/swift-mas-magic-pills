@@ -12,7 +12,7 @@ public extension CALayer {
             masksToBounds = false
             self.contents = nil
             if let sublayer = sublayers?.first,
-                sublayer.name == "Constants.contentLayerName" {
+               sublayer.name == "Constants.contentLayerName" {
                 sublayer.removeFromSuperlayer()
             }
             let contentLayer = CALayer()
@@ -35,7 +35,7 @@ public extension CALayer {
             }
 
         if let sublayer = sublayers?.first,
-            sublayer.name == "Constants.contentLayerName" {
+           sublayer.name == "Constants.contentLayerName" {
             self.contents = sublayer.contents
             sublayer.removeFromSuperlayer()
         }

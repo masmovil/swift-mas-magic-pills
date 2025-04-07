@@ -39,8 +39,8 @@ public extension String {
                                                   options: options,
                                                   range: start..<end,
                                                   locale: locale ?? .current) {
-                                                    ranges.append(NSRange(range, in: self))
-                                                    start = range.upperBound
+            ranges.append(NSRange(range, in: self))
+            start = range.upperBound
         }
         return ranges
     }

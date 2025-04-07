@@ -37,9 +37,9 @@ public extension String {
         if self.isValidSpanishPhone {
             let phoneWithoutWhiteSpaces = self.removingWhiteSpaces
             let phoneWithoutPrefix = phoneWithoutWhiteSpaces.removing(prefix: "+34")
-                                                            .removing(prefix: "34")
-                                                            .removing(prefix: "034")
-                                                            .removing(prefix: "0034")
+                .removing(prefix: "34")
+                .removing(prefix: "034")
+                .removing(prefix: "0034")
             return phoneWithoutPrefix
         }
         return self
@@ -53,8 +53,8 @@ public extension String {
 
         if identifierBase.satisfiesRegex("^[0-9]{0,1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$") {
             guard let numberBase = Int(identifierBase.prefix(identifierBase.count - 1)),
-                let letter: Character = identifierBase.last else {
-                    return false
+                  let letter: Character = identifierBase.last else {
+                return false
             }
             let letterMap = "TRWAGMYFPDXBNJZSQVHLCKET"
             let letterIndex = numberBase % 23

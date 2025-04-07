@@ -24,8 +24,10 @@ public enum CurrencyCodeType: RawRepresentable, Equatable, Codable, CaseIterable
         switch self {
         case .euro:
             return "EUR"
+
         case .dollar:
             return "USD"
+
         case .custom(let value):
             return value
         }

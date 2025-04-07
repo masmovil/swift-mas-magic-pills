@@ -146,7 +146,7 @@ public extension Date {
         }
         return .morning
     }
-    
+
     var localizedMonthName: String {
         let currentCalendar = Calendar.current
         return currentCalendar

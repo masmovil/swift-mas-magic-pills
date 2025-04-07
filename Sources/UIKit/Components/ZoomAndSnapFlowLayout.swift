@@ -77,7 +77,7 @@ public class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
 
     override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         // Invalidate layout so that every cell get a chance to be zoomed when it reaches the center of the screen
-        return true
+        true
     }
 
     override public func invalidationContext(forBoundsChange newBounds: CGRect) -> UICollectionViewLayoutInvalidationContext {

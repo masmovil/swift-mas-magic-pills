@@ -17,7 +17,7 @@ public class Toast: UIView {
         guard
             let message = aDecoder.decodeObject(forKey: "messageKey") as? String,
             let font = aDecoder.decodeObject(forKey: "fontKey") as? UIFont else {
-                return nil
+            return nil
         }
         self.message = message
         self.messageFont = font
@@ -90,11 +90,11 @@ public extension Toast {
                        delay: 0.1,
                        options: .curveEaseOut,
                        animations: {
-                            toast.alpha = 0.0
+                        toast.alpha = 0.0
                        },
                        completion: { _ in
-                            toast.removeFromSuperview()
-                            completion?()
+                        toast.removeFromSuperview()
+                        completion?()
                        })
         return toast
     }

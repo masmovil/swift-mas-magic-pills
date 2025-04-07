@@ -93,7 +93,7 @@ public extension UIImage {
                                     space: colorSpace,
                                     bitmapInfo: bitmapInfo.rawValue),
             let maskImage = cgImage else {
-                return nil
+            return nil
         }
 
         context.clip(to: bounds,

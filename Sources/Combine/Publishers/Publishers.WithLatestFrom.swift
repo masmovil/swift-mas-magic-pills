@@ -22,7 +22,7 @@ public extension Publishers {
         }
 
         public func receive<Downstream: Subscriber>(subscriber: Downstream)
-            where Output == Downstream.Input, Downstream.Failure == Upstream.Failure {
+        where Output == Downstream.Input, Downstream.Failure == Upstream.Failure {
             let merged = mergedStream(upstream, other)
             let result = resultStream(from: merged)
             result.subscribe(subscriber)
@@ -43,7 +43,7 @@ private extension Publishers.WithLatestFrom {
 
     // MARK: - Pipelines
     func mergedStream(_ upstream1: Upstream, _ upstream2: Other)
-        -> AnyPublisher<MergedElement, Failure> {
+    -> AnyPublisher<MergedElement, Failure> {
         let mergedElementUpstream1 = upstream1
             .map { MergedElement.upstream1($0) }
         let mergedElementUpstream2 = upstream2
@@ -76,9 +76,9 @@ private extension Publishers.WithLatestFrom {
                                   value2: newValue2 ?? prevResult?.value2,
                                   shouldEmit: shouldEmit)
             }
-        .compactMap { $0 }
-        .filter { $0.shouldEmit }
-        .map { Output($0.value1!, $0.value2!) }
-        .eraseToAnyPublisher()
+            .compactMap { $0 }
+            .filter { $0.shouldEmit }
+            .map { Output($0.value1!, $0.value2!) }
+            .eraseToAnyPublisher()
     }
 }

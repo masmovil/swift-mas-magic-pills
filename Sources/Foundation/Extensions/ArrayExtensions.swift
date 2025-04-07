@@ -28,7 +28,7 @@ public extension Array where Element: Equatable {
     /// Update existing element or insert if not exists
     mutating func upsert(_ newElement: Element) {
         if let element = filter({ $0 == newElement }).first,
-            let index = firstIndex(of: element) {
+           let index = firstIndex(of: element) {
             remove(at: index)
             insert(newElement, at: index)
         } else {
@@ -49,7 +49,7 @@ public extension Array where Element: Equatable {
     func upserting(_ newElement: Element) -> [Element] {
         var result = self
         if let element = result.first(where: { $0 == newElement }),
-            let index = result.firstIndex(of: element) {
+           let index = result.firstIndex(of: element) {
             result.remove(at: index)
             result.insert(newElement, at: index)
         } else {

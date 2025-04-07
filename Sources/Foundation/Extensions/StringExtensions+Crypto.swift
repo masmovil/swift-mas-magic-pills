@@ -98,11 +98,11 @@ public extension String {
             defer { context.deallocate() }
 
             key.withUnsafeBytes { (buffer: UnsafePointer<UInt8>) in
-              CCHmacInit(context, commonCryptoAlgorithm, buffer, size_t(key.count))
+                CCHmacInit(context, commonCryptoAlgorithm, buffer, size_t(key.count))
             }
 
             message.withUnsafeBytes { (buffer: UnsafePointer<UInt8>) in
-              CCHmacUpdate(context, buffer, size_t(message.count))
+                CCHmacUpdate(context, buffer, size_t(message.count))
             }
 
             var hmac = [UInt8](repeating: 0, count: Int(commonCryptoDigestLength))

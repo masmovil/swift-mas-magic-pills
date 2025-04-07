@@ -183,9 +183,9 @@ public extension UIView {
         UIView.animate(withDuration: animated ? duration : 0,
                        delay: 0,
                        options: .curveLinear,
-                       animations: { () -> Void in
+                       animations: { () in
                         self.transform = self.transform.rotated(by: angleInRadians)
-        }, completion: completion)
+                       }, completion: completion)
     }
 
     /// Shake animation for view

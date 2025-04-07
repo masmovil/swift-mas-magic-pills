@@ -17,7 +17,7 @@ public class SnackBar: UIView {
         guard
             let message = aDecoder.decodeObject(forKey: "messageKey") as? String,
             let font = aDecoder.decodeObject(forKey: "fontKey") as? UIFont else {
-                return nil
+            return nil
         }
         self.message = message
         self.messageFont = font
