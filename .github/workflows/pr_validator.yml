@@ -13,6 +13,9 @@ jobs:
     timeout-minutes: 120
     steps:
 
+    - name: Remove any previous hook 🥸
+      run: rm -rf .git/hooks
+
     - name: Checkout 🔎
       uses: actions/checkout@v3
       with:
@@ -31,6 +34,9 @@ jobs:
     runs-on: apps-ci
     timeout-minutes: 120
     steps:
+
+    - name: Remove any previous hook 🥸
+      run: rm -rf .git/hooks
 
     - name: Checkout 🔎
       uses: actions/checkout@v3
