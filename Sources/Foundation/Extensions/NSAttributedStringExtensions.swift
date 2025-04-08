@@ -1,4 +1,9 @@
-import Foundation
+#if canImport(UIKit)
+import UIKit
+#endif
+#if canImport(AppKit)
+import AppKit
+#endif
 
 public extension NSAttributedString {
     func uppercased() -> NSAttributedString {
@@ -11,6 +16,7 @@ public extension NSAttributedString {
         return result
     }
 
+    #if canImport(UIKit)
     func underlining(_ sentence: String) -> NSAttributedString {
         guard let linkRange = self.string.nsRange(of: sentence) else {
             return self
@@ -20,4 +26,5 @@ public extension NSAttributedString {
         attrString.addAttributes([.underlineStyle: NSUnderlineStyle.single.rawValue], range: linkRange)
         return attrString
     }
+    #endif
 }

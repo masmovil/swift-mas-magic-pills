@@ -1,6 +1,6 @@
 import Foundation
 import SwiftUI
-#if !os(macOS) && !os(watchOS)
+#if canImport(UIKit)
 import UIKit
 #endif
 

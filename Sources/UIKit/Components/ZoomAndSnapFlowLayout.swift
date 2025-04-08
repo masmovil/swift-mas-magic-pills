@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 /// UICollectionViewFlowLayout implementation for horizontal carousel layout.
@@ -87,3 +88,4 @@ public class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
         return context
     }
 }
+#endif

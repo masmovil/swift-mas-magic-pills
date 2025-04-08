@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension UIImage {
@@ -134,3 +135,4 @@ public extension UIImage {
         UIImage(data: data)?.resized(ratio: percentage, isOpaque: isOpaque)
     }
 }
+#endif

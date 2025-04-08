@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public class Toast: UIView {
@@ -99,3 +100,4 @@ public extension Toast {
         return toast
     }
 }
+#endif

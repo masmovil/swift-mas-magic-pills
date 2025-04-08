@@ -5,8 +5,10 @@ let package = Package(
     name: "MagicPills",
     platforms: [
         .iOS("16"),
-        .macOS(.v11),
-        .tvOS(.v13),
+        .macCatalyst("16"),
+        .tvOS("16"),
+        .watchOS("7.0"),
+        .macOS("12"),
     ],
     products: [
         .library(
@@ -27,8 +29,8 @@ let package = Package(
             path: "Tests",
             resources: [
                 .copy("Helpers/LocalizedSample.strings"),
-                .copy("UIKit/Extensions/Views/iOS/CollectionCellForTests.xib"),
-                .copy("UIKit/Extensions/Views/iOS/TableViewCellForTests.xib")
+                .process("UIKit/Extensions/Views/iOS/CollectionCellForTests.xib"),
+                .process("UIKit/Extensions/Views/iOS/TableViewCellForTests.xib")
             ]
         ),
     ]

@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension NSAttributedString {
@@ -52,9 +53,11 @@ public extension NSAttributedString {
         }
         return attrString
     }
+
     func asUILabel() -> UILabel {
         let label = UILabel()
         label.attributedText = NSAttributedString(attributedString: self)
         return label
     }
 }
+#endif

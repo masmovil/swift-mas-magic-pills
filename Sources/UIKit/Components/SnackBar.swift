@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public class SnackBar: UIView {
@@ -114,3 +115,4 @@ public extension SnackBar {
         return snackBar
     }
 }
+#endif

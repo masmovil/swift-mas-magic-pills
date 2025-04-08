@@ -1,4 +1,5 @@
-import Foundation
+#if canImport(UIKit) && !os(watchOS)
+import UIKit
 
 public extension UIStackView {
     // MARK: - Methods
@@ -18,3 +19,4 @@ public extension UIStackView {
         }
     }
 }
+#endif

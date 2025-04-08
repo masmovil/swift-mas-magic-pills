@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension UIView {
@@ -211,3 +212,4 @@ public extension UIView {
 
 extension UIView: XibRepresentable {
 }
+#endif

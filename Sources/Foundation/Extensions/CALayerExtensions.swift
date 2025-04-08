@@ -1,5 +1,12 @@
 import Foundation
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
+import UIKit
+#endif
 
+#if !os(watchOS)
 public extension CALayer {
     func roundSublayers(_ cornerRadius: CGFloat) {
         sublayers?
@@ -41,3 +48,4 @@ public extension CALayer {
         }
     }
 }
+#endif

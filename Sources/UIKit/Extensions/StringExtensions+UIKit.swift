@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public extension String {
@@ -112,3 +113,4 @@ public extension String {
         return attr
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension UIScrollView {
@@ -32,3 +33,4 @@ public extension UIScrollView {
         }
     }
 }
+#endif

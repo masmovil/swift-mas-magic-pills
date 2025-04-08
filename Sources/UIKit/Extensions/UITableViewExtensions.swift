@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension UITableView {
@@ -65,3 +66,4 @@ public extension UITableView {
         return headerView
     }
 }
+#endif

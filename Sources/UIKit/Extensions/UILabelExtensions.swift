@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension UILabel {
@@ -16,3 +17,4 @@ public extension UILabel {
                                             boldColor: color ?? self.textColor)
     }
 }
+#endif

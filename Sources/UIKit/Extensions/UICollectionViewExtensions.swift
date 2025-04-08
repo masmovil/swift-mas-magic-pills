@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension UICollectionView {
@@ -50,3 +51,4 @@ public extension UICollectionView {
         return view
     }
 }
+#endif

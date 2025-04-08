@@ -1,3 +1,4 @@
+#if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 public extension UIViewController {
@@ -8,3 +9,4 @@ public extension UIViewController {
         _ = navigationController?.popViewController(animated: animated)
     }
 }
+#endif
