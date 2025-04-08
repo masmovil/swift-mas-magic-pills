@@ -13,21 +13,9 @@ class DateExtensionsTests: XCTestCase {
         XCTAssertEqual(date.adding(minutes: 10).formatted(with: .iso8601, timeZone: .utc), "2019-08-13T10:58:00Z")
     }
 
-    func test_localizedMonthName() {
-        let date1 = Date()
-        let date2 = date1.addingTimeInterval(60 * 60 * 24)
-        var dates: [Date] = []
-        
-        dates.append(date1)
-        dates.append(date2)
-        
-        var monthNames: [String] = []
-        
-        for date in dates {
-            monthNames.append(date.localizedMonthName)
-        }
-        
-        XCTAssertEqual(dates.count, monthNames.count)
+    func test_previousMonthName() {
+        let expectedMonthName = Date().adding(months: -1).formatted(with: .month, locale: .spanishSpain)
+        XCTAssertEqual(Date.previousMonthName(locale: .spanishSpain), expectedMonthName)
     }
 
     func test_init_from_formatted_dates() {
