@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class ToastTests: XCTestCase {
     func test_show_toast() {
@@ -33,3 +35,4 @@ class ToastTests: XCTestCase {
         XCTAssertEqual(recoveredToast?.frame, frame)
     }
 }
+#endif

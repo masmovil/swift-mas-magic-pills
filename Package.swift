@@ -28,9 +28,7 @@ let package = Package(
             dependencies: ["MasMagicPills"],
             path: "Tests",
             resources: [
-                .copy("Helpers/LocalizedSample.strings"),
-                .process("UIKit/Extensions/Views/iOS/CollectionCellForTests.xib"),
-                .process("UIKit/Extensions/Views/iOS/TableViewCellForTests.xib")
+                .process("Helpers/LocalizedSample.strings")
             ]
         ),
     ]

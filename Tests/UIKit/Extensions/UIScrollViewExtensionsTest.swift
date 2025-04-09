@@ -1,6 +1,7 @@
 import MasMagicPills
-import UIKit
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UIScrollViewExtensionsTests: XCTestCase {
     let screenWidth: CGFloat = 828
@@ -42,3 +43,4 @@ class UIScrollViewExtensionsTests: XCTestCase {
         XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 0, y: scrollHeight - screenHeight))
     }
 }
+#endif

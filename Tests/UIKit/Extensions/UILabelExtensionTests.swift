@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UILabelExtensionsTests: XCTestCase {
     func test_highlight_text() {
@@ -41,3 +43,4 @@ class UILabelExtensionsTests: XCTestCase {
         XCTAssertNil(label.attributedText)
     }
 }
+#endif

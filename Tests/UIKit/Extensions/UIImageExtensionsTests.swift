@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UIImageExtensionsTests: XCTestCase {
     func test_colored_image() {
@@ -41,3 +43,4 @@ class UIImageExtensionsTests: XCTestCase {
         XCTAssertNil(ciimageBlack.uiImage.tinted(.red))
     }
 }
+#endif

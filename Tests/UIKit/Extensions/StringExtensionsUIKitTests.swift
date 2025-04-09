@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class StringExtensionsUIKitTests: XCTestCase {
     func test_format_last_character() {
@@ -224,3 +226,4 @@ class StringExtensionsUIKitTests: XCTestCase {
         XCTAssertEqual(foundRanges, expectedRanges)
     }
 }
+#endif
