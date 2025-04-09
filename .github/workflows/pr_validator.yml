@@ -54,7 +54,7 @@ jobs:
         xcrun llvm-cov export \
           -format="lcov" \
           --ignore-filename-regex=".build|.test-bundle|Tests/" \
-          .build/debug/MiniPackageTests.xctest/Contents/MacOS/MiniPackageTests \
+          .build/debug/MagicPillsPackageTests.xctest/Contents/MacOS/MagicPillsPackageTests \
           -instr-profile .build/debug/codecov/default.profdata \
           > report.lcov
 
