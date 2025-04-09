@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UIStackViewExtensionsTests: XCTestCase {
     func test_add_arranged_subviews() {
@@ -17,3 +19,4 @@ class UIStackViewExtensionsTests: XCTestCase {
         XCTAssert(stack.arrangedSubviews.isEmpty)
     }
 }
+#endif

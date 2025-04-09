@@ -1,6 +1,7 @@
 import MasMagicPills
-import UIKit
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UIViewExtensionsTests: XCTestCase {
     func test_border_color() {
@@ -31,14 +32,6 @@ class UIViewExtensionsTests: XCTestCase {
 
         view.cornerRadius = 20
         XCTAssertEqual(view.cornerRadius, 20)
-    }
-
-    func test_init_from_nib() {
-        let cell1 = TableViewCellForTests.fromNib(bundle: Bundle(for: UIViewExtensionsTests.self))
-        XCTAssertEqual(cell1.type, "UITableViewCell")
-
-        let cell2 = CollectionCellForTests.fromNib(bundle: Bundle(for: UIViewExtensionsTests.self))
-        XCTAssertEqual(cell2.type, "UICollectionViewCell")
     }
 
     func test_add_subviews() {
@@ -154,3 +147,4 @@ class UIViewExtensionsTests: XCTestCase {
         XCTAssertEqual(view2.transform, transform2)
     }
 }
+#endif

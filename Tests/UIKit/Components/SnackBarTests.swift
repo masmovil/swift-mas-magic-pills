@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class SnackBarTests: XCTestCase {
     func test_show_snackbar() {
@@ -32,3 +34,4 @@ class SnackBarTests: XCTestCase {
         XCTAssertEqual(recoveredSnackbar?.frame, frame)
     }
 }
+#endif

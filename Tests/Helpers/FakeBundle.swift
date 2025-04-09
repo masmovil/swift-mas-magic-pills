@@ -1,6 +1,6 @@
 import Foundation
 
-class FakeBundle: Bundle {
+class FakeBundle: Bundle, @unchecked Sendable {
     var versionNumberValue: String?
     var buildNumberValue: String?
     var testflight = false
@@ -17,6 +17,7 @@ class FakeBundle: Bundle {
         switch key {
         case "CFBundleShortVersionString":
             return versionNumberValue
+
         case "CFBundleVersion":
             return buildNumberValue
 

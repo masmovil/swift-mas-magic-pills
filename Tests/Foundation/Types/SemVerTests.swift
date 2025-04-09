@@ -61,23 +61,23 @@ class SemVerTests: XCTestCase {
 
         XCTAssertEqual(versionFromObj, versionFromValues)
     }
-    
+
     func test_encode_decode_jsonstring() {
         let encodableObject = Semver("1.2.3")
-        
+
         let json = try? encodableObject.jsonString()
         XCTAssertNotNil(json)
-        
+
         let object = try? Semver.decode(jsonString: json)
         XCTAssertEqual(object, encodableObject)
     }
-    
+
     func test_encode_decode_jsonstring_from_components() {
         let encodableObject = Semver(major: 1, minor: 2, patch: 3)
-        
+
         let json = try? encodableObject.jsonString()
         XCTAssertNotNil(json)
-        
+
         let object = try? Semver.decode(jsonString: json)
         XCTAssertEqual(object, encodableObject)
     }

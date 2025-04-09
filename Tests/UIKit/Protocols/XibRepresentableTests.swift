@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class XibRepresentableTests: XCTestCase {
     func test_xib_name() {
@@ -9,3 +11,4 @@ class XibRepresentableTests: XCTestCase {
 }
 
 private class ViewWithRepresentableXib: UIView { }
+#endif
