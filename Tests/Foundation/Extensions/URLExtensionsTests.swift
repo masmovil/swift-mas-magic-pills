@@ -4,7 +4,7 @@ import XCTest
 
 class URLExtensionsTests: XCTestCase {
     func test_appendingFragment() {
-        var url = URL(string: "http://aaa.com")!
+        let url = URL(string: "http://aaa.com")!
 
         let newUrl = url.appendingFragment("fasf")
 
@@ -12,7 +12,7 @@ class URLExtensionsTests: XCTestCase {
     }
 
     func test_appendingItems() throws {
-        var url = URL(string: "http://aaa.com")!
+        let url = URL(string: "http://aaa.com")!
 
         let newUrl = try url.appendingItems(items: [.init(name: "fff", value: "aaaa")])
 
