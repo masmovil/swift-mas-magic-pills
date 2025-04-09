@@ -28,7 +28,7 @@ let package = Package(
             dependencies: ["MasMagicPills"],
             path: "Tests",
             resources: [
-                .process("Helpers/LocalizedSample.strings")
+                .copy("Helpers/LocalizedSample.strings")
             ]
         ),
     ]

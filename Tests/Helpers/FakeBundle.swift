@@ -1,6 +1,6 @@
 import Foundation
 
-class FakeBundle: Bundle {
+class FakeBundle: Bundle, @unchecked Sendable {
     var versionNumberValue: String?
     var buildNumberValue: String?
     var testflight = false
