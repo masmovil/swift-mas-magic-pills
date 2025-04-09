@@ -5,7 +5,7 @@ Set of powerful utilities for development in Swift
 [![Release Date](https://img.shields.io/github/release-date/masmovil/swift-mas-magic-pills.svg)](https://github.com/masmovil/swift-mas-magic-pills/releases)
 [![GitHub](https://img.shields.io/github/license/masmovil/swift-mas-magic-pills.svg)](https://github.com/bq/swift-mas-magic-pills/blob/master/LICENSE)
 
-[![Build Status](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/pr-validator.yml/badge.svg)](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/pr-validator.yml)
+[![Build Status](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/pr_validator.yml/badge.svg)](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/pr_validator.yml)
 [![codecov](https://codecov.io/gh/masmovil/swift-mas-magic-pills/branch/master/graph/badge.svg)](https://codecov.io/gh/masmovil/swift-mas-magic-pills)
 
 ## Installation
