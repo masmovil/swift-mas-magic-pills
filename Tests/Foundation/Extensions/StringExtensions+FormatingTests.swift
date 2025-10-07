@@ -77,6 +77,11 @@ class StringExtensionsFormatingTests: XCTestCase {
         XCTAssertEqual(" hola ".trimmed, "hola")
     }
 
+    func test_removing_whitespaces_and_percent_encoding() {
+        XCTAssertEqual("hola%20que%20tal".removingWhiteSpacesAndPercentEncoding, "holaquetal")
+        XCTAssertEqual("hola que tal".removingWhiteSpacesAndPercentEncoding, "holaquetal")
+    }
+    
     func test_rendering_valid_unicode_emojis() {
         XCTAssertEqual("Instalación rápida U+26A1".renderingUnicodeEmojis, "Instalación rápida ⚡")
         XCTAssertEqual("U+1F525 Ofertas especiales".renderingUnicodeEmojis, "🔥 Ofertas especiales")

@@ -66,6 +66,11 @@ public extension String {
         trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 
+    var removingWhiteSpacesAndPercentEncoding: Self {
+        let stringWithoutPercent = self.removingPercentEncoding ?? self
+        return stringWithoutPercent.removingWhiteSpaces
+    }
+
     var renderingUnicodeEmojis: Self {
         let regex = /(?i)(?:U\+|\\u\{?)([0-9A-F]{4,6})(?=\}$|\}(?:U\+|\\u)|(?:U\+|\\u)|[^0-9A-Za-z]|$)\}?/
 
