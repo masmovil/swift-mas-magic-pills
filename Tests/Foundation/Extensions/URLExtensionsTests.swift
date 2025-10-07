@@ -17,6 +17,18 @@ class URLExtensionsTests: XCTestCase {
         XCTAssertEqual(URL(email: "MAILTO:hola@chau.com")?.absoluteString, "mailto:hola@chau.com")
     }
 
+    func test_sanitized_phone_url() {
+        let url = URL(string: "teL://125215")!
+        let sanitizedUrl = url.sanitizedPhoneUrl()
+        XCTAssertEqual(sanitizedUrl?.clickToCallDestination, "125215")
+    }
+
+    func test_sanitized_email_url() {
+        let url = URL(string: "MAILTO:hi@bye.com?Subject=hi")!
+        let sanitizedUrl = url.sanitizedEmailUrl()
+        XCTAssertEqual(sanitizedUrl?.mailToDestination, "hi@bye.com")
+    }
+
     func test_appendingFragment() {
         let url = URL(string: "http://aaa.com")!
 
@@ -50,6 +62,7 @@ class URLExtensionsTests: XCTestCase {
     }
 
     func test_clicktocall_url() {
+        XCTAssertEqual(URL(string: "tel://685685685")?.isClickToCall, true)
         XCTAssertEqual(URL(string: "tel:685685685")?.isClickToCall, true)
         XCTAssertEqual(URL(string: "tel:sfafsaf")?.isClickToCall, false)
         XCTAssertEqual(URL(string: "tel:+34687687687")?.isClickToCall, true)
@@ -63,8 +76,9 @@ class URLExtensionsTests: XCTestCase {
     }
 
     func test_mailto_url() {
+        XCTAssertEqual(URL(string: "mailto://ssss@ssss.com")?.isMailTo, true)
         XCTAssertEqual(URL(string: "mailto:ssss@ssss.com")?.isMailTo, true)
-        XCTAssertEqual(URL(string: "mailto:ssss@ssss.com?subject=Hi")?.isMailTo, true)
+        XCTAssertEqual(URL(string: "Mailto:ssss@ssss.com?subject=Hi")?.isMailTo, true)
         XCTAssertEqual(URL(string: "tel:+34687687687")?.isMailTo, false)
         XCTAssertEqual(URL(string: "mailto:asfasf.com")?.isMailTo, false)
         XCTAssertEqual(URL(string: "mailto:124124")?.isMailTo, false)
