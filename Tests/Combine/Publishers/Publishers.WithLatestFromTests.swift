@@ -13,7 +13,7 @@ class PublishersWithLatestFromTests: XCTestCase {
 
         subject1
             .withLatestFrom(subject2)
-            .sink { values in
+            .sink { values in
                 print("received \(values)")
                 expectation.fulfill()
             }

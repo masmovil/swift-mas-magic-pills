@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UIFontExtensionsTests: XCTestCase {
     func test_font_bold() {
@@ -38,3 +40,4 @@ class UIFontExtensionsTests: XCTestCase {
                        UIFont.systemFont(ofSize: 14, weight: .light))
     }
 }
+#endif

@@ -3,32 +3,20 @@ Set of powerful utilities for development in Swift
 
 [![Release Version](https://img.shields.io/github/release/masmovil/swift-mas-magic-pills.svg)](https://github.com/masmovil/swift-mas-magic-pills/releases) 
 [![Release Date](https://img.shields.io/github/release-date/masmovil/swift-mas-magic-pills.svg)](https://github.com/masmovil/swift-mas-magic-pills/releases)
-[![Pod](https://img.shields.io/cocoapods/v/MasMagicPills.svg?style=flat)](https://cocoapods.org/pods/MasMagicPills)
-[![Platform](https://img.shields.io/cocoapods/p/MasMagicPills.svg?style=flat)](https://cocoapods.org/pods/MasMagicPills)
 [![GitHub](https://img.shields.io/github/license/masmovil/swift-mas-magic-pills.svg)](https://github.com/bq/swift-mas-magic-pills/blob/master/LICENSE)
 
-[![Build Status](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/build-and-tests.yml/badge.svg)](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/build-and-tests.yml)
+[![Build Status](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/pr_validator.yml/badge.svg)](https://github.com/masmovil/swift-mas-magic-pills/actions/workflows/pr_validator.yml)
 [![codecov](https://codecov.io/gh/masmovil/swift-mas-magic-pills/branch/master/graph/badge.svg)](https://codecov.io/gh/masmovil/swift-mas-magic-pills)
-
-## Requirements
-
-* Xcode 10.2
-* Swift 5.0
-
-For Xcode 10.1 and below, [use Magic Pills 1.2.0](https://github.com/masmovil/swift-mas-magic-pills/tree/v1.2.0).
 
 ## Installation
 
-MasMagicPills is available through [CocoaPods](https://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage). 
+MasMagicPills is available through [Swift Package Manager](https://swift.org/package-manager/). 
 
-To install it, simply add the following line to your `Podfile`:
-```ruby
-pod 'MasMagicPills'
-```
-or this into your `Cartfile`:
-```ogdl
-github "masmovil/swift-mas-magic-pills" 
-```
+1. Follow Apple's [Adding Package Dependencies to Your App](
+https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app
+) guide on how to add a Swift Package dependency.
+2. Use `https://github.com/masmovil/swift-mas-magic-pills` as the repository URL.
+3. Specify the version to be at least `4.0.0`.
 
 ## Authors & Collaborators
 

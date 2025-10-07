@@ -1,6 +1,8 @@
 import Foundation
 import MasMagicPills
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UILabelExtensionsTests: XCTestCase {
     func test_highlight_text() {
@@ -22,10 +24,10 @@ class UILabelExtensionsTests: XCTestCase {
             .enumerateAttribute(.font,
                                 in: fullRange,
                                 options: [.longestEffectiveRangeNotRequired]) { value, range, _ in
-                                    if range == highlightedRange,
-                                        let font = value as? UIFont {
-                                        foundFont = font
-                                    }
+                if range == highlightedRange,
+                   let font = value as? UIFont {
+                    foundFont = font
+                }
             }
 
         XCTAssertTrue(foundFont?.fontDescriptor.symbolicTraits.contains(.traitBold) ?? false)
@@ -41,3 +43,4 @@ class UILabelExtensionsTests: XCTestCase {
         XCTAssertNil(label.attributedText)
     }
 }
+#endif

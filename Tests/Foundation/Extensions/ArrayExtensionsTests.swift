@@ -64,21 +64,21 @@ class ArrayExtensionsTests: XCTestCase {
     }
 
     func test_upserting() {
-         let value11 = KeyedValue(id: "1", value: "hi")
-         let value12 = KeyedValue(id: "1", value: "bye")
-         let value2 = KeyedValue(id: "2", value: "cya")
+        let value11 = KeyedValue(id: "1", value: "hi")
+        let value12 = KeyedValue(id: "1", value: "bye")
+        let value2 = KeyedValue(id: "2", value: "cya")
 
-         let collection = [value11]
+        let collection = [value11]
 
-         let newCollection = collection.upserting([value12, value2])
-         XCTAssertEqual(newCollection.count, 2)
-         XCTAssertEqual(newCollection.first { $0.id == "1" }?.value, "bye")
-         XCTAssertEqual(newCollection.first { $0.id == "2" }?.value, "cya")
-     }
+        let newCollection = collection.upserting([value12, value2])
+        XCTAssertEqual(newCollection.count, 2)
+        XCTAssertEqual(newCollection.first { $0.id == "1" }?.value, "bye")
+        XCTAssertEqual(newCollection.first { $0.id == "2" }?.value, "cya")
+    }
 
     func test_subtracting() {
-        var array = ["a", "b", "c", "d", "e"]
-        var arrayToSubtract = ["c", "d", "e", "f", "g"]
+        let array = ["a", "b", "c", "d", "e"]
+        let arrayToSubtract = ["c", "d", "e", "f", "g"]
 
         XCTAssertEqual(array.subtracting(arrayToSubtract), ["a", "b"])
     }

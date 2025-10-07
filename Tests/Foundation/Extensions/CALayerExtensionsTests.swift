@@ -1,7 +1,8 @@
 import Foundation
 import MasMagicPills
-import UIKit
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class CALayerExtensionsTests: XCTestCase {
     func test_round_sublayer() {
@@ -30,3 +31,4 @@ class CALayerExtensionsTests: XCTestCase {
         XCTAssertEqual(view.layer.sublayers?.first!.cornerRadius, 0)
     }
 }
+#endif

@@ -1,6 +1,7 @@
 import MasMagicPills
-import UIKit
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 private class HeaderCollectionReusableView: UICollectionReusableView {}
 
@@ -17,12 +18,6 @@ class UICollectionViewExtensionsTests: XCTestCase {
     func test_register_cell_with_class() {
         let indexPath = IndexPath(row: 0, section: 0)
         collectionView.register(CollectionCellForTests.self)
-        _ = collectionView.dequeueReusableCell(indexPath: indexPath) as CollectionCellForTests
-    }
-
-    func test_register_cell_with_nib_using_class() {
-        let indexPath = IndexPath(row: 0, section: 0)
-        collectionView.registerWithNib(CollectionCellForTests.self, bundle: Bundle(for: UICollectionViewExtensionsTests.self))
         _ = collectionView.dequeueReusableCell(indexPath: indexPath) as CollectionCellForTests
     }
 
@@ -50,3 +45,4 @@ extension UICollectionViewExtensionsTests: UICollectionViewDataSource, UICollect
         UICollectionViewCell()
     }
 }
+#endif

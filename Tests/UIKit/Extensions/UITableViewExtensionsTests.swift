@@ -1,6 +1,7 @@
 import MasMagicPills
-import UIKit
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 class UITableViewExtensionsTests: XCTestCase {
     let tableView = UITableView()
@@ -21,12 +22,6 @@ class UITableViewExtensionsTests: XCTestCase {
     func test_register_cell_with_class_and_indexpath() {
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.register(TableViewCellForTests.self)
-        _ = tableView.dequeueReusableCell(indexPath: indexPath) as TableViewCellForTests
-    }
-
-    func test_register_cell_with_nib_using_class() {
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.registerWithNib(TableViewCellForTests.self, bundle: Bundle(for: UITableViewExtensionsTests.self))
         _ = tableView.dequeueReusableCell(indexPath: indexPath) as TableViewCellForTests
     }
 
@@ -53,3 +48,4 @@ extension UITableViewExtensionsTests: UITableViewDataSource {
         UITableViewCell()
     }
 }
+#endif

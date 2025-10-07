@@ -1,6 +1,7 @@
 import MasMagicPills
-import UIKit
 import XCTest
+#if canImport(UIKit)
+import UIKit
 
 private class HomeViewController: UIViewController {}
 private class SecondViewController: UIViewController {}
@@ -20,3 +21,4 @@ class UIViewControllerExtensionsTests: XCTestCase {
         XCTAssertTrue(navigationController.visibleViewController is HomeViewController)
     }
 }
+#endif

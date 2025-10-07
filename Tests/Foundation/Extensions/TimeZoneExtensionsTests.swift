@@ -9,7 +9,7 @@ class TimeZoneExtensionsTests: XCTestCase {
         formatter.dateFormat = "Z"
 
         let offsets = TimeZone.allCases
-            .map { timeZone -> String in
+            .map { timeZone -> String in
                 formatter.timeZone = timeZone
                 return formatter.string(from: referenceDate)
             }
