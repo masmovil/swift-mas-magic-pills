@@ -1,6 +1,23 @@
 import Foundation
 
 public extension URL {
+    init?(phone: String) {
+        let phone = phone.removingWhiteSpacesAndPercentEncoding
+            .lowercased()
+            .removing(prefix: "tel://")
+            .removing(prefix: "tel:")
+        guard phone.isValidForPhoneDialer else { return nil }
+        self.init(string: "tel:\(phone)")
+    }
+
+    init?(email: String) {
+        let email = email.removingWhiteSpacesAndPercentEncoding
+            .lowercased()
+            .removing(prefix: "mailto:")
+        guard email.isValidEmail else { return nil }
+        self.init(string: "mailto:\(email)")
+    }
+
     func appendingFragment(_ fragment: String?) -> URL {
         var components = URLComponents(url: self, resolvingAgainstBaseURL: true) ?? URLComponents()
         components.fragment = fragment
