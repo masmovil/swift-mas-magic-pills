@@ -77,8 +77,8 @@ class ArrayExtensionsTests: XCTestCase {
     }
 
     func test_subtracting() {
-        var array = ["a", "b", "c", "d", "e"]
-        var arrayToSubtract = ["c", "d", "e", "f", "g"]
+        let array = ["a", "b", "c", "d", "e"]
+        let arrayToSubtract = ["c", "d", "e", "f", "g"]
 
         XCTAssertEqual(array.subtracting(arrayToSubtract), ["a", "b"])
     }

@@ -2,7 +2,7 @@
 import UIKit
 
 public extension NSAttributedString {
-    func bolding(_ sentence: String) -> NSAttributedString {
+    func bolded(_ sentence: String) -> NSAttributedString {
         guard
             let linkRange = self.string.nsRange(of: sentence),
             let currentFont = self.attribute(.font, at: 0, longestEffectiveRange: nil, in: linkRange) as? UIFont,
@@ -49,7 +49,7 @@ public extension NSAttributedString {
             attrString = attrString.coloring(sentence, color: color)
         }
         if bold {
-            attrString = attrString.bolding(sentence)
+            attrString = attrString.bolded(sentence)
         }
         return attrString
     }
