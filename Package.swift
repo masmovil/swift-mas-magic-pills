@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
@@ -7,8 +7,8 @@ let package = Package(
         .iOS("16"),
         .macCatalyst("16"),
         .tvOS("16"),
-        .watchOS("7.0"),
-        .macOS("12"),
+        .watchOS("9"),
+        .macOS("13"),
     ],
     products: [
         .library(
@@ -21,7 +21,10 @@ let package = Package(
         .target(
             name: "MasMagicPills",
             dependencies: [],
-            path: "Sources"
+            path: "Sources",
+            swiftSettings: [
+                .enableUpcomingFeature("BareSlashRegexLiterals")
+            ]
         ),
         .testTarget(
             name: "MagicPillsTests",
@@ -29,6 +32,9 @@ let package = Package(
             path: "Tests",
             resources: [
                 .copy("Helpers/LocalizedSample.strings")
+            ],
+            swiftSettings: [
+                .enableUpcomingFeature("BareSlashRegexLiterals")
             ]
         ),
     ]
