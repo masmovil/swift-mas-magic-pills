@@ -76,11 +76,11 @@ class StringExtensionsFormatingTests: XCTestCase {
     func test_trimed() {
         XCTAssertEqual(" hola ".trimmed, "hola")
     }
-    
+
     func test_bolded() {
         XCTAssertEqual("negrita".bolded, "__negrita__")
     }
-    
+
     func test_italicized() {
         XCTAssertEqual("cursiva".italicized, "_cursiva_")
     }
@@ -89,7 +89,7 @@ class StringExtensionsFormatingTests: XCTestCase {
         XCTAssertEqual("hola%20que%20tal".removingWhiteSpacesAndPercentEncoding, "holaquetal")
         XCTAssertEqual("hola que tal".removingWhiteSpacesAndPercentEncoding, "holaquetal")
     }
-    
+
     func test_rendering_valid_unicode_emojis() {
         XCTAssertEqual("Instalación rápida U+26A1".renderingUnicodeEmojis, "Instalación rápida ⚡")
         XCTAssertEqual("U+1F525 Ofertas especiales".renderingUnicodeEmojis, "🔥 Ofertas especiales")
