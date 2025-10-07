@@ -2,7 +2,7 @@ import Foundation
 
 public extension String {
     var isValidInternetUrl: Bool {
-        let regEx = "((https|http|itms-apps|itms)://)((\\w|-)+)(([.]|[/])(([\\w|/]|-)+))+"
+        let regEx = "^(?:https?|itms-apps|itms):\\/\\/(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}(?:\\/[\\S&&[^?#]]*)?(?:\\?[\\S&&[^#]]*)?$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", argumentArray: [regEx])
         return predicate.evaluate(with: self)
     }

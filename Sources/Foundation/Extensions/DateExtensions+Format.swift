@@ -32,7 +32,8 @@ public extension Date {
         case europeanDateWithDashes = "yyyy-MM-dd"
         case time = "HH:mm"
         case day = "d"
-        case dayAndMonth = "d MMM"
+        case dayAndShortMonth = "d MMM"
+        case dayAndMonth = "d MMMM"
         case shortMonth = "MMM"
         case month = "MMMM"
         case monthAndYear = "MMMM yyyy"
@@ -48,14 +49,9 @@ public extension Date {
         case dateStyleLong = "dateStyleLong"
         case dateStyleFull = "dateStyleFull"
 
-        func string(from date: Date, locale: Locale?, timeZone: TimeZone?) -> String {
-            let formatter = formatter(locale: locale, timeZone: timeZone)
-
-            if let dateFormat = mainDateFormat(timeZone: timeZone) {
-                formatter.dateFormat = dateFormat
-            }
-
-            return formatter.string(from: date)
+        func string(from date: Date, locale: Locale?, timeZone: TimeZone?, useLocalizedTemplate: Bool = false) -> String {
+            formatter(locale: locale, timeZone: timeZone, useLocalizedTemplate: useLocalizedTemplate)
+                .string(from: date)
         }
 
         func date(from formattedDate: String, locale: Locale?, timeZone: TimeZone?) -> Date? {
@@ -125,8 +121,9 @@ public extension Date {
             }
         }
 
-        func formatter(locale: Locale?, timeZone: TimeZone?) -> DateFormatter {
+        func formatter(locale: Locale?, timeZone: TimeZone?, useLocalizedTemplate: Bool = false) -> DateFormatter {
             let dateFormatter = Formatter.date(locale: locale, timeZone: timeZone)
+            let format = mainDateFormat(timeZone: timeZone)
 
             switch self {
             case .dateStyleShort:
@@ -141,8 +138,14 @@ public extension Date {
             case .dateStyleFull:
                 dateFormatter.dateStyle = .full
 
+            case .iso8601, .rfc1123:
+                dateFormatter.dateFormat = format
+
             default:
-                dateFormatter.dateFormat = mainDateFormat(timeZone: timeZone)
+                dateFormatter.dateFormat = format
+                if useLocalizedTemplate, let format {
+                    dateFormatter.setLocalizedDateFormatFromTemplate(format)
+                }
             }
             return dateFormatter
         }

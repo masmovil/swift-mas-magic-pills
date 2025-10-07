@@ -3,6 +3,20 @@ import MasMagicPills
 import XCTest
 
 class URLExtensionsTests: XCTestCase {
+    func test_initializing_from_phone() {
+        XCTAssertEqual(URL(phone: "125215")?.absoluteString, "tel:125215")
+        XCTAssertNil(URL(phone: "asfasf"))
+        XCTAssertEqual(URL(phone: "tel:125215")?.absoluteString, "tel:125215")
+        XCTAssertEqual(URL(phone: "teL://125215")?.absoluteString, "tel:125215")
+    }
+
+    func test_initializing_from_email() {
+        XCTAssertEqual(URL(email: "hola@chau.com")?.absoluteString, "mailto:hola@chau.com")
+        XCTAssertNil(URL(email: "asfasf"))
+        XCTAssertNil(URL(email: "1325125.com"))
+        XCTAssertEqual(URL(email: "MAILTO:hola@chau.com")?.absoluteString, "mailto:hola@chau.com")
+    }
+
     func test_appendingFragment() {
         let url = URL(string: "http://aaa.com")!
 
