@@ -50,7 +50,7 @@ public extension Date {
         case dateStyleFull = "dateStyleFull"
 
         func string(from date: Date, locale: Locale?, timeZone: TimeZone?, useLocalizedTemplate: Bool = false) -> String {
-            return formatter(locale: locale, timeZone: timeZone, useLocalizedTemplate: useLocalizedTemplate)
+            formatter(locale: locale, timeZone: timeZone, useLocalizedTemplate: useLocalizedTemplate)
                 .string(from: date)
         }
 
@@ -137,10 +137,10 @@ public extension Date {
 
             case .dateStyleFull:
                 dateFormatter.dateStyle = .full
-                
+
             case .iso8601, .rfc1123:
                 dateFormatter.dateFormat = format
-                
+
             default:
                 dateFormatter.dateFormat = format
                 if useLocalizedTemplate, let format {
