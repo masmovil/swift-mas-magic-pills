@@ -65,4 +65,19 @@ public extension String {
     var trimmed: String {
         trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
+
+    var renderingUnicodeEmojis: Self {
+        let regex = /(?i)(?:U\+|\\u\{?)([0-9A-F]{4,6})(?=\}$|\}(?:U\+|\\u)|(?:U\+|\\u)|[^0-9A-Za-z]|$)\}?/
+
+        return self.replacing(regex) { match in
+            let hexString = String(match.1)
+
+            guard let unicodeValue = UInt32(hexString, radix: 16),
+                  let scalar = UnicodeScalar(unicodeValue) else {
+                return String(match.0)
+            }
+
+            return String(Character(scalar))
+        }
+    }
 }

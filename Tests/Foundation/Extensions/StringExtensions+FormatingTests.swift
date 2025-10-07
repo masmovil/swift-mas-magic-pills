@@ -76,4 +76,31 @@ class StringExtensionsFormatingTests: XCTestCase {
     func test_trimed() {
         XCTAssertEqual(" hola ".trimmed, "hola")
     }
+
+    func test_rendering_valid_unicode_emojis() {
+        XCTAssertEqual("Instalación rápida U+26A1".renderingUnicodeEmojis, "Instalación rápida ⚡")
+        XCTAssertEqual("U+1F525 Ofertas especiales".renderingUnicodeEmojis, "🔥 Ofertas especiales")
+        XCTAssertEqual("Instalación U+26A1 rápida".renderingUnicodeEmojis, "Instalación ⚡ rápida")
+        XCTAssertEqual("U+1F44D Servicio U+26A1 rápido U+1F4B0".renderingUnicodeEmojis, "👍 Servicio ⚡ rápido 💰")
+        XCTAssertEqual("Super oferta U+1F525U+1F4A5 disponible".renderingUnicodeEmojis, "Super oferta 🔥💥 disponible")
+        XCTAssertEqual("U+1F525U+26A1U+1F44D".renderingUnicodeEmojis, "🔥⚡👍")
+        XCTAssertEqual("Texto u+1f525 y U+26A1 mezclados".renderingUnicodeEmojis, "Texto 🔥 y ⚡ mezclados")
+        XCTAssertEqual("Reloj U+23F0 temporizador".renderingUnicodeEmojis, "Reloj ⏰ temporizador")
+        XCTAssertEqual("Fire U+1F525 emoji".renderingUnicodeEmojis, "Fire 🔥 emoji")
+        XCTAssertEqual("Test U+1F1E8U+1F1F4 flag".renderingUnicodeEmojis, "Test 🇨🇴 flag")
+    }
+
+    func test_rendering_normal_text_as_unicode_emojis() {
+        XCTAssertEqual("Texto normal sin códigos unicode".renderingUnicodeEmojis, "Texto normal sin códigos unicode")
+        XCTAssertEqual("    ".renderingUnicodeEmojis, "    ")
+        XCTAssertEqual("".renderingUnicodeEmojis, "")
+    }
+
+    func test_rendering_invalid_unicode_emojis() {
+        XCTAssertEqual("U+ U+12 U+GGG U+12345G texto".renderingUnicodeEmojis, "U+ U+12 U+GGG U+12345G texto")
+        XCTAssertEqual("u+ u+12 u+GGG u+12345g texto".renderingUnicodeEmojis, "u+ u+12 u+GGG u+12345g texto")
+        XCTAssertEqual("U+ U+12 U+GGG U+12345x texto".renderingUnicodeEmojis, "U+ U+12 U+GGG U+12345x texto")
+        XCTAssertEqual("Valid U+1F525 invalid U+12 valid U+26A1".renderingUnicodeEmojis, "Valid 🔥 invalid U+12 valid ⚡")
+        XCTAssertEqual("Texto normal sin códigos unicode".renderingUnicodeEmojis, "Texto normal sin códigos unicode")
+    }
 }
