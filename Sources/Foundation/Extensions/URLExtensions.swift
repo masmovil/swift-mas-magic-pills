@@ -13,9 +13,18 @@ public extension URL {
     init?(email: String) {
         let email = email.removingWhiteSpacesAndPercentEncoding
             .lowercased()
+            .removing(prefix: "mailto://")
             .removing(prefix: "mailto:")
         guard email.isValidEmail else { return nil }
         self.init(string: "mailto:\(email)")
+    }
+
+    func sanitizedPhoneUrl() -> URL? {
+        URL(phone: removingQuery.absoluteString)
+    }
+
+    func sanitizedEmailUrl() -> URL? {
+        URL(email: removingQuery.absoluteString)
     }
 
     func appendingFragment(_ fragment: String?) -> URL {
@@ -41,16 +50,18 @@ public extension URL {
     }
 
     var isMailTo: Bool {
-        guard scheme == "mailto" else { return false }
-        return removingQuery.absoluteString.replacingOccurrences(of: "mailto:", with: "").isValidEmail
+        guard let url = sanitizedEmailUrl() else { return false }
+        guard url.scheme == "mailto" else { return false }
+        return url.removingQuery.absoluteString.replacingOccurrences(of: "mailto:", with: "").isValidEmail
     }
 
     var isClickToCall: Bool {
-        guard scheme == "tel" else { return false }
-        return absoluteString.replacingOccurrences(of: "tel:", with: "").isValidForPhoneDialer
+        guard let url = sanitizedPhoneUrl() else { return false }
+        guard url.scheme == "tel" else { return false }
+        return url.absoluteString.replacingOccurrences(of: "tel:", with: "").isValidForPhoneDialer
     }
 
-    /// Is the value is a ClickToCall URL, returns the phone number
+    /// If the URL is a ClickToCall URL, returns the email destination
     var clickToCallDestination: String? {
         guard isClickToCall else { return nil }
         guard let scheme = scheme else { return nil }
@@ -63,7 +74,7 @@ public extension URL {
         return nil
     }
 
-    /// Is the value is a MailTo URL, returns the email
+    /// If the URL is a MailTo URL, returns the email destination
     var mailToDestination: String? {
         guard isMailTo else { return nil }
         guard let scheme = scheme else { return nil }
