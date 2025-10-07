@@ -10,7 +10,7 @@ class PublishersMapToVoidTests: XCTestCase {
         Just("patata")
             .mapToVoid()
             .sink { value in
-                XCTAssertTrue(value is Void)
+                XCTAssertTrue(type(of: value) == Void.self)
                 expectation.fulfill()
             }
             .store(in: &cancellables)

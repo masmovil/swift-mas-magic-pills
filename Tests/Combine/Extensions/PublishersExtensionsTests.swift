@@ -18,7 +18,7 @@ class PublishersExtensionsTests: XCTestCase {
                     .map { value2 in "\(value2) (\(value1)))" }
                     .eraseToAnyPublisher()
             }
-            .sink { values in
+            .sink { values in
                 print("received \(values)")
                 expectation.fulfill()
             }
