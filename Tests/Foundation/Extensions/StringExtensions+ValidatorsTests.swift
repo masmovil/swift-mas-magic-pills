@@ -6,6 +6,7 @@ class StringExtensionsValidatorsTests: XCTestCase {
     func test_valid_internet_url() {
         XCTAssertTrue("itms://itunes.apple.com/es/app/xxxx/id123132156465456456".isValidInternetUrl)
         XCTAssertTrue("http://www.google.com".isValidInternetUrl)
+        XCTAssertTrue("https://wa.me/123123123?text=hello".isValidInternetUrl)
         XCTAssertFalse("wawawa".isValidInternetUrl)
         XCTAssertFalse("".isValidInternetUrl)
     }
