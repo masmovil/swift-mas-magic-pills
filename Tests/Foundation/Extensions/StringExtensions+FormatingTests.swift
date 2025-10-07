@@ -76,4 +76,17 @@ class StringExtensionsFormatingTests: XCTestCase {
     func test_trimed() {
         XCTAssertEqual(" hola ".trimmed, "hola")
     }
+
+    func test_bolded() {
+        XCTAssertEqual("negrita".bolded, "__negrita__")
+    }
+
+    func test_italicized() {
+        XCTAssertEqual("cursiva".italicized, "_cursiva_")
+    }
+
+    func test_removing_whitespaces_and_percent_encoding() {
+        XCTAssertEqual("hola%20que%20tal".removingWhiteSpacesAndPercentEncoding, "holaquetal")
+        XCTAssertEqual("hola que tal".removingWhiteSpacesAndPercentEncoding, "holaquetal")
+    }
 }

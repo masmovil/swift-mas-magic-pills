@@ -1,6 +1,14 @@
 import Foundation
 
 public extension String {
+    var bolded: String {
+        "__\(self)__"
+    }
+
+    var italicized: String {
+        "_\(self)_"
+    }
+
     var underLined: NSAttributedString {
         NSMutableAttributedString(string: self, attributes: [.underlineStyle: 1])
     }
@@ -64,5 +72,10 @@ public extension String {
 
     var trimmed: String {
         trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    }
+
+    var removingWhiteSpacesAndPercentEncoding: Self {
+        let stringWithoutPercent = self.removingPercentEncoding ?? self
+        return stringWithoutPercent.removingWhiteSpaces
     }
 }
