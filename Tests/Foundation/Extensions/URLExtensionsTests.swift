@@ -82,6 +82,7 @@ class URLExtensionsTests: XCTestCase {
         XCTAssertEqual(URL(string: "tel:+34687687687")?.isMailTo, false)
         XCTAssertEqual(URL(string: "mailto:asfasf.com")?.isMailTo, false)
         XCTAssertEqual(URL(string: "mailto:124124")?.isMailTo, false)
+        XCTAssertEqual(URL(string: "wawa@wewe.com")?.isMailTo, false)
     }
 
     func test_mailto_destination() {

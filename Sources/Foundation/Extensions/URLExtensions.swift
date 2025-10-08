@@ -50,14 +50,14 @@ public extension URL {
     }
 
     var isMailTo: Bool {
+        guard scheme?.lowercased() == "mailto" else { return false }
         guard let url = sanitizedEmailUrl() else { return false }
-        guard url.scheme == "mailto" else { return false }
         return url.removingQuery.absoluteString.replacingOccurrences(of: "mailto:", with: "").isValidEmail
     }
 
     var isClickToCall: Bool {
+        guard scheme?.lowercased() == "tel" else { return false }
         guard let url = sanitizedPhoneUrl() else { return false }
-        guard url.scheme == "tel" else { return false }
         return url.absoluteString.replacingOccurrences(of: "tel:", with: "").isValidForPhoneDialer
     }
 
@@ -65,11 +65,12 @@ public extension URL {
     var clickToCallDestination: String? {
         guard isClickToCall else { return nil }
         guard let scheme = scheme else { return nil }
+        guard let url = sanitizedPhoneUrl() else { return nil }
         if absoluteString.hasPrefix("\(scheme):\\") {
-            return absoluteString.removing(prefix: "\(scheme):\\")
+            return url.absoluteString.removing(prefix: "\(scheme):\\")
         }
         if absoluteString.hasPrefix("\(scheme):") {
-            return absoluteString.removing(prefix: "\(scheme):")
+            return url.absoluteString.removing(prefix: "\(scheme):")
         }
         return nil
     }
@@ -78,11 +79,12 @@ public extension URL {
     var mailToDestination: String? {
         guard isMailTo else { return nil }
         guard let scheme = scheme else { return nil }
+        guard let url = sanitizedEmailUrl() else { return nil }
         if absoluteString.hasPrefix("\(scheme):\\") {
-            return removingQuery.absoluteString.removing(prefix: "\(scheme):\\")
+            return url.absoluteString.removing(prefix: "\(scheme):\\")
         }
         if absoluteString.hasPrefix("\(scheme):") {
-            return removingQuery.absoluteString.removing(prefix: "\(scheme):")
+            return url.absoluteString.removing(prefix: "\(scheme):")
         }
         return nil
     }
