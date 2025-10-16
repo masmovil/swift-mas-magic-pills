@@ -2,6 +2,14 @@ import Foundation
 import SwiftUI
 
 public extension Color {
+    init?(hex: String?) {
+        guard let hex = hex else {
+            return nil
+        }
+
+        try? self.init(hex: hex)
+    }
+
     init(hex: String) throws {
         var cString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
