@@ -1,42 +1,24 @@
 import Foundation
 
 public extension Bundle {
-    /// The release ("Major"."Minor"."Patch") or version number of the bundle
-    var versionNumber: String {
-        (object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String) ?? "0"
+    /// The release version of the bundle in Semver format
+    var versionNumber: Semver {
+        Semver((object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String) ?? "0")
     }
 
-    @available(*, deprecated, renamed: "versionNumber")
-    var appVersion: String {
-        versionNumber
-    }
-
-    /// The version number of the bundle. (read-only, optional)
+    /// The build version of the bundle.
     var buildNumber: String {
         (object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String) ?? "0"
     }
 
-    @available(*, deprecated, renamed: "buildNumber")
-    var appBuild: String {
-        buildNumber
-    }
-
-    /// Release number with version number or version number if are the same (read-only, optional)
+    /// Release number with version number or version number if are the same
     var fullVersionNumber: String {
-        versionNumber == buildNumber ? "v\(versionNumber)" : "v\(versionNumber)(\(buildNumber))"
-    }
-
-    @available(*, deprecated, renamed: "fullVersionNumber")
-    var appFullVersion: String {
-        fullVersionNumber
+        versionNumber.full == buildNumber ?
+            "\(versionNumber.commercial)" :
+            "\(versionNumber.commercial) (\(buildNumber))"
     }
 
     var isRunningFromTestFlight: Bool {
         appStoreReceiptURL?.lastPathComponent == "sandboxReceipt"
-    }
-
-    @available(*, deprecated, renamed: "isRunningFromTestFlight")
-    var runningFromTestFlight: Bool {
-        isRunningFromTestFlight
     }
 }
