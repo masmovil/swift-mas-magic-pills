@@ -31,6 +31,7 @@ public extension Date {
         case europeanFullDateWithSlashes = "yyyy/MM/dd HH:mm"
         case europeanDateWithDashes = "yyyy-MM-dd"
         case time = "HH:mm"
+        case timeWithSeconds = "HH:mm:ss"
         case day = "d"
         case dayAndShortMonth = "d MMM"
         case dayAndMonth = "d MMMM"
