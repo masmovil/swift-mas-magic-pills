@@ -51,7 +51,7 @@ public extension String {
             .replacingOccurrences(of: "\\", with: "")
             .removingWhiteSpaces
 
-        if identifierBase.satisfiesRegex("^[0-9]{0,1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$") {
+        if identifierBase.satisfiesRegex("^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKEtrwagmyfpdxbnjzsqvhlcke]$") {
             guard let numberBase = Int(identifierBase.prefix(identifierBase.count - 1)),
                   let letter: Character = identifierBase.last else {
                 return false

@@ -64,9 +64,13 @@ class StringExtensionsValidatorsTests: XCTestCase {
         XCTAssertTrue("21234567R".isValidNIF)
         XCTAssertTrue("12345678Z".isValidNIF)
         XCTAssertTrue("05446767E".isValidNIF)
+        XCTAssertTrue("00353635X".isValidNIF)
     }
 
     func test_is_not_valid_nif() {
+        XCTAssertFalse("5446767E".isValidNIF)
+        XCTAssertFalse("353635X".isValidNIF)
+        XCTAssertFalse("0353635X".isValidNIF)
         XCTAssertFalse("05446767F".isValidNIF)
         XCTAssertFalse("kkk".isValidNIF)
         XCTAssertFalse("".isValidNIF)
